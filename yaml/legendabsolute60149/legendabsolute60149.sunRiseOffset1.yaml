@@ -1,0 +1,30 @@
+id: legendabsolute60149.sunRiseOffset1
+version: 1
+status: proposed
+name: Sun Rise Offset1
+ephemeral: false
+attributes:
+  sunRiseOffset:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+        unit:
+          type: string
+          enum:
+            - min
+          default: min
+      additionalProperties: false
+      required:
+        - value
+    setter: setSunRiseOffset
+    enumCommands: []
+commands:
+  setSunRiseOffset:
+    name: setSunRiseOffset
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: integer

@@ -1,0 +1,106 @@
+id: samsungce.washerWaterLevel
+version: 1
+status: proposed
+name: Washer Water Level
+ephemeral: false
+attributes:
+  supportedWaterLevel:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - noDisplay
+              - "0"
+              - "1"
+              - "2"
+              - "3"
+              - "4"
+              - "5"
+              - "6"
+              - "7"
+              - "8"
+              - "9"
+              - "10"
+              - "11"
+              - "12"
+              - "13"
+              - "14"
+              - "15"
+              - auto
+              - low
+              - medium
+              - high
+              - extraHigh
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  waterLevel:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - noDisplay
+            - "0"
+            - "1"
+            - "2"
+            - "3"
+            - "4"
+            - "5"
+            - "6"
+            - "7"
+            - "8"
+            - "9"
+            - "10"
+            - "11"
+            - "12"
+            - "13"
+            - "14"
+            - "15"
+            - auto
+            - low
+            - medium
+            - high
+            - extraHigh
+      additionalProperties: false
+      required:
+        - value
+    setter: setWaterLevel
+    enumCommands: []
+commands:
+  setWaterLevel:
+    name: setWaterLevel
+    arguments:
+      - name: waterLevel
+        optional: false
+        schema:
+          type: string
+          enum:
+            - noDisplay
+            - "0"
+            - "1"
+            - "2"
+            - "3"
+            - "4"
+            - "5"
+            - "6"
+            - "7"
+            - "8"
+            - "9"
+            - "10"
+            - "11"
+            - "12"
+            - "13"
+            - "14"
+            - "15"
+            - auto
+            - low
+            - medium
+            - high
+            - extraHigh

@@ -1,0 +1,58 @@
+id: hca.washerMode
+version: 1
+status: proposed
+name: Washer Mode
+ephemeral: false
+attributes:
+  mode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - normal
+            - mix
+            - quickWash
+            - rinseOnly
+            - spinOnly
+            - eco
+            - others
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedModes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - normal
+              - mix
+              - quickWash
+              - rinseOnly
+              - spinOnly
+              - eco
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setMode:
+    name: setMode
+    arguments:
+      - name: mode
+        optional: false
+        schema:
+          type: string
+          enum:
+            - normal
+            - mix
+            - quickWash
+            - rinseOnly
+            - spinOnly
+            - eco

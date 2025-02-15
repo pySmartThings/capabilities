@@ -1,0 +1,118 @@
+id: mediaInputSource
+version: 1
+status: live
+name: Media Input Source
+ephemeral: false
+attributes:
+  supportedInputSources:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            title: MediaSource
+            type: string
+            enum:
+              - AM
+              - CD
+              - FM
+              - HDMI
+              - HDMI1
+              - HDMI2
+              - HDMI3
+              - HDMI4
+              - HDMI5
+              - HDMI6
+              - digitalTv
+              - USB
+              - YouTube
+              - aux
+              - bluetooth
+              - digital
+              - melon
+              - wifi
+              - network
+              - optical
+              - coaxial
+              - analog1
+              - analog2
+              - analog3
+              - phono
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  inputSource:
+    schema:
+      type: object
+      properties:
+        value:
+          title: MediaSource
+          type: string
+          enum:
+            - AM
+            - CD
+            - FM
+            - HDMI
+            - HDMI1
+            - HDMI2
+            - HDMI3
+            - HDMI4
+            - HDMI5
+            - HDMI6
+            - digitalTv
+            - USB
+            - YouTube
+            - aux
+            - bluetooth
+            - digital
+            - melon
+            - wifi
+            - network
+            - optical
+            - coaxial
+            - analog1
+            - analog2
+            - analog3
+            - phono
+      additionalProperties: false
+      required:
+        - value
+    setter: setInputSource
+    enumCommands: []
+commands:
+  setInputSource:
+    name: setInputSource
+    arguments:
+      - name: mode
+        optional: false
+        schema:
+          title: MediaSource
+          type: string
+          enum:
+            - AM
+            - CD
+            - FM
+            - HDMI
+            - HDMI1
+            - HDMI2
+            - HDMI3
+            - HDMI4
+            - HDMI5
+            - HDMI6
+            - digitalTv
+            - USB
+            - YouTube
+            - aux
+            - bluetooth
+            - digital
+            - melon
+            - wifi
+            - network
+            - optical
+            - coaxial
+            - analog1
+            - analog2
+            - analog3
+            - phono

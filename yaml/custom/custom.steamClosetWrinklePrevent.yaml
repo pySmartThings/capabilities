@@ -1,0 +1,32 @@
+id: custom.steamClosetWrinklePrevent
+version: 1
+status: proposed
+name: Steam Closet Wrinkle Prevent
+ephemeral: false
+attributes:
+  steamClosetWrinklePrevent:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - "on"
+            - "off"
+          title: SteamClosetWrinklePrevent
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setSteamClosetWrinklePrevent:
+    name: setSteamClosetWrinklePrevent
+    arguments:
+      - name: WrinklePrevent
+        optional: false
+        schema:
+          type: string
+          enum:
+            - "on"
+            - "off"
+          title: SteamClosetWrinklePrevent

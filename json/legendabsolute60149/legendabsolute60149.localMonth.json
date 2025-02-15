@@ -1,0 +1,33 @@
+{
+  "id": "legendabsolute60149.localMonth",
+  "version": 1,
+  "status": "proposed",
+  "name": "Local Month",
+  "ephemeral": false,
+  "attributes": {
+    "localMonth": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "integer", "minimum": 1, "maximum": 12 }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setLocalMonth",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setLocalMonth": {
+      "name": "setLocalMonth",
+      "arguments": [
+        {
+          "name": "value",
+          "optional": false,
+          "schema": { "type": "integer", "minimum": 1, "maximum": 12 }
+        }
+      ]
+    }
+  }
+}

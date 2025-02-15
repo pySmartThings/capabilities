@@ -1,0 +1,27 @@
+id: legendabsolute60149.progressiveOn1
+version: 1
+status: proposed
+name: Progressive On 1
+ephemeral: false
+attributes:
+  progOn:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          maxLength: 8
+      additionalProperties: false
+      required:
+        - value
+    setter: setProgOn
+    enumCommands: []
+commands:
+  setProgOn:
+    name: setProgOn
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+          maxLength: 8

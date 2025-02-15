@@ -1,0 +1,52 @@
+id: samsungce.washerWaterValve
+version: 1
+status: proposed
+name: Washer Water Valve
+ephemeral: false
+attributes:
+  waterValve:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - none
+            - cold
+            - warm
+            - hot
+      additionalProperties: false
+      required:
+        - value
+    setter: setWaterValve
+    enumCommands: []
+  supportedWaterValve:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - none
+              - cold
+              - warm
+              - hot
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setWaterValve:
+    name: setWaterValve
+    arguments:
+      - name: waterValve
+        optional: false
+        schema:
+          type: string
+          enum:
+            - none
+            - cold
+            - warm
+            - hot

@@ -1,0 +1,38 @@
+{
+  "id": "custom.dishwasherDelayStartTime",
+  "version": 1,
+  "status": "proposed",
+  "name": "Dishwasher Delay Start Time",
+  "ephemeral": false,
+  "attributes": {
+    "dishwasherDelayStartTime": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "pattern": "^((([0-1][0-9]|2[0-3]):([0-5][0-9]):00)|(24:00:00))$"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setDishwasherDelayStartTime": {
+      "name": "setDishwasherDelayStartTime",
+      "arguments": [
+        {
+          "name": "dishwasherDelayStartTime",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "pattern": "^((([0-1][0-9]|2[0-3]):([0-5][0-9]):00)|(24:00:00))$"
+          }
+        }
+      ]
+    }
+  }
+}

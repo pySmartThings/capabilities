@@ -1,0 +1,24 @@
+{
+  "id": "samsungvd.soundDetection",
+  "version": 1,
+  "status": "proposed",
+  "name": "Sound Detection",
+  "ephemeral": false,
+  "attributes": {
+    "soundDetected": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["off", "noSound", "dogBarking"]
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

@@ -1,0 +1,18 @@
+id: platemusic11009.associationGroupTwo
+version: 1
+status: proposed
+name: Association Group Two
+ephemeral: false
+attributes:
+  associationGroupTwo:
+    schema:
+      type: object
+      properties:
+        value:
+          title: Association Group 2 Devices
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

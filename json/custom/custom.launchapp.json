@@ -1,0 +1,17 @@
+{
+  "id": "custom.launchapp",
+  "version": 1,
+  "status": "proposed",
+  "name": "launchApp",
+  "ephemeral": false,
+  "attributes": {},
+  "commands": {
+    "launchApp": {
+      "name": "launchApp",
+      "arguments": [
+        { "name": "appId", "optional": true, "schema": { "type": "string" } },
+        { "name": "appName", "optional": true, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}

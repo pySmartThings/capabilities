@@ -1,0 +1,22 @@
+{
+  "id": "samsungce.washerBubbleSoak",
+  "version": 1,
+  "status": "proposed",
+  "name": "Washer Bubble Soak",
+  "ephemeral": false,
+  "attributes": {
+    "status": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string", "enum": ["on", "off"] } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "off": { "name": "off", "arguments": [] },
+    "on": { "name": "on", "arguments": [] }
+  }
+}

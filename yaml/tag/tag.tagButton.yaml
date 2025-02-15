@@ -1,0 +1,66 @@
+id: tag.tagButton
+version: 1
+status: proposed
+name: Tag Button
+ephemeral: false
+attributes:
+  tagButton:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - pushed
+            - held
+            - pushed_2x
+            - pushed_3x
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setButtonDoublePush:
+    name: setButtonDoublePush
+    arguments:
+      - name: buttonDoublePushState
+        optional: false
+        schema:
+          title: EnableState
+          type: string
+          enum:
+            - enabled
+            - disabled
+  setButtonTriplePush:
+    name: setButtonTriplePush
+    arguments:
+      - name: buttonTripblePushState
+        optional: false
+        schema:
+          title: EnableState
+          type: string
+          enum:
+            - enabled
+            - disabled
+  setButtonPush:
+    name: setButtonPush
+    arguments:
+      - name: buttonPushState
+        optional: false
+        schema:
+          title: EnableState
+          type: string
+          enum:
+            - enabled
+            - disabled
+  setButtonHold:
+    name: setButtonHold
+    arguments:
+      - name: buttonHoldState
+        optional: false
+        schema:
+          title: EnableState
+          type: string
+          enum:
+            - enabled
+            - disabled

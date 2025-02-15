@@ -1,0 +1,70 @@
+{
+  "id": "custom.doNotDisturbMode",
+  "version": 1,
+  "status": "proposed",
+  "name": "Do Not Disturb Mode",
+  "ephemeral": false,
+  "attributes": {
+    "doNotDisturb": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string", "enum": ["on", "off"] } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "startTime": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "pattern": "^([0-1]\\d|2[0-3])([0-5]\\d)$"
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "endTime": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "pattern": "^([0-1]\\d|2[0-3])([0-5]\\d)$"
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "doNotDisturbOff": { "name": "doNotDisturbOff", "arguments": [] },
+    "doNotDisturbOn": { "name": "doNotDisturbOn", "arguments": [] },
+    "setDoNotDisturbMode": {
+      "name": "setDoNotDisturbMode",
+      "arguments": [
+        {
+          "name": "startTime",
+          "optional": false,
+          "schema": { "type": "string" }
+        },
+        {
+          "name": "endTime",
+          "optional": false,
+          "schema": { "type": "string" }
+        },
+        {
+          "name": "mode",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["on", "off"] }
+        }
+      ]
+    }
+  }
+}

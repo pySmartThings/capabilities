@@ -1,0 +1,80 @@
+id: mediaPlayback
+version: 1
+status: live
+name: Media Playback
+ephemeral: false
+attributes:
+  supportedPlaybackCommands:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            title: MediaPlaybackCommands
+            type: string
+            enum:
+              - pause
+              - play
+              - stop
+              - fastForward
+              - rewind
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  playbackStatus:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - paused
+            - playing
+            - stopped
+            - fast forwarding
+            - rewinding
+            - buffering
+      additionalProperties: false
+      required: []
+    setter: setPlaybackStatus
+    enumCommands:
+      - command: play
+        value: playing
+      - command: pause
+        value: paused
+      - command: stop
+        value: stopped
+      - command: fastForward
+        value: fast forwarding
+      - command: rewind
+        value: rewinding
+commands:
+  play:
+    name: play
+    arguments: []
+  stop:
+    name: stop
+    arguments: []
+  rewind:
+    name: rewind
+    arguments: []
+  fastForward:
+    name: fastForward
+    arguments: []
+  setPlaybackStatus:
+    name: setPlaybackStatus
+    arguments:
+      - name: status
+        optional: false
+        schema:
+          type: string
+          enum:
+            - paused
+            - playing
+            - stopped
+            - fast forwarding
+            - rewinding
+  pause:
+    name: pause
+    arguments: []

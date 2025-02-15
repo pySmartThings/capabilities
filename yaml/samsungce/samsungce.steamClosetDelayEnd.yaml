@@ -1,0 +1,34 @@
+id: samsungce.steamClosetDelayEnd
+version: 1
+status: proposed
+name: Steam Closet Delay End
+ephemeral: false
+attributes:
+  remainingTime:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 0
+          maximum: 1440
+        unit:
+          type: string
+          enum:
+            - min
+          default: min
+      additionalProperties: false
+      required:
+        - value
+        - unit
+    enumCommands: []
+commands:
+  setDelayTime:
+    name: setDelayTime
+    arguments:
+      - name: delayTime
+        optional: false
+        schema:
+          type: integer
+          minimum: 0
+          maximum: 1440

@@ -1,0 +1,51 @@
+id: samsungce.airQualityHealthConcern
+version: 1
+status: proposed
+name: Air Quality Health Concern
+ephemeral: false
+attributes:
+  supportedAirQualityHealthConcerns:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - good
+              - normal
+              - poor
+              - veryPoor
+              - nice
+              - moderate
+              - unhealthyForSensitiveGroups
+              - unhealthy
+              - veryUnhealthy
+              - hazardous
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  airQualityHealthConcern:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - good
+            - normal
+            - poor
+            - veryPoor
+            - nice
+            - moderate
+            - unhealthyForSensitiveGroups
+            - unhealthy
+            - veryUnhealthy
+            - hazardous
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

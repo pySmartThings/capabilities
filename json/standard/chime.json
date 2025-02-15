@@ -1,0 +1,27 @@
+{
+  "id": "chime",
+  "version": 1,
+  "status": "live",
+  "name": "Chime",
+  "ephemeral": false,
+  "attributes": {
+    "chime": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["chime", "off"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": [
+        { "command": "chime", "value": "chime" },
+        { "command": "off", "value": "off" }
+      ]
+    }
+  },
+  "commands": {
+    "off": { "name": "off", "arguments": [] },
+    "chime": { "name": "chime", "arguments": [] }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "samsungvd.thingStatus",
+  "version": 1,
+  "status": "proposed",
+  "name": "Thing Status",
+  "ephemeral": false,
+  "attributes": {
+    "updatedTime": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "integer" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "status": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["AgentUpdate Started", "Idle"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

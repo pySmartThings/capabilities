@@ -1,0 +1,39 @@
+id: samsungce.dryerAutoCycleLink
+version: 1
+status: proposed
+name: Dryer Auto Cycle Link
+ephemeral: false
+attributes:
+  dryerAutoCycleLink:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - "on"
+            - "off"
+      additionalProperties: false
+      required:
+        - value
+    setter: setDryerAutoCycleLink
+    enumCommands: []
+commands:
+  linkDryerCycle:
+    name: linkDryerCycle
+    arguments:
+      - name: cycle
+        optional: false
+        schema:
+          type: string
+          pattern: ^AutoLinkCycle(_([A-Z]|[a-z]|\d){4})+$
+  setDryerAutoCycleLink:
+    name: setDryerAutoCycleLink
+    arguments:
+      - name: dryerAutoCycleLink
+        optional: false
+        schema:
+          type: string
+          enum:
+            - "on"
+            - "off"

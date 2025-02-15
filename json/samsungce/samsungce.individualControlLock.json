@@ -1,0 +1,21 @@
+{
+  "id": "samsungce.individualControlLock",
+  "version": 1,
+  "status": "proposed",
+  "name": "Individual Control Lock",
+  "ephemeral": false,
+  "attributes": {
+    "lockState": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["locked", "unlocked"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

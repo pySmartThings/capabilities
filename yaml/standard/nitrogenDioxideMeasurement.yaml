@@ -1,0 +1,24 @@
+id: nitrogenDioxideMeasurement
+version: 1
+status: live
+name: Nitrogen Dioxide Measurement
+ephemeral: false
+attributes:
+  nitrogenDioxide:
+    schema:
+      type: object
+      properties:
+        value:
+          type: number
+          minimum: 0
+          maximum: 1000000
+        unit:
+          type: string
+          enum:
+            - ppm
+          default: ppm
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

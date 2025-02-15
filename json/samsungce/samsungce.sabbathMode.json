@@ -1,0 +1,36 @@
+{
+  "id": "samsungce.sabbathMode",
+  "version": 1,
+  "status": "proposed",
+  "name": "Sabbath Mode",
+  "ephemeral": false,
+  "attributes": {
+    "supportedActions": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["on", "off"] }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "status": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string", "enum": ["on", "off"] } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "off": { "name": "off", "arguments": [] },
+    "on": { "name": "on", "arguments": [] }
+  }
+}

@@ -1,0 +1,124 @@
+id: securitySystem
+version: 1
+status: live
+name: Security System
+ephemeral: false
+attributes:
+  sensorStatus:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - ready
+            - bypassedNotReady
+        data:
+          type: object
+          additionalProperties: false
+          required: []
+          properties:
+            openSensors:
+              type: array
+              items:
+                type: object
+                additionalProperties: false
+                properties:
+                  name:
+                    title: String
+                    type: string
+                    maxLength: 255
+                  status:
+                    type: string
+                    enum:
+                      - open
+                      - unlocked
+                      - unresponsive
+                      - other
+                  externalId:
+                    title: String
+                    type: string
+                    maxLength: 255
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  alarm:
+    schema:
+      type: object
+      properties:
+        value:
+          title: String
+          type: string
+          maxLength: 255
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedSecuritySystemCommands:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - armAway
+              - armStay
+              - disarm
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  securitySystemStatus:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - armedAway
+            - armedStay
+            - disarmed
+      additionalProperties: false
+      required:
+        - value
+    enumCommands:
+      - command: armStay
+        value: armedStay
+      - command: armAway
+        value: armedAway
+      - command: disarm
+        value: disarmed
+  supportedSecuritySystemStatuses:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - armedAway
+              - armedStay
+              - disarmed
+      additionalProperties: false
+      required: []
+    enumCommands: []
+commands:
+  armStay:
+    name: armStay
+    arguments:
+      - name: bypassAll
+        optional: true
+        schema:
+          type: boolean
+  disarm:
+    name: disarm
+    arguments: []
+  armAway:
+    name: armAway
+    arguments:
+      - name: bypassAll
+        optional: true
+        schema:
+          type: boolean

@@ -1,0 +1,29 @@
+id: legendabsolute60149.localDay
+version: 1
+status: proposed
+name: Local Day
+ephemeral: false
+attributes:
+  localDay:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 1
+          maximum: 31
+      additionalProperties: false
+      required:
+        - value
+    setter: setLocalDay
+    enumCommands: []
+commands:
+  setLocalDay:
+    name: setLocalDay
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: integer
+          minimum: 1
+          maximum: 31

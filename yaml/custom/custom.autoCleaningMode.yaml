@@ -1,0 +1,198 @@
+id: custom.autoCleaningMode
+version: 1
+status: proposed
+name: Auto Cleaning Mode
+ephemeral: false
+attributes:
+  supportedAutoCleaningModes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            enum:
+              - "on"
+              - speedClean
+              - quietClean
+              - timedClean
+              - "off"
+            type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  timedCleanDuration:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 0
+          maximum: 1440
+        unit:
+          type: string
+          enum:
+            - hour
+            - min
+          default: min
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  operatingState:
+    schema:
+      type: object
+      properties:
+        value:
+          enum:
+            - autoClean
+            - speedClean
+            - quietClean
+            - timedClean
+            - ready
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  timedCleanDurationRange:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            minimum:
+              type: integer
+              minimum: 0
+            maximum:
+              type: integer
+              minimum: 0
+              maximum: 1440
+            step:
+              type: integer
+              minium: 10
+              default: 10
+          required:
+            - minimum
+            - maximum
+        unit:
+          type: string
+          enum:
+            - hour
+            - min
+          default: min
+      additionalProperties: false
+      required:
+        - value
+        - unit
+    enumCommands: []
+  supportedOperatingStates:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            enum:
+              - autoClean
+              - speedClean
+              - quietClean
+              - timedClean
+              - ready
+            type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  progress:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 0
+          maximum: 100
+        unit:
+          type: string
+          enum:
+            - "%"
+          default: "%"
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  autoCleaningMode:
+    schema:
+      type: object
+      properties:
+        value:
+          enum:
+            - "on"
+            - speedClean
+            - quietClean
+            - timedClean
+            - "off"
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setOperatingState:
+    name: setOperatingState
+    arguments:
+      - name: operatingState
+        optional: false
+        schema:
+          enum:
+            - autoClean
+            - speedClean
+            - quietClean
+            - timedClean
+            - ready
+          type: string
+  stop:
+    name: stop
+    arguments: []
+  setTimedCleanDuration:
+    name: setTimedCleanDuration
+    arguments:
+      - name: time
+        optional: false
+        schema:
+          type: integer
+          minimum: 0
+  start:
+    name: setOperatingState
+    arguments:
+      - name: mode
+        optional: false
+        schema:
+          enum:
+            - autoClean
+            - speedClean
+            - quietClean
+            - timedClean
+          type: string
+      - name: time
+        optional: true
+        schema:
+          type: integer
+          minimum: 0
+          maximum: 1440
+  setAutoCleaningMode:
+    name: setAutoCleaningMode
+    arguments:
+      - name: mode
+        optional: false
+        schema:
+          enum:
+            - "on"
+            - speedClean
+            - quietClean
+            - timedClean
+            - "off"
+          type: string

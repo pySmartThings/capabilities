@@ -1,0 +1,13 @@
+id: custom.recording
+version: 1
+status: proposed
+name: Recording
+ephemeral: false
+attributes: {}
+commands:
+  recordStart:
+    name: recordStart
+    arguments: []
+  recordStop:
+    name: recordStop
+    arguments: []

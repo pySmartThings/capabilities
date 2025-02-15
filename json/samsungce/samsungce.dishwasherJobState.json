@@ -1,0 +1,76 @@
+{
+  "id": "samsungce.dishwasherJobState",
+  "version": 1,
+  "status": "proposed",
+  "name": "Dishwasher Job State",
+  "ephemeral": false,
+  "attributes": {
+    "scheduledJobs": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "jobName": {
+                  "type": "string",
+                  "enum": [
+                    "none",
+                    "delayWashing",
+                    "preWashing",
+                    "washing",
+                    "rinsing",
+                    "drying",
+                    "dryingAutoReleaseDelay",
+                    "cooling",
+                    "draining",
+                    "finished",
+                    "preDrain",
+                    "sanitizing",
+                    "autoReleaseDrying"
+                  ]
+                },
+                "timeInSec": { "type": "integer" }
+              },
+              "required": ["jobName", "timeInSec"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "dishwasherJobState": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "none",
+              "delayWashing",
+              "preWashing",
+              "washing",
+              "rinsing",
+              "drying",
+              "dryingAutoReleaseDelay",
+              "cooling",
+              "draining",
+              "finished",
+              "preDrain",
+              "sanitizing",
+              "autoReleaseDrying"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

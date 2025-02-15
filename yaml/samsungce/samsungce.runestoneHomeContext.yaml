@@ -1,0 +1,65 @@
+id: samsungce.runestoneHomeContext
+version: 1
+status: proposed
+name: Runestone Home Context
+ephemeral: false
+attributes:
+  supportedContexts:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              context:
+                type: string
+              place:
+                type: string
+              startTime:
+                type: string
+                pattern: ^(?:(?:[01]\d|2[0-3]):[0-5]\d|99:99)$
+                default: 99:99
+              endTime:
+                type: string
+                pattern: ^(?:(?:[01]\d|2[0-3]):[0-5]\d|99:99)$
+                default: 99:99
+            required:
+              - context
+              - place
+              - startTime
+              - endTime
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setContextSnapshot:
+    name: setContextSnapshot
+    arguments:
+      - name: contextSnapshot
+        optional: false
+        schema:
+          type: array
+          uniqueItems: true
+          items:
+            type: string
+  setContext:
+    name: setContext
+    arguments:
+      - name: context
+        optional: false
+        schema:
+          type: string
+  setRecentlyUsedApps:
+    name: setRecentlyUsedApps
+    arguments:
+      - name: recentlyUsedApps
+        optional: false
+        schema:
+          type: array
+          uniqueItems: true
+          items:
+            type: string

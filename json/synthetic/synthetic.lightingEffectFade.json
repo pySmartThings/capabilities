@@ -1,0 +1,156 @@
+{
+  "id": "synthetic.lightingEffectFade",
+  "version": 1,
+  "status": "proposed",
+  "name": "Lighting Effect Fade",
+  "ephemeral": false,
+  "attributes": {
+    "fade": {
+      "schema": {
+        "title": "Fade",
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "properties": {
+              "state": { "type": "string", "enum": ["Stop", "Run"] },
+              "fadeType": { "type": "string", "enum": ["WakeUp", "WindDown"] },
+              "startTime": { "type": "string", "pattern": "^[0-9]{10}$" },
+              "duration": {
+                "type": "integer",
+                "minimum": 5,
+                "maximum": 60,
+                "default": 30
+              },
+              "effects": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "capability": { "type": "string" },
+                    "start": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 9999999
+                    },
+                    "end": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 9999999
+                    }
+                  }
+                }
+              },
+              "afterAction": {
+                "type": "object",
+                "properties": {
+                  "afterActionType": {
+                    "type": "string",
+                    "enum": [
+                      "KeepCurrent",
+                      "TurnOff",
+                      "Circadian",
+                      "CustomCommands"
+                    ]
+                  },
+                  "timeZoneId": {
+                    "type": "string",
+                    "pattern": "^[A-Z+\\-][A-Za-z0-9_\\-+:/]{0,50}$"
+                  },
+                  "afterCommands": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "component": { "type": "string" },
+                        "capability": { "type": "string" },
+                        "command": { "type": "string" },
+                        "arguments": {
+                          "type": "array",
+                          "items": { "type": "integer" }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "additionalProperties": false,
+            "required": ["state", "fadeType", "duration", "effects"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setFade",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setFade": {
+      "name": "setFade",
+      "arguments": [
+        {
+          "name": "fade",
+          "optional": false,
+          "schema": {
+            "title": "LIGHT_FADE_MAP",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "state": { "type": "string", "enum": ["Stop", "Run"] },
+              "fadeType": { "type": "string", "enum": ["WakeUp", "WindDown"] },
+              "duration": { "type": "number", "minimum": 5, "maximum": 60 },
+              "effects": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "capability": { "type": "string" },
+                    "start": { "type": "number", "minimum": 1 },
+                    "end": { "type": "number", "minimum": 1 }
+                  },
+                  "required": ["capability", "start", "end"]
+                }
+              },
+              "afterAction": {
+                "type": "object",
+                "properties": {
+                  "afterActionType": {
+                    "type": "string",
+                    "enum": [
+                      "KeepCurrent",
+                      "TurnOff",
+                      "Circadian",
+                      "CustomCommands"
+                    ]
+                  },
+                  "timeZoneId": {
+                    "type": "string",
+                    "pattern": "^[A-Z+\\-][A-Za-z0-9_\\-+:/]{0,50}$"
+                  },
+                  "afterCommands": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "component": { "type": "string" },
+                        "capability": { "type": "string" },
+                        "command": { "type": "string" },
+                        "arguments": {
+                          "type": "array",
+                          "items": { "type": "integer" }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "required": ["state", "fadeType", "duration", "effects"]
+          }
+        }
+      ]
+    }
+  }
+}

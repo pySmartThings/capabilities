@@ -1,0 +1,46 @@
+id: custom.fridgeMode
+version: 1
+status: proposed
+name: Fridge Mode
+ephemeral: false
+attributes:
+  fridgeModeValue:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  fridgeMode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedFridgeModes:
+    schema:
+      type: object
+      properties:
+        value:
+          items:
+            type: string
+          type: array
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setFridgeMode:
+    name: setFridgeMode
+    arguments:
+      - name: fridgeMode
+        optional: false
+        schema:
+          type: string

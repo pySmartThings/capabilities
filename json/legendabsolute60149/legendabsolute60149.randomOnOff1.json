@@ -1,0 +1,31 @@
+{
+  "id": "legendabsolute60149.randomOnOff1",
+  "version": 1,
+  "status": "proposed",
+  "name": "Random On Off 1",
+  "ephemeral": false,
+  "attributes": {
+    "randomOnOff": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string", "maxLength": 8 } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setRandomOnOff",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setRandomOnOff": {
+      "name": "setRandomOnOff",
+      "arguments": [
+        {
+          "name": "value",
+          "optional": false,
+          "schema": { "type": "string", "maxLength": 8 }
+        }
+      ]
+    }
+  }
+}

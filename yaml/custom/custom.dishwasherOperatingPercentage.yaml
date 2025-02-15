@@ -1,0 +1,19 @@
+id: custom.dishwasherOperatingPercentage
+version: 1
+status: proposed
+name: Dishwasher Operating Percentage
+ephemeral: false
+attributes:
+  dishwasherOperatingPercentage:
+    schema:
+      type: object
+      properties:
+        value:
+          minimum: 0
+          type: integer
+          maximum: 100
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

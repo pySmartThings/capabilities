@@ -1,0 +1,42 @@
+id: custom.airConditionerOdorController
+version: 1
+status: proposed
+name: Air Conditioner Odor Controller
+ephemeral: false
+attributes:
+  airConditionerOdorControllerProgress:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          max: 100
+          min: 0
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  airConditionerOdorControllerState:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - "on"
+            - "off"
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setAirConditionerOdorControllerState:
+    name: setAirConditionerOdorControllerState
+    arguments:
+      - name: state
+        optional: false
+        schema:
+          type: string
+          enum:
+            - "on"
+            - "off"

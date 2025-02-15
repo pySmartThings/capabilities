@@ -1,0 +1,69 @@
+id: samsungvd.supportsFeatures
+version: 1
+status: proposed
+name: Supports Features
+ephemeral: false
+attributes:
+  mediaOutputSupported:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  imeAdvSupported:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  wifiUpdateSupport:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  executableServiceList:
+    schema:
+      type: object
+      properties:
+        value:
+          items:
+            type: string
+          type: array
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  remotelessSupported:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  mobileCamSupported:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

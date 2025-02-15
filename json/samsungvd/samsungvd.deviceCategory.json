@@ -1,0 +1,19 @@
+{
+  "id": "samsungvd.deviceCategory",
+  "version": 1,
+  "status": "proposed",
+  "name": "Device Category",
+  "ephemeral": false,
+  "attributes": {
+    "category": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

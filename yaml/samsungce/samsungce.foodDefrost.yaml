@@ -1,0 +1,112 @@
+id: samsungce.foodDefrost
+version: 1
+status: proposed
+name: Food Defrost
+ephemeral: false
+attributes:
+  supportedOptions:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          patternProperties:
+            ^.{1,32}$:
+              type: array
+              items:
+                type: object
+                additionalProperties: false
+                properties:
+                  weight:
+                    oneOf:
+                      - type: string
+                        enum:
+                          - auto
+                      - type: number
+                        minimum: 0
+                required:
+                  - weight
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  foodType:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  weight:
+    schema:
+      type: object
+      properties:
+        value:
+          oneOf:
+            - type: string
+              enum:
+                - auto
+            - type: number
+              minimum: 0
+        unit:
+          type: string
+          enum:
+            - g
+          default: g
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  operationTime:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 0
+        unit:
+          type: string
+          enum:
+            - min
+          default: min
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  remainingTime:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 0
+        unit:
+          type: string
+          enum:
+            - min
+          default: min
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setDefrost:
+    name: setDefrost
+    arguments:
+      - name: foodType
+        optional: false
+        schema:
+          type: string
+      - name: weight
+        optional: false
+        schema:
+          oneOf:
+            - type: string
+              enum:
+                - auto
+            - type: number
+              minimum: 0

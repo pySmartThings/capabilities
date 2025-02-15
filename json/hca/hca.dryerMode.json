@@ -1,0 +1,62 @@
+{
+  "id": "hca.dryerMode",
+  "version": 1,
+  "status": "proposed",
+  "name": "Dryer Mode",
+  "ephemeral": false,
+  "attributes": {
+    "mode": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "normal",
+              "mix",
+              "quickDry",
+              "timeDry",
+              "antiWrinkle",
+              "others"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedModes": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["normal", "mix", "quickDry", "timeDry", "antiWrinkle"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setMode": {
+      "name": "setMode",
+      "arguments": [
+        {
+          "name": "mode",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["normal", "mix", "quickDry", "timeDry", "antiWrinkle"]
+          }
+        }
+      ]
+    }
+  }
+}

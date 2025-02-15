@@ -1,0 +1,393 @@
+{
+  "id": "samsungce.detergentAutoReplenishment",
+  "version": 1,
+  "status": "proposed",
+  "name": "Detergent Auto Replenishment",
+  "ephemeral": false,
+  "attributes": {
+    "neutralDetergentType": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["none", "liquid", "capsule", "drySheet"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "regularDetergentRemainingAmount": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number", "minimum": 0 },
+          "unit": { "type": "string", "enum": ["cc", "ea"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "babyDetergentRemainingAmount": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number", "minimum": 0 },
+          "unit": { "type": "string", "enum": ["cc", "ea"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "neutralDetergentRemainingAmount": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number", "minimum": 0 },
+          "unit": { "type": "string", "enum": ["cc", "ea"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "neutralDetergentAlarmEnabled": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "neutralDetergentOrderThreshold": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number", "minimum": 0 },
+          "unit": { "type": "string", "enum": ["cc", "ea"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "babyDetergentInitialAmount": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number", "minimum": 0 },
+          "unit": { "type": "string", "enum": ["cc", "ea"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "babyDetergentType": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["none", "liquid", "capsule", "drySheet"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "neutralDetergentInitialAmount": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number", "minimum": 0 },
+          "unit": { "type": "string", "enum": ["cc", "ea"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "regularDetergentDosage": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number", "minimum": 0 },
+          "unit": { "type": "string", "enum": ["cc", "ea"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "babyDetergentDosage": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number", "minimum": 0 },
+          "unit": { "type": "string", "enum": ["cc", "ea"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "regularDetergentOrderThreshold": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number", "minimum": 0 },
+          "unit": { "type": "string", "enum": ["cc", "ea"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "regularDetergentType": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["none", "liquid", "capsule", "drySheet"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "regularDetergentInitialAmount": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number", "minimum": 0 },
+          "unit": { "type": "string", "enum": ["cc", "ea"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "regularDetergentAlarmEnabled": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "neutralDetergentDosage": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number", "minimum": 0 },
+          "unit": { "type": "string", "enum": ["cc", "ea"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "babyDetergentOrderThreshold": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number", "minimum": 0 },
+          "unit": { "type": "string", "enum": ["cc", "ea"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "babyDetergentAlarmEnabled": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "enableAlarm": {
+      "name": "enableAlarm",
+      "arguments": [
+        {
+          "name": "name",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["regularDetergent", "neutralDetergent", "babyDetergent"]
+          }
+        }
+      ]
+    },
+    "setOrderThreshold": {
+      "name": "setOrderThreshold",
+      "arguments": [
+        {
+          "name": "name",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["regularDetergent", "neutralDetergent", "babyDetergent"]
+          }
+        },
+        {
+          "name": "threshold",
+          "optional": false,
+          "schema": { "type": "number", "minimum": 0 }
+        }
+      ]
+    },
+    "disableAlarm": {
+      "name": "disableAlarm",
+      "arguments": [
+        {
+          "name": "name",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["regularDetergent", "neutralDetergent", "babyDetergent"]
+          }
+        }
+      ]
+    },
+    "setAutoReplenishment": {
+      "name": "setAutoReplenishment",
+      "arguments": [
+        {
+          "name": "autoReplenishment",
+          "optional": false,
+          "schema": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "enum": [
+                    "regularDetergent",
+                    "neutralDetergent",
+                    "babyDetergent"
+                  ]
+                },
+                "type": {
+                  "type": "string",
+                  "enum": ["none", "liquid", "capsule", "drySheet"]
+                },
+                "amount": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "initial": { "type": "number", "minimum": 0 },
+                    "remaining": { "type": "number", "minimum": 0 },
+                    "dosage": { "type": "number", "minimum": 0 }
+                  }
+                },
+                "amountUnit": { "type": "string", "enum": ["cc", "ea"] },
+                "alarmEnabled": { "type": "boolean" },
+                "orderThreshold": { "type": "number", "minimum": 0 }
+              },
+              "required": [
+                "name",
+                "type",
+                "amount",
+                "amountUnit",
+                "alarmEnabled"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "setInitialAmount": {
+      "name": "setInitialAmount",
+      "arguments": [
+        {
+          "name": "name",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["regularDetergent", "neutralDetergent", "babyDetergent"]
+          }
+        },
+        {
+          "name": "amount",
+          "optional": false,
+          "schema": { "type": "number", "minimum": 0 }
+        }
+      ]
+    },
+    "setRemainingAmount": {
+      "name": "setRemainingAmount",
+      "arguments": [
+        {
+          "name": "name",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["regularDetergent", "neutralDetergent", "babyDetergent"]
+          }
+        },
+        {
+          "name": "amount",
+          "optional": false,
+          "schema": { "type": "number", "minimum": 0 }
+        }
+      ]
+    },
+    "setDosage": {
+      "name": "setDosage",
+      "arguments": [
+        {
+          "name": "name",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["regularDetergent", "neutralDetergent", "babyDetergent"]
+          }
+        },
+        {
+          "name": "amount",
+          "optional": false,
+          "schema": { "type": "number", "minimum": 0 }
+        }
+      ]
+    },
+    "setType": {
+      "name": "setType",
+      "arguments": [
+        {
+          "name": "name",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["regularDetergent", "neutralDetergent", "babyDetergent"]
+          }
+        },
+        {
+          "name": "type",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["none", "liquid", "capsule", "drySheet"]
+          }
+        }
+      ]
+    }
+  }
+}

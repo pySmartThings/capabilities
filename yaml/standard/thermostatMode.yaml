@@ -1,0 +1,290 @@
+id: thermostatMode
+version: 1
+status: live
+name: Thermostat Mode
+ephemeral: false
+attributes:
+  thermostatMode:
+    schema:
+      type: object
+      properties:
+        value:
+          title: ThermostatMode
+          type: string
+          enum:
+            - antifreezing
+            - asleep
+            - auto
+            - autowitheco
+            - autowithreset
+            - autochangeover
+            - autochangeoveractive
+            - autocool
+            - autoheat
+            - auxheatonly
+            - auxiliaryemergencyheat
+            - away
+            - cool
+            - coolingfloorandcoldair
+            - comfort
+            - custom
+            - dayoff
+            - dryair
+            - eco
+            - emergency heat
+            - emergencyheat
+            - emergencyheatactive
+            - energysavecool
+            - energysaveheat
+            - fanonly
+            - frostguard
+            - furnace
+            - heat
+            - heatingoff
+            - home
+            - hotwateronly
+            - in
+            - manual
+            - moistair
+            - "off"
+            - "on"
+            - out
+            - radiatingfloor
+            - radiatingfloorandhotair
+            - resume
+            - rush hour
+            - rushhour
+            - schedule
+            - southernaway
+            - precooling
+            - lukewarm
+            - warm
+            - hot
+            - veryhot
+            - ondol
+            - bath
+            - iterativeReservation
+            - 24hourReservation
+        data:
+          type: object
+          additionalProperties: false
+          required: []
+          properties:
+            supportedThermostatModes:
+              type: array
+              items:
+                title: ThermostatMode
+                type: string
+                enum:
+                  - antifreezing
+                  - asleep
+                  - auto
+                  - autowitheco
+                  - autowithreset
+                  - autochangeover
+                  - autochangeoveractive
+                  - autocool
+                  - autoheat
+                  - auxheatonly
+                  - auxiliaryemergencyheat
+                  - away
+                  - cool
+                  - coolingfloorandcoldair
+                  - comfort
+                  - custom
+                  - dayoff
+                  - dryair
+                  - eco
+                  - emergency heat
+                  - emergencyheat
+                  - emergencyheatactive
+                  - energysavecool
+                  - energysaveheat
+                  - fanonly
+                  - frostguard
+                  - furnace
+                  - heat
+                  - heatingoff
+                  - home
+                  - hotwateronly
+                  - in
+                  - manual
+                  - moistair
+                  - "off"
+                  - "on"
+                  - out
+                  - radiatingfloor
+                  - radiatingfloorandhotair
+                  - resume
+                  - rush hour
+                  - rushhour
+                  - schedule
+                  - southernaway
+                  - precooling
+                  - lukewarm
+                  - warm
+                  - hot
+                  - veryhot
+                  - ondol
+                  - bath
+                  - iterativeReservation
+                  - 24hourReservation
+      additionalProperties: false
+      required:
+        - value
+    setter: setThermostatMode
+    enumCommands:
+      - command: auto
+        value: auto
+      - command: cool
+        value: cool
+      - command: emergencyHeat
+        value: emergency heat
+      - command: heat
+        value: heat
+      - command: "off"
+        value: "off"
+  supportedThermostatModes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            title: ThermostatMode
+            type: string
+            enum:
+              - antifreezing
+              - asleep
+              - auto
+              - autowitheco
+              - autowithreset
+              - autochangeover
+              - autochangeoveractive
+              - autocool
+              - autoheat
+              - auxheatonly
+              - auxiliaryemergencyheat
+              - away
+              - cool
+              - coolingfloorandcoldair
+              - comfort
+              - custom
+              - dayoff
+              - dryair
+              - eco
+              - emergency heat
+              - emergencyheat
+              - emergencyheatactive
+              - energysavecool
+              - energysaveheat
+              - fanonly
+              - frostguard
+              - furnace
+              - heat
+              - heatingoff
+              - home
+              - hotwateronly
+              - in
+              - manual
+              - moistair
+              - "off"
+              - "on"
+              - out
+              - radiatingfloor
+              - radiatingfloorandhotair
+              - resume
+              - rush hour
+              - rushhour
+              - schedule
+              - southernaway
+              - precooling
+              - lukewarm
+              - warm
+              - hot
+              - veryhot
+              - ondol
+              - bath
+              - iterativeReservation
+              - 24hourReservation
+      additionalProperties: false
+      required: []
+    enumCommands: []
+commands:
+  heat:
+    name: heat
+    arguments: []
+  auto:
+    name: auto
+    arguments: []
+  setThermostatMode:
+    name: setThermostatMode
+    arguments:
+      - name: mode
+        optional: false
+        schema:
+          title: ThermostatMode
+          type: string
+          enum:
+            - antifreezing
+            - asleep
+            - auto
+            - autowitheco
+            - autowithreset
+            - autochangeover
+            - autochangeoveractive
+            - autocool
+            - autoheat
+            - auxheatonly
+            - auxiliaryemergencyheat
+            - away
+            - cool
+            - coolingfloorandcoldair
+            - comfort
+            - custom
+            - dayoff
+            - dryair
+            - eco
+            - emergency heat
+            - emergencyheat
+            - emergencyheatactive
+            - energysavecool
+            - energysaveheat
+            - fanonly
+            - frostguard
+            - furnace
+            - heat
+            - heatingoff
+            - home
+            - hotwateronly
+            - in
+            - manual
+            - moistair
+            - "off"
+            - "on"
+            - out
+            - radiatingfloor
+            - radiatingfloorandhotair
+            - resume
+            - rush hour
+            - rushhour
+            - schedule
+            - southernaway
+            - precooling
+            - lukewarm
+            - warm
+            - hot
+            - veryhot
+            - ondol
+            - bath
+            - iterativeReservation
+            - 24hourReservation
+  cool:
+    name: cool
+    arguments: []
+  emergencyHeat:
+    name: emergencyHeat
+    arguments: []
+  "off":
+    name: "off"
+    arguments: []

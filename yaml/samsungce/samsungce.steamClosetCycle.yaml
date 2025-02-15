@@ -1,0 +1,83 @@
+id: samsungce.steamClosetCycle
+version: 1
+status: proposed
+name: Steam Closet Cycle
+ephemeral: false
+attributes:
+  supportedCycles:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              cycle:
+                type: string
+              supportedOptions:
+                type: object
+                additionalProperties: false
+                patternProperties:
+                  ^.{1,32}$:
+                    type: object
+                    additionalProperties: false
+                    properties:
+                      raw:
+                        type: string
+                      default:
+                        type: string
+                      options:
+                        type: array
+                        items:
+                          type: string
+            required:
+              - cycle
+              - supportedOptions
+            examples:
+              - cycle: "22"
+                supportedOptions:
+                  sanitize:
+                    raw: 6206
+                    default: "off"
+                    options:
+                      - "on"
+                      - "off"
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  steamClosetCycle:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setSteamClosetCycle
+    enumCommands: []
+  referenceTable:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            id:
+              type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setSteamClosetCycle:
+    name: setSteamClosetCycle
+    arguments:
+      - name: steamClosetCycle
+        optional: false
+        schema:
+          type: string

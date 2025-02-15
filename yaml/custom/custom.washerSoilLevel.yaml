@@ -1,0 +1,66 @@
+id: custom.washerSoilLevel
+version: 1
+status: proposed
+name: Washer Soil Level
+ephemeral: false
+attributes:
+  supportedWasherSoilLevel:
+    schema:
+      title: supportedWasherSoilLevel
+      type: object
+      properties:
+        value:
+          items:
+            enum:
+              - none
+              - heavy
+              - normal
+              - light
+              - extraLight
+              - extraHeavy
+              - up
+              - down
+            title: soilLevel
+            type: string
+          type: array
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  washerSoilLevel:
+    schema:
+      title: washerSoilLevel
+      type: object
+      properties:
+        value:
+          enum:
+            - none
+            - heavy
+            - normal
+            - light
+            - extraLight
+            - extraHeavy
+            - up
+            - down
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setWasherSoilLevel:
+    name: setWasherSoilLevel
+    arguments:
+      - name: soilLevel
+        optional: false
+        schema:
+          enum:
+            - none
+            - heavy
+            - normal
+            - light
+            - extraLight
+            - extraHeavy
+            - up
+            - down
+          type: string

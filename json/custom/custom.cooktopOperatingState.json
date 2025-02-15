@@ -1,0 +1,41 @@
+{
+  "id": "custom.cooktopOperatingState",
+  "version": 1,
+  "status": "proposed",
+  "name": "Cooktop Operating State",
+  "ephemeral": false,
+  "attributes": {
+    "supportedCooktopOperatingState": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "items": {
+              "enum": ["ready", "run", "paused", "finished"],
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "cooktopOperatingState": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "enum": ["ready", "run", "paused", "finished"],
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

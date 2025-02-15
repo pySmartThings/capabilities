@@ -1,0 +1,19 @@
+id: samsungce.unavailableCapabilities
+version: 1
+status: proposed
+name: Unavailable Capabilities
+ephemeral: false
+attributes:
+  unavailableCommands:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

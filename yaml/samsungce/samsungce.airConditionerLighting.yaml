@@ -1,0 +1,66 @@
+id: samsungce.airConditionerLighting
+version: 1
+status: proposed
+name: Air Conditioner Lighting
+ephemeral: false
+attributes:
+  supportedLightingLevels:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - "on"
+              - dim
+              - bright
+              - "off"
+              - smart
+              - high
+              - low
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  lighting:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - "on"
+            - dim
+            - bright
+            - "off"
+            - smart
+            - high
+            - low
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setLightingLevel:
+    name: setLightingLevel
+    arguments:
+      - name: lightingLevel
+        optional: false
+        schema:
+          type: string
+          enum:
+            - "on"
+            - dim
+            - bright
+            - "off"
+            - smart
+            - high
+            - low
+  "off":
+    name: "off"
+    arguments: []
+  "on":
+    name: "on"
+    arguments: []

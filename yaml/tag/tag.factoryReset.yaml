@@ -1,0 +1,10 @@
+id: tag.factoryReset
+version: 1
+status: proposed
+name: Factory reset
+ephemeral: false
+attributes: {}
+commands:
+  reset:
+    name: reset
+    arguments: []

@@ -1,0 +1,77 @@
+id: soundDetection
+version: 1
+status: live
+name: Sound Detection
+ephemeral: false
+attributes:
+  soundDetectionState:
+    schema:
+      type: object
+      properties:
+        value:
+          title: EnableState
+          type: string
+          enum:
+            - enabled
+            - disabled
+      additionalProperties: false
+      required:
+        - value
+    enumCommands:
+      - command: enableSoundDetection
+        value: enabled
+      - command: disableSoundDetection
+        value: disabled
+  supportedSoundTypes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            title: DetectedSoundType
+            type: string
+            enum:
+              - noSound
+              - babyCrying
+              - glassBreaking
+              - fireAlarm
+              - dogBarking
+              - catMeowing
+              - doorKnocking
+              - siren
+              - fingerSnapping
+              - snoring
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  soundDetected:
+    schema:
+      type: object
+      properties:
+        value:
+          title: DetectedSoundType
+          type: string
+          enum:
+            - noSound
+            - babyCrying
+            - glassBreaking
+            - fireAlarm
+            - dogBarking
+            - catMeowing
+            - doorKnocking
+            - siren
+            - fingerSnapping
+            - snoring
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  disableSoundDetection:
+    name: disableSoundDetection
+    arguments: []
+  enableSoundDetection:
+    name: enableSoundDetection
+    arguments: []

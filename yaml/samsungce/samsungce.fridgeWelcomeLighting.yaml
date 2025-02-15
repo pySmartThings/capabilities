@@ -1,0 +1,67 @@
+id: samsungce.fridgeWelcomeLighting
+version: 1
+status: proposed
+name: Fridge Welcome Lighting
+ephemeral: false
+attributes:
+  detectionProximity:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - near
+            - middle
+            - far
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedDetectionProximities:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - near
+              - middle
+              - far
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  status:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - "on"
+            - "off"
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setDetectionProximity:
+    name: setDetectionProximity
+    arguments:
+      - name: detectionProximity
+        optional: false
+        schema:
+          type: string
+          enum:
+            - near
+            - middle
+            - far
+  "off":
+    name: "off"
+    arguments: []
+  "on":
+    name: "on"
+    arguments: []

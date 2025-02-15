@@ -1,0 +1,47 @@
+id: tag.tagStatus
+version: 1
+status: proposed
+name: Tag Status
+ephemeral: false
+attributes:
+  connectedUserId:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          maxLength: 255
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  tagStatus:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - connected
+            - disconnected
+            - lost
+            - found
+            - d2dConnected
+            - d2dScanned
+            - d2dDisconnected
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  connectedDeviceId:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          pattern: ^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

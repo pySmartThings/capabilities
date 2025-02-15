@@ -1,0 +1,132 @@
+id: samsungce.washerCyclePreset
+version: 1
+status: proposed
+name: Washer Cycle Preset
+ephemeral: false
+attributes:
+  maxNumberOfPresets:
+    schema:
+      title: Maximum number of presets
+      type: object
+      properties:
+        value:
+          type: number
+          default: 10
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  presets:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          patternProperties:
+            ^.{1,32}$:
+              type: object
+              additionalProperties: false
+              properties:
+                recipeId:
+                  type: string
+                title:
+                  type: string
+                memo:
+                  type: string
+                cycle:
+                  type: string
+                options:
+                  type: object
+                  additionalProperties:
+                    type: string
+                  properties:
+                    waterValve:
+                      type: string
+                    waterLevel:
+                      type: string
+                    washingTime:
+                      type: string
+                    waterTemperature:
+                      type: string
+                    rinseCycle:
+                      type: string
+                    spinLevel:
+                      type: string
+                    dryingLevel:
+                      type: string
+                    soilLevel:
+                      type: string
+                    soak:
+                      type: string
+                    bubbleSoak:
+                      type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setWasherCyclePreset:
+    name: setWasherCyclePreset
+    arguments:
+      - name: presets
+        optional: false
+        schema:
+          type: object
+          additionalProperties: false
+          patternProperties:
+            ^.{1,32}$:
+              type: object
+              additionalProperties: false
+              properties:
+                recipeId:
+                  type: string
+                title:
+                  type: string
+                memo:
+                  type: string
+                cycle:
+                  type: string
+                options:
+                  type: object
+                  additionalProperties:
+                    type: string
+                  properties:
+                    waterValve:
+                      type: string
+                    waterLevel:
+                      type: string
+                    washingTime:
+                      type: string
+                    waterTemperature:
+                      type: string
+                    rinseCycle:
+                      type: string
+                    spinLevel:
+                      type: string
+                    dryingLevel:
+                      type: string
+                    dryingTime:
+                      type: string
+                    soilLevel:
+                      type: string
+                    soak:
+                      type: string
+                    bubbleSoak:
+                      type: string
+              required:
+                - recipeId
+                - title
+                - memo
+                - cycle
+                - options
+  delete:
+    name: delete
+    arguments:
+      - name: presetIds
+        optional: false
+        schema:
+          type: array
+          items:
+            type: string
+            pattern: ^.{1,32}$

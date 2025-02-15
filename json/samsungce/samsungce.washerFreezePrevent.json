@@ -1,0 +1,21 @@
+{
+  "id": "samsungce.washerFreezePrevent",
+  "version": 1,
+  "status": "proposed",
+  "name": "Washer Freeze Prevent",
+  "ephemeral": false,
+  "attributes": {
+    "operatingState": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["ready", "running"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

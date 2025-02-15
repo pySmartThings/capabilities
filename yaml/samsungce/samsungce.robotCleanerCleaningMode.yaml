@@ -1,0 +1,99 @@
+id: samsungce.robotCleanerCleaningMode
+version: 1
+status: proposed
+name: Robot Cleaner Cleaning Mode
+ephemeral: false
+attributes:
+  supportedCleaningMode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - stop
+              - auto
+              - manual
+              - spot
+              - area
+              - object
+              - map
+              - pet
+              - uncleanedObject
+              - patternMap
+              - creatingMap
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  repeatModeEnabled:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportRepeatMode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  cleaningMode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - stop
+            - auto
+            - manual
+            - spot
+            - area
+            - object
+            - map
+            - pet
+            - uncleanedObject
+            - patternMap
+            - creatingMap
+      additionalProperties: false
+      required:
+        - value
+    setter: setCleaningMode
+    enumCommands: []
+commands:
+  setCleaningMode:
+    name: setCleaningMode
+    arguments:
+      - name: cleaningMode
+        optional: false
+        schema:
+          type: string
+          enum:
+            - stop
+            - auto
+            - manual
+            - spot
+            - area
+            - object
+            - map
+            - pet
+            - uncleanedObject
+            - patternMap
+            - creatingMap
+  disableRepeatMode:
+    name: disableRepeatMode
+    arguments: []
+  enableRepeatMode:
+    name: enableRepeatMode
+    arguments: []

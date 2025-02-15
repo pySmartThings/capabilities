@@ -1,0 +1,124 @@
+id: samsungce.definedRecipe
+version: 1
+status: proposed
+name: Defined Recipe
+ephemeral: false
+attributes:
+  definedRecipe:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          required:
+            - recipeType
+            - categoryId
+            - itemId
+            - servingSize
+          properties:
+            cavityId:
+              type: string
+            recipeType:
+              type: string
+            categoryId:
+              type: integer
+              minimum: 0
+              maximum: 255
+            itemId:
+              type: integer
+              minimum: 0
+              maximum: 255
+            servingSize:
+              type: integer
+              minimum: 0
+              maximum: 255
+            browingLevel:
+              type: integer
+              minimum: 0
+              maximum: 255
+            option:
+              type: integer
+              minimum: 0
+              maximum: 255
+      additionalProperties: false
+      required:
+        - value
+    setter: setDefinedRecipe
+    enumCommands: []
+commands:
+  setDefinedRecipe:
+    name: setDefinedRecipe
+    arguments:
+      - name: payload
+        optional: false
+        schema:
+          type: object
+          additionalProperties: false
+          required:
+            - recipeType
+            - categoryId
+            - itemId
+            - servingSize
+          properties:
+            cavityId:
+              type: string
+            recipeType:
+              type: string
+            categoryId:
+              type: integer
+              minimum: 0
+              maximum: 255
+            itemId:
+              type: integer
+              minimum: 0
+              maximum: 255
+            servingSize:
+              type: integer
+              minimum: 0
+              maximum: 255
+            browingLevel:
+              type: integer
+              minimum: 0
+              maximum: 255
+            option:
+              type: integer
+              minimum: 0
+              maximum: 255
+  cookDefinedRecipe:
+    name: cookDefinedRecipe
+    arguments:
+      - name: recipeType
+        optional: false
+        schema:
+          type: string
+      - name: categoryId
+        optional: false
+        schema:
+          type: integer
+          minimum: 0
+          maximum: 255
+      - name: itemId
+        optional: false
+        schema:
+          type: integer
+          minimum: 0
+          maximum: 255
+      - name: servingSize
+        optional: false
+        schema:
+          type: integer
+          minimum: 0
+          maximum: 255
+      - name: browingLevel
+        optional: true
+        schema:
+          type: integer
+          minimum: 0
+          maximum: 255
+      - name: option
+        optional: true
+        schema:
+          type: integer
+          minimum: 0
+          maximum: 255

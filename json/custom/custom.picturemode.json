@@ -1,0 +1,56 @@
+{
+  "id": "custom.picturemode",
+  "version": 1,
+  "status": "proposed",
+  "name": "PictureMode",
+  "ephemeral": false,
+  "attributes": {
+    "pictureMode": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "supportedPictureModes": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "array" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "supportedPictureModesMap": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "required": [],
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "string" },
+                "name": { "type": "string" }
+              }
+            },
+            "type": "array"
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setPictureMode": {
+      "name": "setPictureMode",
+      "arguments": [
+        { "name": "mode", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}

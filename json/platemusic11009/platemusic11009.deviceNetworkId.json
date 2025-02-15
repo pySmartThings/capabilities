@@ -1,0 +1,21 @@
+{
+  "id": "platemusic11009.deviceNetworkId",
+  "version": 1,
+  "status": "proposed",
+  "name": "Device Network ID",
+  "ephemeral": false,
+  "attributes": {
+    "deviceNetworkId": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "title": "Device Network ID", "type": "string" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

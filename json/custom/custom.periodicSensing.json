@@ -1,0 +1,149 @@
+{
+  "id": "custom.periodicSensing",
+  "version": 1,
+  "status": "proposed",
+  "name": "Periodic Sensing",
+  "ephemeral": false,
+  "attributes": {
+    "automaticExecutionSetting": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "automaticExecutionMode": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "supportedAutomaticExecutionSetting": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "supportedAutomaticExecutionMode": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "periodicSensing": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string", "enum": ["on", "off"] } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "periodicSensingInterval": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "integer" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "lastSensingTime": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "pattern": "^\\d{10}$|0" },
+          "unit": { "type": "string", "enum": ["second"], "default": "second" }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "lastSensingLevel": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "periodicSensingStatus": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["nonprocessing", "processing"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "periodicSensingOn": { "name": "periodicSensingOn", "arguments": [] },
+    "setPeriodicSensingInterval": {
+      "name": "setPeriodicSensingInterval",
+      "arguments": [
+        {
+          "name": "interval",
+          "optional": false,
+          "schema": { "type": "integer" }
+        }
+      ]
+    },
+    "setPeriodicSensing": {
+      "name": "setPeriodicSensing",
+      "arguments": [
+        {
+          "name": "periodicSensing",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["on", "off"] }
+        },
+        {
+          "name": "interval",
+          "optional": false,
+          "schema": { "type": "integer" }
+        }
+      ]
+    },
+    "setAutomaticExecutionMode": {
+      "name": "setAutomaticExecutionMode",
+      "arguments": [
+        {
+          "name": "automaticExecutionMode",
+          "optional": false,
+          "schema": { "type": "string" }
+        }
+      ]
+    },
+    "setAutomaticExecutionSetting": {
+      "name": "setAutomaticExecutionSetting",
+      "arguments": [
+        {
+          "name": "automaticExecutionSetting",
+          "optional": false,
+          "schema": { "type": "string" }
+        }
+      ]
+    },
+    "periodicSensingOff": { "name": "periodicSensingOff", "arguments": [] },
+    "triggerManualSensing": { "name": "triggerManualSensing", "arguments": [] }
+  }
+}

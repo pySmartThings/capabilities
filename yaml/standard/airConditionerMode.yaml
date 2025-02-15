@@ -1,0 +1,51 @@
+id: airConditionerMode
+version: 1
+status: live
+name: Air Conditioner Mode
+ephemeral: false
+attributes:
+  availableAcModes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  supportedAcModes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  airConditionerMode:
+    schema:
+      type: object
+      properties:
+        value:
+          title: String
+          type: string
+          maxLength: 255
+      additionalProperties: false
+      required:
+        - value
+    setter: setAirConditionerMode
+    enumCommands: []
+commands:
+  setAirConditionerMode:
+    name: setAirConditionerMode
+    arguments:
+      - name: mode
+        optional: false
+        schema:
+          title: String
+          type: string
+          maxLength: 255

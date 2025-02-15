@@ -1,0 +1,29 @@
+id: legendabsolute60149.localDayTwo
+version: 1
+status: proposed
+name: Local Day Two
+ephemeral: false
+attributes:
+  localDayTwo:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 1
+          maximum: 31
+      additionalProperties: false
+      required:
+        - value
+    setter: setLocalDayTwo
+    enumCommands: []
+commands:
+  setLocalDayTwo:
+    name: setLocalDayTwo
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: integer
+          minimum: 1
+          maximum: 31

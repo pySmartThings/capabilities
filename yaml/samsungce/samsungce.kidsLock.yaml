@@ -1,0 +1,21 @@
+id: samsungce.kidsLock
+version: 1
+status: proposed
+name: Kids Lock
+ephemeral: false
+attributes:
+  lockState:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - locked
+            - unlocked
+            - paused
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

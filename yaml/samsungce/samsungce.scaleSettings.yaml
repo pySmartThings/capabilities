@@ -1,0 +1,17 @@
+id: samsungce.scaleSettings
+version: 1
+status: proposed
+name: Scale Settings
+ephemeral: false
+attributes:
+  enabled:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

@@ -1,0 +1,21 @@
+{
+  "id": "samsungce.doorState",
+  "version": 1,
+  "status": "proposed",
+  "name": "Door State",
+  "ephemeral": false,
+  "attributes": {
+    "doorState": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["closed", "open"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

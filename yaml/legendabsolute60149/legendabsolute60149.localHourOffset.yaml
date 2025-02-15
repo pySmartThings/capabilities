@@ -1,0 +1,34 @@
+id: legendabsolute60149.localHourOffset
+version: 1
+status: proposed
+name: Local Hour Offset
+ephemeral: false
+attributes:
+  localHourOffset:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: -12
+          maximum: 12
+        unit:
+          type: string
+          enum:
+            - hr
+          default: hr
+      additionalProperties: false
+      required:
+        - value
+    setter: setLocalHourOffset
+    enumCommands: []
+commands:
+  setLocalHourOffset:
+    name: setLocalHourOffset
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: integer
+          minimum: -12
+          maximum: 12

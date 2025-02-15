@@ -1,0 +1,44 @@
+id: samsungce.wifiKitSubDevices
+version: 1
+status: proposed
+name: Wifi Kit Sub Devices
+ephemeral: false
+attributes:
+  numberOfConnectedDevices:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 0
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  subDevices:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              connected:
+                type: boolean
+              name:
+                type: string
+              deviceId:
+                type: string
+                pattern: ^[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}$
+              description:
+                type: string
+            required:
+              - connected
+              - deviceId
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

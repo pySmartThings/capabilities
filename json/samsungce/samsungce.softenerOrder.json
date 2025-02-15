@@ -1,0 +1,45 @@
+{
+  "id": "samsungce.softenerOrder",
+  "version": 1,
+  "status": "proposed",
+  "name": "Softener Order",
+  "ephemeral": false,
+  "attributes": {
+    "alarmEnabled": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "orderThreshold": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number" },
+          "unit": { "type": "string", "enum": ["cc"], "default": "cc" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setOrderThreshold",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "enableAlarm": { "name": "enableAlarm", "arguments": [] },
+    "setOrderThreshold": {
+      "name": "setOrderThreshold",
+      "arguments": [
+        {
+          "name": "threshold",
+          "optional": false,
+          "schema": { "type": "number" }
+        }
+      ]
+    },
+    "disableAlarm": { "name": "disableAlarm", "arguments": [] }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "mode",
+  "version": 1,
+  "status": "live",
+  "name": "Mode",
+  "ephemeral": false,
+  "attributes": {
+    "mode": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setMode",
+      "enumCommands": []
+    },
+    "supportedModes": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "supportedArguments": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setMode": {
+      "name": "setMode",
+      "arguments": [
+        { "name": "mode", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "samsungvd.firmwareVersion",
+  "version": 1,
+  "status": "proposed",
+  "name": "Firmware Version",
+  "ephemeral": false,
+  "attributes": {
+    "firmwareVersion": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setFirmwareVersion": {
+      "name": "setFirmwareVersion",
+      "arguments": [
+        { "name": "version", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}

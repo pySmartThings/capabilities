@@ -1,0 +1,129 @@
+{
+  "id": "samsungce.kitchenModeSpecification",
+  "version": 1,
+  "status": "proposed",
+  "name": "Kitchen Mode Specification",
+  "ephemeral": false,
+  "attributes": {
+    "specification": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "patternProperties": {
+              "^(single|lower|upper)$": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["mode"],
+                  "properties": {
+                    "mode": { "type": "string" },
+                    "supportedOperations": {
+                      "type": "array",
+                      "items": { "type": "string", "enum": ["start", "set"] }
+                    },
+                    "supportedOptions": {
+                      "type": "object",
+                      "patternProperties": {
+                        "^(temperature|probeTemperature)$": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "patternProperties": {
+                            "^[CF]$": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "patternProperties": {
+                                "^(min|max|resolution|default)$": {
+                                  "type": "number"
+                                }
+                              },
+                              "properties": {
+                                "supportedValues": {
+                                  "type": "array",
+                                  "items": { "type": "number" }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "properties": {
+                        "powerLevel": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "supportedValues": {
+                              "type": "array",
+                              "items": { "type": "string" }
+                            },
+                            "default": { "type": "string" }
+                          }
+                        },
+                        "operationTime": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "patternProperties": {
+                            "^(min|max|resolution|default)$": {
+                              "type": "string",
+                              "pattern": "^\\d\\d+:[0-5]\\d:[0-5]\\d$"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "examples": [
+              {
+                "single": [
+                  {
+                    "mode": "Convection",
+                    "supportedOperations": ["set"],
+                    "supportedOptions": {
+                      "temperature": {
+                        "F": {
+                          "min": 300,
+                          "max": 500,
+                          "default": 350,
+                          "resolution": 5
+                        },
+                        "C": {
+                          "min": 100,
+                          "max": 250,
+                          "default": 180,
+                          "supportedValues": [100, 180, 250]
+                        }
+                      },
+                      "operationTime": {
+                        "min": "00:00:01",
+                        "max": "11:59:59",
+                        "default": "00:30:00",
+                        "resolution": "00:00:01"
+                      },
+                      "probeTemperature": {
+                        "C": {
+                          "min": 30,
+                          "max": 90,
+                          "default": 50,
+                          "resolution": 5
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

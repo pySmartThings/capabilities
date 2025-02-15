@@ -1,0 +1,42 @@
+{
+  "id": "samsungce.welcomeMessage",
+  "version": 1,
+  "status": "proposed",
+  "name": "Welcome Message",
+  "ephemeral": false,
+  "attributes": {
+    "welcomeMessage": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": { "text": { "type": "string" } }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setWelcomeMessage",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "deleteWelcomeMessage": { "name": "deleteWelcomeMessage", "arguments": [] },
+    "setWelcomeMessage": {
+      "name": "setWelcomeMessage",
+      "arguments": [
+        {
+          "name": "welcomeMessage",
+          "optional": false,
+          "schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": { "text": { "type": "string" } }
+          }
+        }
+      ]
+    }
+  }
+}

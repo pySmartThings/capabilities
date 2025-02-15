@@ -1,0 +1,91 @@
+id: samsungvd.lightControl
+version: 1
+status: proposed
+name: Light Control
+ephemeral: false
+attributes:
+  supportedModeMap:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+          required: []
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  requestId:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  selectedMode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  streamControl:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  selectedAppId:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  errorCode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedModes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setLightControlMode:
+    name: setLightControlMode
+    arguments:
+      - name: selectedMode
+        optional: false
+        schema:
+          type: string

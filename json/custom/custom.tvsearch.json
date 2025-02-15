@@ -1,0 +1,17 @@
+{
+  "id": "custom.tvsearch",
+  "version": 1,
+  "status": "proposed",
+  "name": "tvSearch",
+  "ephemeral": false,
+  "attributes": {},
+  "commands": {
+    "search": {
+      "name": "search",
+      "arguments": [
+        { "name": "query", "optional": false, "schema": { "type": "string" } },
+        { "name": "url", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}

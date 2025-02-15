@@ -1,0 +1,25 @@
+id: legendabsolute60149.currentTimePeriod
+version: 1
+status: proposed
+name: Current Time Period
+ephemeral: false
+attributes:
+  currentTimePeriod:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setCurrentTimePeriod
+    enumCommands: []
+commands:
+  setCurrentTimePeriod:
+    name: setCurrentTimePeriod
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string

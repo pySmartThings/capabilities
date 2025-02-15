@@ -1,0 +1,127 @@
+id: custom.energyType
+version: 1
+status: proposed
+name: Energy Type
+ephemeral: false
+attributes:
+  energyType:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  energySavingSupport:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  drMaxDuration:
+    schema:
+      type: object
+      properties:
+        value:
+          maximum: 99999999
+          minimum: 0
+          type: integer
+        unit:
+          type: string
+          enum:
+            - min
+          default: min
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  energySavingLevel:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  energySavingInfo:
+    schema:
+      type: object
+      properties:
+        value:
+          items:
+            required:
+              - energySavingLevel
+              - maxEnergySavingRate
+            properties:
+              maxEnergySavingRate:
+                maximum: 100
+                minimum: 0
+                type: integer
+              energySavingLevel:
+                minimum: 0
+                type: integer
+            type: object
+            additionalProperties: false
+          type: array
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedEnergySavingLevels:
+    schema:
+      type: object
+      properties:
+        value:
+          items:
+            type: integer
+          type: array
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  energySavingOperation:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  notificationTemplateID:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  energySavingOperationSupport:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setEnergySavingLevel:
+    name: setEnergySavingLevel
+    arguments:
+      - name: energySavingLevel
+        optional: false
+        schema:
+          type: integer

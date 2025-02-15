@@ -1,0 +1,42 @@
+id: samsungce.washerWashingTime
+version: 1
+status: proposed
+name: Washer Washing Time
+ephemeral: false
+attributes:
+  supportedWashingTimes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  washingTime:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+        unit:
+          type: string
+          enum:
+            - min
+          default: min
+      additionalProperties: false
+      required:
+        - value
+    setter: setWashingTime
+    enumCommands: []
+commands:
+  setWashingTime:
+    name: setWashingTime
+    arguments:
+      - name: washingTime
+        optional: false
+        schema:
+          type: string

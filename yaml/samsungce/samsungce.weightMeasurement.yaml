@@ -1,0 +1,23 @@
+id: samsungce.weightMeasurement
+version: 1
+status: proposed
+name: Weight Measurement
+ephemeral: false
+attributes:
+  weight:
+    schema:
+      type: object
+      properties:
+        value:
+          type: number
+        unit:
+          type: string
+          enum:
+            - g
+            - kg
+      additionalProperties: false
+      required:
+        - value
+        - unit
+    enumCommands: []
+commands: {}

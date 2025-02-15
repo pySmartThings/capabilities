@@ -1,0 +1,22 @@
+id: custom.accessibility
+version: 1
+status: proposed
+name: Accessibility
+ephemeral: false
+attributes: {}
+commands:
+  setAccessibility:
+    name: setAccessibility
+    arguments:
+      - name: menuName
+        optional: false
+        schema:
+          type: string
+      - name: menuId
+        optional: false
+        schema:
+          type: string
+      - name: option
+        optional: true
+        schema:
+          type: string
