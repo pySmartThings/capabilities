@@ -1,0 +1,25 @@
+{
+  "id": "tag.e2eEncryption",
+  "version": 1,
+  "status": "proposed",
+  "name": "E2E Encryption",
+  "ephemeral": false,
+  "attributes": {
+    "encryption": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string", "enum": ["on", "off"] } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": [
+        { "command": "on", "value": "on" },
+        { "command": "off", "value": "off" }
+      ]
+    }
+  },
+  "commands": {
+    "off": { "name": "off", "arguments": [] },
+    "on": { "name": "on", "arguments": [] }
+  }
+}

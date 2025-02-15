@@ -1,0 +1,29 @@
+id: legendabsolute60149.localMonthTwo
+version: 1
+status: proposed
+name: Local Month Two
+ephemeral: false
+attributes:
+  localMonthTwo:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 1
+          maximum: 12
+      additionalProperties: false
+      required:
+        - value
+    setter: setLocalMonthTwo
+    enumCommands: []
+commands:
+  setLocalMonthTwo:
+    name: setLocalMonthTwo
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: integer
+          minimum: 1
+          maximum: 12

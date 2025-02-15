@@ -1,0 +1,30 @@
+id: legendabsolute60149.sunAzimuthAngle
+version: 1
+status: proposed
+name: Sun Azimuth Angle
+ephemeral: false
+attributes:
+  sunAzimuthAngle:
+    schema:
+      type: object
+      properties:
+        value:
+          type: number
+        unit:
+          type: string
+          enum:
+            - "\xBA"
+          default: "\xBA"
+      additionalProperties: false
+      required:
+        - value
+    setter: setSunAzimuthAngle
+    enumCommands: []
+commands:
+  setSunAzimuthAngle:
+    name: setSunAzimuthAngle
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: number

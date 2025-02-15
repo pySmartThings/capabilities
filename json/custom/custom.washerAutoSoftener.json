@@ -1,0 +1,36 @@
+{
+  "id": "custom.washerAutoSoftener",
+  "version": 1,
+  "status": "proposed",
+  "name": "Washer Auto Softener",
+  "ephemeral": false,
+  "attributes": {
+    "washerAutoSoftener": {
+      "schema": {
+        "title": "washerAutoSoftener",
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["on", "off", "notSupported", "notUsed"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setWasherAutoSoftener": {
+      "name": "setWasherAutoSoftener",
+      "arguments": [
+        {
+          "name": "washerAutoSoftener",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["on", "off"] }
+        }
+      ]
+    }
+  }
+}

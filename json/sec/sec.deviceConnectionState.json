@@ -1,0 +1,31 @@
+{
+  "id": "sec.deviceConnectionState",
+  "version": 1,
+  "status": "proposed",
+  "name": "Device Connection State",
+  "ephemeral": false,
+  "attributes": {
+    "deviceConnectionState": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["fullConnection", "partialConnection", "noConnection"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "refreshConnection": {
+      "name": "refreshConnection",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "object" } }
+      ]
+    }
+  }
+}

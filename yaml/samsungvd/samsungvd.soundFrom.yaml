@@ -1,0 +1,38 @@
+id: samsungvd.soundFrom
+version: 1
+status: proposed
+name: Sound From
+ephemeral: false
+attributes:
+  mode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  detailName:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setSoundFrom:
+    name: setSoundFrom
+    arguments:
+      - name: mode
+        optional: false
+        schema:
+          type: integer
+      - name: detailName
+        optional: true
+        schema:
+          type: string

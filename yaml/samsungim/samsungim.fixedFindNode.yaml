@@ -1,0 +1,10 @@
+id: samsungim.fixedFindNode
+version: 1
+status: proposed
+name: Fixed Find Node
+ephemeral: false
+attributes: {}
+commands:
+  refresh:
+    name: refresh
+    arguments: []

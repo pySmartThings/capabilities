@@ -1,0 +1,39 @@
+{
+  "id": "samsungce.fridgePantryMode",
+  "version": 1,
+  "status": "proposed",
+  "name": "Fridge Pantry Mode",
+  "ephemeral": false,
+  "attributes": {
+    "mode": {
+      "schema": {
+        "title": "Mode",
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedModes": {
+      "schema": {
+        "title": "Supported Modes",
+        "type": "object",
+        "properties": {
+          "value": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setMode": {
+      "name": "setMode",
+      "arguments": [
+        { "name": "mode", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}

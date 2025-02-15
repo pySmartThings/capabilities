@@ -1,0 +1,200 @@
+{
+  "id": "samsungce.meatAging",
+  "version": 1,
+  "status": "proposed",
+  "name": "Meat Aging",
+  "ephemeral": false,
+  "attributes": {
+    "zoneInfo": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "rows": { "type": "integer", "minimum": 0 },
+              "columns": { "type": "integer", "minimum": 0 },
+              "capacity": { "type": "integer", "minimum": 0 }
+            },
+            "required": ["rows", "columns", "capacity"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedMeatTypes": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["sirloin", "striploin", "chuck", "others"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedAgingMethods": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["dry", "wet"] }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "status": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": { "type": "integer", "minimum": 0 },
+                "meatType": {
+                  "type": "string",
+                  "enum": ["sirloin", "striploin", "chuck", "others"]
+                },
+                "progressDay": { "type": "integer", "minimum": 0 },
+                "daysSinceButchery": { "type": "integer", "minimum": 0 },
+                "zones": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "minItems": 1,
+                  "items": { "type": "integer", "minimum": 0 }
+                },
+                "agingMethod": { "type": "string", "enum": ["dry", "wet"] },
+                "agingPhase": {
+                  "type": "string",
+                  "pattern": "^(\\d+|expired)$"
+                },
+                "phaseDaysInfo": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "patternProperties": {
+                    "^\\d+$": {
+                      "type": "object",
+                      "properties": {
+                        "agingDays": { "type": "integer", "minimum": 0 }
+                      }
+                    }
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "meatType",
+                "progressDay",
+                "daysSinceButchery",
+                "zones",
+                "agingMethod",
+                "agingPhase",
+                "phaseDaysInfo"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "addAging": {
+      "name": "addAging",
+      "arguments": [
+        {
+          "name": "agingOption",
+          "optional": false,
+          "schema": {
+            "type": "object",
+            "properties": {
+              "daysSinceButchery": { "type": "integer", "minimum": 0 },
+              "meatType": {
+                "type": "string",
+                "enum": ["sirloin", "striploin", "chuck", "others"]
+              },
+              "agingMethod": { "type": "string", "enum": ["dry", "wet"] },
+              "zones": {
+                "type": "array",
+                "uniqueItems": true,
+                "minItems": 1,
+                "items": { "type": "integer", "minimum": 0 }
+              }
+            },
+            "required": [
+              "daysSinceButchery",
+              "meatType",
+              "agingMethod",
+              "zones"
+            ]
+          }
+        }
+      ]
+    },
+    "cancelAging": {
+      "name": "cancelAging",
+      "arguments": [
+        {
+          "name": "id",
+          "optional": false,
+          "schema": { "type": "integer", "minimum": 0 }
+        }
+      ]
+    },
+    "updateAging": {
+      "name": "updateAging",
+      "arguments": [
+        {
+          "name": "id",
+          "optional": false,
+          "schema": { "type": "integer", "minimum": 0 }
+        },
+        {
+          "name": "agingOption",
+          "optional": false,
+          "schema": {
+            "type": "object",
+            "properties": {
+              "daysSinceButchery": { "type": "integer", "minimum": 0 },
+              "meatType": {
+                "type": "string",
+                "enum": ["sirloin", "striploin", "chuck", "others"]
+              },
+              "agingMethod": { "type": "string", "enum": ["dry", "wet"] },
+              "zones": {
+                "type": "array",
+                "uniqueItems": true,
+                "minItems": 1,
+                "items": { "type": "integer", "minimum": 0 }
+              }
+            },
+            "required": [
+              "daysSinceButchery",
+              "meatType",
+              "agingMethod",
+              "zones"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

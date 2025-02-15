@@ -1,0 +1,129 @@
+{
+  "id": "samsungce.softwareUpdate",
+  "version": 1,
+  "status": "proposed",
+  "name": "Software Update",
+  "ephemeral": false,
+  "attributes": {
+    "targetModule": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "properties": {
+              "newVersion": { "type": "string" },
+              "currentVersion": { "type": "string" },
+              "moduleType": {
+                "type": "string",
+                "enum": [
+                  "mainController",
+                  "display",
+                  "inverter",
+                  "indoorUnit",
+                  "outdoorUnit"
+                ]
+              }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "otnDUID": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "lastUpdatedDate": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "pattern": "^(?:[1-9]\\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "availableModules": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "newVersionAvailable": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "operatingState": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "none",
+              "available",
+              "preparing",
+              "delayed",
+              "inprogress",
+              "checking",
+              "completed",
+              "rebooting",
+              "swapRebooting"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "progress": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "integer", "minimum": 0, "maximum": 100 },
+          "unit": { "type": "string", "enum": ["%"], "default": "%" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "agreeUpdate": {
+      "name": "agreeUpdate",
+      "arguments": [
+        { "name": "module", "optional": true, "schema": { "type": "string" } }
+      ]
+    },
+    "disagreeUpdate": {
+      "name": "disagreeUpdate",
+      "arguments": [
+        { "name": "module", "optional": true, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}

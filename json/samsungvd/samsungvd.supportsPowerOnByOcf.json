@@ -1,0 +1,21 @@
+{
+  "id": "samsungvd.supportsPowerOnByOcf",
+  "version": 1,
+  "status": "proposed",
+  "name": "Supports Power On By OCF",
+  "ephemeral": false,
+  "attributes": {
+    "supportsPowerOnByOcf": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["true", "false"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

@@ -1,0 +1,115 @@
+{
+  "id": "samsungce.autoDispenseSoftener",
+  "version": 1,
+  "status": "proposed",
+  "name": "Auto Dispense Softener",
+  "ephemeral": false,
+  "attributes": {
+    "remainingAmount": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["empty", "less", "normal", "unknown"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "amount": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["none", "less", "standard", "extra", "custom"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setAmount",
+      "enumCommands": []
+    },
+    "supportedDensity": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["none", "normal", "high", "extraHigh", "custom"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "density": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["none", "normal", "high", "extraHigh", "custom"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setAmount",
+      "enumCommands": []
+    },
+    "supportedAmount": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["none", "less", "standard", "extra", "custom"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setAmount": {
+      "name": "setAmount",
+      "arguments": [
+        {
+          "name": "amount",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["none", "less", "standard", "extra", "custom"]
+          }
+        }
+      ]
+    },
+    "setDensity": {
+      "name": "setDensity",
+      "arguments": [
+        {
+          "name": "density",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["none", "normal", "high", "extraHigh", "custom"]
+          }
+        }
+      ]
+    }
+  }
+}

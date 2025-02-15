@@ -1,0 +1,67 @@
+{
+  "id": "samsungce.clothingExtraCare",
+  "version": 1,
+  "status": "proposed",
+  "name": "Clothing Extra Care",
+  "ephemeral": false,
+  "attributes": {
+    "operationMode": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["off", "manual", "userLocationBased"],
+            "default": "manual"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setOperationMode",
+      "enumCommands": []
+    },
+    "userLocation": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["indoor", "outdoor", "unknown"],
+            "default": "indoor"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setUserLocation",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setOperationMode": {
+      "name": "setOperationMode",
+      "arguments": [
+        {
+          "name": "operationMode",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["off", "manual", "userLocationBased"],
+            "default": "manual"
+          }
+        }
+      ]
+    },
+    "setUserLocation": {
+      "name": "setUserLocation",
+      "arguments": [
+        {
+          "name": "userLocation",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["indoor", "outdoor"] }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,474 @@
+id: samsungce.dishwasherWashingOptions
+version: 1
+status: proposed
+name: Dishwasher Washing Options
+ephemeral: false
+attributes:
+  dryPlus:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          properties:
+            value:
+              type: boolean
+            settable:
+              type: array
+              items:
+                type: boolean
+          required:
+            - value
+            - settable
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  stormWash:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          properties:
+            value:
+              type: boolean
+            settable:
+              type: array
+              items:
+                type: boolean
+          required:
+            - value
+            - settable
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  hotAirDry:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          properties:
+            value:
+              type: boolean
+            settable:
+              type: array
+              items:
+                type: boolean
+          required:
+            - value
+            - settable
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  selectedZone:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          properties:
+            value:
+              type: string
+              enum:
+                - none
+                - lower
+                - upper
+                - all
+            settable:
+              type: array
+              items:
+                type: string
+                enum:
+                  - none
+                  - lower
+                  - upper
+                  - all
+          required:
+            - value
+            - settable
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  speedBooster:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          properties:
+            value:
+              type: boolean
+            settable:
+              type: array
+              items:
+                type: boolean
+          required:
+            - value
+            - settable
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  highTempWash:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          properties:
+            value:
+              type: boolean
+            settable:
+              type: array
+              items:
+                type: boolean
+          required:
+            - value
+            - settable
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  sanitizingWash:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          properties:
+            value:
+              type: boolean
+            settable:
+              type: array
+              items:
+                type: boolean
+          required:
+            - value
+            - settable
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  heatedDry:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          properties:
+            value:
+              type: string
+              enum:
+                - none
+                - extraLow
+                - low
+                - medium
+                - high
+                - extraHigh
+            settable:
+              type: array
+              items:
+                type: string
+                enum:
+                  - none
+                  - extraLow
+                  - low
+                  - medium
+                  - high
+                  - extraHigh
+          required:
+            - value
+            - settable
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  zoneBooster:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          properties:
+            value:
+              type: string
+              enum:
+                - none
+                - left
+                - right
+                - all
+            settable:
+              type: array
+              items:
+                type: string
+                enum:
+                  - none
+                  - left
+                  - right
+                  - all
+          required:
+            - value
+            - settable
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  addRinse:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          properties:
+            value:
+              type: boolean
+            settable:
+              type: array
+              items:
+                type: boolean
+          required:
+            - value
+            - settable
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  supportedList:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - selectedZone
+              - zoneBooster
+              - speedBooster
+              - sanitize
+              - highTempWash
+              - steamSoak
+              - addRinse
+              - dryPlus
+              - stormWash
+              - sanitizingWash
+              - rinsePlus
+              - hotAirDry
+              - heatedDry
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  rinsePlus:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          properties:
+            value:
+              type: boolean
+            settable:
+              type: array
+              items:
+                type: boolean
+          required:
+            - value
+            - settable
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  sanitize:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          properties:
+            value:
+              type: boolean
+            settable:
+              type: array
+              items:
+                type: boolean
+          required:
+            - value
+            - settable
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  steamSoak:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          properties:
+            value:
+              type: boolean
+            settable:
+              type: array
+              items:
+                type: boolean
+          required:
+            - value
+            - settable
+      additionalProperties: false
+      required: []
+    enumCommands: []
+commands:
+  setSelectedZone:
+    name: setSelectedZone
+    arguments:
+      - name: selectedZone
+        optional: false
+        schema:
+          type: string
+          enum:
+            - none
+            - lower
+            - upper
+            - all
+  setSanitize:
+    name: setSanitize
+    arguments:
+      - name: sanitize
+        optional: false
+        schema:
+          type: boolean
+  setZoneBooster:
+    name: setZoneBooster
+    arguments:
+      - name: zoneBooster
+        optional: false
+        schema:
+          type: string
+          enum:
+            - none
+            - left
+            - right
+            - all
+  setDryPlus:
+    name: setDryPlus
+    arguments:
+      - name: dryPlus
+        optional: false
+        schema:
+          type: boolean
+  setAddRinse:
+    name: setAddRinse
+    arguments:
+      - name: addRinse
+        optional: false
+        schema:
+          type: boolean
+  setHotAirDry:
+    name: setHotAirDry
+    arguments:
+      - name: hotAirDry
+        optional: false
+        schema:
+          type: boolean
+  setStormWash:
+    name: setStormWash
+    arguments:
+      - name: stormWash
+        optional: false
+        schema:
+          type: boolean
+  setHeatedDry:
+    name: setHeatedDry
+    arguments:
+      - name: heatedDry
+        optional: false
+        schema:
+          type: string
+          enum:
+            - none
+            - extraLow
+            - low
+            - medium
+            - high
+            - extraHigh
+  setHighTempWash:
+    name: setHighTempWash
+    arguments:
+      - name: highTempWash
+        optional: false
+        schema:
+          type: boolean
+  setSanitizingWash:
+    name: setSanitizingWash
+    arguments:
+      - name: sanitizingWash
+        optional: false
+        schema:
+          type: boolean
+  setSpeedBooster:
+    name: setSpeedBooster
+    arguments:
+      - name: speedBooster
+        optional: false
+        schema:
+          type: boolean
+  setRinsePlus:
+    name: setRinsePlus
+    arguments:
+      - name: rinsePlus
+        optional: false
+        schema:
+          type: boolean
+  setOptions:
+    name: setOptions
+    arguments:
+      - name: options
+        optional: false
+        schema:
+          type: object
+          additionalProperties: false
+          properties:
+            selectedZone:
+              type: string
+              enum:
+                - none
+                - lower
+                - upper
+                - all
+            zoneBooster:
+              type: string
+              enum:
+                - none
+                - left
+                - right
+                - all
+            speedBooster:
+              type: boolean
+            sanitize:
+              type: boolean
+            highTempWash:
+              type: boolean
+            steamSoak:
+              type: boolean
+            addRinse:
+              type: boolean
+            dryPlus:
+              type: boolean
+            stormWash:
+              type: boolean
+            sanitizingWash:
+              type: boolean
+            rinsePlus:
+              type: boolean
+            hotAirDry:
+              type: boolean
+            heatedDry:
+              type: string
+              enum:
+                - none
+                - extraLow
+                - low
+                - medium
+                - high
+                - extraHigh
+  setSteamSoak:
+    name: setSteamSoak
+    arguments:
+      - name: steamSoak
+        optional: false
+        schema:
+          type: boolean

@@ -1,0 +1,10 @@
+id: samsungvd.ambient
+version: 1
+status: proposed
+name: Ambient
+ephemeral: false
+attributes: {}
+commands:
+  setAmbientOn:
+    name: setAmbientOn
+    arguments: []

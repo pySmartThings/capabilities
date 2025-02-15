@@ -1,0 +1,49 @@
+id: sec.calmConnectionCare
+version: 1
+status: proposed
+name: Calm Connection Care
+ephemeral: false
+attributes:
+  role:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            title: role
+            type: string
+            enum:
+              - things
+              - helper
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  protocols:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            title: protocols
+            type: string
+            enum:
+              - l3_ocf
+              - ble_ocf
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  version:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

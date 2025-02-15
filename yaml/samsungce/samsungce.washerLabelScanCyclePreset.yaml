@@ -1,0 +1,102 @@
+id: samsungce.washerLabelScanCyclePreset
+version: 1
+status: proposed
+name: Washer Label Scan Cycle Preset
+ephemeral: false
+attributes:
+  presets:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          patternProperties:
+            ^.{1,32}$:
+              type: object
+              additionalProperties: false
+              properties:
+                recipeId:
+                  type: string
+                cycle:
+                  type: string
+                options:
+                  type: object
+                  additionalProperties:
+                    type: string
+                  properties:
+                    waterValve:
+                      type: string
+                    waterLevel:
+                      type: string
+                    washingTime:
+                      type: string
+                    waterTemperature:
+                      type: string
+                    rinseCycle:
+                      type: string
+                    spinLevel:
+                      type: string
+                    dryingLevel:
+                      type: string
+                    dryingTime:
+                      type: string
+                    soilLevel:
+                      type: string
+                    soak:
+                      type: string
+                    bubbleSoak:
+                      type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setWasherLabelScanCyclePreset:
+    name: setWasherLabelScanCyclePreset
+    arguments:
+      - name: presets
+        optional: false
+        schema:
+          type: object
+          additionalProperties: false
+          patternProperties:
+            ^.{1,32}$:
+              type: object
+              additionalProperties: false
+              properties:
+                recipeId:
+                  type: string
+                cycle:
+                  type: string
+                options:
+                  type: object
+                  additionalProperties:
+                    type: string
+                  properties:
+                    waterValve:
+                      type: string
+                    waterLevel:
+                      type: string
+                    washingTime:
+                      type: string
+                    waterTemperature:
+                      type: string
+                    rinseCycle:
+                      type: string
+                    spinLevel:
+                      type: string
+                    dryingLevel:
+                      type: string
+                    soilLevel:
+                      type: string
+                    soak:
+                      type: string
+                    bubbleSoak:
+                      type: string
+              required:
+                - cycle
+                - options
+  delete:
+    name: delete
+    arguments: []

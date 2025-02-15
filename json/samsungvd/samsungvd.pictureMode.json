@@ -1,0 +1,56 @@
+{
+  "id": "samsungvd.pictureMode",
+  "version": 1,
+  "status": "proposed",
+  "name": "Picture Mode",
+  "ephemeral": false,
+  "attributes": {
+    "pictureMode": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "supportedPictureModes": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "array" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "supportedPictureModesMap": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "string" },
+                "name": { "type": "string" }
+              }
+            },
+            "required": []
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setPictureMode": {
+      "name": "setPictureMode",
+      "arguments": [
+        { "name": "mode", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}

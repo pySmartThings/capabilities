@@ -1,0 +1,277 @@
+{
+  "id": "samsungce.dishwasherWashingCourseDetails",
+  "version": 1,
+  "status": "proposed",
+  "name": "Dishwasher Washing Course Details",
+  "ephemeral": false,
+  "attributes": {
+    "predefinedCourses": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "courseName": {
+                  "type": "string",
+                  "enum": [
+                    "auto",
+                    "eco",
+                    "intensive",
+                    "delicate",
+                    "express",
+                    "preWash",
+                    "selfClean",
+                    "extraSilence",
+                    "rinseOnly",
+                    "plastics",
+                    "potsAndPans",
+                    "babycare",
+                    "normal",
+                    "selfSanitize",
+                    "dryOnly",
+                    "upperExpress",
+                    "night",
+                    "babyBottle",
+                    "coldRinse",
+                    "glasses",
+                    "quick",
+                    "heavy",
+                    "daily",
+                    "chef",
+                    "preBlast",
+                    "steamSoak",
+                    "rinseDry",
+                    "machineCare",
+                    "AI",
+                    "nightSilence",
+                    "drinkware",
+                    "express_0C",
+                    "daily_09",
+                    "eco_08",
+                    "eco_10",
+                    "quick_14"
+                  ]
+                },
+                "energyUsage": { "type": "number", "minimum": 1 },
+                "waterUsage": { "type": "number", "minimum": 0 },
+                "temperature": {
+                  "type": "object",
+                  "properties": {
+                    "min": { "type": "integer" },
+                    "max": { "type": "integer" },
+                    "unit": { "type": "string", "enum": ["C", "F"] }
+                  },
+                  "required": ["min", "max"]
+                },
+                "expectedTime": {
+                  "type": "object",
+                  "properties": {
+                    "time": { "type": "integer" },
+                    "unit": { "type": "string", "enum": ["hour", "min", "sec"] }
+                  },
+                  "required": ["time"]
+                },
+                "options": {
+                  "type": "object",
+                  "properties": {
+                    "selectedZone": {
+                      "type": "object",
+                      "properties": {
+                        "default": { "type": "string" },
+                        "settable": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "enum": ["none", "lower", "upper", "all"]
+                          }
+                        }
+                      },
+                      "required": ["default", "settable"]
+                    },
+                    "zoneBooster": {
+                      "type": "object",
+                      "properties": {
+                        "default": { "type": "string" },
+                        "settable": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "enum": ["none", "left", "right", "all"]
+                          }
+                        }
+                      },
+                      "required": ["default", "settable"]
+                    },
+                    "speedBooster": {
+                      "type": "object",
+                      "properties": {
+                        "default": { "type": "boolean" },
+                        "settable": {
+                          "type": "array",
+                          "items": { "type": "boolean" }
+                        }
+                      },
+                      "required": ["default", "settable"]
+                    },
+                    "sanitize": {
+                      "type": "object",
+                      "properties": {
+                        "default": { "type": "boolean" },
+                        "settable": {
+                          "type": "array",
+                          "items": { "type": "boolean" }
+                        }
+                      },
+                      "required": ["default", "settable"]
+                    },
+                    "highTempWash": {
+                      "type": "object",
+                      "properties": {
+                        "default": { "type": "boolean" },
+                        "settable": {
+                          "type": "array",
+                          "items": { "type": "boolean" }
+                        }
+                      },
+                      "required": ["default", "settable"]
+                    },
+                    "steamSoak": {
+                      "type": "object",
+                      "properties": {
+                        "default": { "type": "boolean" },
+                        "settable": {
+                          "type": "array",
+                          "items": { "type": "boolean" }
+                        }
+                      },
+                      "required": ["default", "settable"]
+                    },
+                    "addRinse": {
+                      "type": "object",
+                      "properties": {
+                        "default": { "type": "boolean" },
+                        "settable": {
+                          "type": "array",
+                          "items": { "type": "boolean" }
+                        }
+                      },
+                      "required": ["default", "settable"]
+                    },
+                    "dryPlus": {
+                      "type": "object",
+                      "properties": {
+                        "default": { "type": "boolean" },
+                        "settable": {
+                          "type": "array",
+                          "items": { "type": "boolean" }
+                        }
+                      },
+                      "required": ["default", "settable"]
+                    },
+                    "stormWash": {
+                      "type": "object",
+                      "properties": {
+                        "default": { "type": "boolean" },
+                        "settable": {
+                          "type": "array",
+                          "items": { "type": "boolean" }
+                        }
+                      },
+                      "required": ["default", "settable"]
+                    },
+                    "sanitizingWash": {
+                      "type": "object",
+                      "properties": {
+                        "default": { "type": "boolean" },
+                        "settable": {
+                          "type": "array",
+                          "items": { "type": "boolean" }
+                        }
+                      },
+                      "required": ["default", "settable"]
+                    },
+                    "rinsePlus": {
+                      "type": "object",
+                      "properties": {
+                        "default": { "type": "boolean" },
+                        "settable": {
+                          "type": "array",
+                          "items": { "type": "boolean" }
+                        }
+                      },
+                      "required": ["default", "settable"]
+                    },
+                    "hotAirDry": {
+                      "type": "object",
+                      "properties": {
+                        "default": { "type": "boolean" },
+                        "settable": {
+                          "type": "array",
+                          "items": { "type": "boolean" }
+                        }
+                      },
+                      "required": ["default", "settable"]
+                    },
+                    "heatedDry": {
+                      "type": "object",
+                      "properties": {
+                        "default": { "type": "string" },
+                        "settable": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "enum": [
+                              "none",
+                              "extraLow",
+                              "low",
+                              "medium",
+                              "high",
+                              "extraHigh"
+                            ]
+                          }
+                        }
+                      },
+                      "required": ["default", "settable"]
+                    }
+                  }
+                }
+              },
+              "required": [
+                "courseName",
+                "energyUsage",
+                "waterUsage",
+                "expectedTime",
+                "options"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "waterUsageMax": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "integer" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "energyUsageMax": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "integer" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

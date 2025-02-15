@@ -1,0 +1,89 @@
+id: samsungce.viewInside
+version: 1
+status: proposed
+name: View Inside
+ephemeral: false
+attributes:
+  supportedFocusAreas:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - mainShelves
+              - leftDoorShelves
+              - rightDoorShelves
+            default: mainShelves
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  contents:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              fileId:
+                type: string
+              mimeType:
+                type: string
+                pattern: ^[-\w.]+/[-\w.]+$
+              updatedTime:
+                type: string
+                pattern: (^(?:[1-9]\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)T(?:[01]\d|2[0-3]):?[0-5]\d:?[0-5]\d(?:\.\d{3})?(?:Z|[+-][01]\d(?::?[0-5]\d)?)$|^$)
+              expiredTime:
+                type: string
+                pattern: (^(?:[1-9]\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)T(?:[01]\d|2[0-3]):?[0-5]\d:?[0-5]\d(?:\.\d{3})?(?:Z|[+-][01]\d(?::?[0-5]\d)?)$|^$)
+              focusArea:
+                type: string
+                enum:
+                  - mainShelves
+                  - leftDoorShelves
+                  - rightDoorShelves
+                default: mainShelves
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  lastUpdatedTime:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          pattern: ^(?:[1-9]\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)T(?:[01]\d|2[0-3]):?[0-5]\d:?[0-5]\d(?:\.\d{3})?(?:Z|[+-][01]\d(?::?[0-5]\d)?)$
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  refreshSpecificArea:
+    name: refreshSpecificArea
+    arguments:
+      - name: focusArea
+        optional: false
+        schema:
+          type: string
+          enum:
+            - mainShelves
+            - leftDoorShelves
+            - rightDoorShelves
+          default: mainShelves
+  refreshAll:
+    name: refreshAll
+    arguments: []
+  refresh:
+    name: refresh
+    arguments:
+      - name: fileId
+        optional: false
+        schema:
+          type: string

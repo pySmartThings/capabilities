@@ -1,0 +1,21 @@
+{
+  "id": "custom.disabledComponents",
+  "version": 1,
+  "status": "proposed",
+  "name": "Disabled Components",
+  "ephemeral": false,
+  "attributes": {
+    "disabledComponents": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

@@ -1,0 +1,106 @@
+{
+  "id": "custom.airConditionerOptionalMode",
+  "version": 1,
+  "status": "proposed",
+  "name": "Air Conditioner Optional Mode",
+  "ephemeral": false,
+  "attributes": {
+    "supportedAcOptionalMode": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "items": {
+              "enum": [
+                "off",
+                "energySaving",
+                "windFree",
+                "sleep",
+                "windFreeSleep",
+                "speed",
+                "smart",
+                "quiet",
+                "twoStep",
+                "comfort",
+                "dlightCool",
+                "dryComfort",
+                "cubePurify",
+                "longWind",
+                "motionIndirect",
+                "motionDirect"
+              ],
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "acOptionalMode": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "enum": [
+              "off",
+              "energySaving",
+              "windFree",
+              "sleep",
+              "windFreeSleep",
+              "speed",
+              "smart",
+              "quiet",
+              "twoStep",
+              "comfort",
+              "dlightCool",
+              "dryComfort",
+              "cubePurify",
+              "longWind",
+              "motionIndirect",
+              "motionDirect"
+            ],
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setAcOptionalMode": {
+      "name": "setAcOptionalMode",
+      "arguments": [
+        {
+          "name": "mode",
+          "optional": false,
+          "schema": {
+            "enum": [
+              "off",
+              "energySaving",
+              "windFree",
+              "sleep",
+              "windFreeSleep",
+              "speed",
+              "smart",
+              "quiet",
+              "twoStep",
+              "comfort",
+              "dlightCool",
+              "dryComfort",
+              "cubePurify",
+              "longWind",
+              "motionIndirect",
+              "motionDirect"
+            ],
+            "type": "string"
+          }
+        }
+      ]
+    }
+  }
+}

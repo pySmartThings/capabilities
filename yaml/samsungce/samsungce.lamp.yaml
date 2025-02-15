@@ -1,0 +1,69 @@
+id: samsungce.lamp
+version: 1
+status: proposed
+name: Lamp
+ephemeral: false
+attributes:
+  brightnessLevel:
+    schema:
+      type: object
+      properties:
+        value:
+          oneOf:
+            - type: string
+              enum:
+                - "off"
+                - "on"
+                - low
+                - mid
+                - high
+                - extraHigh
+            - type: integer
+              minimum: 0
+              maximum: 100
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedBrightnessLevel:
+    schema:
+      type: object
+      properties:
+        value:
+          items:
+            oneOf:
+              - type: string
+                enum:
+                  - "off"
+                  - "on"
+                  - low
+                  - mid
+                  - high
+                  - extraHigh
+              - type: integer
+                minimum: 0
+                maximum: 100
+          type: array
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setBrightnessLevel:
+    name: setBrightnessLevel
+    arguments:
+      - name: level
+        optional: false
+        schema:
+          oneOf:
+            - type: string
+              enum:
+                - "off"
+                - "on"
+                - low
+                - mid
+                - high
+                - extraHigh
+            - type: integer
+              minimum: 0
+              maximum: 100

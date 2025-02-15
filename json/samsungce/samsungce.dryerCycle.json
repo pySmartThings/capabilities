@@ -1,0 +1,106 @@
+{
+  "id": "samsungce.dryerCycle",
+  "version": 1,
+  "status": "proposed",
+  "name": "Dryer Cycle",
+  "ephemeral": false,
+  "attributes": {
+    "dryerCycle": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setDryerCycle",
+      "enumCommands": []
+    },
+    "supportedCycles": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "cycle": { "type": "string" },
+                "supportedOptions": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "patternProperties": {
+                    "^.{1,32}$": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "raw": { "type": "string" },
+                        "default": { "type": "string" },
+                        "options": {
+                          "type": "array",
+                          "items": { "type": "string" }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "required": ["cycle", "supportedOptions"],
+              "examples": [
+                {
+                  "cycle": "01",
+                  "supportedOptions": {
+                    "dryingLevel": {
+                      "raw": "D31E",
+                      "default": "normal",
+                      "options": ["damp", "less", "normal", "more"]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "referenceTable": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": { "id": { "type": "string" } }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "specializedFunctionClassification": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "integer" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setDryerCycle": {
+      "name": "setDryerCycle",
+      "arguments": [
+        {
+          "name": "dryerCycle",
+          "optional": false,
+          "schema": { "type": "string" }
+        }
+      ]
+    }
+  }
+}

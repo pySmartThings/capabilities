@@ -1,0 +1,22 @@
+{
+  "id": "samsungce.powerFreeze",
+  "version": 1,
+  "status": "proposed",
+  "name": "Power Freeze",
+  "ephemeral": false,
+  "attributes": {
+    "activated": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "activate": { "name": "activate", "arguments": [] },
+    "deactivate": { "name": "deactivate", "arguments": [] }
+  }
+}

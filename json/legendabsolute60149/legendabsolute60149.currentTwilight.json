@@ -1,0 +1,27 @@
+{
+  "id": "legendabsolute60149.currentTwilight",
+  "version": 1,
+  "status": "proposed",
+  "name": "Current Twilight",
+  "ephemeral": false,
+  "attributes": {
+    "currentTwilight": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setCurrentTwilight",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setCurrentTwilight": {
+      "name": "setCurrentTwilight",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}

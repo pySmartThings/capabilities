@@ -1,0 +1,42 @@
+id: samsungce.dryerDryingTime
+version: 1
+status: proposed
+name: Dryer Drying Time
+ephemeral: false
+attributes:
+  supportedDryingTime:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  dryingTime:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+        unit:
+          type: string
+          enum:
+            - min
+          default: min
+      additionalProperties: false
+      required:
+        - value
+    setter: setDryingTime
+    enumCommands: []
+commands:
+  setDryingTime:
+    name: setDryingTime
+    arguments:
+      - name: dryingTime
+        optional: false
+        schema:
+          type: string

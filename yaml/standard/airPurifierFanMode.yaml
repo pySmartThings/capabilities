@@ -1,0 +1,65 @@
+id: airPurifierFanMode
+version: 1
+status: live
+name: Air Purifier Fan Mode
+ephemeral: false
+attributes:
+  supportedAirPurifierFanModes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            title: AirPurifierFanMode
+            type: string
+            enum:
+              - auto
+              - sleep
+              - low
+              - medium
+              - high
+              - quiet
+              - windFree
+              - "off"
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  airPurifierFanMode:
+    schema:
+      type: object
+      properties:
+        value:
+          title: AirPurifierFanMode
+          type: string
+          enum:
+            - auto
+            - sleep
+            - low
+            - medium
+            - high
+            - quiet
+            - windFree
+            - "off"
+      additionalProperties: false
+      required: []
+    setter: setAirPurifierFanMode
+    enumCommands: []
+commands:
+  setAirPurifierFanMode:
+    name: setAirPurifierFanMode
+    arguments:
+      - name: airPurifierFanMode
+        optional: false
+        schema:
+          title: AirPurifierFanMode
+          type: string
+          enum:
+            - auto
+            - sleep
+            - low
+            - medium
+            - high
+            - quiet
+            - windFree
+            - "off"

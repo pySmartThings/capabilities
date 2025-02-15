@@ -1,0 +1,25 @@
+id: legendabsolute60149.mirrorGroupFunction
+version: 1
+status: proposed
+name: Mirror Group Function
+ephemeral: false
+attributes:
+  mirrorGroupFunction:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setMirrorGroupFunction
+    enumCommands: []
+commands:
+  setMirrorGroupFunction:
+    name: setMirrorGroupFunction
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string

@@ -1,0 +1,25 @@
+id: legendabsolute60149.dayLength
+version: 1
+status: proposed
+name: Day Length
+ephemeral: false
+attributes:
+  dayLength:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setDayLength
+    enumCommands: []
+commands:
+  setDayLength:
+    name: setDayLength
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string

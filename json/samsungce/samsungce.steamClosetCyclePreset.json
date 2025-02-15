@@ -1,0 +1,96 @@
+{
+  "id": "samsungce.steamClosetCyclePreset",
+  "version": 1,
+  "status": "proposed",
+  "name": "Steam Closet Cycle Preset",
+  "ephemeral": false,
+  "attributes": {
+    "maxNumberOfPresets": {
+      "schema": {
+        "title": "Maximum number of presets",
+        "type": "object",
+        "properties": { "value": { "type": "number", "default": 10 } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "presets": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "patternProperties": {
+              "^.{1,32}$": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "recipeId": { "type": "string" },
+                  "title": { "type": "string" },
+                  "memo": { "type": "string" },
+                  "cycle": { "type": "string" },
+                  "options": {
+                    "type": "object",
+                    "additionalProperties": { "type": "string" },
+                    "properties": { "sanitize": { "type": "string" } }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "delete": {
+      "name": "delete",
+      "arguments": [
+        {
+          "name": "presetIds",
+          "optional": false,
+          "schema": {
+            "type": "array",
+            "items": { "type": "string", "pattern": "^.{1,32}$" }
+          }
+        }
+      ]
+    },
+    "setSteamClosetCyclePreset": {
+      "name": "setSteamClosetCyclePreset",
+      "arguments": [
+        {
+          "name": "presets",
+          "optional": false,
+          "schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "patternProperties": {
+              "^.{1,32}$": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "recipeId": { "type": "string" },
+                  "title": { "type": "string" },
+                  "memo": { "type": "string" },
+                  "cycle": { "type": "string" },
+                  "options": {
+                    "type": "object",
+                    "additionalProperties": { "type": "string" },
+                    "properties": { "sanitize": { "type": "string" } }
+                  }
+                },
+                "required": ["recipeId", "title", "memo", "cycle"]
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "legendabsolute60149.sunSetOffset1",
+  "version": 1,
+  "status": "proposed",
+  "name": "Sun Set Offset1",
+  "ephemeral": false,
+  "attributes": {
+    "sunSetOffset": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "integer" },
+          "unit": { "type": "string", "enum": ["min"], "default": "min" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setSunSetOffset",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setSunSetOffset": {
+      "name": "setSunSetOffset",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "integer" } }
+      ]
+    }
+  }
+}

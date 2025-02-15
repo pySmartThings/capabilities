@@ -1,0 +1,29 @@
+id: legendabsolute60149.localMonthDayOne
+version: 1
+status: proposed
+name: Local Month Day One
+ephemeral: false
+attributes:
+  localMonthDayOne:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 101
+          maximum: 1231
+      additionalProperties: false
+      required:
+        - value
+    setter: setLocalMonthDayOne
+    enumCommands: []
+commands:
+  setLocalMonthDayOne:
+    name: setLocalMonthDayOne
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: integer
+          minimum: 101
+          maximum: 1231

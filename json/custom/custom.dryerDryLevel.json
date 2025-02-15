@@ -1,0 +1,145 @@
+{
+  "id": "custom.dryerDryLevel",
+  "version": 1,
+  "status": "proposed",
+  "name": "Dryer Dry Level",
+  "ephemeral": false,
+  "attributes": {
+    "dryerDryLevel": {
+      "schema": {
+        "title": "dryerDryLevel",
+        "type": "object",
+        "properties": {
+          "value": {
+            "enum": [
+              "none",
+              "damp",
+              "less",
+              "normal",
+              "more",
+              "very",
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "cupboard",
+              "extra",
+              "shirt",
+              "delicate",
+              "30",
+              "60",
+              "90",
+              "120",
+              "150",
+              "180",
+              "210",
+              "240",
+              "270",
+              "drum20",
+              "drum40",
+              "drum60"
+            ],
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setDryerDryLevel",
+      "enumCommands": []
+    },
+    "supportedDryerDryLevel": {
+      "schema": {
+        "title": "supportedDryerDryLevel",
+        "type": "object",
+        "properties": {
+          "value": {
+            "items": {
+              "enum": [
+                "none",
+                "damp",
+                "less",
+                "normal",
+                "more",
+                "very",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "cupboard",
+                "extra",
+                "shirt",
+                "delicate",
+                "30",
+                "60",
+                "90",
+                "120",
+                "150",
+                "180",
+                "210",
+                "240",
+                "270",
+                "drum20",
+                "drum40",
+                "drum60"
+              ],
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setDryerDryLevel": {
+      "name": "setDryerDryLevel",
+      "arguments": [
+        {
+          "name": "dryLevel",
+          "optional": false,
+          "schema": {
+            "enum": [
+              "none",
+              "damp",
+              "less",
+              "normal",
+              "more",
+              "very",
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "cupboard",
+              "extra",
+              "shirt",
+              "delicate",
+              "30",
+              "60",
+              "90",
+              "120",
+              "150",
+              "180",
+              "210",
+              "240",
+              "270",
+              "drum20",
+              "drum40",
+              "drum60"
+            ],
+            "type": "string"
+          }
+        }
+      ]
+    }
+  }
+}

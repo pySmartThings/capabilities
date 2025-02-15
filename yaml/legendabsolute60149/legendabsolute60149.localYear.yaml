@@ -1,0 +1,29 @@
+id: legendabsolute60149.localYear
+version: 1
+status: proposed
+name: Local Year
+ephemeral: false
+attributes:
+  localYear:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 2022
+          maximum: 2222
+      additionalProperties: false
+      required:
+        - value
+    setter: setLocalYear
+    enumCommands: []
+commands:
+  setLocalYear:
+    name: setLocalYear
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: integer
+          minimum: 2022
+          maximum: 2222

@@ -1,0 +1,80 @@
+{
+  "id": "ovenSetpoint",
+  "version": 1,
+  "status": "live",
+  "name": "Oven Setpoint",
+  "ephemeral": false,
+  "attributes": {
+    "ovenSetpointRange": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "minimum": {
+                "title": "TemperatureValue",
+                "type": "number",
+                "minimum": -460,
+                "maximum": 10000
+              },
+              "maximum": {
+                "title": "TemperatureValue",
+                "type": "number",
+                "minimum": -460,
+                "maximum": 10000
+              },
+              "step": {
+                "title": "TemperatureValue",
+                "type": "number",
+                "minimum": -460,
+                "maximum": 10000
+              }
+            },
+            "required": ["minimum", "maximum"]
+          },
+          "unit": { "type": "string", "enum": ["F", "C"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "ovenSetpoint": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "title": "TemperatureValue",
+            "type": "number",
+            "minimum": -460,
+            "maximum": 10000
+          },
+          "unit": { "type": "string", "enum": ["F", "C"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setOvenSetpoint",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setOvenSetpoint": {
+      "name": "setOvenSetpoint",
+      "arguments": [
+        {
+          "name": "setpoint",
+          "optional": false,
+          "schema": {
+            "title": "TemperatureValue",
+            "type": "number",
+            "minimum": -460,
+            "maximum": 10000
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "id": "custom.steamClosetOperatingState",
+  "version": 1,
+  "status": "proposed",
+  "name": "Steam Closet Operating State",
+  "ephemeral": false,
+  "attributes": {
+    "supportedSteamClosetJobState": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "items": {
+              "enum": [
+                "none",
+                "steaming",
+                "airwashing",
+                "sterilizing",
+                "drying",
+                "dehumidifying",
+                "delaywash",
+                "finish",
+                "keepFresh",
+                "descaling",
+                "descalingFinish"
+              ],
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "completionTime": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "pattern": "^(?:[1-9]\\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)T(?:[01]\\d|2[0-3]):?[0-5]\\d:?[0-5]\\d(?:\\.\\d{3})?(?:Z|[+-][01]\\d(?::?[0-5]\\d)?)$",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "steamClosetMachineState": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "enum": ["pause", "run", "stop"], "type": "string" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedSteamClosetMachineState": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "items": { "enum": ["pause", "run", "stop"], "type": "string" },
+            "type": "array"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "steamClosetJobState": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "none",
+              "steaming",
+              "airwashing",
+              "sterilizing",
+              "drying",
+              "dehumidifying",
+              "delaywash",
+              "finish",
+              "keepFresh",
+              "descaling",
+              "descalingFinish"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "progress": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "maximum": 100, "minimum": 0, "type": "integer" },
+          "unit": { "type": "string", "enum": ["%"], "default": "%" }
+        },
+        "additionalProperties": false,
+        "required": ["value", "unit"]
+      },
+      "enumCommands": []
+    },
+    "remainingTimeStr": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "pattern": "^[0-2]{0,1}[0-9]:[0-5][0-9]$"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "steamClosetDelayEndTime": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "remainingTime": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "maximum": 1440, "minimum": 0, "type": "integer" },
+          "unit": { "type": "string", "enum": ["min"], "default": "min" }
+        },
+        "additionalProperties": false,
+        "required": ["value", "unit"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setSteamClosetDelayEndTime": {
+      "name": "setSteamClosetDelayEndTime",
+      "arguments": [
+        {
+          "name": "delayEndTime",
+          "optional": false,
+          "schema": { "type": "string" }
+        }
+      ]
+    },
+    "setSteamClosetMachineState": {
+      "name": "setSteamClosetMachineState",
+      "arguments": [
+        {
+          "name": "state",
+          "optional": false,
+          "schema": { "enum": ["pause", "run", "stop"], "type": "string" }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "custom.supportedOptions",
+  "version": 1,
+  "status": "proposed",
+  "name": "Supported Options",
+  "ephemeral": false,
+  "attributes": {
+    "course": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "referenceTable": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": { "id": { "type": "string" } }
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "supportedCourses": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "items": { "type": "string" }, "type": "array" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setCourse": {
+      "name": "setCourse",
+      "arguments": [
+        { "name": "course", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}

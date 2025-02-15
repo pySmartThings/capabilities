@@ -1,0 +1,10 @@
+id: samsungce.weightMeasurementCalibration
+version: 1
+status: proposed
+name: Weight Measurement Calibration
+ephemeral: false
+attributes: {}
+commands:
+  zeroCalibrate:
+    name: zeroCalibrate
+    arguments: []

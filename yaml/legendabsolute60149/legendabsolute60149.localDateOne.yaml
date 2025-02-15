@@ -1,0 +1,25 @@
+id: legendabsolute60149.localDateOne
+version: 1
+status: proposed
+name: Local Date One
+ephemeral: false
+attributes:
+  localDateOne:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+      additionalProperties: false
+      required:
+        - value
+    setter: setLocalDateOne
+    enumCommands: []
+commands:
+  setLocalDateOne:
+    name: setLocalDateOne
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: integer

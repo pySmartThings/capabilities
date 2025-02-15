@@ -1,0 +1,49 @@
+id: airConditionerFanMode
+version: 1
+status: live
+name: Air Conditioner Fan Mode
+ephemeral: false
+attributes:
+  fanMode:
+    schema:
+      type: object
+      properties:
+        value:
+          title: String
+          type: string
+          maxLength: 255
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  supportedAcFanModes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  availableAcFanModes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+      additionalProperties: false
+      required: []
+    enumCommands: []
+commands:
+  setFanMode:
+    name: setFanMode
+    arguments:
+      - name: fanMode
+        optional: false
+        schema:
+          title: String
+          type: string
+          maxLength: 255

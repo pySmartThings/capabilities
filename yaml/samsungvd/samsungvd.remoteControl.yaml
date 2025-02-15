@@ -1,0 +1,40 @@
+id: samsungvd.remoteControl
+version: 1
+status: proposed
+name: Remote Control
+ephemeral: false
+attributes: {}
+commands:
+  send:
+    name: send
+    arguments:
+      - name: keyValue
+        optional: false
+        schema:
+          type: string
+          enum:
+            - UP
+            - DOWN
+            - LEFT
+            - RIGHT
+            - OK
+            - BACK
+            - EXIT
+            - MENU
+            - HOME
+            - MUTE
+            - PLAY
+            - PAUSE
+            - STOP
+            - REWIND
+            - FF
+            - PLAY_BACK
+            - SOURCE
+      - name: keyState
+        optional: true
+        schema:
+          type: string
+          enum:
+            - PRESSED
+            - RELEASED
+            - PRESS_AND_RELEASED

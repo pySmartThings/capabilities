@@ -1,0 +1,98 @@
+id: samsungce.softenerState
+version: 1
+status: proposed
+name: Softener State
+ephemeral: false
+attributes:
+  remainingAmount:
+    schema:
+      type: object
+      properties:
+        value:
+          type: number
+        unit:
+          type: string
+          enum:
+            - cc
+          default: cc
+      additionalProperties: false
+      required:
+        - value
+    setter: setRemainingAmount
+    enumCommands: []
+  dosage:
+    schema:
+      type: object
+      properties:
+        value:
+          type: number
+        unit:
+          type: string
+          enum:
+            - cc
+          default: cc
+      additionalProperties: false
+      required:
+        - value
+    setter: setDosage
+    enumCommands: []
+  softenerType:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - none
+            - liquid
+            - unknown
+      additionalProperties: false
+      required:
+        - value
+    setter: setSoftenerType
+    enumCommands: []
+  initialAmount:
+    schema:
+      type: object
+      properties:
+        value:
+          type: number
+        unit:
+          type: string
+          enum:
+            - cc
+          default: cc
+      additionalProperties: false
+      required:
+        - value
+    setter: setInitialAmount
+    enumCommands: []
+commands:
+  setInitialAmount:
+    name: setInitialAmount
+    arguments:
+      - name: amount
+        optional: false
+        schema:
+          type: number
+  setRemainingAmount:
+    name: setRemainingAmount
+    arguments:
+      - name: amount
+        optional: false
+        schema:
+          type: number
+  setDosage:
+    name: setDosage
+    arguments:
+      - name: amount
+        optional: false
+        schema:
+          type: number
+  setSoftenerType:
+    name: setSoftenerType
+    arguments:
+      - name: softenerType
+        optional: false
+        schema:
+          type: string

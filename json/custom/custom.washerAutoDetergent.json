@@ -1,0 +1,36 @@
+{
+  "id": "custom.washerAutoDetergent",
+  "version": 1,
+  "status": "proposed",
+  "name": "Washer Auto Detergent",
+  "ephemeral": false,
+  "attributes": {
+    "washerAutoDetergent": {
+      "schema": {
+        "title": "washerAutoDetergent",
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["on", "off", "notSupported", "notUsed"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setWasherAutoDetergent": {
+      "name": "setWasherAutoDetergent",
+      "arguments": [
+        {
+          "name": "washerAutoDetergent",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["on", "off"] }
+        }
+      ]
+    }
+  }
+}

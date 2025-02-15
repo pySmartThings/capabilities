@@ -1,0 +1,49 @@
+id: windMode
+version: 1
+status: live
+name: Wind Mode
+ephemeral: false
+attributes:
+  supportedWindModes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - noWind
+              - sleepWind
+              - naturalWind
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  windMode:
+    schema:
+      type: object
+      properties:
+        value:
+          title: WindMode
+          type: string
+          enum:
+            - noWind
+            - sleepWind
+            - naturalWind
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setWindMode:
+    name: setWindMode
+    arguments:
+      - name: windMode
+        optional: false
+        schema:
+          title: WindMode
+          type: string
+          enum:
+            - noWind
+            - sleepWind
+            - naturalWind

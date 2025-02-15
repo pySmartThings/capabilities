@@ -1,0 +1,53 @@
+id: samsungce.dustFilterAlarm
+version: 1
+status: proposed
+name: Dust Filter Alarm
+ephemeral: false
+attributes:
+  alarmThreshold:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+        unit:
+          type: string
+          enum:
+            - CC
+            - Cycle
+            - Gallon
+            - Hour
+            - Month
+      additionalProperties: false
+      required:
+        - value
+    setter: setAlarmThreshold
+    enumCommands: []
+  supportedAlarmThresholds:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: integer
+        unit:
+          type: string
+          enum:
+            - CC
+            - Cycle
+            - Gallon
+            - Hour
+            - Month
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setAlarmThreshold:
+    name: setAlarmThreshold
+    arguments:
+      - name: alarmThreshold
+        optional: false
+        schema:
+          type: integer

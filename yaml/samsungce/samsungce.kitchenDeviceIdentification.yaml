@@ -1,0 +1,80 @@
+id: samsungce.kitchenDeviceIdentification
+version: 1
+status: proposed
+name: Kitchen Device Identification
+ephemeral: false
+attributes:
+  regionCode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          values:
+            - IT
+            - UK
+            - FR
+            - US
+            - JP
+            - EU
+            - KR
+            - CN
+            - ZZ
+            - UNKNOWN
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  modelCode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  fuel:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - gas
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  type:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - oven
+            - range
+            - microwave
+            - cooktop
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  representativeComponent:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - main
+            - cavity-01
+            - cavity-02
+            - cavity-03
+          default: main
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

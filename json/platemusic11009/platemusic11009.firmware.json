@@ -1,0 +1,19 @@
+{
+  "id": "platemusic11009.firmware",
+  "version": 1,
+  "status": "proposed",
+  "name": "Firmware",
+  "ephemeral": false,
+  "attributes": {
+    "firmwareVersion": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "number", "minimum": 0 } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

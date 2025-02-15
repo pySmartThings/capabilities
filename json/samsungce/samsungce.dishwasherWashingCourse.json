@@ -1,0 +1,399 @@
+{
+  "id": "samsungce.dishwasherWashingCourse",
+  "version": 1,
+  "status": "proposed",
+  "name": "Dishwasher Washing Course",
+  "ephemeral": false,
+  "attributes": {
+    "customCourseCandidates": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "auto",
+                "eco",
+                "intensive",
+                "delicate",
+                "express",
+                "preWash",
+                "selfClean",
+                "extraSilence",
+                "rinseOnly",
+                "plastics",
+                "potsAndPans",
+                "babycare",
+                "normal",
+                "selfSanitize",
+                "dryOnly",
+                "upperExpress",
+                "night",
+                "babyBottle",
+                "coldRinse",
+                "glasses",
+                "quick",
+                "heavy",
+                "daily",
+                "chef",
+                "preBlast",
+                "steamSoak",
+                "rinseDry",
+                "machineCare",
+                "AI",
+                "nightSilence",
+                "drinkware",
+                "express_0C",
+                "daily_09",
+                "eco_08",
+                "eco_10",
+                "quick_14"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "washingCourse": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "auto",
+              "eco",
+              "intensive",
+              "delicate",
+              "express",
+              "preWash",
+              "selfClean",
+              "extraSilence",
+              "rinseOnly",
+              "plastics",
+              "potsAndPans",
+              "babycare",
+              "normal",
+              "selfSanitize",
+              "dryOnly",
+              "upperExpress",
+              "night",
+              "babyBottle",
+              "coldRinse",
+              "glasses",
+              "quick",
+              "heavy",
+              "daily",
+              "chef",
+              "preBlast",
+              "steamSoak",
+              "rinseDry",
+              "machineCare",
+              "AI",
+              "nightSilence",
+              "drinkware",
+              "express_0C",
+              "daily_09",
+              "eco_08",
+              "eco_10",
+              "quick_14"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setWashingCourse",
+      "enumCommands": []
+    },
+    "supportedCourses": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "auto",
+                "eco",
+                "intensive",
+                "delicate",
+                "express",
+                "preWash",
+                "selfClean",
+                "extraSilence",
+                "rinseOnly",
+                "plastics",
+                "potsAndPans",
+                "babycare",
+                "normal",
+                "selfSanitize",
+                "dryOnly",
+                "upperExpress",
+                "night",
+                "babyBottle",
+                "coldRinse",
+                "glasses",
+                "quick",
+                "heavy",
+                "daily",
+                "chef",
+                "preBlast",
+                "steamSoak",
+                "rinseDry",
+                "machineCare",
+                "AI",
+                "nightSilence",
+                "drinkware",
+                "express_0C",
+                "daily_09",
+                "eco_08",
+                "eco_10",
+                "quick_14"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setWashingCourse": {
+      "name": "setWashingCourse",
+      "arguments": [
+        {
+          "name": "course",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "auto",
+              "eco",
+              "intensive",
+              "delicate",
+              "express",
+              "preWash",
+              "selfClean",
+              "extraSilence",
+              "rinseOnly",
+              "plastics",
+              "potsAndPans",
+              "babycare",
+              "normal",
+              "selfSanitize",
+              "dryOnly",
+              "upperExpress",
+              "night",
+              "babyBottle",
+              "coldRinse",
+              "glasses",
+              "quick",
+              "heavy",
+              "daily",
+              "chef",
+              "preBlast",
+              "steamSoak",
+              "rinseDry",
+              "machineCare",
+              "AI",
+              "nightSilence",
+              "drinkware",
+              "express_0C",
+              "daily_09",
+              "eco_08",
+              "eco_10",
+              "quick_14"
+            ]
+          }
+        }
+      ]
+    },
+    "setCustomCourse": {
+      "name": "setCustomCourse",
+      "arguments": [
+        {
+          "name": "course",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "auto",
+              "eco",
+              "intensive",
+              "delicate",
+              "express",
+              "preWash",
+              "selfClean",
+              "extraSilence",
+              "rinseOnly",
+              "plastics",
+              "potsAndPans",
+              "babycare",
+              "normal",
+              "selfSanitize",
+              "dryOnly",
+              "upperExpress",
+              "night",
+              "babyBottle",
+              "coldRinse",
+              "glasses",
+              "quick",
+              "heavy",
+              "daily",
+              "chef",
+              "preBlast",
+              "steamSoak",
+              "rinseDry",
+              "machineCare",
+              "AI",
+              "nightSilence",
+              "drinkware",
+              "express_0C",
+              "daily_09",
+              "eco_08",
+              "eco_10",
+              "quick_14"
+            ]
+          }
+        }
+      ]
+    },
+    "startWashingCourse": {
+      "name": "startWashingCourse",
+      "arguments": [
+        {
+          "name": "course",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "auto",
+              "eco",
+              "intensive",
+              "delicate",
+              "express",
+              "preWash",
+              "selfClean",
+              "extraSilence",
+              "rinseOnly",
+              "plastics",
+              "potsAndPans",
+              "babycare",
+              "normal",
+              "selfSanitize",
+              "dryOnly",
+              "upperExpress",
+              "night",
+              "babyBottle",
+              "coldRinse",
+              "glasses",
+              "quick",
+              "heavy",
+              "daily",
+              "chef",
+              "preBlast",
+              "steamSoak",
+              "rinseDry",
+              "machineCare",
+              "AI",
+              "nightSilence",
+              "drinkware",
+              "express_0C",
+              "daily_09",
+              "eco_08",
+              "eco_10",
+              "quick_14"
+            ]
+          }
+        }
+      ]
+    },
+    "startWashingCourseWithOptions": {
+      "name": "startWashingCourseWithOptions",
+      "arguments": [
+        {
+          "name": "course",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "auto",
+              "eco",
+              "intensive",
+              "delicate",
+              "express",
+              "preWash",
+              "selfClean",
+              "extraSilence",
+              "rinseOnly",
+              "plastics",
+              "potsAndPans",
+              "babycare",
+              "normal",
+              "selfSanitize",
+              "dryOnly",
+              "upperExpress",
+              "night",
+              "babyBottle",
+              "coldRinse",
+              "glasses",
+              "quick",
+              "heavy",
+              "daily",
+              "chef",
+              "preBlast",
+              "steamSoak",
+              "rinseDry",
+              "machineCare",
+              "AI",
+              "nightSilence",
+              "drinkware",
+              "express_0C",
+              "daily_09",
+              "eco_08",
+              "eco_10",
+              "quick_14"
+            ]
+          }
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "selectedZone": {
+                "type": "string",
+                "enum": ["none", "lower", "upper", "all"]
+              },
+              "zoneBooster": {
+                "type": "string",
+                "enum": ["none", "left", "right", "all"]
+              },
+              "speedBooster": { "type": "boolean" },
+              "sanitize": { "type": "boolean" },
+              "highTempWash": { "type": "boolean" },
+              "steamSoak": { "type": "boolean" },
+              "addRinse": { "type": "boolean" },
+              "dryPlus": { "type": "boolean" },
+              "stormWash": { "type": "boolean" },
+              "sanitizingWash": { "type": "boolean" },
+              "rinsePlus": { "type": "boolean" },
+              "hotAirDry": { "type": "boolean" }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

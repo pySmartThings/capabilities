@@ -1,0 +1,85 @@
+{
+  "id": "samsungce.selfCheck",
+  "version": 1,
+  "status": "proposed",
+  "name": "Self Check",
+  "ephemeral": false,
+  "attributes": {
+    "result": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "default": "passed",
+            "enum": ["passed", "failed", "checking", "cancelled"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedActions": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "default": ["start"],
+            "items": { "type": "string", "enum": ["start", "cancel"] }
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "progress": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "integer", "minimum": 0, "maximum": 100 },
+          "unit": { "type": "string", "enum": ["%"], "default": "%" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "errors": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": { "code": { "type": "string" } },
+              "required": ["code"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "status": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["ready", "running"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "cancelSelfCheck": { "name": "cancelSelfCheck", "arguments": [] },
+    "startSelfCheck": { "name": "startSelfCheck", "arguments": [] }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "samsungce.meatProbe",
+  "version": 1,
+  "status": "proposed",
+  "name": "Meat Probe",
+  "ephemeral": false,
+  "attributes": {
+    "temperatureSetpoint": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number", "minimum": -460, "maximum": 10000 },
+          "unit": { "type": "string", "enum": ["F", "C"] }
+        },
+        "additionalProperties": false,
+        "required": ["value", "unit"]
+      },
+      "enumCommands": []
+    },
+    "temperature": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number", "minimum": -460, "maximum": 10000 },
+          "unit": { "type": "string", "enum": ["F", "C"] }
+        },
+        "additionalProperties": false,
+        "required": ["value", "unit"]
+      },
+      "enumCommands": []
+    },
+    "status": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "eum": ["connected", "disconnected"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setTemperatureSetpoint": {
+      "name": "setTemperatureSetpoint",
+      "arguments": [
+        {
+          "name": "temperature",
+          "optional": false,
+          "schema": { "type": "number", "minimum": 0 }
+        }
+      ]
+    }
+  }
+}

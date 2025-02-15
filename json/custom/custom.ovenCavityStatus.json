@@ -1,0 +1,25 @@
+{
+  "id": "custom.ovenCavityStatus",
+  "version": 1,
+  "status": "proposed",
+  "name": "Oven Cavity Status",
+  "ephemeral": false,
+  "attributes": {
+    "ovenCavityStatus": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "values": ["on", "off"],
+            "default": "off",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

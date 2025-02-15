@@ -1,0 +1,120 @@
+id: sec.diagnosticsInformation
+version: 1
+status: proposed
+name: Diagnostics Information
+ephemeral: false
+attributes:
+  logType:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            title: logType
+            type: string
+            enum:
+              - errCode
+              - dump
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  endpoint:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - NONE
+            - PIPER
+            - SSM
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  minVersion:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  signinPermission:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - immutable
+            - updating
+            - enabled
+            - disabled
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  setupId:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  protocolType:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - ble_ocf
+            - wifi_https
+            - ble_stdk
+            - wifi_stdk
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  tsId:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  mnId:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  dumpType:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - file
+            - id
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

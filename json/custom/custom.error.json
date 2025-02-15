@@ -1,0 +1,26 @@
+{
+  "id": "custom.error",
+  "version": 1,
+  "status": "proposed",
+  "name": "Error",
+  "ephemeral": false,
+  "attributes": {
+    "error": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "object" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setError": {
+      "name": "setError",
+      "arguments": [
+        { "name": "error", "optional": false, "schema": { "type": "object" } }
+      ]
+    }
+  }
+}

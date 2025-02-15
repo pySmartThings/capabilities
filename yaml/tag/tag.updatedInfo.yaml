@@ -1,0 +1,22 @@
+id: tag.updatedInfo
+version: 1
+status: proposed
+name: Updated Info
+ephemeral: false
+attributes:
+  connection:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - connected
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  update:
+    name: update
+    arguments: []

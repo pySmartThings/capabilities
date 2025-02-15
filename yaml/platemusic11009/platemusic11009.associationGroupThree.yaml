@@ -1,0 +1,18 @@
+id: platemusic11009.associationGroupThree
+version: 1
+status: proposed
+name: Association Group Three
+ephemeral: false
+attributes:
+  associationGroupThree:
+    schema:
+      type: object
+      properties:
+        value:
+          title: Association Group 3 Devices
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

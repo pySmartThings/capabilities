@@ -1,0 +1,30 @@
+{
+  "id": "legendabsolute60149.sunElevationAngle",
+  "version": 1,
+  "status": "proposed",
+  "name": "Sun Elevation Angle",
+  "ephemeral": false,
+  "attributes": {
+    "sunElevationAngle": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number" },
+          "unit": { "type": "string", "enum": ["º"], "default": "º" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setSunElevationAngle",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setSunElevationAngle": {
+      "name": "setSunElevationAngle",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "number" } }
+      ]
+    }
+  }
+}

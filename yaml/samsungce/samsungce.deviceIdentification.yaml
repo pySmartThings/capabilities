@@ -1,0 +1,88 @@
+id: samsungce.deviceIdentification
+version: 1
+status: proposed
+name: Device Identification
+ephemeral: false
+attributes:
+  micomAssayCode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  modelName:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  serialNumber:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  serialNumberExtra:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  modelClassificationCode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          pattern: ^([0-9a-fA-F]){32}$
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  description:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  releaseYear:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  binaryId:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

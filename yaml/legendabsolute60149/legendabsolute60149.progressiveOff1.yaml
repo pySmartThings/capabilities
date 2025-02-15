@@ -1,0 +1,27 @@
+id: legendabsolute60149.progressiveOff1
+version: 1
+status: proposed
+name: Progressive Off 1
+ephemeral: false
+attributes:
+  progOff:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          maxLength: 8
+      additionalProperties: false
+      required:
+        - value
+    setter: setProgOff
+    enumCommands: []
+commands:
+  setProgOff:
+    name: setProgOff
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+          maxLength: 8

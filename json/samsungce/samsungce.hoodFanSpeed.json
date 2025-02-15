@@ -1,0 +1,55 @@
+{
+  "id": "samsungce.hoodFanSpeed",
+  "version": 1,
+  "status": "proposed",
+  "name": "Hood Fan Speed",
+  "ephemeral": false,
+  "attributes": {
+    "settableMaxFanSpeed": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "integer" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "hoodFanSpeed": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "integer" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedHoodFanSpeed": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "array", "items": { "type": "integer" } }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "settableMinFanSpeed": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "integer" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setHoodFanSpeed": {
+      "name": "setHoodFanSpeed",
+      "arguments": [
+        { "name": "speed", "optional": false, "schema": { "type": "integer" } }
+      ]
+    }
+  }
+}

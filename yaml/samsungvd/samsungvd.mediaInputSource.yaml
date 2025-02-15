@@ -1,0 +1,41 @@
+id: samsungvd.mediaInputSource
+version: 1
+status: proposed
+name: Media Input Source
+ephemeral: false
+attributes:
+  supportedInputSourcesMap:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+          required: []
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  inputSource:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setInputSource:
+    name: setInputSource
+    arguments:
+      - name: id
+        optional: false
+        schema:
+          type: string

@@ -1,0 +1,10 @@
+id: samsungce.silentAction
+version: 1
+status: proposed
+name: Silent Action
+ephemeral: false
+attributes: {}
+commands:
+  actSilently:
+    name: actSilently
+    arguments: []

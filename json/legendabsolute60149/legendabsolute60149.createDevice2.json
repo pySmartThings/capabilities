@@ -1,0 +1,27 @@
+{
+  "id": "legendabsolute60149.createDevice2",
+  "version": 1,
+  "status": "proposed",
+  "name": "Create Device 2",
+  "ephemeral": false,
+  "attributes": {
+    "createDevice": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setCreateDevice",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setCreateDevice": {
+      "name": "setCreateDevice",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}

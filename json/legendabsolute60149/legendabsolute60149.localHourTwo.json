@@ -1,0 +1,33 @@
+{
+  "id": "legendabsolute60149.localHourTwo",
+  "version": 1,
+  "status": "proposed",
+  "name": "Local Hour Two",
+  "ephemeral": false,
+  "attributes": {
+    "localHourTwo": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "integer", "minimum": 0, "maximum": 2359 }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setLocalHourTwo",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setLocalHourTwo": {
+      "name": "setLocalHourTwo",
+      "arguments": [
+        {
+          "name": "value",
+          "optional": false,
+          "schema": { "type": "integer", "minimum": 0, "maximum": 2359 }
+        }
+      ]
+    }
+  }
+}

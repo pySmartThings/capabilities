@@ -1,0 +1,29 @@
+id: samsungvd.audioInputSource
+version: 1
+status: proposed
+name: Audio Input Source
+ephemeral: false
+attributes:
+  supportedInputSources:
+    schema:
+      type: object
+      properties:
+        value:
+          items:
+            type: string
+          required: []
+          type: array
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  inputSource:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

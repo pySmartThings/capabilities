@@ -1,0 +1,9 @@
+{
+  "id": "momentary",
+  "version": 1,
+  "status": "live",
+  "name": "Momentary",
+  "ephemeral": false,
+  "attributes": {},
+  "commands": { "push": { "name": "push", "arguments": [] } }
+}

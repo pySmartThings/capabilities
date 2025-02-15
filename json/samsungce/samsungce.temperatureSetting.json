@@ -1,0 +1,45 @@
+{
+  "id": "samsungce.temperatureSetting",
+  "version": 1,
+  "status": "proposed",
+  "name": "Temperature Setting",
+  "ephemeral": false,
+  "attributes": {
+    "supportedDesiredTemperatures": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "array", "items": { "type": "number" } },
+          "unit": { "type": "string", "enum": ["F", "C"] }
+        },
+        "additionalProperties": false,
+        "required": ["value", "unit"]
+      },
+      "enumCommands": []
+    },
+    "desiredTemperature": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number" },
+          "unit": { "type": "string", "enum": ["F", "C"] }
+        },
+        "additionalProperties": false,
+        "required": ["value", "unit"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setDesiredTemperature": {
+      "name": "setDesiredTemperature",
+      "arguments": [
+        {
+          "name": "desiredTemperature",
+          "optional": false,
+          "schema": { "type": "number" }
+        }
+      ]
+    }
+  }
+}

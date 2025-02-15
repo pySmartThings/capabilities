@@ -1,0 +1,44 @@
+id: custom.dryerWrinklePrevent
+version: 1
+status: proposed
+name: Dryer Wrinkle Prevent
+ephemeral: false
+attributes:
+  operatingState:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - ready
+            - running
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  dryerWrinklePrevent:
+    schema:
+      title: WrinklePrevent
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - "on"
+            - "off"
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setDryerWrinklePrevent:
+    name: setDryerWrinklePrevent
+    arguments:
+      - name: WrinklePrevent
+        optional: false
+        schema:
+          type: string
+          enum:
+            - "on"
+            - "off"

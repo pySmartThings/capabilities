@@ -1,0 +1,33 @@
+{
+  "id": "legendabsolute60149.localWeekDay",
+  "version": 1,
+  "status": "proposed",
+  "name": "Local Week Day",
+  "ephemeral": false,
+  "attributes": {
+    "localWeekDay": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "integer", "minimum": 0, "maximum": 6 }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setLocalWeekDay",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setLocalWeekDay": {
+      "name": "setLocalWeekDay",
+      "arguments": [
+        {
+          "name": "value",
+          "optional": false,
+          "schema": { "type": "integer", "minimum": 0, "maximum": 6 }
+        }
+      ]
+    }
+  }
+}

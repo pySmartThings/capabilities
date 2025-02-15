@@ -1,0 +1,102 @@
+{
+  "id": "custom.deodorFilter",
+  "version": 1,
+  "status": "proposed",
+  "name": "Deodor Filter",
+  "ephemeral": false,
+  "attributes": {
+    "deodorFilterCapacity": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "integer" },
+          "unit": {
+            "type": "string",
+            "enum": ["CC", "Cycle", "Gallon", "Hour", "Month"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value", "unit"]
+      },
+      "enumCommands": []
+    },
+    "deodorFilterLastResetDate": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "pattern": "^(?:[1-9]\\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)T(?:[01]\\d|2[0-3]):?[0-5]\\d:?[0-5]\\d(?:\\.\\d{3})?(?:Z|[+-][01]\\d(?::?[0-5]\\d)?)$"
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "deodorFilterStatus": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "normal",
+              "replace",
+              "wash",
+              "preannouncement",
+              "uvregeneration",
+              "notused"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "deodorFilterResetType": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "replaceable",
+                "washable",
+                "notresetable",
+                "uvRegeneratable"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "deodorFilterUsage": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "integer", "min": 0, "max": 100 } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "deodorFilterUsageStep": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "integer", "min": 1, "max": 100 } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "resetDeodorFilter": { "name": "resetDeodorFilter", "arguments": [] }
+  }
+}

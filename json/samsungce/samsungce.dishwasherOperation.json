@@ -1,0 +1,141 @@
+{
+  "id": "samsungce.dishwasherOperation",
+  "version": 1,
+  "status": "proposed",
+  "name": "Dishwasher Operation",
+  "ephemeral": false,
+  "attributes": {
+    "supportedOperatingState": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["idle", "ready", "running", "paused"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "operatingState": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["idle", "ready", "running", "paused"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setOperatingState",
+      "enumCommands": []
+    },
+    "reservable": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean", "default": false } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "progressPercentage": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "number" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "remainingTimeStr": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "pattern": "^[0-2]{0,1}[0-9]:[0-5][0-9]$"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "operationTime": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number" },
+          "unit": { "type": "string", "enum": ["hour", "min", "sec"] }
+        },
+        "additionalProperties": false,
+        "required": ["value", "unit"]
+      },
+      "enumCommands": []
+    },
+    "remainingTime": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number" },
+          "unit": { "type": "string", "enum": ["hour", "min", "sec"] }
+        },
+        "additionalProperties": false,
+        "required": ["value", "unit"]
+      },
+      "enumCommands": []
+    },
+    "timeLeftToStart": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number" },
+          "unit": { "type": "string", "enum": ["hour", "min", "sec"] }
+        },
+        "additionalProperties": false,
+        "required": ["value", "unit"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "resume": { "name": "resume", "arguments": [] },
+    "cancel": {
+      "name": "cancel",
+      "arguments": [
+        { "name": "drain", "optional": true, "schema": { "type": "boolean" } }
+      ]
+    },
+    "setOperatingState": {
+      "name": "setOperatingState",
+      "arguments": [
+        {
+          "name": "operatingState",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["running", "paused", "ready"] }
+        }
+      ]
+    },
+    "start": {
+      "name": "start",
+      "arguments": [
+        { "name": "option", "optional": true, "schema": { "type": "object" } }
+      ]
+    },
+    "startLater": {
+      "name": "startLater",
+      "arguments": [
+        { "name": "delay", "optional": false, "schema": { "type": "number" } }
+      ]
+    },
+    "pause": { "name": "pause", "arguments": [] }
+  }
+}

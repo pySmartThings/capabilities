@@ -1,0 +1,37 @@
+{
+  "id": "custom.thermostatSetpointControl",
+  "version": 1,
+  "status": "proposed",
+  "name": "Thermostat Setpoint Control",
+  "ephemeral": false,
+  "attributes": {
+    "minimumSetpoint": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number" },
+          "unit": { "type": "string", "enum": ["F", "C"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "maximumSetpoint": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number" },
+          "unit": { "type": "string", "enum": ["F", "C"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "raiseSetpoint": { "name": "raiseSetpoint", "arguments": [] },
+    "lowerSetpoint": { "name": "lowerSetpoint", "arguments": [] }
+  }
+}

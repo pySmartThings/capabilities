@@ -1,0 +1,103 @@
+id: samsungce.detergentState
+version: 1
+status: proposed
+name: Detergent State
+ephemeral: false
+attributes:
+  remainingAmount:
+    schema:
+      type: object
+      properties:
+        value:
+          type: number
+        unit:
+          type: string
+          enum:
+            - ea
+            - cc
+          default: ea
+      additionalProperties: false
+      required:
+        - value
+    setter: setRemainingAmount
+    enumCommands: []
+  dosage:
+    schema:
+      type: object
+      properties:
+        value:
+          type: number
+        unit:
+          type: string
+          enum:
+            - ea
+            - cc
+          default: ea
+      additionalProperties: false
+      required:
+        - value
+    setter: setDosage
+    enumCommands: []
+  initialAmount:
+    schema:
+      type: object
+      properties:
+        value:
+          type: number
+        unit:
+          type: string
+          enum:
+            - ea
+            - cc
+          default: ea
+      additionalProperties: false
+      required:
+        - value
+    setter: setInitialAmount
+    enumCommands: []
+  detergentType:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - none
+            - liquid
+            - capsule
+            - drySheet
+            - unknown
+      additionalProperties: false
+      required:
+        - value
+    setter: setDetergentType
+    enumCommands: []
+commands:
+  setDetergentType:
+    name: setDetergentType
+    arguments:
+      - name: detergentType
+        optional: false
+        schema:
+          type: string
+  setInitialAmount:
+    name: setInitialAmount
+    arguments:
+      - name: amount
+        optional: false
+        schema:
+          type: number
+  setRemainingAmount:
+    name: setRemainingAmount
+    arguments:
+      - name: amount
+        optional: false
+        schema:
+          type: number
+  setDosage:
+    name: setDosage
+    arguments:
+      - name: amount
+        optional: false
+        schema:
+          type: number

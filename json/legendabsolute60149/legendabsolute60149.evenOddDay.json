@@ -1,0 +1,27 @@
+{
+  "id": "legendabsolute60149.evenOddDay",
+  "version": 1,
+  "status": "proposed",
+  "name": "Even Odd Day",
+  "ephemeral": false,
+  "attributes": {
+    "evenOddDay": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setEvenOddDay",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setEvenOddDay": {
+      "name": "setEvenOddDay",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}

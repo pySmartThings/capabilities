@@ -1,0 +1,21 @@
+id: samsungce.sacDisplayCondition
+version: 1
+status: proposed
+name: SAC Display Condition
+ephemeral: false
+attributes:
+  switch:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - enabled
+            - disabled
+            - hidden
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

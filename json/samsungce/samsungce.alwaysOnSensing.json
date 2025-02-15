@@ -1,0 +1,63 @@
+{
+  "id": "samsungce.alwaysOnSensing",
+  "version": 1,
+  "status": "proposed",
+  "name": "Always On Sensing",
+  "ephemeral": false,
+  "attributes": {
+    "origins": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["devicePlugin", "automation", "airCare"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "alwaysOn": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string", "enum": ["on", "off"] } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "off": {
+      "name": "off",
+      "arguments": [
+        {
+          "name": "origin",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["devicePlugin", "automation", "airCare"]
+          }
+        }
+      ]
+    },
+    "on": {
+      "name": "on",
+      "arguments": [
+        {
+          "name": "origin",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["devicePlugin", "automation", "airCare"]
+          }
+        }
+      ]
+    }
+  }
+}

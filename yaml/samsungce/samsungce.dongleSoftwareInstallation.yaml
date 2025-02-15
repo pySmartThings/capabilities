@@ -1,0 +1,26 @@
+id: samsungce.dongleSoftwareInstallation
+version: 1
+status: proposed
+name: Dongle Software Installation
+ephemeral: false
+attributes:
+  status:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - ready
+            - downloading_20
+            - downloading_40
+            - downloading_60
+            - downloading_80
+            - installing
+            - completed
+            - failed
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

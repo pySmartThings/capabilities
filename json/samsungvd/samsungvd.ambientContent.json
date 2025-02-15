@@ -1,0 +1,26 @@
+{
+  "id": "samsungvd.ambientContent",
+  "version": 1,
+  "status": "proposed",
+  "name": "Ambient Content",
+  "ephemeral": false,
+  "attributes": {
+    "supportedAmbientApps": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "array" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setAmbientContent": {
+      "name": "setAmbientContent",
+      "arguments": [
+        { "name": "id", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}

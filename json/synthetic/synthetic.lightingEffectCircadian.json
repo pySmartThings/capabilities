@@ -1,0 +1,59 @@
+{
+  "id": "synthetic.lightingEffectCircadian",
+  "version": 1,
+  "status": "proposed",
+  "name": "Lighting Effect Circadian",
+  "ephemeral": false,
+  "attributes": {
+    "circadian": {
+      "schema": {
+        "title": "Circadian",
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "properties": {
+              "state": { "type": "string", "enum": ["Stop", "Run"] },
+              "startTime": { "type": "string", "pattern": "^[0-9]{10}$" },
+              "ctValue": { "type": "integer", "minimum": 1, "maximum": 30000 },
+              "timeZoneId": {
+                "type": "string",
+                "pattern": "^[A-Z+\\-][A-Za-z0-9_\\-+:/]{0,50}$"
+              }
+            },
+            "additionalProperties": false,
+            "required": ["state", "timeZoneId"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setCircadian",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setCircadian": {
+      "name": "setCircadian",
+      "arguments": [
+        {
+          "name": "circadian",
+          "optional": false,
+          "schema": {
+            "title": "LIGHT_CIRCADIAN_MAP",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "state": { "type": "string", "enum": ["Stop", "Run"] },
+              "timeZoneId": {
+                "type": "string",
+                "pattern": "^[A-Z+\\-][A-Za-z0-9_\\-+:/]{0,50}$"
+              }
+            },
+            "required": ["state", "timeZoneId"]
+          }
+        }
+      ]
+    }
+  }
+}

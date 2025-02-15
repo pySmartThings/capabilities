@@ -1,0 +1,40 @@
+{
+  "id": "humidifierMode",
+  "version": 1,
+  "status": "live",
+  "name": "Humidifier Mode",
+  "ephemeral": false,
+  "attributes": {
+    "humidifierMode": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "title": "HumidifierMode",
+            "type": "string",
+            "enum": ["auto", "low", "medium", "high"]
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setHumidifierMode": {
+      "name": "setHumidifierMode",
+      "arguments": [
+        {
+          "name": "humidifierMode",
+          "optional": false,
+          "schema": {
+            "title": "HumidifierMode",
+            "type": "string",
+            "enum": ["auto", "low", "medium", "high"]
+          }
+        }
+      ]
+    }
+  }
+}

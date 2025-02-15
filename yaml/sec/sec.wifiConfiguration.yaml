@@ -1,0 +1,83 @@
+id: sec.wifiConfiguration
+version: 1
+status: proposed
+name: Wifi configuration
+ephemeral: false
+attributes:
+  autoReconnection:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  minVersion:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedWiFiFreq:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            title: supportedWiFiFreq
+            type: string
+            enum:
+              - 2.4G
+              - 5G
+              - 6G
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedAuthType:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            title: supportedAuthType
+            type: string
+            enum:
+              - OPEN
+              - WEP
+              - WPA-PSK
+              - WPA2-PSK
+              - EAP
+              - SAE
+              - OWE
+              - FT-PSK
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  protocolType:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            title: protocolType
+            type: string
+            enum:
+              - helper_hotspot
+              - ble_ocf
+              - ble_stdk
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

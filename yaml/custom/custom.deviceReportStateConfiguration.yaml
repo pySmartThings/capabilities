@@ -1,0 +1,108 @@
+id: custom.deviceReportStateConfiguration
+version: 1
+status: proposed
+name: Device Report State Configuration
+ephemeral: false
+attributes:
+  reportStateRealtimePeriod:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - disabled
+            - enabled
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  reportStateRealtime:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          required:
+            - state
+          title: ReportStateRealtime
+          properties:
+            duration:
+              type: integer
+              max: 30
+              min: 10
+            state:
+              type: string
+              enum:
+                - disabled
+                - enabled
+            unit:
+              type: string
+              default: minute
+              enum:
+                - minute
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  reportStatePeriod:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - disabled
+            - enabled
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setReportStatePeriod:
+    name: setReportStatePeriod
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+          enum:
+            - disabled
+            - enabled
+  setReportStateRealtime:
+    name: setReportStateRealtime
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: object
+          additionalProperties: false
+          required:
+            - state
+          title: ReportStateRealtime
+          properties:
+            duration:
+              type: integer
+              max: 30
+              min: 10
+            state:
+              type: string
+              enum:
+                - disabled
+                - enabled
+            unit:
+              type: string
+              default: minute
+              enum:
+                - minute
+  setReportStateRealtimePeriod:
+    name: setReportStateRealtimePeriod
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+          enum:
+            - disabled
+            - enabled

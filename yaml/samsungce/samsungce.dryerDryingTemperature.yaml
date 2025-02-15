@@ -1,0 +1,112 @@
+id: samsungce.dryerDryingTemperature
+version: 1
+status: proposed
+name: Dryer Drying Temperature
+ephemeral: false
+attributes:
+  dryingTemperature:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - none
+            - "20"
+            - "30"
+            - "40"
+            - "50"
+            - "60"
+            - "65"
+            - "70"
+            - "75"
+            - "80"
+            - "90"
+            - "95"
+            - tapCold
+            - cold
+            - ecoWarm
+            - warm
+            - semiHot
+            - hot
+            - extraHot
+            - extraLow
+            - low
+            - mediumLow
+            - medium
+            - high
+      additionalProperties: false
+      required:
+        - value
+    setter: setDryingTemperature
+    enumCommands: []
+  supportedDryingTemperature:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - none
+              - "20"
+              - "30"
+              - "40"
+              - "50"
+              - "60"
+              - "65"
+              - "70"
+              - "75"
+              - "80"
+              - "90"
+              - "95"
+              - tapCold
+              - cold
+              - ecoWarm
+              - warm
+              - semiHot
+              - hot
+              - extraHot
+              - extraLow
+              - low
+              - mediumLow
+              - medium
+              - high
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setDryingTemperature:
+    name: setDryingTemperature
+    arguments:
+      - name: temperature
+        optional: false
+        schema:
+          type: string
+          enum:
+            - none
+            - "20"
+            - "30"
+            - "40"
+            - "50"
+            - "60"
+            - "65"
+            - "70"
+            - "75"
+            - "80"
+            - "90"
+            - "95"
+            - tapCold
+            - cold
+            - ecoWarm
+            - warm
+            - semiHot
+            - hot
+            - extraHot
+            - extraLow
+            - low
+            - mediumLow
+            - medium
+            - high

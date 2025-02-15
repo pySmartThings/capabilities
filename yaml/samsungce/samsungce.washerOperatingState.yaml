@@ -1,0 +1,290 @@
+id: samsungce.washerOperatingState
+version: 1
+status: proposed
+name: Washer Operating State
+ephemeral: false
+attributes:
+  washerJobState:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - airWash
+            - delayWash
+            - drying
+            - cooling
+            - finished
+            - none
+            - preWash
+            - rinse
+            - spin
+            - wash
+            - weightSensing
+            - soilLevelSensing
+            - laundrySensing
+            - drumCleaning
+            - dispenserCleaning
+            - aIWash
+            - aIRinse
+            - aISpin
+            - aIDrying
+            - freezeProtection
+            - sanitizing
+            - internalCare
+            - removingSuds
+            - waitingToDry
+            - cleaningCondenser
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  operatingState:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - ready
+            - running
+            - paused
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedOperatingStates:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - ready
+              - running
+              - paused
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  scheduledJobs:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: object
+            properties:
+              jobName:
+                type: string
+                enum:
+                  - airWash
+                  - delayWash
+                  - drying
+                  - cooling
+                  - finished
+                  - none
+                  - preWash
+                  - rinse
+                  - spin
+                  - wash
+                  - weightSensing
+                  - soilLevelSensing
+                  - laundrySensing
+                  - drumCleaning
+                  - dispenserCleaning
+                  - aIWash
+                  - aIRinse
+                  - aISpin
+                  - aIDrying
+                  - freezeProtection
+                  - sanitizing
+                  - internalCare
+                  - removingSuds
+                  - waitingToDry
+                  - cleaningCondenser
+              timeInMin:
+                type: integer
+            required:
+              - jobName
+              - timeInMin
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  scheduledPhases:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: object
+            properties:
+              phaseName:
+                type: string
+                enum:
+                  - airWash
+                  - delayWash
+                  - drying
+                  - cooling
+                  - finished
+                  - none
+                  - preWash
+                  - rinse
+                  - spin
+                  - wash
+                  - weightSensing
+                  - soilLevelSensing
+                  - laundrySensing
+                  - drumCleaning
+                  - dispenserCleaning
+                  - aIWash
+                  - aIRinse
+                  - aISpin
+                  - aIDrying
+                  - freezeProtection
+                  - sanitizing
+                  - internalCare
+                  - removingSuds
+                  - waitingToDry
+                  - cleaningCondenser
+              timeInMin:
+                type: integer
+            required:
+              - phaseName
+              - timeInMin
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  progress:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 0
+          maximum: 100
+        unit:
+          type: string
+          enum:
+            - "%"
+          default: "%"
+      additionalProperties: false
+      required:
+        - value
+        - unit
+    enumCommands: []
+  remainingTimeStr:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          pattern: ^[0-2]{0,1}[0-9]:[0-5][0-9]$
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  washerJobPhase:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - airWash
+            - delayWash
+            - drying
+            - cooling
+            - finished
+            - none
+            - preWash
+            - rinse
+            - spin
+            - wash
+            - weightSensing
+            - soilLevelSensing
+            - laundrySensing
+            - drumCleaning
+            - dispenserCleaning
+            - aIWash
+            - aIRinse
+            - aISpin
+            - aIDrying
+            - freezeProtection
+            - sanitizing
+            - internalCare
+            - removingSuds
+            - waitingToDry
+            - cleaningCondenser
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  operationTime:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 0
+          maximum: 1440
+        unit:
+          type: string
+          enum:
+            - min
+          default: min
+      additionalProperties: false
+      required:
+        - value
+        - unit
+    enumCommands: []
+  remainingTime:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 0
+          maximum: 1440
+        unit:
+          type: string
+          enum:
+            - min
+          default: min
+      additionalProperties: false
+      required:
+        - value
+        - unit
+    enumCommands: []
+commands:
+  resume:
+    name: resume
+    arguments: []
+  cancel:
+    name: cancel
+    arguments: []
+  start:
+    name: start
+    arguments: []
+  estimateOperationTime:
+    name: estimateOperationTime
+    arguments: []
+  setDelayEnd:
+    name: setDelayEnd
+    arguments:
+      - name: delayTime
+        optional: false
+        schema:
+          type: integer
+          minimum: 0
+          maximum: 1440
+  pause:
+    name: pause
+    arguments: []

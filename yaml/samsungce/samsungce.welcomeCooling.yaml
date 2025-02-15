@@ -1,0 +1,40 @@
+id: samsungce.welcomeCooling
+version: 1
+status: proposed
+name: Welcome Cooling
+ephemeral: false
+attributes:
+  latestRequestId:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          pattern: ^.{4}$
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  operatingState:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - ready
+            - sensing
+            - completed
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  start:
+    name: start
+    arguments:
+      - name: requestId
+        optional: false
+        schema:
+          type: string
+          pattern: ^.{4}$

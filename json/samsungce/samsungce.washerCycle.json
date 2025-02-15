@@ -1,0 +1,165 @@
+{
+  "id": "samsungce.washerCycle",
+  "version": 1,
+  "status": "proposed",
+  "name": "Washer Cycle",
+  "ephemeral": false,
+  "attributes": {
+    "supportedCycles": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "cycle": { "type": "string" },
+                "cycleType": {
+                  "type": "string",
+                  "enum": ["allInOne", "washingOnly", "dryingOnly"],
+                  "default": "washingOnly"
+                },
+                "supportedOptions": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "patternProperties": {
+                    "^.{1,32}$": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "raw": { "type": "string" },
+                        "default": { "type": "string" },
+                        "options": {
+                          "type": "array",
+                          "items": { "type": "string" }
+                        }
+                      }
+                    }
+                  }
+                },
+                "supportedWashingOnlyOptions": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "patternProperties": {
+                    "^.{1,32}$": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "raw": { "type": "string" },
+                        "default": { "type": "string" },
+                        "options": {
+                          "type": "array",
+                          "items": { "type": "string" }
+                        }
+                      }
+                    }
+                  }
+                },
+                "supportedDryingOnlyOptions": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "patternProperties": {
+                    "^.{1,32}$": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "raw": { "type": "string" },
+                        "default": { "type": "string" },
+                        "options": {
+                          "type": "array",
+                          "items": { "type": "string" }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "required": ["cycle", "supportedOptions"],
+              "examples": [
+                {
+                  "cycle": "01",
+                  "cycleType": "washingOnly",
+                  "supportedOptions": {
+                    "spinLevel": {
+                      "raw": "A53F",
+                      "default": "extraHigh",
+                      "options": [
+                        "rinseHold",
+                        "delicate",
+                        "low",
+                        "medium",
+                        "high",
+                        "extraHigh"
+                      ]
+                    },
+                    "rinseCycle": {
+                      "raw": "933F",
+                      "default": "3",
+                      "options": ["0", "1", "2", "3", "4", "5"]
+                    },
+                    "waterTemperature": {
+                      "raw": "821E",
+                      "default": "30",
+                      "options": ["cold", "30", "40", "60"]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "washerCycle": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setWasherCycle",
+      "enumCommands": []
+    },
+    "referenceTable": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": { "id": { "type": "string" } }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "specializedFunctionClassification": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "integer" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setWasherCycle": {
+      "name": "setWasherCycle",
+      "arguments": [
+        {
+          "name": "washerCycle",
+          "optional": false,
+          "schema": { "type": "string" }
+        }
+      ]
+    }
+  }
+}

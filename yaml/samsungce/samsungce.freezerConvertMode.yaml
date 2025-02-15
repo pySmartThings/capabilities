@@ -1,0 +1,72 @@
+id: samsungce.freezerConvertMode
+version: 1
+status: proposed
+name: Freezer Convert Mode
+ephemeral: false
+attributes:
+  supportedFreezerConvertModes:
+    schema:
+      type: object
+      properties:
+        value:
+          items:
+            type: string
+            enum:
+              - freezer
+              - fridge
+              - "off"
+              - softFreeze
+              - chill
+              - cool
+              - softFreezing
+              - cold
+              - kimchiStorageMediumCooling
+              - kimchiStorageLowCooling
+              - kimchiStorageHighCooling
+          type: array
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  freezerConvertMode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - freezer
+            - fridge
+            - "off"
+            - softFreeze
+            - chill
+            - cool
+            - softFreezing
+            - cold
+            - kimchiStorageMediumCooling
+            - kimchiStorageLowCooling
+            - kimchiStorageHighCooling
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setFreezerConvertMode:
+    name: setFreezerConvertMode
+    arguments:
+      - name: freezerConvertMode
+        optional: false
+        schema:
+          type: string
+          enum:
+            - freezer
+            - fridge
+            - "off"
+            - softFreeze
+            - chill
+            - cool
+            - softFreezing
+            - cold
+            - kimchiStorageMediumCooling
+            - kimchiStorageLowCooling
+            - kimchiStorageHighCooling

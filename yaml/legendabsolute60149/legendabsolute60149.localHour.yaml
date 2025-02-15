@@ -1,0 +1,29 @@
+id: legendabsolute60149.localHour
+version: 1
+status: proposed
+name: Local Hour
+ephemeral: false
+attributes:
+  localHour:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 0
+          maximum: 2359
+      additionalProperties: false
+      required:
+        - value
+    setter: setLocalHour
+    enumCommands: []
+commands:
+  setLocalHour:
+    name: setLocalHour
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: integer
+          minimum: 0
+          maximum: 2359

@@ -1,0 +1,235 @@
+id: webrtc
+version: 1
+status: live
+name: webrtc
+ephemeral: false
+attributes:
+  sdpAnswer:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            id:
+              type: string
+            sdp:
+              type: string
+            turn_url:
+              type: string
+            turn_user:
+              type: string
+            turn_pwd:
+              type: string
+          required:
+            - id
+            - sdp
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  talkback:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  turnInfo:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            id:
+              type: string
+            turnUrl:
+              type: string
+            userName:
+              type: string
+            passWord:
+              type: string
+          required:
+            - id
+            - turnUrl
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedFeatures:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: true
+          properties:
+            bundle:
+              type: boolean
+            order:
+              type: string
+            audio:
+              type: string
+            video:
+              type: string
+            turnSource:
+              type: string
+              enum:
+                - camera
+                - player
+            supportTrickleICE:
+              type: boolean
+            portrait:
+              type: boolean
+            width:
+              type: integer
+              minimum: 240
+              maximum: 4096
+            height:
+              type: integer
+              minimum: 240
+              maximum: 4096
+            dualView:
+              type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  deviceIce:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            id:
+              type: string
+            ice:
+              type: object
+              additionalProperties: false
+              properties:
+                candidate:
+                  type: string
+                sdpMid:
+                  type: string
+                sdpMLineIndex:
+                  type: integer
+              required:
+                - candidate
+                - sdpMid
+                - sdpMLineIndex
+          required:
+            - id
+            - ice
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  audioOnly:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  stunUrl:
+    schema:
+      type: object
+      properties:
+        value:
+          title: URL
+          type: string
+          pattern: ^(stun?):((?:[a-zA-Z0-9.-]|%[0-9A-F]{2}){3,})(?::(\d+))?((?:\/(?:[a-zA-Z0-9-._~!$&'()*+,;=:@]|%[0-9A-F]{2})*)*)(?:\?((?:[a-zA-Z0-9-._~!$&'()*+,;=:\/?@]|%[0-9A-F]{2})*))?(?:#((?:[a-zA-Z0-9-._~!$&'()*+,;=:\/?@]|%[0-9A-F]{2})*))?$
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  startTalkback:
+    name: startTalkback
+    arguments:
+      - name: id
+        optional: false
+        schema:
+          type: string
+  clientIce:
+    name: clientIce
+    arguments:
+      - name: id
+        optional: false
+        schema:
+          type: string
+      - name: ice
+        optional: false
+        schema:
+          type: object
+          additionalProperties: false
+          properties:
+            candidate:
+              type: string
+            sdpMid:
+              type: string
+            sdpMLineIndex:
+              type: integer
+          required:
+            - candidate
+            - sdpMid
+            - sdpMLineIndex
+  sdpOffer:
+    name: sdpOffer
+    arguments:
+      - name: id
+        optional: false
+        schema:
+          type: string
+      - name: sdp
+        optional: false
+        schema:
+          type: string
+      - name: iceServers
+        optional: true
+        schema:
+          type: object
+          additionalProperties: false
+          properties:
+            urls:
+              type: array
+              items:
+                type: string
+            username:
+              type: string
+            password:
+              type: string
+          required:
+            - urls
+  stopTalkback:
+    name: stopTalkback
+    arguments:
+      - name: id
+        optional: false
+        schema:
+          type: string
+  requestTurnInfo:
+    name: requestTurnInfo
+    arguments:
+      - name: id
+        optional: false
+        schema:
+          type: string
+  end:
+    name: end
+    arguments:
+      - name: id
+        optional: false
+        schema:
+          type: string

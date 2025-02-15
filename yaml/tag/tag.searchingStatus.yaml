@@ -1,0 +1,22 @@
+id: tag.searchingStatus
+version: 1
+status: proposed
+name: Searching Status
+ephemeral: false
+attributes:
+  searchingStatus:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - searching
+            - spotted
+            - stop
+            - stopByServer
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}
