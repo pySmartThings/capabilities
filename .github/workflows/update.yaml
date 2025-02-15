@@ -41,3 +41,5 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           base: ${{ github.head_ref }}
+          title: Update capabilities
+          body: Sync the capabilities with the SmartThings API
