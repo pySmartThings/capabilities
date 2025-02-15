@@ -1,0 +1,12 @@
+{
+  "name": "capabilities",
+  "version": "0.0.0",
+  "private": true,
+  "description": "List of capabilities for SmartThings.",
+  "scripts": {
+    "prettier": "prettier --write **/*.{json,yaml}"
+  },
+  "devDependencies": {
+    "prettier": "3.5.0"
+  }
+}
