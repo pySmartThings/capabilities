@@ -1,0 +1,41 @@
+---
+name: Update data
+
+# yamllint disable-line rule:truthy
+on:
+  workflow_dispatch:
+    inputs:
+      accessToken:
+        description: 'Access token to use for the SmartThings api'
+        required: true
+
+env:
+  DEFAULT_PYTHON: "3.13"
+
+jobs:
+  update:
+    name: Update
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⤵️ Check out code from GitHub
+        uses: actions/checkout@v4.2.2
+      - name: 🏗 Set up uv
+        uses: astral-sh/setup-uv@v5.2.2
+        with:
+          enable-cache: true
+          python-version: ${{ env.DEFAULT_PYTHON }}
+      - name: 🏗 Install dependencies
+        run: uv sync --extra cli --frozen --dev
+      - name: 🏗 Set up Node.js
+        uses: actions/setup-node@1d0ff469b7ec7b3cb9d8673fde0c81c44821de2a # v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+      - name: 🏗 Install NPM dependencies
+        run: npm install
+      - name: 🚀 Update data
+        env:
+          SMARTTHINGS_TOKEN: ${{ github.event.inputs.accessToken }}
+        run: python download.py
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
