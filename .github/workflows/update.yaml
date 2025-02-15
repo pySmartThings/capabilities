@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       accessToken:
-        description: 'Access token to use for the SmartThings api'
+        description: "Access token to use for the SmartThings api"
         required: true
 
 env:
