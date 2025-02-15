@@ -70,13 +70,15 @@ name = "capabilities"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "orjson" },
     { name = "pysmartthings" },
     { name = "pyyaml" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "pysmartthings", specifier = "==1.0.0" },
+    { name = "orjson", specifier = ">=3.9.10" },
+    { name = "pysmartthings", specifier = "==1.1.0" },
     { name = "pyyaml", specifier = ">=6.0.2" },
 ]
 
@@ -197,7 +199,7 @@ wheels = [
 
 [[package]]
 name = "pysmartthings"
-version = "1.0.0"
+version = "1.1.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aiohttp" },
@@ -205,9 +207,9 @@ dependencies = [
     { name = "orjson" },
     { name = "yarl" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/f6/2c/03525b3322ee6070d2965a947ae17e58d09f950e50c99deeec2ca073ada3/pysmartthings-1.0.0.tar.gz", hash = "sha256:eb0a96244ea13f30f22f590aa2c03e211fc524ba8e914317927092db8bea32b2", size = 34922 }
+sdist = { url = "https://files.pythonhosted.org/packages/51/84/1847c7c7d1f94bc7edd66462b462579f7dad01d03792b76cd93636100507/pysmartthings-1.1.0.tar.gz", hash = "sha256:ad0c5207a4295629404b66ce17e3b9581b40e607ddf4870f3646788a8e973cd7", size = 35003 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/57/de/bff99b60c7afc008a4f5c82a9b867279c192de9e9e4808290a2303c9cdda/pysmartthings-1.0.0-py3-none-any.whl", hash = "sha256:51a5e15a6178400470f7d7a83fa84f6909e9d8154477263bd5370acc8d9462e7", size = 33551 },
+    { url = "https://files.pythonhosted.org/packages/23/64/7618164b4e275c67dfdc4bef0ff6b5b1813ead195137af32749e6aed1204/pysmartthings-1.1.0-py3-none-any.whl", hash = "sha256:3988c470ea88d2ef1ef99005b573641e6aa3d635fd4c205b94093eda829b8f3b", size = 33632 },
 ]
 
 [[package]]

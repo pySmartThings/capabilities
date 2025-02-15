@@ -17,7 +17,7 @@ async def main():
     yaml_root.mkdir(exist_ok=True)
     async with SmartThings() as client:
         client.authenticate(os.getenv("SMARTTHINGS_TOKEN"))
-        for capability in Capability:
+        for capability in [Capability.VALVE]:
             LOGGER.info("Downloading %s", capability)
             standard_namespace = "." not in capability
             namespace = "standard" if standard_namespace else capability.split(".")[0]
