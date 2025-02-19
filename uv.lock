@@ -78,7 +78,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "orjson", specifier = ">=3.9.10" },
-    { name = "pysmartthings", specifier = "==1.1.0" },
+    { name = "pysmartthings", git = "https://github.com/pySmartThings/pysmartthings" },
     { name = "pyyaml", specifier = ">=6.0.2" },
 ]
 
@@ -199,17 +199,13 @@ wheels = [
 
 [[package]]
 name = "pysmartthings"
-version = "1.1.0"
-source = { registry = "https://pypi.org/simple" }
+version = "0.0.0"
+source = { git = "https://github.com/pySmartThings/pysmartthings#223eab15993b41feac303e12b475009b41736e04" }
 dependencies = [
     { name = "aiohttp" },
     { name = "mashumaro" },
     { name = "orjson" },
     { name = "yarl" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/51/84/1847c7c7d1f94bc7edd66462b462579f7dad01d03792b76cd93636100507/pysmartthings-1.1.0.tar.gz", hash = "sha256:ad0c5207a4295629404b66ce17e3b9581b40e607ddf4870f3646788a8e973cd7", size = 35003 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/23/64/7618164b4e275c67dfdc4bef0ff6b5b1813ead195137af32749e6aed1204/pysmartthings-1.1.0-py3-none-any.whl", hash = "sha256:3988c470ea88d2ef1ef99005b573641e6aa3d635fd4c205b94093eda829b8f3b", size = 33632 },
 ]
 
 [[package]]
