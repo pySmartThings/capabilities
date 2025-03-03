@@ -53,6 +53,8 @@ attributes:
               - spinDrying
               - preparingWater
               - supplyingWater
+              - sabbath
+              - suspend
       additionalProperties: false
       required:
         - value
@@ -104,6 +106,8 @@ attributes:
             - spinDrying
             - preparingWater
             - supplyingWater
+            - sabbath
+            - suspend
       additionalProperties: false
       required:
         - value
