@@ -26,6 +26,8 @@ jobs:
           python-version: ${{ env.DEFAULT_PYTHON }}
       - name: 🏗 Install dependencies
         run: uv sync --frozen --dev
+      - name: 🏗 Install pysmartthings
+        run: uv pip install git+https://github.com/pysmartthings/pysmartthings.git
       - name: 🏗 Set up Node.js
         uses: actions/setup-node@1d0ff469b7ec7b3cb9d8673fde0c81c44821de2a # v4
         with:
