@@ -1,0 +1,19 @@
+{
+  "id": "custom.userNotification",
+  "version": 1,
+  "status": "proposed",
+  "name": "User Notification",
+  "ephemeral": false,
+  "attributes": {
+    "message": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "object" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

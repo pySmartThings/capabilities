@@ -1,0 +1,20 @@
+id: samsungce.waterReservoir
+version: 1
+status: proposed
+name: Water Reservoir
+ephemeral: false
+attributes:
+  slotState:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - open
+            - closed
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}
