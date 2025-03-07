@@ -1,0 +1,24 @@
+id: samsungce.robotCleanerAudioClip
+version: 1
+status: proposed
+name: Robot Cleaner Audio Clip
+ephemeral: false
+attributes:
+  enabled:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+          default: false
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  enable:
+    name: enable
+    arguments: []
+  disable:
+    name: disable
+    arguments: []

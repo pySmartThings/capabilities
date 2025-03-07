@@ -1,0 +1,139 @@
+{
+  "id": "samsungim.networkAudioGroupInfo",
+  "version": 1,
+  "status": "proposed",
+  "name": "Network Audio Group Info",
+  "ephemeral": false,
+  "attributes": {
+    "groupName": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setGroupName",
+      "enumCommands": []
+    },
+    "role": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setRole",
+      "enumCommands": []
+    },
+    "channel": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setChannel",
+      "enumCommands": []
+    },
+    "stereoType": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setStereoType",
+      "enumCommands": []
+    },
+    "masterDi": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setMasterDi",
+      "enumCommands": []
+    },
+    "acmMode": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setAcmMode",
+      "enumCommands": []
+    },
+    "status": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setStatus",
+      "enumCommands": []
+    },
+    "masterName": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setMasterName",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setGroupName": {
+      "name": "setGroupName",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "string" } }
+      ]
+    },
+    "setAcmMode": {
+      "name": "setAcmMode",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "string" } }
+      ]
+    },
+    "setRole": {
+      "name": "setRole",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "string" } }
+      ]
+    },
+    "setMasterDi": {
+      "name": "setMasterDi",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "string" } }
+      ]
+    },
+    "setMasterName": {
+      "name": "setMasterName",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "string" } }
+      ]
+    },
+    "setChannel": {
+      "name": "setChannel",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "string" } }
+      ]
+    },
+    "setStereoType": {
+      "name": "setStereoType",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "string" } }
+      ]
+    },
+    "setStatus": {
+      "name": "setStatus",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}

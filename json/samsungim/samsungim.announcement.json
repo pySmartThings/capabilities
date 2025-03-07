@@ -1,0 +1,154 @@
+{
+  "id": "samsungim.announcement",
+  "version": 1,
+  "status": "proposed",
+  "name": "Announcement",
+  "ephemeral": false,
+  "attributes": {
+    "enableState": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "title": "EnableState",
+            "type": "string",
+            "enum": ["enabled", "disabled"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedCategories": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "title": "Supported Categories",
+              "type": "string",
+              "enum": [
+                "WakeUp",
+                "Breakfast",
+                "Lunch",
+                "Dinner",
+                "TimeToLeave",
+                "MovieTime",
+                "TvTime",
+                "BedTime",
+                "none"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "supportedTypes": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "title": "AnnouncemetTypes",
+              "type": "string",
+              "enum": ["text", "udo", "url"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "supportedMimes": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "title": "Supported Mimes",
+              "type": "string",
+              "enum": [
+                "text/plain",
+                "audio/pcm",
+                "audio/wav",
+                "audio/mp3",
+                "aduio/ogg"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setEnableState": {
+      "name": "setEnableState",
+      "arguments": [
+        {
+          "name": "enableState",
+          "optional": false,
+          "schema": {
+            "title": "EnableState",
+            "type": "string",
+            "enum": ["enabled", "disabled"]
+          }
+        }
+      ]
+    },
+    "announce": {
+      "name": "announce",
+      "arguments": [
+        {
+          "name": "type",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["text", "udo", "url"] }
+        },
+        {
+          "name": "mime",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "text/plain",
+              "audio/pcm",
+              "audio/wav",
+              "audio/mp3",
+              "audio/ogg"
+            ]
+          }
+        },
+        { "name": "data", "optional": false, "schema": { "type": "string" } },
+        {
+          "name": "category",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "WakeUp",
+              "Breakfast",
+              "Lunch",
+              "Dinner",
+              "TimeToLeave",
+              "MovieTime",
+              "TvTime",
+              "BedTime",
+              "none"
+            ]
+          }
+        },
+        { "name": "message", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}

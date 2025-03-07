@@ -1,0 +1,237 @@
+{
+  "id": "samsungce.robotCleanerPatrol",
+  "version": 1,
+  "status": "proposed",
+  "name": "Robot Cleaner Patrol",
+  "ephemeral": false,
+  "attributes": {
+    "dayOfWeek": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "patrolStatus": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "areadId": { "type": "string" },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "ready",
+                    "selected",
+                    "moving",
+                    "patrolling",
+                    "finished",
+                    "paused",
+                    "abnormal",
+                    "error"
+                  ]
+                },
+                "errorCode": { "type": "string" }
+              },
+              "required": ["areadId", "status"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "blockingStatus": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["blocked", "unblocked"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "areaIds": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "startTime": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "interval": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "integer" },
+          "unit": {
+            "type": "string",
+            "enum": ["hour", "minute"],
+            "default": "hour"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "endTime": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "obsoleted": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean", "default": false } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "waypoints": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "string" },
+                "coordinates": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                }
+              },
+              "required": ["id", "coordinates"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "enabled": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean", "default": false } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setPatrol": {
+      "name": "setPatrol",
+      "arguments": [
+        {
+          "name": "enabled",
+          "optional": false,
+          "schema": { "type": "boolean" }
+        },
+        {
+          "name": "areaIds",
+          "optional": false,
+          "schema": { "type": "array", "items": { "type": "string" } }
+        },
+        {
+          "name": "dayOfWeek",
+          "optional": false,
+          "schema": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+            }
+          }
+        },
+        {
+          "name": "startTime",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"
+          }
+        },
+        {
+          "name": "endTime",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"
+          }
+        },
+        {
+          "name": "interval",
+          "optional": false,
+          "schema": { "type": "integer", "minimum": 1 }
+        },
+        {
+          "name": "waypoints",
+          "optional": true,
+          "schema": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "string" },
+                "coordinates": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                }
+              },
+              "required": ["id", "coordinates"]
+            }
+          }
+        }
+      ]
+    },
+    "enable": { "name": "enable", "arguments": [] },
+    "disable": { "name": "disable", "arguments": [] }
+  }
+}
