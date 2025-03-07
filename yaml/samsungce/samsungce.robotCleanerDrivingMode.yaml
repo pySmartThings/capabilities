@@ -1,0 +1,50 @@
+id: samsungce.robotCleanerDrivingMode
+version: 1
+status: proposed
+name: Robot Cleaner Driving Mode
+ephemeral: false
+attributes:
+  drivingMode:
+    schema:
+      title: Driving Mode
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - areaThenWalls
+            - wallFirst
+            - quickCleaningZigzagPattern
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedDrivingModes:
+    schema:
+      title: Supported Driving Modes
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - areaThenWalls
+              - wallFirst
+              - quickCleaningZigzagPattern
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setDrivingMode:
+    name: setDrivingMode
+    arguments:
+      - name: mode
+        optional: false
+        schema:
+          type: string
+          enum:
+            - areaThenWalls
+            - wallFirst
+            - quickCleaningZigzagPattern

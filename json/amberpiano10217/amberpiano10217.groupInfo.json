@@ -1,0 +1,28 @@
+{
+  "id": "amberpiano10217.groupInfo",
+  "version": 1,
+  "status": "proposed",
+  "name": "Group Info",
+  "ephemeral": false,
+  "attributes": {
+    "infoText": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "infoHtml": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

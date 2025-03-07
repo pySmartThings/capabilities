@@ -1,0 +1,33 @@
+{
+  "id": "samsungce.softwareVersion",
+  "version": 1,
+  "status": "proposed",
+  "name": "Software Version",
+  "ephemeral": false,
+  "attributes": {
+    "versions": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "string" },
+                "swType": { "type": "string" },
+                "description": { "type": "string" },
+                "versionNumber": { "type": "string" }
+              },
+              "required": ["id", "versionNumber"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

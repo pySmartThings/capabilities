@@ -1,0 +1,34 @@
+{
+  "id": "amberpiano10217.groupRemove",
+  "version": 1,
+  "status": "proposed",
+  "name": "Group Remove",
+  "ephemeral": false,
+  "attributes": {
+    "groupId": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number", "minimum": 0, "maximum": 65535 }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "setter": "remove",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "push": { "name": "push", "arguments": [] },
+    "remove": {
+      "name": "remove",
+      "arguments": [
+        {
+          "name": "groupId",
+          "optional": true,
+          "schema": { "type": "number", "minimum": 0, "maximum": 65535 }
+        }
+      ]
+    }
+  }
+}

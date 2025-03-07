@@ -80,6 +80,7 @@ attributes:
             - wifi_https
             - ble_stdk
             - wifi_stdk
+            - l3_ocf
       additionalProperties: false
       required:
         - value

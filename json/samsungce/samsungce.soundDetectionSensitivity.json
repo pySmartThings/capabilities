@@ -1,0 +1,47 @@
+{
+  "id": "samsungce.soundDetectionSensitivity",
+  "version": 1,
+  "status": "proposed",
+  "name": "Sound Detection Sensitivity",
+  "ephemeral": false,
+  "attributes": {
+    "level": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["low", "medium", "high"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setLevel",
+      "enumCommands": []
+    },
+    "supportedLevels": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["low", "medium", "high"] }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setLevel": {
+      "name": "setLevel",
+      "arguments": [
+        {
+          "name": "level",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["low", "medium", "high"] }
+        }
+      ]
+    }
+  }
+}

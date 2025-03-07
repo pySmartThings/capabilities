@@ -1,0 +1,10 @@
+id: abateachieve62503.statelessChannelUp
+version: 1
+status: proposed
+name: Stateless Channel Up
+ephemeral: false
+attributes: {}
+commands:
+  channelUp:
+    name: channelUp
+    arguments: []

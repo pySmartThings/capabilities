@@ -1,0 +1,19 @@
+{
+  "id": "amberpiano10217.object",
+  "version": 1,
+  "status": "proposed",
+  "name": "Object",
+  "ephemeral": false,
+  "attributes": {
+    "data": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "object" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

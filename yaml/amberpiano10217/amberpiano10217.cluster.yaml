@@ -1,0 +1,45 @@
+id: amberpiano10217.cluster
+version: 1
+status: proposed
+name: Cluster
+ephemeral: false
+attributes:
+  clusterName:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required: []
+    setter: setClusterId
+    enumCommands: []
+  clusterId:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          maxLength: 4
+      additionalProperties: false
+      required: []
+    setter: setClusterId
+    enumCommands: []
+  clusterIdDec:
+    schema:
+      type: object
+      properties:
+        value:
+          type: number
+      additionalProperties: false
+      required: []
+    enumCommands: []
+commands:
+  setClusterId:
+    name: setClusterId
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+          maxLength: 4

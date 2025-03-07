@@ -1,0 +1,73 @@
+{
+  "id": "samsungce.countDownTimer",
+  "version": 1,
+  "status": "proposed",
+  "name": "Count Down Timer",
+  "ephemeral": false,
+  "attributes": {
+    "startValue": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number" },
+          "unit": {
+            "type": "string",
+            "enum": ["hour", "min", "sec"],
+            "default": "min"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "currentValue": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number" },
+          "unit": {
+            "type": "string",
+            "enum": ["hour", "min", "sec"],
+            "default": "min"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "status": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["idle", "running", "paused"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "resume": { "name": "resume", "arguments": [] },
+    "cancel": { "name": "cancel", "arguments": [] },
+    "start": { "name": "start", "arguments": [] },
+    "setStartValue": {
+      "name": "setStartValue",
+      "arguments": [
+        {
+          "name": "startValue",
+          "optional": false,
+          "schema": { "type": "number" }
+        },
+        {
+          "name": "unit",
+          "optional": true,
+          "schema": { "type": "string", "enum": ["hour", "min", "sec"] }
+        }
+      ]
+    },
+    "pause": { "name": "pause", "arguments": [] }
+  }
+}

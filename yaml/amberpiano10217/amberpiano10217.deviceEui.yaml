@@ -1,0 +1,26 @@
+id: amberpiano10217.deviceEui
+version: 1
+status: proposed
+name: Device EUI
+ephemeral: false
+attributes:
+  eui:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          maxLength: 16
+      additionalProperties: false
+      required: []
+    setter: setDeviceEui
+    enumCommands: []
+commands:
+  setDeviceEui:
+    name: setDeviceEui
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+          maxLength: 16

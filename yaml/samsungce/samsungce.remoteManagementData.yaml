@@ -1,0 +1,35 @@
+id: samsungce.remoteManagementData
+version: 1
+status: proposed
+name: Remote Management Data
+ephemeral: false
+attributes:
+  reportRawData:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  version:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          pattern: ^[A-Z]{2,4}-[0-9]{2}.[0-9]{2,4}$
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  rmCommand:
+    name: rmCommand
+    arguments:
+      - name: rawData
+        optional: false
+        schema:
+          type: string

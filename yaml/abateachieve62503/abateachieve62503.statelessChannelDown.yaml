@@ -1,0 +1,10 @@
+id: abateachieve62503.statelessChannelDown
+version: 1
+status: proposed
+name: Stateless Channel Down
+ephemeral: false
+attributes: {}
+commands:
+  channelDown:
+    name: channelDown
+    arguments: []

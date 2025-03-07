@@ -1,0 +1,25 @@
+id: samsungce.robotCleanerAvpRegistration
+version: 1
+status: proposed
+name: Robot Cleaner Avp Registration
+ephemeral: false
+attributes:
+  registrationStatus:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - registering
+            - registered
+            - deregistering
+            - deregistered
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  register:
+    name: register
+    arguments: []
