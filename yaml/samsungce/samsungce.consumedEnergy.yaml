@@ -1,0 +1,56 @@
+id: samsungce.consumedEnergy
+version: 1
+status: proposed
+name: Consumed Energy
+ephemeral: false
+attributes:
+  monthlyUsage:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: object
+            properties:
+              month:
+                type: string
+                pattern: ^[1-9]\d{3}-(?:0[1-9]|1[0-2])$
+              consumedEnergy:
+                type: number
+            required:
+              - month
+              - consumedEnergy
+        unit:
+          type: string
+          enum:
+            - Wh
+            - mWh
+            - kWh
+            - MWh
+          default: kWh
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  timeOffset:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          pattern: ^[+,-](2[0-3]|[0-1][0-9]):[0-5][0-9]$
+      additionalProperties: false
+      required:
+        - value
+    setter: setTimeOffset
+    enumCommands: []
+commands:
+  setTimeOffset:
+    name: setTimeOffset
+    arguments:
+      - name: timeOffset
+        optional: false
+        schema:
+          type: string
+          pattern: ^[+,-](2[0-3]|[0-1][0-9]):[0-5][0-9]$

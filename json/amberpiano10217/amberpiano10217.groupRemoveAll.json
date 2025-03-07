@@ -1,0 +1,9 @@
+{
+  "id": "amberpiano10217.groupRemoveAll",
+  "version": 1,
+  "status": "proposed",
+  "name": "Group Remove All",
+  "ephemeral": false,
+  "attributes": {},
+  "commands": { "push": { "name": "push", "arguments": [] } }
+}

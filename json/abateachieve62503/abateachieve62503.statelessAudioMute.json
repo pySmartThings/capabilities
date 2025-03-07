@@ -1,0 +1,9 @@
+{
+  "id": "abateachieve62503.statelessAudioMute",
+  "version": 1,
+  "status": "proposed",
+  "name": "Stateless Audio Mute",
+  "ephemeral": false,
+  "attributes": {},
+  "commands": { "muted": { "name": "muted", "arguments": [] } }
+}

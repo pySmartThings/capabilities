@@ -1,0 +1,31 @@
+id: amberpiano10217.controllerStatus
+version: 1
+status: proposed
+name: Controller Status
+ephemeral: false
+attributes:
+  status:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - ready
+            - creating
+            - created
+            - failed
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  info:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required: []
+    enumCommands: []
+commands: {}

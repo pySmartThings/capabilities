@@ -1,0 +1,10 @@
+id: samsungce.robotCleanerMonitoringAutomation
+version: 1
+status: proposed
+name: Robot Cleaner Monitoring Automation
+ephemeral: false
+attributes: {}
+commands:
+  enableMonitoringAutomation:
+    name: enableMonitoringAutomation
+    arguments: []
