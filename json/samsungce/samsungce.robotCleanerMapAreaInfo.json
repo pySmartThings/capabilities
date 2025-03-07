@@ -1,0 +1,32 @@
+{
+  "id": "samsungce.robotCleanerMapAreaInfo",
+  "version": 1,
+  "status": "proposed",
+  "name": "Robot Cleaner Map Area Info",
+  "ephemeral": false,
+  "attributes": {
+    "areaInfo": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": { "type": "string" },
+                "name": { "type": "string" }
+              },
+              "required": ["id", "name"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

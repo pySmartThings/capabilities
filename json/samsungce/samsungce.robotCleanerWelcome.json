@@ -1,0 +1,39 @@
+{
+  "id": "samsungce.robotCleanerWelcome",
+  "version": 1,
+  "status": "proposed",
+  "name": "Robot Cleaner Welcome",
+  "ephemeral": false,
+  "attributes": {
+    "coordinates": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "x": { "type": "number" },
+              "y": { "type": "number" },
+              "theta": { "type": "number" }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setCoordinates": {
+      "name": "setCoordinates",
+      "arguments": [
+        { "name": "x", "optional": false, "schema": { "type": "number" } },
+        { "name": "y", "optional": false, "schema": { "type": "number" } },
+        { "name": "theta", "optional": false, "schema": { "type": "number" } }
+      ]
+    },
+    "start": { "name": "start", "arguments": [] }
+  }
+}

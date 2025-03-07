@@ -1,0 +1,35 @@
+{
+  "id": "samsungce.robotCleanerDustBag",
+  "version": 1,
+  "status": "proposed",
+  "name": "Robot Cleaner Dust Bag",
+  "ephemeral": false,
+  "attributes": {
+    "supportedStatus": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["full", "normal", "ejected"] }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "status": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["full", "normal", "ejected"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

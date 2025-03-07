@@ -1,0 +1,102 @@
+{
+  "id": "samsungce.musicPlaylist",
+  "version": 1,
+  "status": "proposed",
+  "name": "Music Playlist",
+  "ephemeral": false,
+  "attributes": {
+    "currentTrack": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "playlistId": { "type": "string" },
+              "id": { "type": "string" },
+              "title": { "type": "string" },
+              "source": { "type": "string" },
+              "thumbnail": { "type": "string" },
+              "state": {
+                "type": "string",
+                "enum": ["playing", "paused", "stopped", "error"]
+              },
+              "error": { "type": "string" }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "playlist": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "playlistId": { "type": "string" },
+              "playlist": {
+                "type": "array",
+                "properties": {
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "id": { "type": "string" },
+                      "title": { "type": "string" },
+                      "source": { "type": "string" },
+                      "thumbnail": { "type": "string" }
+                    },
+                    "required": ["id", "title", "source"]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setPlaylist": {
+      "name": "setPlaylist",
+      "arguments": [
+        {
+          "name": "playlist",
+          "optional": false,
+          "schema": {
+            "type": "array",
+            "additionalProperties": false,
+            "properties": {
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "id": { "type": "string" },
+                  "title": { "type": "string" },
+                  "source": { "type": "string" },
+                  "thumbnail": { "type": "string" }
+                },
+                "required": ["id", "title", "source"]
+              }
+            },
+            "required": ["value"]
+          }
+        },
+        {
+          "name": "playlistId",
+          "optional": true,
+          "schema": { "type": "string" }
+        }
+      ]
+    }
+  }
+}

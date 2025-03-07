@@ -1,0 +1,46 @@
+id: samsungce.robotCleanerPetMonitorReport
+version: 1
+status: proposed
+name: Robot Cleaner Pet Monitor Report
+ephemeral: false
+attributes:
+  report:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            startTime:
+              type: string
+              pattern: ^([01]\d|2[0-3]):[0-5]\d$
+            monitoringResult:
+              type: string
+              enum:
+                - done
+                - error
+            motionDetectionResult:
+              type: string
+              enum:
+                - detected
+                - notDetected
+            clipRecordingResult:
+              type: string
+              enum:
+                - none
+                - uploaded
+            clips:
+              type: array
+              items:
+                type: string
+          required:
+            - startTime
+            - monitoringResult
+            - motionDetectionResult
+            - clipRecordingResult
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

@@ -1,0 +1,18 @@
+id: samsungce.robotCleanerRelayCleaning
+version: 1
+status: proposed
+name: Robot Cleaner Relay Cleaning
+ephemeral: false
+attributes:
+  batonTouch:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+          default: false
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

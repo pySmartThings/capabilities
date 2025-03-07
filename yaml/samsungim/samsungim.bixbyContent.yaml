@@ -1,0 +1,40 @@
+id: samsungim.bixbyContent
+version: 1
+status: proposed
+name: Bixby Content
+ephemeral: false
+attributes:
+  supportedModes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            title: BixbyContentModes
+            type: string
+            enum:
+              - news
+              - weather
+              - music
+              - search_all
+      additionalProperties: false
+      required: []
+    enumCommands: []
+commands:
+  bixbyCommand:
+    name: bixbyCommand
+    arguments:
+      - name: mode
+        optional: false
+        schema:
+          type: string
+          enum:
+            - news
+            - weather
+            - music
+            - search_all
+      - name: searchKeywowrd
+        optional: true
+        schema:
+          type: string
