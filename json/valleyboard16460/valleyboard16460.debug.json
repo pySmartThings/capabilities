@@ -1,0 +1,28 @@
+{
+  "id": "valleyboard16460.debug",
+  "version": 1,
+  "status": "proposed",
+  "name": "Debug",
+  "ephemeral": false,
+  "attributes": {
+    "value": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setValue",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setValue": {
+      "name": "setValue",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "string" } }
+      ]
+    },
+    "clear": { "name": "clear", "arguments": [] }
+  }
+}

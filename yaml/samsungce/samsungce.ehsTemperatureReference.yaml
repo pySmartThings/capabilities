@@ -1,0 +1,21 @@
+id: samsungce.ehsTemperatureReference
+version: 1
+status: proposed
+name: EHS Temperature Reference
+ephemeral: false
+attributes:
+  temperatureReference:
+    schema:
+      title: Reference of temperature
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - air
+            - water
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

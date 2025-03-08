@@ -1,0 +1,70 @@
+id: samsungce.ehsFsvSettings
+version: 1
+status: proposed
+name: EHS FSV Settings
+ephemeral: false
+attributes:
+  fsvSettings:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              inUse:
+                type: boolean
+              isValid:
+                type: boolean
+              resolution:
+                type: number
+              type:
+                type: string
+                enum:
+                  - etc
+                  - temperature
+                  - hour
+                  - minute
+                  - day
+              minValue:
+                type: number
+              maxValue:
+                type: number
+              value:
+                type: number
+              temperatureUnit:
+                type: string
+                enum:
+                  - F
+                  - C
+            required:
+              - id
+              - inUse
+              - isValid
+              - resolution
+              - type
+              - minValue
+              - maxValue
+              - value
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setValue:
+    name: setValue
+    arguments:
+      - name: id
+        optional: false
+        schema:
+          type: string
+      - name: value
+        optional: false
+        schema:
+          type: number
+  refresh:
+    name: refresh
+    arguments: []

@@ -1,0 +1,33 @@
+id: samsungce.toggleSwitch
+version: 1
+status: proposed
+name: Toggle Switch
+ephemeral: false
+attributes:
+  switch:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - "on"
+            - "off"
+      additionalProperties: false
+      required:
+        - value
+    enumCommands:
+      - command: "on"
+        value: "on"
+      - command: "off"
+        value: "off"
+commands:
+  toggle:
+    name: toggle
+    arguments: []
+  "off":
+    name: "off"
+    arguments: []
+  "on":
+    name: "on"
+    arguments: []
