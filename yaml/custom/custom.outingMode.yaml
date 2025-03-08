@@ -1,0 +1,30 @@
+id: custom.outingMode
+version: 1
+status: proposed
+name: Outing Mode
+ephemeral: false
+attributes:
+  outingMode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - "on"
+            - "off"
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setOutingMode:
+    name: setOutingMode
+    arguments:
+      - name: mode
+        optional: false
+        schema:
+          type: string
+          enum:
+            - "on"
+            - "off"
