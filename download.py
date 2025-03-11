@@ -18,7 +18,7 @@ async def main():
     async with SmartThings() as client:
         client.authenticate(os.getenv("SMARTTHINGS_TOKEN"))
         for capability in Capability:
-            print("Downloading %s", capability)
+            print(f"Downloading {capability}")
             standard_namespace = "." not in capability
             namespace = "standard" if standard_namespace else capability.split(".")[0]
             schema = await client.get_capability(capability)
@@ -29,7 +29,7 @@ async def main():
             yaml_path.mkdir(exist_ok=True)
             with open(yaml_path / f"{capability}.yaml", "w") as f:
                 yaml.dump(orjson.loads(schema), f, sort_keys=False)
-            print("Downloaded %s", capability)
+            print(f"Downloaded {capability}")
             await asyncio.sleep(0.1)
 
     os.system("npm run prettier")
