@@ -30,7 +30,7 @@ async def main():
             with open(yaml_path / f"{capability}.yaml", "w") as f:
                 yaml.dump(orjson.loads(schema), f, sort_keys=False)
             LOGGER.info("Downloaded %s", capability)
-            await asyncio.sleep(1)
+            await asyncio.sleep(0.1)
 
     os.system("npm run prettier")
 
