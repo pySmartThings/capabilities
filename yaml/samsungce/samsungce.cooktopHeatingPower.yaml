@@ -1,0 +1,79 @@
+id: samsungce.cooktopHeatingPower
+version: 1
+status: proposed
+name: Cooktop Heating Power
+ephemeral: false
+attributes:
+  manualLevel:
+    schema:
+      type: object
+      properties:
+        value:
+          type: number
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  heatingMode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - "off"
+            - onOff
+            - manual
+            - boost
+            - keepWarm
+            - quickPreheat
+            - defrost
+            - melt
+            - simmer
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  manualLevelMin:
+    schema:
+      type: object
+      properties:
+        value:
+          type: number
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedHeatingModes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - "off"
+              - onOff
+              - manual
+              - boost
+              - keepWarm
+              - quickPreheat
+              - defrost
+              - melt
+              - simmer
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  manualLevelMax:
+    schema:
+      type: object
+      properties:
+        value:
+          type: number
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

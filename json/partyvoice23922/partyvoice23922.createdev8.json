@@ -1,0 +1,31 @@
+{
+  "id": "partyvoice23922.createdev8",
+  "version": 1,
+  "status": "proposed",
+  "name": "createdev8",
+  "ephemeral": false,
+  "attributes": {
+    "deviceType": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string", "maxLength": 20 } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setDeviceType",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setDeviceType": {
+      "name": "setDeviceType",
+      "arguments": [
+        {
+          "name": "value",
+          "optional": false,
+          "schema": { "type": "string", "maxLength": 20 }
+        }
+      ]
+    }
+  }
+}

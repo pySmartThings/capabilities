@@ -1,0 +1,75 @@
+{
+  "id": "rivertalent14263.adaptiveEnergyUsageState",
+  "version": 1,
+  "status": "proposed",
+  "name": "Adaptive energy usage state",
+  "ephemeral": false,
+  "attributes": {
+    "stormWatchEnabled": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "stormWatchActive": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "gridStatusSupport": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "stormWatchSupport": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "energyUsageState": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "title": "Energy usage state",
+            "type": "string",
+            "enum": ["surplus", "normal", "needsavings"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "gridStatusStatus": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["unknown", "on-grid", "off-grid"]
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}
