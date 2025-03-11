@@ -1,0 +1,58 @@
+id: samsungim.hubOnboarding
+version: 1
+status: proposed
+name: Hub Onboarding
+ephemeral: false
+attributes:
+  onboarding:
+    schema:
+      type: object
+      properties:
+        value:
+          title: OnboardingState
+          type: string
+          enum:
+            - onboarding
+            - reset
+      additionalProperties: false
+      required:
+        - value
+    enumCommands:
+      - command: onboarding
+        value: onboarding
+      - command: reset
+        value: reset
+commands:
+  reset:
+    name: reset
+    arguments: []
+  onboarding:
+    name: onboarding
+    arguments:
+      - name: status
+        optional: false
+        schema:
+          type: object
+          properties:
+            userId:
+              type: string
+            locationId:
+              type: string
+            roomId:
+              type: string
+            environment:
+              type: string
+              enum:
+                - PROD
+                - ACCEPTANCE
+                - STG
+                - DEV
+                - PROD_CN
+                - STG_CN
+            country:
+              type: string
+          additionalProperties: false
+          required:
+            - userId
+            - locationId
+            - environment

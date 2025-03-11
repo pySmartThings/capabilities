@@ -1,0 +1,54 @@
+id: samsungim.findNode
+version: 1
+status: proposed
+name: Find Node
+ephemeral: false
+attributes:
+  disabledReason:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - unknown
+            - wrongGeolocation
+            - oobeNotCompleted
+            - stfDeleted
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  enabled:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    setter: setEnabled
+    enumCommands: []
+commands:
+  setEnabled:
+    name: setEnabled
+    arguments:
+      - name: enabled
+        optional: false
+        schema:
+          type: boolean
+  stfInstalled:
+    name: stfInstalled
+    arguments:
+      - name: installedAppId
+        optional: false
+        schema:
+          type: string
+  stfUninstalled:
+    name: stfUninstalled
+    arguments:
+      - name: installedAppId
+        optional: false
+        schema:
+          type: string

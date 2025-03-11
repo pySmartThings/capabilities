@@ -1,0 +1,29 @@
+id: samsungim.selfTest
+version: 1
+status: proposed
+name: Self Test
+ephemeral: false
+attributes:
+  report:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          properties:
+            state:
+              type: integer
+            result:
+              type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  run:
+    name: run
+    arguments:
+      - name: run
+        optional: false
+        schema:
+          type: boolean

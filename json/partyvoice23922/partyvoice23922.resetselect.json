@@ -1,0 +1,31 @@
+{
+  "id": "partyvoice23922.resetselect",
+  "version": 1,
+  "status": "proposed",
+  "name": "resetselect",
+  "ephemeral": false,
+  "attributes": {
+    "cmdSelect": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string", "maxLength": 50 } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setSelect",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setSelect": {
+      "name": "setSelect",
+      "arguments": [
+        {
+          "name": "value",
+          "optional": false,
+          "schema": { "type": "string", "maxLength": 50 }
+        }
+      ]
+    }
+  }
+}

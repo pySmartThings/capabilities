@@ -1,0 +1,28 @@
+id: samsungim.firmwareAutoUpdate
+version: 1
+status: proposed
+name: Firmware Auto Update
+ephemeral: false
+attributes:
+  autoUpdateEnabled:
+    schema:
+      type: object
+      properties:
+        value:
+          title: enabled
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands:
+      - command: enableAutoUpdate
+        value: "true"
+      - command: disableAutoUpdate
+        value: "false"
+commands:
+  enableAutoUpdate:
+    name: enableAutoUpdate
+    arguments: []
+  disableAutoUpdate:
+    name: disableAutoUpdate
+    arguments: []

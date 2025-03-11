@@ -1,0 +1,108 @@
+{
+  "id": "samsungim.findNodeGeolocation",
+  "version": 1,
+  "status": "proposed",
+  "name": "Find Node Geolocation",
+  "ephemeral": false,
+  "attributes": {
+    "method": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "maxLength": 255, "type": "string", "title": "String" }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "heading": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "maximum": 360, "type": "number", "minimum": 0 }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "latitude": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "maximum": 90, "type": "number", "minimum": -90 }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "accuracy": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "number", "minimum": 0 } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "speed": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "number", "minimum": 0 } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "longitude": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "maximum": 180, "type": "number", "minimum": -180 }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "update": {
+      "name": "update",
+      "arguments": [
+        {
+          "name": "method",
+          "optional": true,
+          "schema": { "type": "string", "maxLength": 255, "title": "String" }
+        },
+        {
+          "name": "heading",
+          "optional": true,
+          "schema": { "type": "number", "maximum": 360, "minimum": 0 }
+        },
+        {
+          "name": "latitude",
+          "optional": false,
+          "schema": { "type": "number", "maximum": 90, "minimum": -90 }
+        },
+        {
+          "name": "accuracy",
+          "optional": true,
+          "schema": { "type": "number", "minimum": 0 }
+        },
+        {
+          "name": "speed",
+          "optional": true,
+          "schema": { "type": "number", "minimum": 0 }
+        },
+        {
+          "name": "longitude",
+          "optional": false,
+          "schema": { "type": "number", "maximum": 180, "minimum": -180 }
+        }
+      ]
+    }
+  }
+}

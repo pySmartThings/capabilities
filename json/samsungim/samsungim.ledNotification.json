@@ -1,0 +1,31 @@
+{
+  "id": "samsungim.ledNotification",
+  "version": 1,
+  "status": "proposed",
+  "name": "Led Notification",
+  "ephemeral": false,
+  "attributes": {
+    "ledNotification": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "title": "enabled", "type": "boolean" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": [
+        { "command": "enableLedNotification", "value": "true" },
+        { "command": "disableLedNotification", "value": "false" }
+      ]
+    }
+  },
+  "commands": {
+    "enableLedNotification": {
+      "name": "enableLedNotification",
+      "arguments": []
+    },
+    "disableLedNotification": {
+      "name": "disableLedNotification",
+      "arguments": []
+    }
+  }
+}

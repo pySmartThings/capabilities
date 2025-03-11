@@ -1,0 +1,19 @@
+{
+  "id": "partyvoice23922.infotable",
+  "version": 1,
+  "status": "proposed",
+  "name": "infotable",
+  "ephemeral": false,
+  "attributes": {
+    "info": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

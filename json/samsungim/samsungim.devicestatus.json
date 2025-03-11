@@ -1,0 +1,35 @@
+{
+  "id": "samsungim.devicestatus",
+  "version": 1,
+  "status": "proposed",
+  "name": "DeviceStatus",
+  "ephemeral": false,
+  "attributes": {
+    "status": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "properties": {
+              "modelNumber": { "type": "string" },
+              "serialNumber": { "type": "string" },
+              "wifiMAC": { "type": "string" },
+              "btAddr": { "type": "string" },
+              "mnId": { "type": "string" },
+              "setupId": { "type": "string" },
+              "productionDate": { "type": "string" },
+              "swVer": { "type": "string" },
+              "hwVer": { "type": "string" },
+              "mnmo": { "type": "string" }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

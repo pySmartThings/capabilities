@@ -1,0 +1,27 @@
+id: legendabsolute60149.circadian
+version: 1
+status: proposed
+name: Circadian
+ephemeral: false
+attributes:
+  circadian:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          maxLength: 25
+      additionalProperties: false
+      required:
+        - value
+    setter: setCircadian
+    enumCommands: []
+commands:
+  setCircadian:
+    name: setCircadian
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+          maxLength: 25

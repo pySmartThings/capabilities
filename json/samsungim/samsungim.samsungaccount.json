@@ -1,0 +1,36 @@
+{
+  "id": "samsungim.samsungaccount",
+  "version": 1,
+  "status": "proposed",
+  "name": "SamsungAccount",
+  "ephemeral": false,
+  "attributes": {
+    "signInStatus": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "title": "String", "type": "string" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "signIn": {
+      "name": "signIn",
+      "arguments": [
+        {
+          "name": "signInData",
+          "optional": false,
+          "schema": { "title": "JsonObject", "type": "object" }
+        }
+      ]
+    },
+    "signOut": {
+      "name": "signOut",
+      "arguments": [
+        { "name": "guid", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}
