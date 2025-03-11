@@ -1,0 +1,29 @@
+id: partyvoice23922.createqty
+version: 1
+status: proposed
+name: createqty
+ephemeral: false
+attributes:
+  createQty:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 1
+          maximum: 10
+      additionalProperties: false
+      required:
+        - value
+    setter: setCreateQty
+    enumCommands: []
+commands:
+  setCreateQty:
+    name: setCreateQty
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: integer
+          minimum: 1
+          maximum: 10

@@ -72,7 +72,7 @@
         "properties": {
           "value": {
             "type": "string",
-            "enum": ["ble_ocf", "wifi_https", "ble_stdk", "wifi_stdk"]
+            "enum": ["ble_ocf", "wifi_https", "ble_stdk", "wifi_stdk", "l3_ocf"]
           }
         },
         "additionalProperties": false,

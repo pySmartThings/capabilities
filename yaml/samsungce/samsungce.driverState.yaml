@@ -1,0 +1,18 @@
+id: samsungce.driverState
+version: 1
+status: proposed
+name: Driver State
+ephemeral: false
+attributes:
+  driverState:
+    schema:
+      title: json object for state
+      type: object
+      properties:
+        value:
+          type: object
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

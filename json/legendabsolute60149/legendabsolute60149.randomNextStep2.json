@@ -1,0 +1,27 @@
+{
+  "id": "legendabsolute60149.randomNextStep2",
+  "version": 1,
+  "status": "proposed",
+  "name": "Random Next Step 2",
+  "ephemeral": false,
+  "attributes": {
+    "randomNext": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setRandomNext",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setRandomNext": {
+      "name": "setRandomNext",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "amberpiano10217.virtualThingType",
+  "version": 1,
+  "status": "proposed",
+  "name": "Virtual Thing Type",
+  "ephemeral": false,
+  "attributes": {
+    "type": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "switch",
+              "curtain_switch",
+              "dimmer",
+              "momentary",
+              "sensor_air_quality",
+              "sensor_acceleration",
+              "sensor_contact",
+              "sensor_humidity",
+              "sensor_motion",
+              "sensor_presence",
+              "sensor_smoke",
+              "sensor_temperature",
+              "sensor_temperature_humidity",
+              "sensor_water",
+              "smart_lock",
+              "thermostat",
+              "alarm",
+              "audio",
+              "battery",
+              "tv",
+              "power",
+              "counter"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setThingType",
+      "enumCommands": []
+    },
+    "supportedTypes": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setThingType": {
+      "name": "setThingType",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}

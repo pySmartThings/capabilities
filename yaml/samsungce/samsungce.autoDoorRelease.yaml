@@ -1,0 +1,23 @@
+id: samsungce.autoDoorRelease
+version: 1
+status: proposed
+name: Auto Door Release
+ephemeral: false
+attributes:
+  autoDoorReleaseEnabled:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  enable:
+    name: enable
+    arguments: []
+  disable:
+    name: disable
+    arguments: []

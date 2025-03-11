@@ -1,0 +1,34 @@
+id: legendabsolute60149.atmosPressure
+version: 1
+status: proposed
+name: Atmos Pressure
+ephemeral: false
+attributes:
+  atmosPressure:
+    schema:
+      type: object
+      properties:
+        value:
+          type: number
+          minimum: 1
+          maximum: 1500
+        unit:
+          type: string
+          enum:
+            - mBar
+          default: mBar
+      additionalProperties: false
+      required:
+        - value
+    setter: setAtmosPressure
+    enumCommands: []
+commands:
+  setAtmosPressure:
+    name: setAtmosPressure
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: number
+          minimum: 1
+          maximum: 1500

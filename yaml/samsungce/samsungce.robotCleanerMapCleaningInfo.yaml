@@ -1,0 +1,61 @@
+id: samsungce.robotCleanerMapCleaningInfo
+version: 1
+status: proposed
+name: Robot Cleaner Map Cleaning Info
+ephemeral: false
+attributes:
+  area:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          default: none
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  cleanedExtent:
+    schema:
+      type: object
+      properties:
+        value:
+          type: number
+        unit:
+          type: string
+          enum:
+            - "m\xB2"
+          default: "m\xB2"
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  nearObject:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          default: none
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  remainingTime:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          min: -1
+        unit:
+          type: string
+          enum:
+            - hour
+            - minute
+            - second
+          default: minute
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

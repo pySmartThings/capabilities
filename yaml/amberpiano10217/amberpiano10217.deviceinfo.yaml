@@ -1,0 +1,52 @@
+id: amberpiano10217.deviceinfo
+version: 1
+status: proposed
+name: DeviceInfo
+ephemeral: false
+attributes:
+  basicHtmlDisable:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  appVersion:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  zclVersion:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  basicHtml:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  dashBoardValue:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required: []
+    enumCommands: []
+commands: {}

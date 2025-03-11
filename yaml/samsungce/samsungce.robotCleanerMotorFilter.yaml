@@ -1,0 +1,34 @@
+id: samsungce.robotCleanerMotorFilter
+version: 1
+status: proposed
+name: Robot Cleaner Motor Filter
+ephemeral: false
+attributes:
+  motorFilterResetType:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - washable
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  motorFilterStatus:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - normal
+            - wash
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

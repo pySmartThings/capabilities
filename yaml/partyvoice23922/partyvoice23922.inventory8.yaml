@@ -1,0 +1,27 @@
+id: partyvoice23922.inventory8
+version: 1
+status: proposed
+name: inventory8
+ephemeral: false
+attributes:
+  inventory:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          maxLength: 20
+      additionalProperties: false
+      required:
+        - value
+    setter: setInventory
+    enumCommands: []
+commands:
+  setInventory:
+    name: setInventory
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+          maxLength: 20

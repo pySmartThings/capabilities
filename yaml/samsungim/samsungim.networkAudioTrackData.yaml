@@ -1,0 +1,43 @@
+id: samsungim.networkAudioTrackData
+version: 1
+status: proposed
+name: Network Audio Track Data
+ephemeral: false
+attributes:
+  appName:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setAppName
+    enumCommands: []
+  source:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setSource
+    enumCommands: []
+commands:
+  setSource:
+    name: setSource
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+  setAppName:
+    name: setAppName
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string

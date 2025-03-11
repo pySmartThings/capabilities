@@ -1,0 +1,72 @@
+id: samsungce.dryerLabelScanCyclePreset
+version: 1
+status: proposed
+name: Dryer Label Scan Cycle Preset
+ephemeral: false
+attributes:
+  presets:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          patternProperties:
+            ^.{1,32}$:
+              type: object
+              additionalProperties: false
+              properties:
+                recipeId:
+                  type: string
+                cycle:
+                  type: string
+                options:
+                  type: object
+                  additionalProperties:
+                    type: string
+                  properties:
+                    dryingTime:
+                      type: string
+                    dryingTemperature:
+                      type: string
+                    dryingLevel:
+                      type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setDryerLabelScanCyclePreset:
+    name: setDryerLabelScanCyclePreset
+    arguments:
+      - name: presets
+        optional: false
+        schema:
+          type: object
+          additionalProperties: false
+          patternProperties:
+            ^.{1,32}$:
+              type: object
+              additionalProperties: false
+              properties:
+                recipeId:
+                  type: string
+                cycle:
+                  type: string
+                options:
+                  type: object
+                  additionalProperties:
+                    type: string
+                  properties:
+                    dryingTime:
+                      type: string
+                    dryingTemperature:
+                      type: string
+                    dryingLevel:
+                      type: string
+              required:
+                - cycle
+                - options
+  delete:
+    name: delete
+    arguments: []

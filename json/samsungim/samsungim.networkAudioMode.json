@@ -1,0 +1,27 @@
+{
+  "id": "samsungim.networkAudioMode",
+  "version": 1,
+  "status": "proposed",
+  "name": "Network Audio Mode",
+  "ephemeral": false,
+  "attributes": {
+    "mode": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setMode",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setMode": {
+      "name": "setMode",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}

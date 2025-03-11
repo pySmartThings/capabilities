@@ -1,0 +1,154 @@
+{
+  "id": "samsungce.robotCleanerReservation",
+  "version": 1,
+  "status": "proposed",
+  "name": "Robot Cleaner Reservation",
+  "ephemeral": false,
+  "attributes": {
+    "reservations": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "string" },
+                "enabled": { "type": "boolean" },
+                "repeatMode": {
+                  "type": "string",
+                  "enum": ["once", "daily", "weekly"]
+                },
+                "dayOfWeek": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+                  }
+                },
+                "startTime": { "type": "string" },
+                "cleaningMode": { "type": "string" },
+                "areaId": { "type": "array", "items": { "type": "string" } }
+              },
+              "required": [
+                "id",
+                "enabled",
+                "dayOfWeek",
+                "startTime",
+                "cleaningMode"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "maxNumberOfReservations": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "number" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "addReservation": {
+      "name": "addReservation",
+      "arguments": [
+        {
+          "name": "newReservation",
+          "optional": false,
+          "schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "enabled": { "type": "boolean" },
+              "repeatMode": {
+                "type": "string",
+                "enum": ["once", "daily", "weekly"]
+              },
+              "dayOfWeek": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+                }
+              },
+              "startTime": { "type": "string" },
+              "cleaningMode": { "type": "string" },
+              "areaId": { "type": "array", "items": { "type": "string" } }
+            },
+            "required": ["enabled", "dayOfWeek", "startTime", "cleaningMode"]
+          }
+        }
+      ]
+    },
+    "deleteReservations": {
+      "name": "deleteReservations",
+      "arguments": [
+        {
+          "name": "ids",
+          "optional": false,
+          "schema": {
+            "type": "array",
+            "additionalProperties": false,
+            "items": { "type": "string" }
+          }
+        }
+      ]
+    },
+    "editReservation": {
+      "name": "editReservation",
+      "arguments": [
+        {
+          "name": "reservation",
+          "optional": false,
+          "schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "string" },
+              "enabled": { "type": "boolean" },
+              "repeatMode": {
+                "type": "string",
+                "enum": ["once", "daily", "weekly"]
+              },
+              "dayOfWeek": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+                }
+              },
+              "startTime": { "type": "string" },
+              "cleaningMode": { "type": "string" },
+              "areaId": { "type": "array", "items": { "type": "string" } }
+            },
+            "required": [
+              "id",
+              "enabled",
+              "dayOfWeek",
+              "startTime",
+              "cleaningMode"
+            ]
+          }
+        }
+      ]
+    },
+    "deleteReservation": {
+      "name": "deleteReservation",
+      "arguments": [
+        {
+          "name": "id",
+          "optional": false,
+          "schema": { "type": "string", "additionalProperties": false }
+        }
+      ]
+    }
+  }
+}

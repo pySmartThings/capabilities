@@ -1,0 +1,10 @@
+id: abateachieve62503.statelessAudioVolumeDown
+version: 1
+status: proposed
+name: Stateless Audio Volume Down
+ephemeral: false
+attributes: {}
+commands:
+  volumeDown:
+    name: volumeDown
+    arguments: []

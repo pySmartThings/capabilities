@@ -1,0 +1,29 @@
+id: amberpiano10217.detectionInterval
+version: 1
+status: proposed
+name: Detection Interval
+ephemeral: false
+attributes:
+  detectionInterval:
+    schema:
+      type: object
+      properties:
+        value:
+          type: number
+          minimum: 0
+          maximum: 255
+      additionalProperties: false
+      required:
+        - value
+    setter: setDetectionInterval
+    enumCommands: []
+commands:
+  setDetectionInterval:
+    name: setDetectionInterval
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: number
+          minimum: 0
+          maximum: 255

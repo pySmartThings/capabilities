@@ -1,0 +1,28 @@
+id: amberpiano10217.groupAdd
+version: 1
+status: proposed
+name: Group Add
+ephemeral: false
+attributes:
+  status:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required: []
+    enumCommands: []
+commands:
+  add:
+    name: add
+    arguments:
+      - name: groupId
+        optional: false
+        schema:
+          type: number
+          minimum: 0
+          maximum: 65535
+  push:
+    name: push
+    arguments: []

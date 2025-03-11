@@ -1,0 +1,226 @@
+{
+  "id": "rivertalent14263.energyMeterProperties",
+  "version": 1,
+  "status": "proposed",
+  "name": "Energy Meter Properties",
+  "ephemeral": false,
+  "attributes": {
+    "supportTouEventNotification": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "hasTodayUsage": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "touEventNotification": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "properties": {
+              "eventType": { "type": "string", "enum": ["off-peak"] },
+              "end": {
+                "type": "string",
+                "pattern": "^(?:[1-9]\\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)T(?:[01]\\d|2[0-3]):?[0-5]\\d:?[0-5]\\d(?:\\.\\d{3})?(?:Z|[+-][01]\\d(?::?[0-5]\\d)?)$",
+                "title": "Iso8601Date"
+              },
+              "start": {
+                "type": "string",
+                "pattern": "^(?:[1-9]\\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)T(?:[01]\\d|2[0-3]):?[0-5]\\d:?[0-5]\\d(?:\\.\\d{3})?(?:Z|[+-][01]\\d(?::?[0-5]\\d)?)$",
+                "title": "Iso8601Date"
+              }
+            },
+            "required": ["start", "end", "eventType"],
+            "title": "eventNotification",
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "hasCost": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "tariffProvider": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "hasTotalUsage": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "measureInterval": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "number" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "rateType": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["tou", "block", "flat", "none"]
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "hasFromGrid": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "tariffName": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "dateStarted": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "pattern": "^(?:[1-9]\\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)T(?:[01]\\d|2[0-3]):?[0-5]\\d:?[0-5]\\d(?:\\.\\d{3})?(?:Z|[+-][01]\\d(?::?[0-5]\\d)?)$"
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "supportTouInfo": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "touInfo": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "start": {
+                "type": "string",
+                "pattern": "^(?:[1-9]\\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)T(?:[01]\\d|2[0-3]):?[0-5]\\d:?[0-5]\\d(?:\\.\\d{3})?(?:Z|[+-][01]\\d(?::?[0-5]\\d)?)$"
+              },
+              "end": {
+                "type": "string",
+                "pattern": "^(?:[1-9]\\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)T(?:[01]\\d|2[0-3]):?[0-5]\\d:?[0-5]\\d(?:\\.\\d{3})?(?:Z|[+-][01]\\d(?::?[0-5]\\d)?)$"
+              },
+              "interval": { "type": "integer", "enum": [15, 60] },
+              "values": { "type": "array", "items": { "type": "number" } }
+            },
+            "required": ["start", "end", "interval", "values"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "hasToGrid": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "serviceMessage": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "meteringDate": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number", "minimum": 1, "maximum": 31 }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "setter": "setMeteringDate",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setMeteringDate": {
+      "name": "setMeteringDate",
+      "arguments": [
+        {
+          "name": "meteringDate",
+          "optional": false,
+          "schema": { "type": "number", "minimum": 1, "maximum": 31 }
+        }
+      ]
+    },
+    "setServiceMessage": {
+      "name": "setServiceMessage",
+      "arguments": [
+        {
+          "name": "serviceMessage",
+          "optional": false,
+          "schema": { "type": "string" }
+        }
+      ]
+    }
+  }
+}

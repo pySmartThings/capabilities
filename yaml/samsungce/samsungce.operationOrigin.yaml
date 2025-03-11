@@ -1,0 +1,21 @@
+id: samsungce.operationOrigin
+version: 1
+status: proposed
+name: Operation Origin
+ephemeral: false
+attributes: {}
+commands:
+  setOperationOrigin:
+    name: setOperationOrigin
+    arguments:
+      - name: origin
+        optional: false
+        schema:
+          type: string
+      - name: data
+        optional: true
+        schema:
+          oneOf:
+            - type: string
+            - type: object
+            - type: array

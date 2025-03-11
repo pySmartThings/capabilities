@@ -1,0 +1,22 @@
+id: samsungce.surfaceResidualHeat
+version: 1
+status: proposed
+name: Surface Residual Heat
+ephemeral: false
+attributes:
+  surfaceResidualHeat:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - normal
+            - low
+            - high
+            - veryHigh
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

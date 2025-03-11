@@ -1,0 +1,31 @@
+id: samsungce.robotCleanerFeatureVisibility
+version: 1
+status: proposed
+name: Robot Cleaner Feature Visibility
+ephemeral: false
+attributes:
+  invisibleFeatures:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  visibleFeatures:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

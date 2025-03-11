@@ -1,0 +1,25 @@
+id: legendabsolute60149.switchAllOnOff1
+version: 1
+status: proposed
+name: Switch All On Off 1
+ephemeral: false
+attributes:
+  switchAllOnOff:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setSwitchAllOnOff
+    enumCommands: []
+commands:
+  setSwitchAllOnOff:
+    name: setSwitchAllOnOff
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string

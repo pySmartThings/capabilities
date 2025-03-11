@@ -1,0 +1,20 @@
+id: samsungce.ehsThermostat
+version: 1
+status: proposed
+name: EHS Thermostat
+ephemeral: false
+attributes:
+  connectionState:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - connected
+            - disconnected
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

@@ -1,0 +1,131 @@
+{
+  "id": "samsungce.robotCleanerPetCleaningSchedule",
+  "version": 1,
+  "status": "proposed",
+  "name": "Robot Cleaner Pet Cleaning Schedule",
+  "ephemeral": false,
+  "attributes": {
+    "dayOfWeek": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "mapId": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "areaIds": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "startTime": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "originator": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "obsoleted": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean", "default": false } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "enabled": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean", "default": false } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setSchedule": {
+      "name": "setSchedule",
+      "arguments": [
+        {
+          "name": "enabled",
+          "optional": false,
+          "schema": { "type": "boolean" }
+        },
+        {
+          "name": "areaIds",
+          "optional": false,
+          "schema": { "type": "array", "items": { "type": "string" } }
+        },
+        {
+          "name": "dayOfWeek",
+          "optional": false,
+          "schema": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+            }
+          }
+        },
+        {
+          "name": "startTime",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"
+          }
+        },
+        {
+          "name": "originator",
+          "optional": false,
+          "schema": { "type": "string" }
+        },
+        { "name": "mapId", "optional": true, "schema": { "type": "string" } }
+      ]
+    },
+    "enable": { "name": "enable", "arguments": [] },
+    "disable": { "name": "disable", "arguments": [] }
+  }
+}

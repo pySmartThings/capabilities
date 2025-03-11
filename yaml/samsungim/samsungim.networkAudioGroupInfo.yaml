@@ -1,40 +1,10 @@
-id: sec.diagnosticsInformation
+id: samsungim.networkAudioGroupInfo
 version: 1
 status: proposed
-name: Diagnostics Information
+name: Network Audio Group Info
 ephemeral: false
 attributes:
-  logType:
-    schema:
-      type: object
-      properties:
-        value:
-          type: array
-          items:
-            title: logType
-            type: string
-            enum:
-              - errCode
-              - dump
-      additionalProperties: false
-      required:
-        - value
-    enumCommands: []
-  endpoint:
-    schema:
-      type: object
-      properties:
-        value:
-          type: string
-          enum:
-            - NONE
-            - PIPER
-            - SSM
-      additionalProperties: false
-      required:
-        - value
-    enumCommands: []
-  minVersion:
+  groupName:
     schema:
       type: object
       properties:
@@ -43,23 +13,9 @@ attributes:
       additionalProperties: false
       required:
         - value
+    setter: setGroupName
     enumCommands: []
-  signinPermission:
-    schema:
-      type: object
-      properties:
-        value:
-          type: string
-          enum:
-            - immutable
-            - updating
-            - enabled
-            - disabled
-      additionalProperties: false
-      required:
-        - value
-    enumCommands: []
-  setupId:
+  role:
     schema:
       type: object
       properties:
@@ -68,24 +24,9 @@ attributes:
       additionalProperties: false
       required:
         - value
+    setter: setRole
     enumCommands: []
-  protocolType:
-    schema:
-      type: object
-      properties:
-        value:
-          type: string
-          enum:
-            - ble_ocf
-            - wifi_https
-            - ble_stdk
-            - wifi_stdk
-            - l3_ocf
-      additionalProperties: false
-      required:
-        - value
-    enumCommands: []
-  tsId:
+  channel:
     schema:
       type: object
       properties:
@@ -94,8 +35,9 @@ attributes:
       additionalProperties: false
       required:
         - value
+    setter: setChannel
     enumCommands: []
-  mnId:
+  stereoType:
     schema:
       type: object
       properties:
@@ -104,18 +46,106 @@ attributes:
       additionalProperties: false
       required:
         - value
+    setter: setStereoType
     enumCommands: []
-  dumpType:
+  masterDi:
     schema:
       type: object
       properties:
         value:
           type: string
-          enum:
-            - file
-            - id
       additionalProperties: false
       required:
         - value
+    setter: setMasterDi
     enumCommands: []
-commands: {}
+  acmMode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setAcmMode
+    enumCommands: []
+  status:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setStatus
+    enumCommands: []
+  masterName:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setMasterName
+    enumCommands: []
+commands:
+  setGroupName:
+    name: setGroupName
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+  setAcmMode:
+    name: setAcmMode
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+  setRole:
+    name: setRole
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+  setMasterDi:
+    name: setMasterDi
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+  setMasterName:
+    name: setMasterName
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+  setChannel:
+    name: setChannel
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+  setStereoType:
+    name: setStereoType
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+  setStatus:
+    name: setStatus
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
