@@ -1,0 +1,17 @@
+id: custom.airQualityMaxLevel
+version: 1
+status: proposed
+name: Air Quality Max Level
+ephemeral: false
+attributes:
+  airQualityMaxLevel:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

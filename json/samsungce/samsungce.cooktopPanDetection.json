@@ -1,0 +1,19 @@
+{
+  "id": "samsungce.cooktopPanDetection",
+  "version": 1,
+  "status": "proposed",
+  "name": "Cooktop Pan Detection",
+  "ephemeral": false,
+  "attributes": {
+    "detected": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

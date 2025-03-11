@@ -1,0 +1,30 @@
+id: custom.lowerDevicePower
+version: 1
+status: proposed
+name: Lower Device Power
+ephemeral: false
+attributes:
+  powerState:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - "on"
+            - "off"
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setPowerState:
+    name: setPowerState
+    arguments:
+      - name: setPower
+        optional: false
+        schema:
+          type: string
+          enum:
+            - "on"
+            - "off"

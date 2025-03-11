@@ -1,0 +1,20 @@
+id: custom.filterUsageTime
+version: 1
+status: proposed
+name: Filter Usage Time
+ephemeral: false
+attributes:
+  usageTime:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  resetFilterUsageTime:
+    name: resetFilterUsageTime
+    arguments: []

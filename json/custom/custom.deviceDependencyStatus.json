@@ -1,0 +1,39 @@
+{
+  "id": "custom.deviceDependencyStatus",
+  "version": 1,
+  "status": "proposed",
+  "name": "Device Dependency Status",
+  "ephemeral": false,
+  "attributes": {
+    "subDeviceActive": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean", "default": false } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "dependencyStatus": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["master", "slave", "single"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "numberOfSubDevices": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "number" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

@@ -1,0 +1,28 @@
+id: samsungce.cooktopBurnerMode
+version: 1
+status: proposed
+name: Cooktop Burner Mode
+ephemeral: false
+attributes:
+  cooktopBurnerMode:
+    schema:
+      title: Cooktop Burner Mode
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - normal
+            - desiredTemperature
+            - preventBoilOver
+            - autoCook
+            - assistCook
+            - smartPot
+            - detectBoiling
+            - detectSoupBoiling
+            - multiStage
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}
