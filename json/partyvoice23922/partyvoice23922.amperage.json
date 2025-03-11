@@ -1,0 +1,22 @@
+{
+  "id": "partyvoice23922.amperage",
+  "version": 1,
+  "status": "proposed",
+  "name": "amperage",
+  "ephemeral": false,
+  "attributes": {
+    "amperage": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "title": "Number", "type": "number" },
+          "unit": { "type": "string", "enum": ["A"], "default": "A" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

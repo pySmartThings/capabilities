@@ -1,0 +1,53 @@
+{
+  "id": "samsungim.wifi",
+  "version": 1,
+  "status": "proposed",
+  "name": "wifi",
+  "ephemeral": false,
+  "attributes": {
+    "connectionInfo": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "ssid": { "type": "string" },
+            "rssi": { "type": "integer" },
+            "securityType": { "type": "integer" },
+            "state": { "type": "integer" }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "scanResults": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "ssid": { "type": "string" },
+              "rssi": { "type": "integer" },
+              "securityType": { "type": "integer" },
+              "state": { "type": "integer" },
+              "level": { "type": "integer" },
+              "frequency": { "type": "integer" },
+              "channelBandwidth": { "type": "integer" },
+              "responder": { "type": "integer" }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "update": { "name": "update", "arguments": [] },
+    "getScanResults": { "name": "getScanResults", "arguments": [] }
+  }
+}

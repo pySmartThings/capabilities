@@ -1,0 +1,51 @@
+{
+  "id": "samsungim.sthubeui",
+  "version": 1,
+  "status": "proposed",
+  "name": "sthubeui",
+  "ephemeral": false,
+  "attributes": {
+    "hubEui": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "title": "hubEui", "type": "string", "maxLength": 255 }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "hubDeviceId": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "title": "hubDeviceId",
+            "type": "string",
+            "maxLength": 255
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "hubOnboardingStatus": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "title": "hubOnboardingStatus",
+            "type": "string",
+            "maxLength": 255
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

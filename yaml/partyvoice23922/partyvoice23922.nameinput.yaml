@@ -1,0 +1,25 @@
+id: partyvoice23922.nameinput
+version: 1
+status: proposed
+name: nameinput
+ephemeral: false
+attributes:
+  nameText:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setInput
+    enumCommands: []
+commands:
+  setInput:
+    name: setInput
+    arguments:
+      - name: name
+        optional: true
+        schema:
+          type: string

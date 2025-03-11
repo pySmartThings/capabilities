@@ -1,0 +1,37 @@
+id: samsungim.chargingStatus
+version: 1
+status: proposed
+name: Charging Status
+ephemeral: false
+attributes:
+  stoppedStatus:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - unknown
+            - highTemperature
+            - foreignObjectDetection
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  chargingStatus:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - idle
+            - charging
+            - fastCharging
+            - chargingComplete
+            - chargingStopped
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

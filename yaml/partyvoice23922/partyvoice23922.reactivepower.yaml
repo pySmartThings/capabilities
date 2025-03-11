@@ -1,0 +1,23 @@
+id: partyvoice23922.reactivepower
+version: 1
+status: proposed
+name: reactivepower
+ephemeral: false
+attributes:
+  reactive:
+    schema:
+      type: object
+      properties:
+        value:
+          title: Number
+          type: number
+        unit:
+          type: string
+          enum:
+            - W
+          default: W
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

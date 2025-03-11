@@ -1,0 +1,17 @@
+id: partyvoice23922.errorstatus
+version: 1
+status: proposed
+name: errorstatus
+ephemeral: false
+attributes:
+  errorstatus:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

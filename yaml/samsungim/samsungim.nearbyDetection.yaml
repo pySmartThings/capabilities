@@ -1,0 +1,34 @@
+id: samsungim.nearbyDetection
+version: 1
+status: proposed
+name: Nearby Detection
+ephemeral: false
+attributes:
+  status:
+    schema:
+      type: object
+      properties:
+        value:
+          title: status
+          type: string
+          enum:
+            - "on"
+            - "off"
+      additionalProperties: false
+      required:
+        - value
+    enumCommands:
+      - command: "on"
+        value: "on"
+      - command: "off"
+        value: "off"
+commands:
+  refresh:
+    name: refresh
+    arguments: []
+  "off":
+    name: "off"
+    arguments: []
+  "on":
+    name: "on"
+    arguments: []

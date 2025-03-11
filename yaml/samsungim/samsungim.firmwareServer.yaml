@@ -1,0 +1,39 @@
+id: samsungim.firmwareServer
+version: 1
+status: proposed
+name: Firmware Server
+ephemeral: false
+attributes:
+  server:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - SERVICE
+            - TEST
+            - UT
+            - TEST-UT
+            - DM
+            - TEST-DM
+      additionalProperties: false
+      required:
+        - value
+    setter: setServer
+    enumCommands: []
+commands:
+  setServer:
+    name: setServer
+    arguments:
+      - name: type
+        optional: true
+        schema:
+          type: string
+          enum:
+            - SERVICE
+            - TEST
+            - UT
+            - TEST-UT
+            - DM
+            - TEST-DM

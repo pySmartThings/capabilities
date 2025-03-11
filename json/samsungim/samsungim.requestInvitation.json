@@ -1,0 +1,68 @@
+{
+  "id": "samsungim.requestInvitation",
+  "version": 1,
+  "status": "proposed",
+  "name": "Request Invitation",
+  "ephemeral": false,
+  "attributes": {
+    "requestInvitation": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string", "enum": ["executed"] } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "held": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "title": "enabled", "type": "boolean" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "double": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "title": "enabled", "type": "boolean" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "pushed": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "title": "enabled", "type": "boolean" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "update": {
+      "name": "update",
+      "arguments": [
+        {
+          "name": "status",
+          "optional": false,
+          "schema": {
+            "type": "object",
+            "properties": {
+              "event": {
+                "type": "string",
+                "enum": ["pushed", "held", "double"]
+              },
+              "enabled": { "type": "boolean" }
+            },
+            "additionalProperties": false,
+            "required": ["event", "enabled"]
+          }
+        }
+      ]
+    }
+  }
+}

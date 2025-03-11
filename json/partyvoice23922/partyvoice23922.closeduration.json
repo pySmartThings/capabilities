@@ -1,0 +1,38 @@
+{
+  "id": "partyvoice23922.closeduration",
+  "version": 1,
+  "status": "proposed",
+  "name": "closeduration",
+  "ephemeral": false,
+  "attributes": {
+    "closeduration": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "integer", "minimum": 0, "maximum": 180 },
+          "unit": {
+            "type": "string",
+            "enum": ["seconds"],
+            "default": "seconds"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setClose",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setClose": {
+      "name": "setClose",
+      "arguments": [
+        {
+          "name": "closeduration",
+          "optional": false,
+          "schema": { "type": "integer", "minimum": 0, "maximum": 180 }
+        }
+      ]
+    }
+  }
+}

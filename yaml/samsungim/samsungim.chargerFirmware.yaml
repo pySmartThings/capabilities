@@ -1,0 +1,27 @@
+id: samsungim.chargerFirmware
+version: 1
+status: proposed
+name: Charger Firmware
+ephemeral: false
+attributes:
+  mcuDeviceFwVer:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  txicDeviceFwVer:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

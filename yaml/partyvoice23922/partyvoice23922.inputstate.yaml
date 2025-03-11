@@ -1,0 +1,17 @@
+id: partyvoice23922.inputstate
+version: 1
+status: proposed
+name: inputstate
+ephemeral: false
+attributes:
+  state:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

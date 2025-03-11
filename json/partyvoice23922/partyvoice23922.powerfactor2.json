@@ -1,0 +1,27 @@
+{
+  "id": "partyvoice23922.powerfactor2",
+  "version": 1,
+  "status": "proposed",
+  "name": "powerfactor2",
+  "ephemeral": false,
+  "attributes": {
+    "powerfactor": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "title": "Number",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "unit": { "type": "string", "enum": ["%"], "default": "%" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

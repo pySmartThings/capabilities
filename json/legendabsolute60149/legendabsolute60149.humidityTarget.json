@@ -1,0 +1,27 @@
+{
+  "id": "legendabsolute60149.humidityTarget",
+  "version": 1,
+  "status": "proposed",
+  "name": "Humidity Target",
+  "ephemeral": false,
+  "attributes": {
+    "humidityTarget": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setHumidityTarget",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setHumidityTarget": {
+      "name": "setHumidityTarget",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}
