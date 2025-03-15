@@ -1,0 +1,34 @@
+{
+  "id": "legendabsolute60149.colorChangeTimer",
+  "version": 1,
+  "status": "proposed",
+  "name": "Color Change Timer",
+  "ephemeral": false,
+  "attributes": {
+    "colorChangeTimer": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "integer", "minimum": 1, "maximum": 20 },
+          "unit": { "type": "string", "enum": ["Sec"], "default": "Sec" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setColorChangeTimer",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setColorChangeTimer": {
+      "name": "setColorChangeTimer",
+      "arguments": [
+        {
+          "name": "value",
+          "optional": false,
+          "schema": { "type": "integer", "minimum": 1, "maximum": 20 }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+id: rboyapps.lockOneTouchLock
+version: 1
+status: proposed
+name: Lock One Touch Lock
+ephemeral: false
+attributes:
+  onetouchlock:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - enabled
+            - disabled
+            - unknown
+      additionalProperties: false
+      required:
+        - value
+    setter: setOneTouchLock
+    enumCommands:
+      - command: enableOneTouchLock
+        value: enabled
+      - command: disableOneTouchLock
+        value: disabled
+commands:
+  setOneTouchLock:
+    name: setOneTouchLock
+    arguments:
+      - name: mode
+        optional: false
+        schema:
+          type: string
+          enum:
+            - enabled
+            - disabled
+  enableOneTouchLock:
+    name: enableOneTouchLock
+    arguments: []
+  disableOneTouchLock:
+    name: disableOneTouchLock
+    arguments: []

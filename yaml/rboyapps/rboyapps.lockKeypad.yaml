@@ -1,0 +1,42 @@
+id: rboyapps.lockKeypad
+version: 1
+status: proposed
+name: Lock Keypad
+ephemeral: false
+attributes:
+  keypad:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - enabled
+            - disabled
+            - unknown
+      additionalProperties: false
+      required:
+        - value
+    setter: setKeypad
+    enumCommands:
+      - command: enableKeypad
+        value: enabled
+      - command: disableKeypad
+        value: disabled
+commands:
+  disableKeypad:
+    name: disableKeypad
+    arguments: []
+  setKeypad:
+    name: setKeypad
+    arguments:
+      - name: mode
+        optional: false
+        schema:
+          type: string
+          enum:
+            - enabled
+            - disabled
+  enableKeypad:
+    name: enableKeypad
+    arguments: []

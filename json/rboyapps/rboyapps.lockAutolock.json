@@ -1,0 +1,41 @@
+{
+  "id": "rboyapps.lockAutolock",
+  "version": 1,
+  "status": "proposed",
+  "name": "Lock Autolock",
+  "ephemeral": false,
+  "attributes": {
+    "autolock": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["enabled", "disabled", "unknown"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setAutolock",
+      "enumCommands": [
+        { "command": "enableAutolock", "value": "enabled" },
+        { "command": "disableAutolock", "value": "disabled" }
+      ]
+    }
+  },
+  "commands": {
+    "setAutolock": {
+      "name": "setAutolock",
+      "arguments": [
+        {
+          "name": "mode",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["enabled", "disabled"] }
+        }
+      ]
+    },
+    "disableAutolock": { "name": "disableAutolock", "arguments": [] },
+    "enableAutolock": { "name": "enableAutolock", "arguments": [] }
+  }
+}

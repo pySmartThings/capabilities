@@ -1,0 +1,102 @@
+id: eventflute36860.notificationSingle
+version: 1
+status: proposed
+name: Notification Single
+ephemeral: false
+attributes:
+  notificationLevel:
+    schema:
+      title: Level
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setNotificationLevel
+    enumCommands: []
+  notificationEffect:
+    schema:
+      title: Effect
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setNotificationEffect
+    enumCommands: []
+  notificationColor:
+    schema:
+      title: Color
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setNotificationColor
+    enumCommands: []
+  notificationDuration:
+    schema:
+      title: Duration
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setNotificationDuration
+    enumCommands: []
+  notificationNumber:
+    schema:
+      title: LED Number
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setNotificationNumber
+    enumCommands: []
+commands:
+  setNotificationLevel:
+    name: setNotificationLevel
+    arguments:
+      - name: level
+        optional: false
+        schema:
+          type: string
+  setNotificationDuration:
+    name: setNotificationDuration
+    arguments:
+      - name: duration
+        optional: false
+        schema:
+          type: string
+  setNotificationNumber:
+    name: setNotificationNumber
+    arguments:
+      - name: number
+        optional: false
+        schema:
+          type: string
+  setNotificationColor:
+    name: setNotificationColor
+    arguments:
+      - name: color
+        optional: false
+        schema:
+          type: string
+  setNotificationEffect:
+    name: setNotificationEffect
+    arguments:
+      - name: effect
+        optional: false
+        schema:
+          type: string

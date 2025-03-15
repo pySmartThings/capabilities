@@ -1,0 +1,45 @@
+id: eventflute36860.ledBarSwitchOff
+version: 1
+status: proposed
+name: LED Bar Switch Off
+ephemeral: false
+attributes:
+  ledBarOffColor:
+    schema:
+      title: Color
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setLedBarOffColor
+    enumCommands: []
+  ledBarOffLevel:
+    schema:
+      title: Level
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setLedBarOffLevel
+    enumCommands: []
+commands:
+  setLedBarOffLevel:
+    name: setLedBarOffLevel
+    arguments:
+      - name: level
+        optional: false
+        schema:
+          type: string
+  setLedBarOffColor:
+    name: setLedBarOffColor
+    arguments:
+      - name: color
+        optional: false
+        schema:
+          type: string

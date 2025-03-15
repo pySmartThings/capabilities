@@ -1,0 +1,37 @@
+{
+  "id": "custom.airPurifierOperationMode",
+  "version": 1,
+  "status": "proposed",
+  "name": "Air Purifier Operation Mode",
+  "ephemeral": false,
+  "attributes": {
+    "apOperationMode": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedApOperationMode": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setApOperationMode": {
+      "name": "setApOperationMode",
+      "arguments": [
+        { "name": "mode", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}

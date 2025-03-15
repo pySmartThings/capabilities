@@ -1,0 +1,78 @@
+id: rboyapps.lockExtended
+version: 1
+status: proposed
+name: Lock Extended
+ephemeral: false
+attributes:
+  lockStatus:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  lockType:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - unknown
+            - manual
+            - keypad
+            - auto
+            - command
+            - rfid
+            - fingerprint
+            - bluetooth
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  invalidCode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - detected
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  userName:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  userId:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  userCode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}
