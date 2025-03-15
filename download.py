@@ -15,9 +15,13 @@ async def main():
     json_root.mkdir(exist_ok=True)
     yaml_root = Path("yaml")
     yaml_root.mkdir(exist_ok=True)
+
+    with open("capabilities.json", "r") as f:
+        capabilities = orjson.loads(f.read())
+
     async with SmartThings() as client:
         client.authenticate(os.getenv("SMARTTHINGS_TOKEN"))
-        for capability in Capability:
+        for capability in capabilities:
             print(f"Downloading {capability}")
             standard_namespace = "." not in capability
             namespace = "standard" if standard_namespace else capability.split(".")[0]
