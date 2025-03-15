@@ -542,5 +542,10 @@
   "legendabsolute60149.colorChangeTimer",
   "legendabsolute60149.colorChanging",
   "legendabsolute60149.hueSteps",
-  "legendabsolute60149.colorChangeMode1"
+  "legendabsolute60149.colorChangeMode1",
+  "logTrigger",
+  "samsungce.airConditionerAudioFeedback",
+  "samsungce.airConditionerDisplay",
+  "samsungce.cameraStreaming",
+  "samsungce.ehsCycleData"
 ]
