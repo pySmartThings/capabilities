@@ -1,0 +1,55 @@
+{
+  "id": "samsungce.airConditionerAudioFeedback",
+  "version": 1,
+  "status": "proposed",
+  "name": "Air Conditioner Audio Feedback",
+  "ephemeral": false,
+  "attributes": {
+    "volumeLevel": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["mute", "quiet", "normal", "loud", "effectiveToneOnly"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedVolumeLevels": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["mute", "quiet", "normal", "loud", "effectiveToneOnly"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setVolumeLevel": {
+      "name": "setVolumeLevel",
+      "arguments": [
+        {
+          "name": "volumeLevel",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["mute", "quiet", "normal", "loud", "effectiveToneOnly"]
+          }
+        }
+      ]
+    }
+  }
+}
