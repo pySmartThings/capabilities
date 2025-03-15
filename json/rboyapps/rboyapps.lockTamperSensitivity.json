@@ -1,0 +1,48 @@
+{
+  "id": "rboyapps.lockTamperSensitivity",
+  "version": 1,
+  "status": "proposed",
+  "name": "Lock Tamper Sensitivity",
+  "ephemeral": false,
+  "attributes": {
+    "sensitive": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "lowest",
+              "low",
+              "medium",
+              "high",
+              "highest",
+              "unknown",
+              "off"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setSensitivity",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setSensitivity": {
+      "name": "setSensitivity",
+      "arguments": [
+        {
+          "name": "mode",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["lowest", "low", "medium", "high", "highest"]
+          }
+        }
+      ]
+    },
+    "sensitiveToggle": { "name": "sensitiveToggle", "arguments": [] }
+  }
+}

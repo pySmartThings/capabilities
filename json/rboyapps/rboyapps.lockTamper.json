@@ -1,0 +1,40 @@
+{
+  "id": "rboyapps.lockTamper",
+  "version": 1,
+  "status": "proposed",
+  "name": "Lock Tamper",
+  "ephemeral": false,
+  "attributes": {
+    "alarm": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["off", "alert", "tamper", "forced", "unknown"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setAlarm",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "alarmToggle": { "name": "alarmToggle", "arguments": [] },
+    "setAlarm": {
+      "name": "setAlarm",
+      "arguments": [
+        {
+          "name": "mode",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["off", "alert", "tamper", "forced"]
+          }
+        }
+      ]
+    }
+  }
+}

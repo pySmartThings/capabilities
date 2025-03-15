@@ -1,0 +1,27 @@
+{
+  "id": "eventflute36860.localControl",
+  "version": 1,
+  "status": "proposed",
+  "name": "Local Control",
+  "ephemeral": false,
+  "attributes": {
+    "localControl": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setLocalControl",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setLocalControl": {
+      "name": "setLocalControl",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}

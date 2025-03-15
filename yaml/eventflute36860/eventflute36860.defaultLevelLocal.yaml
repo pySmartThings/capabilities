@@ -1,0 +1,29 @@
+id: eventflute36860.defaultLevelLocal
+version: 1
+status: proposed
+name: Default Level Local
+ephemeral: false
+attributes:
+  levelLocal:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 0
+          maximum: 101
+      additionalProperties: false
+      required:
+        - value
+    setter: setLevelLocal
+    enumCommands: []
+commands:
+  setLevelLocal:
+    name: setLevelLocal
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: integer
+          minimum: 0
+          maximum: 101

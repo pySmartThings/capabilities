@@ -1,0 +1,27 @@
+{
+  "id": "eventflute36860.remoteControl",
+  "version": 1,
+  "status": "proposed",
+  "name": "Remote Control",
+  "ephemeral": false,
+  "attributes": {
+    "remoteControl": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setRemoteControl",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setRemoteControl": {
+      "name": "setRemoteControl",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}

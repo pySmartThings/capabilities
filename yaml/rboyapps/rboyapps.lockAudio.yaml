@@ -1,0 +1,42 @@
+id: rboyapps.lockAudio
+version: 1
+status: proposed
+name: Lock Audio
+ephemeral: false
+attributes:
+  audio:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - enabled
+            - disabled
+            - unknown
+      additionalProperties: false
+      required:
+        - value
+    setter: setAudio
+    enumCommands:
+      - command: enableAudio
+        value: enabled
+      - command: disableAudio
+        value: disabled
+commands:
+  disableAudio:
+    name: disableAudio
+    arguments: []
+  enableAudio:
+    name: enableAudio
+    arguments: []
+  setAudio:
+    name: setAudio
+    arguments:
+      - name: mode
+        optional: false
+        schema:
+          type: string
+          enum:
+            - enabled
+            - disabled
