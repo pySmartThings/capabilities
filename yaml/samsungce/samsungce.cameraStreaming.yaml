@@ -1,0 +1,37 @@
+id: samsungce.cameraStreaming
+version: 1
+status: proposed
+name: Camera Streaming
+ephemeral: false
+attributes:
+  registrationStatus:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - registering
+            - registered
+            - unregistered
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  available:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  cancelOnboarding:
+    name: cancelOnboarding
+    arguments: []
+  register:
+    name: register
+    arguments: []
