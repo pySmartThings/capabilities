@@ -547,5 +547,10 @@
   "samsungce.airConditionerAudioFeedback",
   "samsungce.airConditionerDisplay",
   "samsungce.cameraStreaming",
-  "samsungce.ehsCycleData"
+  "samsungce.ehsCycleData",
+  "partyvoice23922.location",
+  "partyvoice23922.errorstatuscv",
+  "partyvoice23922.openduration",
+  "partyvoice23922.count",
+  "partyvoice23922.shellydevs4"
 ]
