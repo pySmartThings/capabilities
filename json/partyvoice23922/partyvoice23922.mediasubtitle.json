@@ -1,0 +1,19 @@
+{
+  "id": "partyvoice23922.mediasubtitle",
+  "version": 1,
+  "status": "proposed",
+  "name": "mediasubtitle",
+  "ephemeral": false,
+  "attributes": {
+    "subtitle": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

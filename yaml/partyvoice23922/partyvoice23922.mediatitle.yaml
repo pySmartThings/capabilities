@@ -1,0 +1,17 @@
+id: partyvoice23922.mediatitle
+version: 1
+status: proposed
+name: mediatitle
+ephemeral: false
+attributes:
+  title:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

@@ -1,0 +1,31 @@
+{
+  "id": "partyvoice23922.location",
+  "version": 1,
+  "status": "proposed",
+  "name": "location",
+  "ephemeral": false,
+  "attributes": {
+    "location": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setLoc",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setLoc": {
+      "name": "setLoc",
+      "arguments": [
+        {
+          "name": "location",
+          "optional": false,
+          "schema": { "type": "string" }
+        }
+      ]
+    }
+  }
+}
