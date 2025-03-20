@@ -1,0 +1,9 @@
+{
+  "id": "partyvoice23922.volumeup",
+  "version": 1,
+  "status": "proposed",
+  "name": "volumeup",
+  "ephemeral": false,
+  "attributes": {},
+  "commands": { "push": { "name": "push", "arguments": [] } }
+}

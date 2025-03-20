@@ -1,0 +1,174 @@
+{
+  "id": "samsungce.cookRecipe",
+  "version": 1,
+  "status": "proposed",
+  "name": "Cook Recipe",
+  "ephemeral": false,
+  "attributes": {
+    "stageStatus": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "numberOfStages": { "type": "number", "minimum": 0 },
+              "currentStage": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "stageNumber": { "type": "integer", "minimum": 0 },
+                  "mode": { "type": "string" },
+                  "remainingTime": {
+                    "type": "string",
+                    "pattern": "^\\d\\d+:[0-5]\\d:[0-5]\\d$"
+                  },
+                  "operationTime": {
+                    "type": "string",
+                    "pattern": "^\\d\\d+:[0-5]\\d:[0-5]\\d$"
+                  },
+                  "completionTime": {
+                    "type": "string",
+                    "pattern": "^(?:[1-9]\\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)T(?:[01]\\d|2[0-3]):?[0-5]\\d:?[0-5]\\d(?:\\.\\d{3})?(?:Z|[+-][01]\\d(?::?[0-5]\\d)?)$"
+                  },
+                  "progress": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100
+                  }
+                }
+              }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "cookRecipe": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "language": {
+                "type": "string",
+                "pattern": "^[a-z]{2}_[A-Z]{2}$"
+              },
+              "menu": { "type": "string", "maxLength": 40 },
+              "option": { "type": "string", "maxLength": 25 },
+              "servingSize": { "type": "string", "maxLength": 25 },
+              "zoneInfo": {
+                "type": "object",
+                "additionalProperties": false,
+                "patternProperties": {
+                  "^zone[1-9]$": { "type": "string", "maxLength": 25 }
+                }
+              }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setCookRecipe": {
+      "name": "setCookRecipe",
+      "arguments": [
+        {
+          "name": "recipeType",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["normal", "todayRecipe", "imageScanCook"]
+          }
+        },
+        {
+          "name": "recipeStages",
+          "optional": false,
+          "schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "temperatureUnit": { "type": "string", "enum": ["F", "C"] },
+              "accessories": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "none",
+                    "plateUpper",
+                    "plateLower",
+                    "plateBoth",
+                    "steamQooker",
+                    "grillUpper",
+                    "grillLower",
+                    "heatingPan"
+                  ]
+                }
+              },
+              "hasIndicationForZone4": {
+                "type": "string",
+                "enum": ["true", "false"]
+              },
+              "notifyPreheatForFirstStage": {
+                "type": "string",
+                "enum": ["true", "false"]
+              },
+              "isCookRecipeDefault": {
+                "type": "string",
+                "enum": ["true", "false"]
+              },
+              "burnNotification": {
+                "type": "string",
+                "enum": ["true", "false"]
+              },
+              "zoneInfo": { "type": "string", "enum": ["single", "multi"] },
+              "turnTableControl": {
+                "type": "string",
+                "enum": ["default", "off"]
+              },
+              "stages": { "type": "array", "items": { "type": "object" } },
+              "visionIndex": { "type": "string" }
+            }
+          }
+        },
+        {
+          "name": "recipeDisplay",
+          "optional": false,
+          "schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "language": {
+                "type": "string",
+                "pattern": "^[a-z]{2}_[A-Z]{2}$"
+              },
+              "menu": { "type": "string", "maxLength": 40 },
+              "option": { "type": "string", "maxLength": 25 },
+              "servingSize": { "type": "string", "maxLength": 25 }
+            }
+          }
+        },
+        {
+          "name": "recipeZones",
+          "optional": false,
+          "schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "patternProperties": {
+              "^zone[1-9]$": { "type": "string", "maxLength": 25 }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

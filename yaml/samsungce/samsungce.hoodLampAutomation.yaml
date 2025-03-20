@@ -1,0 +1,83 @@
+id: samsungce.hoodLampAutomation
+version: 1
+status: proposed
+name: Hood Lamp Automation
+ephemeral: false
+attributes:
+  condition:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - always
+            - withDevice
+            - scheduled
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedConditions:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - always
+              - withDevice
+              - scheduled
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  startTime:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          pattern: ^(?:[01]\d|2[0-3]):?[0-5]\d:?[0-5]\d(?:\.\d{3})?(?:Z|[+-][01]\d(?::?[0-5]\d)?)$
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  endTime:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          pattern: ^(?:[01]\d|2[0-3]):?[0-5]\d:?[0-5]\d(?:\.\d{3})?(?:Z|[+-][01]\d(?::?[0-5]\d)?)$
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setSchedule:
+    name: setSchedule
+    arguments:
+      - name: startTime
+        optional: false
+        schema:
+          type: string
+          pattern: ^(?:[01]\d|2[0-3]):?[0-5]\d:?[0-5]\d(?:\.\d{3})?(?:Z|[+-][01]\d(?::?[0-5]\d)?)$
+      - name: endTime
+        optional: false
+        schema:
+          type: string
+          pattern: ^(?:[01]\d|2[0-3]):?[0-5]\d:?[0-5]\d(?:\.\d{3})?(?:Z|[+-][01]\d(?::?[0-5]\d)?)$
+  setCondition:
+    name: setCondition
+    arguments:
+      - name: condition
+        optional: false
+        schema:
+          type: string
+          enum:
+            - always
+            - withDevice
+            - scheduled
