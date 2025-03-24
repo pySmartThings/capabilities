@@ -4,22 +4,12 @@ status: proposed
 name: Robot Cleaner Patrol
 ephemeral: false
 attributes:
-  dayOfWeek:
+  timezone:
     schema:
       type: object
       properties:
         value:
-          type: array
-          items:
-            type: string
-            enum:
-              - Sun
-              - Mon
-              - Tue
-              - Wed
-              - Thu
-              - Fri
-              - Sat
+          type: string
       additionalProperties: false
       required:
         - value
@@ -55,19 +45,6 @@ attributes:
       required:
         - value
     enumCommands: []
-  blockingStatus:
-    schema:
-      type: object
-      properties:
-        value:
-          type: string
-          enum:
-            - blocked
-            - unblocked
-      additionalProperties: false
-      required:
-        - value
-    enumCommands: []
   areaIds:
     schema:
       type: object
@@ -80,18 +57,7 @@ attributes:
       required:
         - value
     enumCommands: []
-  startTime:
-    schema:
-      type: object
-      properties:
-        value:
-          type: string
-          pattern: ^([01]\d|2[0-3]):[0-5]\d$
-      additionalProperties: false
-      required:
-        - value
-    enumCommands: []
-  interval:
+  timeOffset:
     schema:
       type: object
       properties:
@@ -101,30 +67,8 @@ attributes:
           type: string
           enum:
             - hour
-            - minute
+            - min
           default: hour
-      additionalProperties: false
-      required:
-        - value
-    enumCommands: []
-  endTime:
-    schema:
-      type: object
-      properties:
-        value:
-          type: string
-          pattern: ^([01]\d|2[0-3]):[0-5]\d$
-      additionalProperties: false
-      required:
-        - value
-    enumCommands: []
-  obsoleted:
-    schema:
-      type: object
-      properties:
-        value:
-          type: boolean
-          default: false
       additionalProperties: false
       required:
         - value
@@ -152,6 +96,98 @@ attributes:
         - value
     enumCommands: []
   enabled:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+          default: false
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  dayOfWeek:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - Sun
+              - Mon
+              - Tue
+              - Wed
+              - Thu
+              - Fri
+              - Sat
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  blockingStatus:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - blocked
+            - unblocked
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  mapId:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  startTime:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          pattern: ^([01]\d|2[0-3]):[0-5]\d$
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  interval:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+        unit:
+          type: string
+          enum:
+            - hour
+            - min
+          default: hour
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  endTime:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          pattern: ^([01]\d|2[0-3]):[0-5]\d$
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  obsoleted:
     schema:
       type: object
       properties:
@@ -206,7 +242,7 @@ commands:
           type: integer
           minimum: 1
       - name: waypoints
-        optional: true
+        optional: false
         schema:
           type: array
           items:
@@ -221,6 +257,10 @@ commands:
             required:
               - id
               - coordinates
+      - name: mapId
+        optional: false
+        schema:
+          type: string
   enable:
     name: enable
     arguments: []

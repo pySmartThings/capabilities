@@ -1,0 +1,25 @@
+id: absoluteweather46907.lockstaterelease
+version: 1
+status: proposed
+name: lockStateRelease
+ephemeral: false
+attributes:
+  lock:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setLock
+    enumCommands: []
+commands:
+  setLock:
+    name: setLock
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string

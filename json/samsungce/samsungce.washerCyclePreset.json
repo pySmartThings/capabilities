@@ -41,7 +41,9 @@
                       "waterTemperature": { "type": "string" },
                       "rinseCycle": { "type": "string" },
                       "spinLevel": { "type": "string" },
+                      "dryingTime": { "type": "string" },
                       "dryingLevel": { "type": "string" },
+                      "dryingTemperature": { "type": "string" },
                       "soilLevel": { "type": "string" },
                       "soak": { "type": "string" },
                       "bubbleSoak": { "type": "string" }
@@ -87,8 +89,9 @@
                       "waterTemperature": { "type": "string" },
                       "rinseCycle": { "type": "string" },
                       "spinLevel": { "type": "string" },
-                      "dryingLevel": { "type": "string" },
                       "dryingTime": { "type": "string" },
+                      "dryingLevel": { "type": "string" },
+                      "dryingTemperature": { "type": "string" },
                       "soilLevel": { "type": "string" },
                       "soak": { "type": "string" },
                       "bubbleSoak": { "type": "string" }

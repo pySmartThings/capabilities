@@ -1,0 +1,39 @@
+id: musicahead43206.stage
+version: 1
+status: proposed
+name: Stage
+ephemeral: false
+attributes:
+  stage:
+    schema:
+      type: object
+      properties:
+        value:
+          title: Stage
+          type: string
+          enum:
+            - Stage1
+            - Stage2
+            - Stage3
+            - Stage4
+            - Stage5
+      additionalProperties: false
+      required:
+        - value
+    setter: setStage
+    enumCommands: []
+commands:
+  setStage:
+    name: setStage
+    arguments:
+      - name: stage
+        optional: false
+        schema:
+          title: Stage
+          type: string
+          enum:
+            - Stage1
+            - Stage2
+            - Stage3
+            - Stage4
+            - Stage5

@@ -130,6 +130,27 @@ attributes:
         - value
     setter: setType
     enumCommands: []
+  supportedTypes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - regularDetergent
+              - neutralDetergent
+              - babyDetergent
+              - regularSoftener
+              - scannedRegularDetergent
+              - scannedNeutralDetergent
+              - scannedBabyDetergent
+              - scannedRegularSoftener
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
   recommendedAmount:
     schema:
       type: object

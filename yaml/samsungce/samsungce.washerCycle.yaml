@@ -4,6 +4,21 @@ status: proposed
 name: Washer Cycle
 ephemeral: false
 attributes:
+  cycleType:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - allInOne
+            - washingOnly
+            - dryingOnly
+          default: washingOnly
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
   supportedCycles:
     schema:
       type: object

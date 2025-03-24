@@ -1,0 +1,130 @@
+id: samsungce.notification
+version: 1
+status: proposed
+name: Notification
+ephemeral: false
+attributes:
+  supportedActionSettings:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              action:
+                type: string
+                enum:
+                  - stop
+              supportedSettings:
+                type: array
+                items:
+                  type: string
+                  enum:
+                    - "on"
+                    - "off"
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  actionSetting:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          patternProperties:
+            ^(stop)$:
+              type: object
+              additionalProperties: false
+              properties:
+                setting:
+                  type: string
+                  enum:
+                    - "on"
+                    - "off"
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedContexts:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - incomingCall
+              - outgoingCall
+              - duringCall
+              - offHook
+              - messageReceived
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportCustomContent:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+          default: false
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setContentTitle:
+    name: setContentTitle
+    arguments:
+      - name: contentTitle
+        optional: false
+        schema:
+          type: string
+  setContexts:
+    name: setContexts
+    arguments:
+      - name: contexts
+        optional: false
+        schema:
+          type: array
+          uniqueItems: true
+          items:
+            type: string
+            enum:
+              - incomingCall
+              - outgoingCall
+              - duringCall
+              - offHook
+              - messageReceived
+  setActionSetting:
+    name: setActionSetting
+    arguments:
+      - name: actionSetting
+        optional: false
+        schema:
+          type: object
+          additionalProperties: false
+          patternProperties:
+            ^(stop)$:
+              type: object
+              additionalProperties: false
+              properties:
+                setting:
+                  type: string
+                  enum:
+                    - "on"
+                    - "off"
+  setContentText:
+    name: setContentText
+    arguments:
+      - name: contentText
+        optional: false
+        schema:
+          type: string
