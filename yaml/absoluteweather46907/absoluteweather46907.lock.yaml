@@ -1,0 +1,28 @@
+id: absoluteweather46907.lock
+version: 1
+status: proposed
+name: Lock
+ephemeral: false
+attributes:
+  lock:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setOption
+    enumCommands: []
+commands:
+  setOption:
+    name: setOption
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+  unlock:
+    name: unlock
+    arguments: []

@@ -108,7 +108,7 @@
           "value": { "type": "integer" },
           "unit": {
             "type": "string",
-            "enum": ["hour", "minute"],
+            "enum": ["hour", "min"],
             "default": "hour"
           }
         },

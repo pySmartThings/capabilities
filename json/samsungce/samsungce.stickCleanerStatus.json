@@ -1,0 +1,30 @@
+{
+  "id": "samsungce.stickCleanerStatus",
+  "version": 1,
+  "status": "proposed",
+  "name": "Stick Cleaner Status",
+  "ephemeral": false,
+  "attributes": {
+    "operatingState": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "ready",
+              "usingVacuum",
+              "emptyingDustbin",
+              "UVCleaning",
+              "UVPaused"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

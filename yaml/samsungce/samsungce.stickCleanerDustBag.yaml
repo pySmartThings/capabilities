@@ -1,0 +1,49 @@
+id: samsungce.stickCleanerDustBag
+version: 1
+status: proposed
+name: Stick Cleaner Dust Bag
+ephemeral: false
+attributes:
+  supportedStatus:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - full
+              - normal
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  usage:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 0
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  status:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - full
+            - normal
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  reset:
+    name: reset
+    arguments: []

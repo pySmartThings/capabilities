@@ -1,0 +1,31 @@
+{
+  "id": "musicahead43206.snooze",
+  "version": 1,
+  "status": "proposed",
+  "name": "Snooze",
+  "ephemeral": false,
+  "attributes": {
+    "snooze": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "title": "Snooze",
+            "type": "string",
+            "enum": ["on", "off"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": [
+        { "command": "on", "value": "on" },
+        { "command": "off", "value": "off" }
+      ]
+    }
+  },
+  "commands": {
+    "off": { "name": "off", "arguments": [] },
+    "on": { "name": "on", "arguments": [] }
+  }
+}

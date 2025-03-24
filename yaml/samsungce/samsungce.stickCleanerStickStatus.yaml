@@ -1,0 +1,54 @@
+id: samsungce.stickCleanerStickStatus
+version: 1
+status: proposed
+name: Stick Cleaner Stick Status
+ephemeral: false
+attributes:
+  mode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - min
+            - mid
+            - max
+            - jet
+            - aIOptimal
+            - wet
+            - none
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  status:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - charging
+            - cleaning
+            - fullyCharged
+            - waiting
+            - errorStatus
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  bleConnectionState:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - connected
+            - disconnected
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}
