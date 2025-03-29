@@ -1,0 +1,10 @@
+id: legendabsolute60149.resetbutton
+version: 1
+status: proposed
+name: resetButton
+ephemeral: false
+attributes: {}
+commands:
+  push:
+    name: push
+    arguments: []

@@ -1,0 +1,25 @@
+id: legendabsolute60149.loopsNumber
+version: 1
+status: proposed
+name: Loops Number
+ephemeral: false
+attributes:
+  loopsNumber:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+      additionalProperties: false
+      required:
+        - value
+    setter: setLoopsNumber
+    enumCommands: []
+commands:
+  setLoopsNumber:
+    name: setLoopsNumber
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: integer

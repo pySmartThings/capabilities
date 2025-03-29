@@ -1,0 +1,27 @@
+{
+  "id": "legendabsolute60149.timerNextChange",
+  "version": 1,
+  "status": "proposed",
+  "name": "Timer Next Change",
+  "ephemeral": false,
+  "attributes": {
+    "timerNextChange": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setTimerNextChange",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setTimerNextChange": {
+      "name": "setTimerNextChange",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}

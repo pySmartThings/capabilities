@@ -1,0 +1,27 @@
+{
+  "id": "legendabsolute60149.timerType",
+  "version": 1,
+  "status": "proposed",
+  "name": "Timer Type",
+  "ephemeral": false,
+  "attributes": {
+    "timerType": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setTimerType",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setTimerType": {
+      "name": "setTimerType",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}
