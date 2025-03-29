@@ -1,0 +1,10 @@
+id: partyvoice23922.volumedown
+version: 1
+status: proposed
+name: volumedown
+ephemeral: false
+attributes: {}
+commands:
+  push:
+    name: push
+    arguments: []

@@ -1,0 +1,31 @@
+{
+  "id": "partyvoice23922.castmediacontrol",
+  "version": 1,
+  "status": "proposed",
+  "name": "castmediacontrol",
+  "ephemeral": false,
+  "attributes": {
+    "castControl": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string", "maxLength": 20 } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setControl",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setControl": {
+      "name": "setControl",
+      "arguments": [
+        {
+          "name": "value",
+          "optional": false,
+          "schema": { "type": "string", "maxLength": 20 }
+        }
+      ]
+    }
+  }
+}

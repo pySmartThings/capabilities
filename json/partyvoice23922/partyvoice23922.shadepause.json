@@ -1,0 +1,9 @@
+{
+  "id": "partyvoice23922.shadepause",
+  "version": 1,
+  "status": "proposed",
+  "name": "shadepause",
+  "ephemeral": false,
+  "attributes": {},
+  "commands": { "push": { "name": "push", "arguments": [] } }
+}

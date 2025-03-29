@@ -1,0 +1,25 @@
+id: legendabsolute60149.mirrorIn
+version: 1
+status: proposed
+name: Mirror In
+ephemeral: false
+attributes:
+  mirrorIn:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setMirrorIn
+    enumCommands: []
+commands:
+  setMirrorIn:
+    name: setMirrorIn
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string

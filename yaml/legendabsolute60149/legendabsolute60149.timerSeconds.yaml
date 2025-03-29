@@ -1,0 +1,34 @@
+id: legendabsolute60149.timerSeconds
+version: 1
+status: proposed
+name: Timer Seconds
+ephemeral: false
+attributes:
+  timerSeconds:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 0
+          maximum: 86400
+        unit:
+          type: string
+          enum:
+            - Sec
+          default: Sec
+      additionalProperties: false
+      required:
+        - value
+    setter: setTimerSeconds
+    enumCommands: []
+commands:
+  setTimerSeconds:
+    name: setTimerSeconds
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: integer
+          minimum: 0
+          maximum: 86400

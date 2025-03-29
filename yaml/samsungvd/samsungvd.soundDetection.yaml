@@ -14,6 +14,7 @@ attributes:
             - "off"
             - noSound
             - dogBarking
+            - babyCrying
       additionalProperties: false
       required: []
     enumCommands: []
