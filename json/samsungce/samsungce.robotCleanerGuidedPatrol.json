@@ -1,0 +1,69 @@
+{
+  "id": "samsungce.robotCleanerGuidedPatrol",
+  "version": 1,
+  "status": "proposed",
+  "name": "Robot Cleaner Guided Patrol",
+  "ephemeral": false,
+  "attributes": {
+    "mapId": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "waypoints": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "string" },
+                "coordinates": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                }
+              },
+              "required": ["id", "coordinates"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "stop": { "name": "stop", "arguments": [] },
+    "start": {
+      "name": "start",
+      "arguments": [
+        { "name": "mapId", "optional": false, "schema": { "type": "string" } },
+        {
+          "name": "waypoints",
+          "optional": false,
+          "schema": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "string" },
+                "coordinates": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                }
+              },
+              "required": ["id", "coordinates"]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

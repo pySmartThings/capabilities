@@ -1,0 +1,26 @@
+id: samsungce.microphoneSettings
+version: 1
+status: proposed
+name: Microphone Settings
+ephemeral: false
+attributes:
+  mute:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - muted
+            - unmuted
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  mute:
+    name: mute
+    arguments: []
+  unmute:
+    name: unmute
+    arguments: []

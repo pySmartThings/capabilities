@@ -1,0 +1,33 @@
+{
+  "id": "samsungce.robotCleanerSafetyPatrol",
+  "version": 1,
+  "status": "proposed",
+  "name": "Robot Cleaner Safety Patrol",
+  "ephemeral": false,
+  "attributes": {
+    "personDetection": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "ready",
+              "detecting",
+              "noPersonDetected",
+              "personDetected",
+              "personLyingDown"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "stop": { "name": "stop", "arguments": [] },
+    "start": { "name": "start", "arguments": [] }
+  }
+}
