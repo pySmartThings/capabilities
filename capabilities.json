@@ -594,5 +594,14 @@
   "partyvoice23922.tvchannel",
   "rivertalent14263.batchPowerConsumptionReport",
   "stsolutions.demandResponseStatus",
-  "partyvoice23922.shellydevs4"
+  "samsungce.activationState",
+  "samsungce.drainFilter",
+  "samsungce.robotCleanerCleaningType",
+  "samsungce.robotCleanerSystemSoundMode",
+  "samsungce.microphoneSettings",
+  "samsungce.audioVolumeLevel",
+  "samsungce.robotCleanerSafetyPatrol",
+  "samsungce.robotCleanerWaterSprayLevel",
+  "samsungce.robotCleanerMapMetadata",
+  "samsungce.robotCleanerGuidedPatrol"
 ]
