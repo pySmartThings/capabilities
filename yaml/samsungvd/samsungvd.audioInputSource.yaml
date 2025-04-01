@@ -26,4 +26,7 @@ attributes:
       required:
         - value
     enumCommands: []
-commands: {}
+commands:
+  setNextInputSource:
+    name: setNextInputSource
+    arguments: []

@@ -1,0 +1,63 @@
+id: samsungce.audioVolumeLevel
+version: 1
+status: proposed
+name: Audio Volume Level
+ephemeral: false
+attributes:
+  volumeLevel:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 0
+          maximum: 100
+      additionalProperties: false
+      required:
+        - value
+    setter: setVolumeLevel
+    enumCommands: []
+  volumeLevelRange:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            minimum:
+              type: integer
+              minimum: 0
+              maximum: 100
+            maximum:
+              type: integer
+              minimum: 0
+              maximum: 100
+            step:
+              type: integer
+              minimum: 0
+              maximum: 100
+          required:
+            - minimum
+            - maximum
+            - step
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  volumeDown:
+    name: volumeDown
+    arguments: []
+  volumeUp:
+    name: volumeUp
+    arguments: []
+  setVolumeLevel:
+    name: setVolumeLevel
+    arguments:
+      - name: volumeLevel
+        optional: false
+        schema:
+          type: integer
+          minimum: 0
+          maximum: 100

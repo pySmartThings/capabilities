@@ -1,0 +1,48 @@
+id: samsungce.robotCleanerSystemSoundMode
+version: 1
+status: proposed
+name: Robot Cleaner System Sound Mode
+ephemeral: false
+attributes:
+  soundMode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - mute
+            - voice
+            - beep
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedSoundModes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - mute
+              - voice
+              - beep
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setSoundMode:
+    name: setSoundMode
+    arguments:
+      - name: soundMode
+        optional: false
+        schema:
+          type: string
+          enum:
+            - mute
+            - voice
+            - beep

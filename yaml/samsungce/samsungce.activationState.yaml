@@ -1,0 +1,20 @@
+id: samsungce.activationState
+version: 1
+status: proposed
+name: Activation State
+ephemeral: false
+attributes:
+  activationState:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - activated
+            - deactivated
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}
