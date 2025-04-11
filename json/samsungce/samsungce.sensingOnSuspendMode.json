@@ -1,0 +1,25 @@
+{
+  "id": "samsungce.sensingOnSuspendMode",
+  "version": 1,
+  "status": "proposed",
+  "name": "Sensing On Suspend Mode",
+  "ephemeral": false,
+  "attributes": {
+    "sensingOnSuspendMode": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["available", "unavailable"],
+            "default": "unavailable"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

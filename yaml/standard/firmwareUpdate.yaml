@@ -45,15 +45,6 @@ attributes:
       additionalProperties: false
       required: []
     enumCommands: []
-  updateRequired:
-    schema:
-      type: object
-      properties:
-        value:
-          type: boolean
-      additionalProperties: false
-      required: []
-    enumCommands: []
   lastUpdateStatus:
     schema:
       type: object

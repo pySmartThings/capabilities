@@ -1,20 +1,20 @@
-id: samsungvd.ambient
+id: samsungce.cleanStationStickStatus
 version: 1
 status: proposed
-name: Ambient
+name: Clean Station Stick Status
 ephemeral: false
 attributes:
-  info:
+  status:
     schema:
       type: object
       properties:
         value:
-          type: object
+          type: string
+          enum:
+            - attached
+            - detached
       additionalProperties: false
       required:
         - value
     enumCommands: []
-commands:
-  setAmbientOn:
-    name: setAmbientOn
-    arguments: []
+commands: {}

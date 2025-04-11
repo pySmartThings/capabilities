@@ -1,0 +1,33 @@
+{
+  "id": "signalahead13665.startstopprogramv2",
+  "version": 1,
+  "status": "proposed",
+  "name": "StartStopProgramV2",
+  "ephemeral": false,
+  "attributes": {
+    "startstop": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["play", "stop"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setStartstop",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setStartstop": {
+      "name": "setStartstop",
+      "arguments": [
+        {
+          "name": "value",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["play", "stop"] }
+        }
+      ]
+    }
+  }
+}

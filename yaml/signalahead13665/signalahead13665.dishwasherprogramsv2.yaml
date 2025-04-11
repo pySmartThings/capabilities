@@ -1,0 +1,98 @@
+id: signalahead13665.dishwasherprogramsv2
+version: 1
+status: proposed
+name: DishwasherProgramsv2
+ephemeral: false
+attributes:
+  availablePrograms:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - Dishcare_Dishwasher_Program_Auto2
+              - Dishcare_Dishwasher_Program_Eco50
+              - Dishcare_Dishwasher_Program_Kurz60
+              - Dishcare_Dishwasher_Program_Intensiv70
+              - Dishcare_Dishwasher_Program_Quick45
+              - Dishcare_Dishwasher_Program_Auto3
+              - Dishcare_Dishwasher_Program_NightWash
+              - Dishcare_Dishwasher_Program_MachineCare
+              - Dishcare_Dishwasher_Program_PreRinse
+              - Dishcare_Dishwasher_Program_Glas40
+              - None
+              - UnknownProgram
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  program:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - Dishcare_Dishwasher_Program_Auto2
+            - Dishcare_Dishwasher_Program_Eco50
+            - Dishcare_Dishwasher_Program_Kurz60
+            - Dishcare_Dishwasher_Program_Intensiv70
+            - Dishcare_Dishwasher_Program_Quick45
+            - Dishcare_Dishwasher_Program_Auto3
+            - Dishcare_Dishwasher_Program_NightWash
+            - Dishcare_Dishwasher_Program_MachineCare
+            - Dishcare_Dishwasher_Program_PreRinse
+            - Dishcare_Dishwasher_Program_Glas40
+            - None
+            - UnknownProgram
+        data:
+          type: object
+          additionalProperties: false
+          required: []
+          properties:
+            availablePrograms:
+              type: array
+              items:
+                type: string
+                enum:
+                  - Dishcare_Dishwasher_Program_Auto2
+                  - Dishcare_Dishwasher_Program_Eco50
+                  - Dishcare_Dishwasher_Program_Kurz60
+                  - Dishcare_Dishwasher_Program_Intensiv70
+                  - Dishcare_Dishwasher_Program_Quick45
+                  - Dishcare_Dishwasher_Program_Auto3
+                  - Dishcare_Dishwasher_Program_NightWash
+                  - Dishcare_Dishwasher_Program_MachineCare
+                  - Dishcare_Dishwasher_Program_PreRinse
+                  - Dishcare_Dishwasher_Program_Glas40
+                  - None
+                  - UnknownProgram
+      additionalProperties: false
+      required:
+        - value
+    setter: setProgram
+    enumCommands: []
+commands:
+  stop:
+    name: stop
+    arguments: []
+  setProgram:
+    name: setProgram
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+          enum:
+            - Dishcare_Dishwasher_Program_Auto2
+            - Dishcare_Dishwasher_Program_Eco50
+            - Dishcare_Dishwasher_Program_Kurz60
+            - Dishcare_Dishwasher_Program_Intensiv70
+            - Dishcare_Dishwasher_Program_Quick45
+            - Dishcare_Dishwasher_Program_Auto3
+            - Dishcare_Dishwasher_Program_NightWash
+            - Dishcare_Dishwasher_Program_MachineCare
+            - Dishcare_Dishwasher_Program_PreRinse
+            - Dishcare_Dishwasher_Program_Glas40
