@@ -603,5 +603,13 @@
   "samsungce.robotCleanerSafetyPatrol",
   "samsungce.robotCleanerWaterSprayLevel",
   "samsungce.robotCleanerMapMetadata",
-  "samsungce.robotCleanerGuidedPatrol"
+  "samsungce.robotCleanerGuidedPatrol",
+  "mirrorhappy40050.copperWaterMeter",
+  "samsungce.sensingOnSuspendMode",
+  "signalahead13665.dishwasherprogramsv2",
+  "signalahead13665.startstopprogramv2",
+  "signalahead13665.applianceoperationstatesv2",
+  "samsungce.cleanStationStickStatus",
+  "samsungce.cleanStationUvCleaning",
+  "sec.smartthingsHub"
 ]
