@@ -1,0 +1,214 @@
+id: sec.smartthingsHub
+version: 1
+status: proposed
+name: SmartThings Hub
+ephemeral: true
+attributes:
+  threadHardwareAvailability:
+    schema:
+      type: object
+      properties:
+        value:
+          title: ThreadHardwareAvailability
+          type: string
+          enum:
+            - unsupported
+            - available
+            - unavailable
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  availability:
+    schema:
+      type: object
+      properties:
+        value:
+          title: HubFeatureAvailability
+          type: string
+          enum:
+            - unavailable
+            - available
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  deviceId:
+    schema:
+      type: object
+      properties:
+        value:
+          title: HubDeviceID
+          type: string
+          pattern: (^$|^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$)
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  zigbeeHardwareAvailability:
+    schema:
+      type: object
+      properties:
+        value:
+          title: ZigbeeHardwareAvailability
+          type: string
+          enum:
+            - unsupported
+            - available
+            - unavailable
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  version:
+    schema:
+      type: object
+      properties:
+        value:
+          title: HubPackageVersion
+          type: string
+          maxLength: 255
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  threadRequiresExternalHardware:
+    schema:
+      type: object
+      properties:
+        value:
+          title: ThreadRequiresExternalHardware
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  zigbeeRequiresExternalHardware:
+    schema:
+      type: object
+      properties:
+        value:
+          title: ZigbeeRequiresExternalHardware
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  eui:
+    schema:
+      type: object
+      properties:
+        value:
+          title: HubEUI
+          type: string
+          pattern: (^$|^[0-9A-F]{16}$)
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  lastOnboardingResult:
+    schema:
+      type: object
+      properties:
+        value:
+          title: HubOnboardingResult
+          type: string
+          enum:
+            - ""
+            - success
+            - fail
+            - cancel
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  zwaveHardwareAvailability:
+    schema:
+      type: object
+      properties:
+        value:
+          title: ZWaveHardwareAvailability
+          type: string
+          enum:
+            - unsupported
+            - available
+            - unavailable
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  zwaveRequiresExternalHardware:
+    schema:
+      type: object
+      properties:
+        value:
+          title: ZWaveRequiresExternalHardware
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  state:
+    schema:
+      type: object
+      properties:
+        value:
+          title: HubOnboardingState
+          type: string
+          enum:
+            - "off"
+            - onboarding
+            - onboarded
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  onboardingProgress:
+    schema:
+      type: object
+      properties:
+        value:
+          title: HubOnboardingProgress
+          type: integer
+          minimum: 0
+          maximum: 100
+        unit:
+          type: string
+          enum:
+            - "%"
+          default: "%"
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  lastOnboardingErrorCode:
+    schema:
+      type: object
+      properties:
+        value:
+          title: HubOnboardingErrorCode
+          type: string
+          maxLength: 255
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  onboarding:
+    name: onboarding
+    arguments:
+      - name: locationId
+        optional: false
+        schema:
+          title: locationId
+          type: string
+          pattern: ^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$
+      - name: roomId
+        optional: false
+        schema:
+          title: roomId
+          type: string
+          pattern: ^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$
+  cancelOnboarding:
+    name: cancelOnboarding
+    arguments: []

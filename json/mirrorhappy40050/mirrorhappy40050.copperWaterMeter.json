@@ -1,0 +1,46 @@
+{
+  "id": "mirrorhappy40050.copperWaterMeter",
+  "version": 1,
+  "status": "proposed",
+  "name": "Copper Water Meter",
+  "ephemeral": false,
+  "attributes": {
+    "energyUsageDay": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number" },
+          "unit": { "type": "string", "enum": ["gal"], "default": "gal" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "energyUsageMonth": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number" },
+          "unit": { "type": "string", "enum": ["gal"], "default": "gal" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "powerCurrent": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number" },
+          "unit": { "type": "string", "enum": ["gpm"], "default": "gpm" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

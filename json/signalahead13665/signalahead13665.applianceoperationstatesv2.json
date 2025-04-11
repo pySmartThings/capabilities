@@ -1,0 +1,35 @@
+{
+  "id": "signalahead13665.applianceoperationstatesv2",
+  "version": 1,
+  "status": "proposed",
+  "name": "applianceOperationStatesV2",
+  "ephemeral": false,
+  "attributes": {
+    "operationState": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "Inactive",
+              "Ready",
+              "DelayedStart",
+              "Run",
+              "Pause",
+              "ActionRequired",
+              "Finished",
+              "Error",
+              "Aborting",
+              "Offline"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}
