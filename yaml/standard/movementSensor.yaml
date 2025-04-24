@@ -1,0 +1,50 @@
+id: movementSensor
+version: 1
+status: proposed
+name: Movement Sensor
+ephemeral: false
+attributes:
+  supportedMovements:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            title: MovementType
+            type: string
+            enum:
+              - inactive
+              - approaching
+              - movingAway
+              - entering
+              - leaving
+              - enteringLeft
+              - enteringRight
+              - leavingLeft
+              - leavingRight
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  movement:
+    schema:
+      type: object
+      properties:
+        value:
+          title: MovementType
+          type: string
+          enum:
+            - inactive
+            - approaching
+            - movingAway
+            - entering
+            - leaving
+            - enteringLeft
+            - enteringRight
+            - leavingLeft
+            - leavingRight
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

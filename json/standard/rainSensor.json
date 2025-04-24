@@ -1,0 +1,25 @@
+{
+  "id": "rainSensor",
+  "version": 1,
+  "status": "proposed",
+  "name": "Rain Sensor",
+  "ephemeral": false,
+  "attributes": {
+    "rain": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "title": "RainState",
+            "type": "string",
+            "enum": ["undetected", "detected"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

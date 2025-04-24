@@ -1,0 +1,50 @@
+{
+  "id": "flowMeasurement",
+  "version": 1,
+  "status": "proposed",
+  "name": "Flow Measurement",
+  "ephemeral": false,
+  "attributes": {
+    "flowRange": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "minimum": {
+                "title": "FlowValue",
+                "type": "number",
+                "minimum": 0
+              },
+              "maximum": {
+                "title": "FlowValue",
+                "type": "number",
+                "minimum": 0
+              }
+            },
+            "required": ["minimum", "maximum"]
+          },
+          "unit": { "type": "string", "enum": ["m^3/h"], "default": "m^3/h" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "flow": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "title": "FlowValue", "type": "number", "minimum": 0 },
+          "unit": { "type": "string", "enum": ["m^3/h"], "default": "m^3/h" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

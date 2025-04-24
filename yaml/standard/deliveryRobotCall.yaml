@@ -1,0 +1,60 @@
+id: deliveryRobotCall
+version: 1
+status: proposed
+name: Delivery Robot Call
+ephemeral: false
+attributes:
+  robotState:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - available
+            - using
+            - error
+            - called
+            - callFailed
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedRobotStates:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - available
+              - using
+              - error
+              - called
+              - callFailed
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  supportedRobotCommands:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - call
+              - cancel
+      additionalProperties: false
+      required: []
+    enumCommands: []
+commands:
+  call:
+    name: call
+    arguments: []
+  cancel:
+    name: cancel
+    arguments: []

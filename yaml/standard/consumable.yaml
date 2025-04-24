@@ -1,0 +1,24 @@
+id: consumable
+version: 1
+status: proposed
+name: Consumable
+ephemeral: false
+attributes:
+  consumableStatus:
+    schema:
+      type: object
+      properties:
+        value:
+          title: ConsumableState
+          type: string
+          enum:
+            - good
+            - maintenance_required
+            - missing
+            - order
+            - replace
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}
