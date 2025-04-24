@@ -1,0 +1,30 @@
+{
+  "id": "windSpeed",
+  "version": 1,
+  "status": "proposed",
+  "name": "Wind Speed",
+  "ephemeral": false,
+  "attributes": {
+    "windspeed": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "title": "PositiveNumber",
+            "type": "number",
+            "minimum": 0
+          },
+          "unit": {
+            "type": "string",
+            "enum": ["m/s", "km/h", "mph", "knots"],
+            "default": "m/s"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

@@ -1,0 +1,26 @@
+id: carbonMonoxideHealthConcern
+version: 1
+status: proposed
+name: Carbon Monoxide Health Concern
+ephemeral: false
+attributes:
+  carbonMonoxideHealthConcern:
+    schema:
+      type: object
+      properties:
+        value:
+          title: AirQualityHealthConcern
+          type: string
+          enum:
+            - unknown
+            - good
+            - moderate
+            - slightlyUnhealthy
+            - unhealthy
+            - veryUnhealthy
+            - hazardous
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

@@ -1,0 +1,56 @@
+{
+  "id": "color",
+  "version": 1,
+  "status": "proposed",
+  "name": "Color",
+  "ephemeral": false,
+  "attributes": {
+    "colorValue": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "hue": { "type": "number", "minimum": 0.0, "maximum": 360.0 },
+              "saturation": {
+                "type": "number",
+                "minimum": 0.0,
+                "maximum": 100.0
+              }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setColorValue",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setColorValue": {
+      "name": "setColorValue",
+      "arguments": [
+        {
+          "name": "colorValue",
+          "optional": false,
+          "schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "hue": { "type": "number", "minimum": 0.0, "maximum": 360.0 },
+              "saturation": {
+                "type": "number",
+                "minimum": 0.0,
+                "maximum": 100.0
+              }
+            },
+            "required": ["hue", "saturation"]
+          }
+        }
+      ]
+    }
+  }
+}
