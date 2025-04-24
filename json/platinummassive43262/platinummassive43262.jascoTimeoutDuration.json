@@ -1,0 +1,31 @@
+{
+  "id": "platinummassive43262.jascoTimeoutDuration",
+  "version": 1,
+  "status": "proposed",
+  "name": "Jasco Timeout Duration",
+  "ephemeral": false,
+  "attributes": {
+    "timeoutDuration": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setTimeoutDuration",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setTimeoutDuration": {
+      "name": "setTimeoutDuration",
+      "arguments": [
+        {
+          "name": "timeoutDuration",
+          "optional": false,
+          "schema": { "type": "string" }
+        }
+      ]
+    }
+  }
+}

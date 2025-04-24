@@ -1,0 +1,20 @@
+id: samsungce.ehsDiverterValve
+version: 1
+status: proposed
+name: EHS Diverter Valve
+ephemeral: false
+attributes:
+  position:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - room
+            - tank
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}
