@@ -611,5 +611,18 @@
   "signalahead13665.applianceoperationstatesv2",
   "samsungce.cleanStationStickStatus",
   "samsungce.cleanStationUvCleaning",
-  "sec.smartthingsHub"
+  "sec.smartthingsHub",
+  "samsungce.ehsBoosterHeater",
+  "samsungce.systemAirConditionerReservation",
+  "samsungce.ehsDiverterValve",
+  "samsungce.ehsDefrostMode",
+  "lockAlarm",
+  "lockCredentials",
+  "lockUsers",
+  "platinummassive43262.jascoOperationMode",
+  "platinummassive43262.jascoTimeoutDuration",
+  "platinummassive43262.jascoDefaultLevel",
+  "platinummassive43262.jascoMotionSensitivity",
+  "platinummassive43262.jascoLightSensing",
+  "samsungce.cooktopFlexZone"
 ]
