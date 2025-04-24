@@ -1,0 +1,25 @@
+id: platinummassive43262.jascoMotionSensitivity
+version: 1
+status: proposed
+name: Jasco Motion Sensitivity
+ephemeral: false
+attributes:
+  motionSensitivity:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setMotionSensitivity
+    enumCommands: []
+commands:
+  setMotionSensitivity:
+    name: setMotionSensitivity
+    arguments:
+      - name: motionSensitivity
+        optional: false
+        schema:
+          type: string

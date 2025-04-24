@@ -1,27 +1,28 @@
 {
-  "id": "airQualityHealthConcern",
+  "id": "lockAlarm",
   "version": 1,
-  "status": "live",
-  "name": "Air Quality Health Concern",
+  "status": "proposed",
+  "name": "Lock Alarm",
   "ephemeral": false,
   "attributes": {
-    "supportedAirQualityValues": {
+    "supportedAlarmValues": {
       "schema": {
         "type": "object",
         "properties": {
           "value": {
             "type": "array",
             "items": {
-              "title": "AirQualityHealthConcern",
               "type": "string",
               "enum": [
-                "unknown",
-                "good",
-                "moderate",
-                "slightlyUnhealthy",
-                "unhealthy",
-                "veryUnhealthy",
-                "hazardous"
+                "clear",
+                "lockFactoryReset",
+                "damaged",
+                "forcedOpeningAttempt",
+                "unableToLockTheDoor",
+                "notClosedForALongTime",
+                "highTemperature",
+                "attemptsExceeded",
+                "physicalImpact"
               ]
             }
           }
@@ -31,21 +32,22 @@
       },
       "enumCommands": []
     },
-    "airQualityHealthConcern": {
+    "alarm": {
       "schema": {
         "type": "object",
         "properties": {
           "value": {
-            "title": "AirQualityHealthConcern",
             "type": "string",
             "enum": [
-              "unknown",
-              "good",
-              "moderate",
-              "slightlyUnhealthy",
-              "unhealthy",
-              "veryUnhealthy",
-              "hazardous"
+              "clear",
+              "lockFactoryReset",
+              "damaged",
+              "forcedOpeningAttempt",
+              "unableToLockTheDoor",
+              "notClosedForALongTime",
+              "highTemperature",
+              "attemptsExceeded",
+              "physicalImpact"
             ]
           }
         },

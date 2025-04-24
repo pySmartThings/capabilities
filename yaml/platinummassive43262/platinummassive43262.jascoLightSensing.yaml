@@ -1,0 +1,25 @@
+id: platinummassive43262.jascoLightSensing
+version: 1
+status: proposed
+name: Jasco Light Sensing
+ephemeral: false
+attributes:
+  lightSensing:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setLightSensing
+    enumCommands: []
+commands:
+  setLightSensing:
+    name: setLightSensing
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string

@@ -1,0 +1,25 @@
+id: platinummassive43262.jascoOperationMode
+version: 1
+status: proposed
+name: Jasco Operation Mode
+ephemeral: false
+attributes:
+  operationMode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setOperationMode
+    enumCommands: []
+commands:
+  setOperationMode:
+    name: setOperationMode
+    arguments:
+      - name: operationMode
+        optional: false
+        schema:
+          type: string

@@ -1,0 +1,30 @@
+id: samsungce.cooktopFlexZone
+version: 1
+status: proposed
+name: Cooktop Flex Zone
+ephemeral: false
+attributes:
+  flexZones:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: object
+            properties:
+              position:
+                type: string
+                enum:
+                  - left
+                  - center
+                  - right
+              syncedBurners:
+                type: array
+                items:
+                  type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}
