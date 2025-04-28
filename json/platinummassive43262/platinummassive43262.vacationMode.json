@@ -1,0 +1,27 @@
+{
+  "id": "platinummassive43262.vacationMode",
+  "version": 1,
+  "status": "proposed",
+  "name": "Vacation Mode",
+  "ephemeral": false,
+  "attributes": {
+    "vacationMode": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["vacation", "off"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": [
+        { "command": "vacation", "value": "vacation" },
+        { "command": "off", "value": "off" }
+      ]
+    }
+  },
+  "commands": {
+    "vacation": { "name": "vacation", "arguments": [] },
+    "off": { "name": "off", "arguments": [] }
+  }
+}

@@ -5,6 +5,15 @@
   "name": "Demand Response Status",
   "ephemeral": false,
   "attributes": {
+    "enrollmentStatusCode": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string", "maxLength": 255 } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
     "currentStatus": {
       "schema": {
         "type": "object",

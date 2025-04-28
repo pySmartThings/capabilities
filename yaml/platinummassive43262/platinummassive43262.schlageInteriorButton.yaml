@@ -1,0 +1,30 @@
+id: platinummassive43262.schlageInteriorButton
+version: 1
+status: proposed
+name: Schlage Interior Button
+ephemeral: false
+attributes:
+  interiorButton:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - enable
+            - disable
+      additionalProperties: false
+      required:
+        - value
+    enumCommands:
+      - command: enable
+        value: enable
+      - command: disable
+        value: disable
+commands:
+  disable:
+    name: disable
+    arguments: []
+  enable:
+    name: enable
+    arguments: []

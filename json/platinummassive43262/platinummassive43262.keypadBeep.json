@@ -1,0 +1,27 @@
+{
+  "id": "platinummassive43262.keypadBeep",
+  "version": 1,
+  "status": "proposed",
+  "name": "Keypad Beep",
+  "ephemeral": false,
+  "attributes": {
+    "keypadBeep": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["beep", "off"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": [
+        { "command": "beep", "value": "beep" },
+        { "command": "off", "value": "off" }
+      ]
+    }
+  },
+  "commands": {
+    "beep": { "name": "beep", "arguments": [] },
+    "off": { "name": "off", "arguments": [] }
+  }
+}

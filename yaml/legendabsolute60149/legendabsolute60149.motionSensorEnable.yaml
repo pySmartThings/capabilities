@@ -1,0 +1,25 @@
+id: legendabsolute60149.motionSensorEnable
+version: 1
+status: proposed
+name: Motion Sensor Enable
+ephemeral: false
+attributes:
+  motionSensorEnable:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setMotionSensorEnable
+    enumCommands: []
+commands:
+  setMotionSensorEnable:
+    name: setMotionSensorEnable
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string

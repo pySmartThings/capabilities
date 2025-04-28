@@ -1,0 +1,27 @@
+{
+  "id": "platinummassive43262.autoLock",
+  "version": 1,
+  "status": "proposed",
+  "name": "Auto Lock",
+  "ephemeral": false,
+  "attributes": {
+    "autoLock": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["autolock", "off"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": [
+        { "command": "autolock", "value": "autolock" },
+        { "command": "off", "value": "off" }
+      ]
+    }
+  },
+  "commands": {
+    "autolock": { "name": "autolock", "arguments": [] },
+    "off": { "name": "off", "arguments": [] }
+  }
+}
