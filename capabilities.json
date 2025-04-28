@@ -727,5 +727,13 @@
   "touchSensor",
   "videoClips",
   "washerOperationalState",
-  "wifiMeshRouter"
+  "platinummassive43262.schlageInteriorButton",
+  "platinummassive43262.keypadBeep",
+  "platinummassive43262.autoLock",
+  "platinummassive43262.schlageLockAlarm",
+  "platinummassive43262.lockAndLeave",
+  "platinummassive43262.vacationMode",
+  "platinummassive43262.unlockCodeName",
+  "legendabsolute60149.motionSensorEnable",
+  "watchpanel55613.tccthermostat"
 ]
