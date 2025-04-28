@@ -1,0 +1,17 @@
+id: watchpanel55613.tccthermostat
+version: 1
+status: proposed
+name: tccthermostat
+ephemeral: false
+attributes:
+  drcapable:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

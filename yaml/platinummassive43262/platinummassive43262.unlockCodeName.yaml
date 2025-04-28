@@ -1,0 +1,17 @@
+id: platinummassive43262.unlockCodeName
+version: 1
+status: proposed
+name: Unlock Code Name
+ephemeral: false
+attributes:
+  unlockCodeName:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

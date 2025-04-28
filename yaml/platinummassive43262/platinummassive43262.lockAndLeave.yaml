@@ -1,0 +1,30 @@
+id: platinummassive43262.lockAndLeave
+version: 1
+status: proposed
+name: Lock And Leave
+ephemeral: false
+attributes:
+  lockAndLeave:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - lockandleave
+            - "off"
+      additionalProperties: false
+      required:
+        - value
+    enumCommands:
+      - command: lockandleave
+        value: lockandleave
+      - command: "off"
+        value: "off"
+commands:
+  lockandleave:
+    name: lockandleave
+    arguments: []
+  "off":
+    name: "off"
+    arguments: []
