@@ -1,0 +1,31 @@
+{
+  "id": "watchdigit58804.thermostatfansetting",
+  "version": 1,
+  "status": "proposed",
+  "name": "thermostatFanSetting",
+  "ephemeral": false,
+  "attributes": {
+    "thermostatFanSetting": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string", "maxLength": 19 } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setThermostatFanSetting",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setThermostatFanSetting": {
+      "name": "setThermostatFanSetting",
+      "arguments": [
+        {
+          "name": "value",
+          "optional": false,
+          "schema": { "type": "string", "maxLength": 19 }
+        }
+      ]
+    }
+  }
+}

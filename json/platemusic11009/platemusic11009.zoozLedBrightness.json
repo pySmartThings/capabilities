@@ -1,0 +1,33 @@
+{
+  "id": "platemusic11009.zoozLedBrightness",
+  "version": 1,
+  "status": "proposed",
+  "name": "Zooz LED Brightness",
+  "ephemeral": false,
+  "attributes": {
+    "ledBrightness": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["bright", "medium", "low"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setLedBrightness",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setLedBrightness": {
+      "name": "setLedBrightness",
+      "arguments": [
+        {
+          "name": "value",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["bright", "medium", "low"] }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+id: platemusic11009.basicSetAssociationGroup
+version: 1
+status: proposed
+name: Basic Set Association Group
+ephemeral: false
+attributes:
+  basicSetAssociationGroup:
+    schema:
+      type: object
+      properties:
+        value:
+          title: Basic Set Association Group Devices
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

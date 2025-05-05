@@ -1,0 +1,35 @@
+id: platemusic11009.zoozLedColor
+version: 1
+status: proposed
+name: Zooz LED Color
+ephemeral: false
+attributes:
+  ledColor:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - white
+            - blue
+            - green
+            - red
+      additionalProperties: false
+      required:
+        - value
+    setter: setLedColor
+    enumCommands: []
+commands:
+  setLedColor:
+    name: setLedColor
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+          enum:
+            - white
+            - blue
+            - green
+            - red

@@ -1,0 +1,47 @@
+{
+  "id": "amberpiano10217.monitoredApproachDistance",
+  "version": 1,
+  "status": "proposed",
+  "name": "Monitored Approach Distance",
+  "ephemeral": false,
+  "attributes": {
+    "distance": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["far", "medium", "near"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setDistance",
+      "enumCommands": []
+    },
+    "supportedModes": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["far", "medium", "near"] }
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setDistance": {
+      "name": "setDistance",
+      "arguments": [
+        {
+          "name": "value",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["far", "medium", "near"] }
+        }
+      ]
+    }
+  }
+}

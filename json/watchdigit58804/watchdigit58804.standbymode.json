@@ -1,0 +1,27 @@
+{
+  "id": "watchdigit58804.standbymode",
+  "version": 1,
+  "status": "proposed",
+  "name": "standbyMode",
+  "ephemeral": false,
+  "attributes": {
+    "standbyMode": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setStandbyMode",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setStandbyMode": {
+      "name": "setStandbyMode",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "boolean" } }
+      ]
+    }
+  }
+}

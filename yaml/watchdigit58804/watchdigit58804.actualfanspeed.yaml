@@ -1,0 +1,27 @@
+id: watchdigit58804.actualfanspeed
+version: 1
+status: proposed
+name: actualFanSpeed
+ephemeral: false
+attributes:
+  actualFanSpeed:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          maxLength: 19
+      additionalProperties: false
+      required:
+        - value
+    setter: setActualFanSpeed
+    enumCommands: []
+commands:
+  setActualFanSpeed:
+    name: setActualFanSpeed
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+          maxLength: 19

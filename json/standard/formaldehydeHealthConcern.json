@@ -5,6 +5,32 @@
   "name": "Formaldehyde Health Concern",
   "ephemeral": false,
   "attributes": {
+    "supportedFormaldehydeValues": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "title": "AirQualityHealthConcern",
+              "type": "string",
+              "enum": [
+                "unknown",
+                "good",
+                "moderate",
+                "slightlyUnhealthy",
+                "unhealthy",
+                "veryUnhealthy",
+                "hazardous"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
     "formaldehydeHealthConcern": {
       "schema": {
         "type": "object",

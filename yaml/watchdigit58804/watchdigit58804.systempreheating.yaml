@@ -1,0 +1,25 @@
+id: watchdigit58804.systempreheating
+version: 1
+status: proposed
+name: systemPreheating
+ephemeral: false
+attributes:
+  systemPreheating:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    setter: setSystemPreheating
+    enumCommands: []
+commands:
+  setSystemPreheating:
+    name: setSystemPreheating
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: boolean
