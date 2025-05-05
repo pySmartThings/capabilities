@@ -27,6 +27,32 @@
         "required": ["value"]
       },
       "enumCommands": []
+    },
+    "supportedFineDustValues": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "title": "AirQualityHealthConcern",
+              "type": "string",
+              "enum": [
+                "unknown",
+                "good",
+                "moderate",
+                "slightlyUnhealthy",
+                "unhealthy",
+                "veryUnhealthy",
+                "hazardous"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
     }
   },
   "commands": {}

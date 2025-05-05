@@ -5,6 +5,32 @@
   "name": "Thermostat Operating State",
   "ephemeral": false,
   "attributes": {
+    "supportedThermostatOperatingStates": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "title": "ThermostatOperatingState",
+              "type": "string",
+              "enum": [
+                "cooling",
+                "fan only",
+                "heating",
+                "idle",
+                "pending cool",
+                "pending heat",
+                "vent economizer"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
     "thermostatOperatingState": {
       "schema": {
         "type": "object",

@@ -36,7 +36,11 @@
         "additionalProperties": false,
         "required": ["value"]
       },
-      "enumCommands": []
+      "enumCommands": [
+        { "command": "start", "value": "running" },
+        { "command": "pause", "value": "paused" },
+        { "command": "goHome", "value": "seekingCharger" }
+      ]
     },
     "supportedOperatingStates": {
       "schema": {
@@ -73,7 +77,25 @@
         "required": ["value"]
       },
       "enumCommands": []
+    },
+    "supportedOperatingStateCommands": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["start", "pause", "goHome"] }
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
     }
   },
-  "commands": {}
+  "commands": {
+    "goHome": { "name": "goHome", "arguments": [] },
+    "start": { "name": "start", "arguments": [] },
+    "pause": { "name": "pause", "arguments": [] }
+  }
 }

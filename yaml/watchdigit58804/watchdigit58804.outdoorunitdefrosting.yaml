@@ -1,0 +1,25 @@
+id: watchdigit58804.outdoorunitdefrosting
+version: 1
+status: proposed
+name: outdoorUnitDefrosting
+ephemeral: false
+attributes:
+  outdoorUnitDefrosting:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    setter: setOutdoorUnitDefrosting
+    enumCommands: []
+commands:
+  setOutdoorUnitDefrosting:
+    name: setOutdoorUnitDefrosting
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: boolean

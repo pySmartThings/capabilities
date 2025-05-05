@@ -1,0 +1,45 @@
+id: amberpiano10217.sensorMonitoringMode
+version: 1
+status: proposed
+name: Sensor Monitoring Mode
+ephemeral: false
+attributes:
+  monitoringMode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - undirected
+            - left_right
+      additionalProperties: false
+      required:
+        - value
+    setter: setMode
+    enumCommands: []
+  supportedModes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - undirected
+              - left_right
+      additionalProperties: false
+      required: []
+    enumCommands: []
+commands:
+  setMode:
+    name: setMode
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+          enum:
+            - undirected
+            - left_right

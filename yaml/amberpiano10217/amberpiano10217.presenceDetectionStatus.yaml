@@ -1,0 +1,58 @@
+id: amberpiano10217.presenceDetectionStatus
+version: 1
+status: proposed
+name: Presence Detection Status
+ephemeral: false
+attributes:
+  supportedStatuses:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - enter
+              - enter_left
+              - enter_right
+              - leave
+              - leave_left
+              - leave_right
+              - approaching
+              - absenting
+              - unknown8
+              - unknown9
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  presenceStatus:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - enter
+            - enter_left
+            - enter_right
+            - leave
+            - leave_left
+            - leave_right
+            - approaching
+            - absenting
+            - unknown8
+            - unknown9
+      additionalProperties: false
+      required:
+        - value
+    setter: setStatus
+    enumCommands: []
+commands:
+  setStatus:
+    name: setStatus
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string

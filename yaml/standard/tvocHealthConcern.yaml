@@ -4,6 +4,26 @@ status: proposed
 name: Tvoc Health Concern
 ephemeral: false
 attributes:
+  supportedTvocValues:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            title: AirQualityHealthConcern
+            type: string
+            enum:
+              - unknown
+              - good
+              - moderate
+              - slightlyUnhealthy
+              - unhealthy
+              - veryUnhealthy
+              - hazardous
+      additionalProperties: false
+      required: []
+    enumCommands: []
   tvocHealthConcern:
     schema:
       type: object

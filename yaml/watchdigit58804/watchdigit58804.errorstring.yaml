@@ -1,0 +1,25 @@
+id: watchdigit58804.errorstring
+version: 1
+status: proposed
+name: errorString
+ephemeral: false
+attributes:
+  error:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setError
+    enumCommands: []
+commands:
+  setError:
+    name: setError
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string

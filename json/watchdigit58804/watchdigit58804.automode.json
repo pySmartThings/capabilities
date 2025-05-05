@@ -1,0 +1,31 @@
+{
+  "id": "watchdigit58804.automode",
+  "version": 1,
+  "status": "proposed",
+  "name": "autoMode",
+  "ephemeral": false,
+  "attributes": {
+    "autoMode": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string", "maxLength": 10 } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setAutoMode",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setAutoMode": {
+      "name": "setAutoMode",
+      "arguments": [
+        {
+          "name": "value",
+          "optional": false,
+          "schema": { "type": "string", "maxLength": 10 }
+        }
+      ]
+    }
+  }
+}
