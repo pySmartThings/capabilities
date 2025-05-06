@@ -755,5 +755,13 @@
   "watchdigit58804.standbymode",
   "watchdigit58804.filterchangeneeded",
   "platemusic11009.temperatureHumiditySensor",
-  "platemusic11009.humidityAlarm"
+  "platemusic11009.humidityAlarm",
+  "samsungce.waterDispenser",
+  "samsungce.waterPurifierColdWaterLock",
+  "samsungce.coffeeBrewingRecipe",
+  "samsungce.waterSterilizationSchedule",
+  "samsungce.waterSterilizationOperatingState",
+  "samsungce.waterPurifierOperatingState",
+  "samsungce.waterPurifierHotWaterLock",
+  "samsungce.waterPurifierMedicationMode"
 ]
