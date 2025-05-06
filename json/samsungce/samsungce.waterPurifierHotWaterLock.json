@@ -1,0 +1,24 @@
+{
+  "id": "samsungce.waterPurifierHotWaterLock",
+  "version": 1,
+  "status": "proposed",
+  "name": "Water Purifier Hot Water Lock",
+  "ephemeral": false,
+  "attributes": {
+    "waterPurifierHotWaterLock": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["locked", "unlocked"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "unlock": { "name": "unlock", "arguments": [] },
+    "lock": { "name": "lock", "arguments": [] }
+  }
+}

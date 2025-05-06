@@ -1,0 +1,24 @@
+{
+  "id": "samsungce.waterPurifierColdWaterLock",
+  "version": 1,
+  "status": "proposed",
+  "name": "Water Purifier Cold Water Lock",
+  "ephemeral": false,
+  "attributes": {
+    "waterPurifierColdWaterLock": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["locked", "unlocked"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "unlock": { "name": "unlock", "arguments": [] },
+    "lock": { "name": "lock", "arguments": [] }
+  }
+}
