@@ -1,0 +1,45 @@
+{
+  "id": "samsungce.waterSterilizationOperatingState",
+  "version": 1,
+  "status": "proposed",
+  "name": "Water Sterilization Operating State",
+  "ephemeral": false,
+  "attributes": {
+    "remainingTime": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "integer" },
+          "unit": {
+            "type": "string",
+            "enum": ["hour", "min", "sec"],
+            "default": "min"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "maxOperationTime": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "integer" },
+          "unit": {
+            "type": "string",
+            "enum": ["hour", "min", "sec"],
+            "default": "min"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "stop": { "name": "stop", "arguments": [] },
+    "start": { "name": "start", "arguments": [] }
+  }
+}

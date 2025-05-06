@@ -1,0 +1,151 @@
+{
+  "id": "samsungce.waterDispenser",
+  "version": 1,
+  "status": "proposed",
+  "name": "Water Dispenser",
+  "ephemeral": false,
+  "attributes": {
+    "mode": {
+      "schema": {
+        "title": "Dispenser Mode",
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["hotWater", "coldWater", "ambientWater"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "amount": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "integer" },
+          "unit": {
+            "type": "string",
+            "enum": ["cc", "gallon"],
+            "default": "cc"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "amountResolution": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "integer" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "minSupportedAmount": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "integer" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "hotTemperature": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number" },
+          "unit": { "type": "string", "enum": ["C", "F"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedHotTemperatures": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "array", "items": { "type": "number" } }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "maxSupportedAmount": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "integer" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedModes": {
+      "schema": {
+        "title": "Supported Dispenser Modes",
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["hotWater", "coldWater", "ambientWater"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "status": {
+      "schema": {
+        "title": "Dispensing status",
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["pouring", "ready"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setHotTemperature": {
+      "name": "setHotTemperature",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "number" } }
+      ]
+    },
+    "setMode": {
+      "name": "setMode",
+      "arguments": [
+        {
+          "name": "mode",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["hotWater", "coldWater", "ambientWater"]
+          }
+        }
+      ]
+    },
+    "setAmount": {
+      "name": "setAmount",
+      "arguments": [
+        {
+          "name": "amount",
+          "optional": false,
+          "schema": { "type": "integer", "minimum": 0 }
+        }
+      ]
+    }
+  }
+}

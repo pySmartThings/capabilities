@@ -1,0 +1,119 @@
+{
+  "id": "samsungce.coffeeBrewingRecipe",
+  "version": 1,
+  "status": "proposed",
+  "name": "Coffee Brewing Recipe",
+  "ephemeral": false,
+  "attributes": {
+    "supportedPublisherIDs": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "coffeeBrewingRecipes": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "additionalProperties": false,
+            "items": {
+              "type": "object",
+              "properties": {
+                "publisherID": { "type": "string" },
+                "type": { "type": "string", "enum": ["hot", "iced"] },
+                "cups": { "type": "integer", "minimum": 0, "maximum": 2 },
+                "titleID": { "type": "string" }
+              },
+              "required": ["publisherID", "type", "cups"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "coffeeBrewingStatus": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["brewing", "ready"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "maxNumberOfRecipes": {
+      "schema": {
+        "title": "Maximum number of recipes",
+        "type": "object",
+        "properties": { "value": { "type": "number", "default": 5 } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setCoffeeBrewingRecipe": {
+      "name": "setCoffeeBrewingRecipe",
+      "arguments": [
+        {
+          "name": "publisherID",
+          "optional": false,
+          "schema": { "type": "string" }
+        },
+        {
+          "name": "type",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["hot", "iced"] }
+        },
+        {
+          "name": "cups",
+          "optional": false,
+          "schema": { "type": "integer", "minimum": 0, "maximum": 2 }
+        },
+        {
+          "name": "stages",
+          "optional": false,
+          "schema": {
+            "type": "array",
+            "maxItems": 6,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "temperature": {
+                  "type": "integer",
+                  "default": 95,
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "waterAmount": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 2000
+                },
+                "timeSecond": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 250
+                },
+                "turnOver": { "type": "integer", "minimum": 0, "maximum": 255 }
+              }
+            }
+          }
+        },
+        { "name": "titleID", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+id: samsungce.waterPurifierMedicationMode
+version: 1
+status: proposed
+name: Water Purifier Medication Mode
+ephemeral: false
+attributes: {}
+commands:
+  setMedicationMode:
+    name: setMedicationMode
+    arguments:
+      - name: amount
+        optional: false
+        schema:
+          type: integer
+          minimum: 0
+      - name: unit
+        optional: true
+        schema:
+          type: string
+          enum:
+            - cc
+          default: cc

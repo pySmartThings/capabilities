@@ -1,0 +1,32 @@
+{
+  "id": "samsungce.waterPurifierOperatingState",
+  "version": 1,
+  "status": "proposed",
+  "name": "Water Purifier Operating State",
+  "ephemeral": false,
+  "attributes": {
+    "operatingState": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "sleep",
+              "ready",
+              "sterilize",
+              "filterClean",
+              "sterilizeCancel",
+              "filterMaxOut",
+              "unavailable"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}
