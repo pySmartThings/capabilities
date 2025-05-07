@@ -1,0 +1,132 @@
+{
+  "id": "samsungce.cooktopCookRecipe",
+  "version": 1,
+  "status": "proposed",
+  "name": "Cooktop Cook Recipe",
+  "ephemeral": false,
+  "attributes": {
+    "cooktopCookRecipe": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "properties": {
+              "menu": { "type": "string", "maxLength": 30 },
+              "stageStatus": {
+                "type": "object",
+                "properties": {
+                  "numberOfStages": { "type": "integer", "minimum": 0 },
+                  "currentStage": {
+                    "type": "object",
+                    "properties": {
+                      "stageNumber": { "type": "integer", "minimum": 0 },
+                      "cookingTime": { "type": "integer", "minimum": 0 },
+                      "remainingTime": { "type": "integer", "minimum": 0 }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "protocolVersion": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "integer" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "overheatForRecipes": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["none", "all"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setCooktopCookRecipe": {
+      "name": "setCooktopCookRecipe",
+      "arguments": [
+        {
+          "name": "recipeStages",
+          "optional": false,
+          "schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "protocolVersion": { "type": "integer", "default": 1 },
+              "cookType": {
+                "type": "string",
+                "enum": ["autoCook", "assistCook"]
+              },
+              "keepWarm": { "type": "string", "enum": ["on"] },
+              "userSettings": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "powerLevel": { "type": "string" },
+                  "cookingTime": { "type": "integer", "minimum": 0 },
+                  "targetTemperature": { "type": "integer", "minimum": 0 }
+                }
+              },
+              "temperatureUnit": { "type": "string", "enum": ["F", "C"] },
+              "powerLevelUnit": { "type": "string", "enum": ["W", "level"] },
+              "accessoryList": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": ["none", "bluetoothProbe", "smartPot"]
+                }
+              },
+              "finishingGuide": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 255
+              },
+              "stageList": { "type": "array", "items": { "type": "object" } }
+            }
+          }
+        },
+        {
+          "name": "recipeDisplay",
+          "optional": false,
+          "schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "language": {
+                "type": "string",
+                "pattern": "^[a-z]{2}_[A-Z]{2}$"
+              },
+              "menu": { "type": "string", "maxLength": 30 },
+              "option": { "type": "string", "maxLength": 25 },
+              "servingSize": { "type": "string", "maxLength": 25 }
+            }
+          }
+        },
+        {
+          "name": "turnOverGuideList",
+          "optional": false,
+          "schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "patternProperties": { "^stage[0-9]+$": { "type": "string" } }
+          }
+        }
+      ]
+    }
+  }
+}

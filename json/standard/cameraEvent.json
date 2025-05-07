@@ -30,6 +30,12 @@
               "gestureOk",
               "lensObstruction"
             ]
+          },
+          "data": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [],
+            "properties": { "imageUrl": { "type": "string" } }
           }
         },
         "additionalProperties": false,
