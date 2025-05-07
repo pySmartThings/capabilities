@@ -1,0 +1,21 @@
+{
+  "id": "samsungce.burnerInfo",
+  "version": 1,
+  "status": "proposed",
+  "name": "Burner Info",
+  "ephemeral": false,
+  "attributes": {
+    "burnerId": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "pattern": "^burner-[0-9]{2}$" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}
