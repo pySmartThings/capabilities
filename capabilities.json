@@ -763,5 +763,8 @@
   "samsungce.waterSterilizationOperatingState",
   "samsungce.waterPurifierOperatingState",
   "samsungce.waterPurifierHotWaterLock",
-  "samsungce.waterPurifierMedicationMode"
+  "samsungce.waterPurifierMedicationMode",
+  "samsungce.burnerInfo",
+  "statelessPowerButton",
+  "samsungce.cooktopCookRecipe"
 ]
