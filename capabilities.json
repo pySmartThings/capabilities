@@ -766,5 +766,9 @@
   "samsungce.waterPurifierMedicationMode",
   "samsungce.burnerInfo",
   "statelessPowerButton",
-  "samsungce.cooktopCookRecipe"
+  "samsungce.cooktopCookRecipe",
+  "samsungce.dehumidifierMode",
+  "samsungce.relativeHumidityLevel",
+  "samsungce.dehumidifierBeep",
+  "samsungce.welcomeHumidity"
 ]
