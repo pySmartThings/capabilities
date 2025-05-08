@@ -1,0 +1,79 @@
+{
+  "id": "samsungce.relativeHumidityLevel",
+  "version": 1,
+  "status": "proposed",
+  "name": "Relative Humidity Level",
+  "ephemeral": false,
+  "attributes": {
+    "desiredHumidityLevelRange": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "minimum": { "type": "number", "minimum": 0, "maximum": 100 },
+              "maximum": { "type": "number", "minimum": 0, "maximum": 100 },
+              "step": { "type": "number", "minimum": 0, "maximum": 100 }
+            },
+            "required": ["minimum", "maximum"]
+          },
+          "unit": { "type": "string", "enum": ["%"], "default": "%" }
+        },
+        "additionalProperties": false,
+        "required": ["value", "unit"]
+      },
+      "enumCommands": []
+    },
+    "desiredHumidityLevel": {
+      "schema": {
+        "title": "Desired Humidity Level",
+        "type": "object",
+        "properties": {
+          "value": { "type": "number", "minimum": 0, "maximum": 100 },
+          "unit": { "type": "string", "enum": ["%"], "default": "%" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "resolution": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number", "minimum": 0, "maximum": 100 }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "relativeHumidityLevel": {
+      "schema": {
+        "title": "Relative Humidity Level",
+        "type": "object",
+        "properties": {
+          "value": { "type": "number", "minimum": 0, "maximum": 100 },
+          "unit": { "type": "string", "enum": ["%"], "default": "%" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setDesiredHumidity": {
+      "name": "setDesiredHumidity",
+      "arguments": [
+        {
+          "name": "level",
+          "optional": false,
+          "schema": { "type": "number", "minimum": 0, "maximum": 100 }
+        }
+      ]
+    }
+  }
+}
