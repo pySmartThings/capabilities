@@ -1,0 +1,64 @@
+{
+  "id": "samsungce.dehumidifierMode",
+  "version": 1,
+  "status": "proposed",
+  "name": "Dehumidifier Mode",
+  "ephemeral": false,
+  "attributes": {
+    "dehumidifierMode": {
+      "schema": {
+        "title": "Dehumidifier Mode",
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["high", "medium", "quiet", "clothesDrying", "max", "smart"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedDehumidifierModes": {
+      "schema": {
+        "title": "Supported Dehumidifer Modes",
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "high",
+                "medium",
+                "quiet",
+                "clothesDrying",
+                "max",
+                "smart"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setDehumidifierMode": {
+      "name": "setDehumidifierMode",
+      "arguments": [
+        {
+          "name": "mode",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["high", "medium", "quiet", "clothesDrying", "max", "smart"]
+          }
+        }
+      ]
+    }
+  }
+}

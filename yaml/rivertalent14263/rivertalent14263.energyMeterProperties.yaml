@@ -193,7 +193,7 @@ attributes:
       properties:
         value:
           type: number
-          minimum: 1
+          minimum: 0
           maximum: 31
       additionalProperties: false
       required: []
@@ -207,7 +207,7 @@ commands:
         optional: false
         schema:
           type: number
-          minimum: 1
+          minimum: 0
           maximum: 31
   setServiceMessage:
     name: setServiceMessage
