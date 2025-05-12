@@ -1,0 +1,44 @@
+{
+  "id": "samsungvd.aiAction",
+  "version": 1,
+  "status": "proposed",
+  "name": "AI Action",
+  "ephemeral": false,
+  "attributes": {
+    "curationSupport": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "imageSupport": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "sendContent": {
+      "name": "sendContent",
+      "arguments": [
+        {
+          "name": "contentType",
+          "optional": false,
+          "schema": { "type": "string" }
+        },
+        {
+          "name": "contentData",
+          "optional": false,
+          "schema": { "type": "object" }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+id: samsungce.ddmsMode
+version: 1
+status: proposed
+name: DDMS Mode
+ephemeral: false
+attributes:
+  mode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - "on"
+            - "off"
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

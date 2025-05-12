@@ -60,7 +60,7 @@ attributes:
                     scheduleIndex:
                       type: integer
                       minimum: 1
-                    weekdays:
+                    weekDays:
                       type: array
                       items:
                         title: DayOfWeek
@@ -91,7 +91,7 @@ attributes:
                       maximum: 59
                   required:
                     - scheduleIndex
-                    - weekdays
+                    - weekDays
                     - startHour
                     - startMinute
                     - endHour
@@ -187,10 +187,10 @@ commands:
           type: integer
           minimum: 1
       - name: scheduleIndex
-        optional: true
+        optional: false
         schema:
           type: integer
-          minimum: 1
+          minimum: 0
       - name: schedule
         optional: false
         schema:
@@ -235,10 +235,10 @@ commands:
           type: integer
           minimum: 1
       - name: scheduleIndex
-        optional: true
+        optional: false
         schema:
           type: integer
-          minimum: 1
+          minimum: 0
       - name: schedule
         optional: false
         schema:
