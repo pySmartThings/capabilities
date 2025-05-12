@@ -55,7 +55,7 @@
                     "additionalProperties": false,
                     "properties": {
                       "scheduleIndex": { "type": "integer", "minimum": 1 },
-                      "weekdays": {
+                      "weekDays": {
                         "type": "array",
                         "items": {
                           "title": "DayOfWeek",
@@ -94,7 +94,7 @@
                     },
                     "required": [
                       "scheduleIndex",
-                      "weekdays",
+                      "weekDays",
                       "startHour",
                       "startMinute",
                       "endHour",
@@ -203,8 +203,8 @@
         },
         {
           "name": "scheduleIndex",
-          "optional": true,
-          "schema": { "type": "integer", "minimum": 1 }
+          "optional": false,
+          "schema": { "type": "integer", "minimum": 0 }
         },
         {
           "name": "schedule",
@@ -248,8 +248,8 @@
         },
         {
           "name": "scheduleIndex",
-          "optional": true,
-          "schema": { "type": "integer", "minimum": 1 }
+          "optional": false,
+          "schema": { "type": "integer", "minimum": 0 }
         },
         {
           "name": "schedule",
