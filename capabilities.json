@@ -770,5 +770,7 @@
   "samsungce.dehumidifierMode",
   "samsungce.relativeHumidityLevel",
   "samsungce.dehumidifierBeep",
-  "samsungce.welcomeHumidity"
+  "samsungce.welcomeHumidity",
+  "samsungce.ddmsMode",
+  "samsungvd.aiAction"
 ]
