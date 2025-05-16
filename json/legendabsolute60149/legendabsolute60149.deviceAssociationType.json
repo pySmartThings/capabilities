@@ -1,0 +1,27 @@
+{
+  "id": "legendabsolute60149.deviceAssociationType",
+  "version": 1,
+  "status": "proposed",
+  "name": "Device Association Type",
+  "ephemeral": false,
+  "attributes": {
+    "deviceAssociationType": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setDeviceAssociationType",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setDeviceAssociationType": {
+      "name": "setDeviceAssociationType",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}

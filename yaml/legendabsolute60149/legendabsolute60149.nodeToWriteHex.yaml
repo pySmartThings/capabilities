@@ -1,0 +1,27 @@
+id: legendabsolute60149.nodeToWriteHex
+version: 1
+status: proposed
+name: Node To Write Hex
+ephemeral: false
+attributes:
+  nodeToWrite:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          maxLength: 2
+      additionalProperties: false
+      required:
+        - value
+    setter: setNodeToWrite
+    enumCommands: []
+commands:
+  setNodeToWrite:
+    name: setNodeToWrite
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+          maxLength: 2

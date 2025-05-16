@@ -1,0 +1,27 @@
+{
+  "id": "legendabsolute60149.groupCommandOption",
+  "version": 1,
+  "status": "proposed",
+  "name": "Group Command Option",
+  "ephemeral": false,
+  "attributes": {
+    "groupCommandOption": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setGroupCommandOption",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setGroupCommandOption": {
+      "name": "setGroupCommandOption",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}
