@@ -777,5 +777,12 @@
   "legendabsolute60149.deviceAssociationType",
   "legendabsolute60149.nodeToWriteHex",
   "legendabsolute60149.groupCommandOption",
-  "legendabsolute60149.groupNumber"
+  "legendabsolute60149.groupNumber",
+  "legendabsolute60149.deviceInfo",
+  "legendabsolute60149.parameterStart",
+  "legendabsolute60149.parameterend",
+  "legendabsolute60149.actionbutton2",
+  "legendabsolute60149.commandClass",
+  "eventflute36860.notificationLzw31sn",
+  "stse.deviceMode"
 ]
