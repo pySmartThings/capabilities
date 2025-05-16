@@ -1,0 +1,29 @@
+id: legendabsolute60149.nodeEndPoint
+version: 1
+status: proposed
+name: Node End Point
+ephemeral: false
+attributes:
+  nodeEndPoint:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 0
+          maximum: 127
+      additionalProperties: false
+      required:
+        - value
+    setter: setNodeEndPoint
+    enumCommands: []
+commands:
+  setNodeEndPoint:
+    name: setNodeEndPoint
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: integer
+          minimum: 0
+          maximum: 127
