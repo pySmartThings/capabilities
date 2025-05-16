@@ -772,5 +772,10 @@
   "samsungce.dehumidifierBeep",
   "samsungce.welcomeHumidity",
   "samsungce.ddmsMode",
-  "samsungvd.aiAction"
+  "samsungvd.aiAction",
+  "legendabsolute60149.nodeEndPoint",
+  "legendabsolute60149.deviceAssociationType",
+  "legendabsolute60149.nodeToWriteHex",
+  "legendabsolute60149.groupCommandOption",
+  "legendabsolute60149.groupNumber"
 ]
