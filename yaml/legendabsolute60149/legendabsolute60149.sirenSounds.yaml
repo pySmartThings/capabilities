@@ -1,0 +1,25 @@
+id: legendabsolute60149.sirenSounds
+version: 1
+status: proposed
+name: Siren Sounds
+ephemeral: false
+attributes:
+  sirenSounds:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setSirenSounds
+    enumCommands: []
+commands:
+  setSirenSounds:
+    name: setSirenSounds
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
