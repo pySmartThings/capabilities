@@ -1,0 +1,19 @@
+{
+  "id": "legendabsolute60149.commandClass",
+  "version": 1,
+  "status": "proposed",
+  "name": "Command Class",
+  "ephemeral": false,
+  "attributes": {
+    "commandClass": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

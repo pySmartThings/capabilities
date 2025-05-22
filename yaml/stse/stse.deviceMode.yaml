@@ -1,0 +1,21 @@
+id: stse.deviceMode
+version: 1
+status: proposed
+name: device mode
+ephemeral: false
+attributes:
+  mode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - zoneDetection
+            - fallDetection
+            - sleepMonitoring
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

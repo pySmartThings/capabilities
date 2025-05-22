@@ -1,0 +1,25 @@
+id: legendabsolute60149.parameterend
+version: 1
+status: proposed
+name: ParameterEnd
+ephemeral: false
+attributes:
+  parameterEnd:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+      additionalProperties: false
+      required:
+        - value
+    setter: setParameterEnd
+    enumCommands: []
+commands:
+  setParameterEnd:
+    name: setParameterEnd
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: integer
