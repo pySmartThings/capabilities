@@ -1,0 +1,27 @@
+{
+  "id": "legendabsolute60149.parameterStart",
+  "version": 1,
+  "status": "proposed",
+  "name": "Parameter Start",
+  "ephemeral": false,
+  "attributes": {
+    "parameterStart": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "integer" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setParameterStart",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setParameterStart": {
+      "name": "setParameterStart",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "integer" } }
+      ]
+    }
+  }
+}

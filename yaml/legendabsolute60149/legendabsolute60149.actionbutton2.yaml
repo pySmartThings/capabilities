@@ -1,0 +1,10 @@
+id: legendabsolute60149.actionbutton2
+version: 1
+status: proposed
+name: actionButton2
+ephemeral: false
+attributes: {}
+commands:
+  push:
+    name: push
+    arguments: []

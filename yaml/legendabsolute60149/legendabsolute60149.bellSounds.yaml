@@ -1,0 +1,25 @@
+id: legendabsolute60149.bellSounds
+version: 1
+status: proposed
+name: Bell Sounds
+ephemeral: false
+attributes:
+  bellSounds:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setBellSounds
+    enumCommands: []
+commands:
+  setBellSounds:
+    name: setBellSounds
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
