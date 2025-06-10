@@ -1,0 +1,31 @@
+id: platemusic11009.hsLedMode
+version: 1
+status: proposed
+name: HS LED Mode
+ephemeral: false
+attributes:
+  ledMode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - normal
+            - status
+      additionalProperties: false
+      required:
+        - value
+    setter: setLedMode
+    enumCommands: []
+commands:
+  setLedMode:
+    name: setLedMode
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+          enum:
+            - normal
+            - status
