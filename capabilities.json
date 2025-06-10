@@ -787,5 +787,13 @@
   "stse.deviceMode",
   "legendabsolute60149.sirenOrBellActive",
   "legendabsolute60149.sirenSounds",
-  "legendabsolute60149.bellSounds"
+  "legendabsolute60149.bellSounds",
+  "platemusic11009.hsStatusLedFourColor",
+  "platemusic11009.hsStatusLedSixColor",
+  "platemusic11009.hsStatusLedThreeColor",
+  "platemusic11009.hsStatusLedOneColor",
+  "platemusic11009.hsLedMode",
+  "platemusic11009.amperageMeasurement",
+  "stsolutions.message",
+  "stsolutions.demandResponseMode"
 ]
