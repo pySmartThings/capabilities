@@ -1,0 +1,57 @@
+id: platemusic11009.hsStatusLedThreeColor
+version: 1
+status: proposed
+name: HS Status Led Three Color
+ephemeral: false
+attributes:
+  statusLedThreeColor:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - "off"
+            - red
+            - green
+            - blue
+            - magenta
+            - yellow
+            - cyan
+            - white
+            - blinkingRed
+            - blinkingGreen
+            - blinkingBlue
+            - blinkingMagenta
+            - blinkingYellow
+            - blinkingCyan
+            - blinkingWhite
+      additionalProperties: false
+      required:
+        - value
+    setter: setStatusLedThreeColor
+    enumCommands: []
+commands:
+  setStatusLedThreeColor:
+    name: setStatusLedThreeColor
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+          enum:
+            - "off"
+            - red
+            - green
+            - blue
+            - magenta
+            - yellow
+            - cyan
+            - white
+            - blinkingRed
+            - blinkingGreen
+            - blinkingBlue
+            - blinkingMagenta
+            - blinkingYellow
+            - blinkingCyan
+            - blinkingWhite

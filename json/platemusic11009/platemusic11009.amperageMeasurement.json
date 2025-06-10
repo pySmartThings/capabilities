@@ -1,0 +1,22 @@
+{
+  "id": "platemusic11009.amperageMeasurement",
+  "version": 1,
+  "status": "proposed",
+  "name": "Amperage Measurement",
+  "ephemeral": false,
+  "attributes": {
+    "amperage": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "title": "Number", "type": "number" },
+          "unit": { "type": "string", "enum": ["A"], "default": "A" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}
