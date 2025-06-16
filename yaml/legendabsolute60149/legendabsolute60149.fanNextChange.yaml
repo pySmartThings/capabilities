@@ -1,0 +1,27 @@
+id: legendabsolute60149.fanNextChange
+version: 1
+status: proposed
+name: Fan Next Change
+ephemeral: false
+attributes:
+  fanNextChange:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          maxLength: 36
+      additionalProperties: false
+      required:
+        - value
+    setter: setFanNextChange
+    enumCommands: []
+commands:
+  setFanNextChange:
+    name: setFanNextChange
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+          maxLength: 36

@@ -1,0 +1,57 @@
+id: platemusic11009.hsStatusLedFiveColor
+version: 1
+status: proposed
+name: HS Status Led Five Color
+ephemeral: false
+attributes:
+  statusLedFiveColor:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - "off"
+            - red
+            - green
+            - blue
+            - magenta
+            - yellow
+            - cyan
+            - white
+            - blinkingRed
+            - blinkingGreen
+            - blinkingBlue
+            - blinkingMagenta
+            - blinkingYellow
+            - blinkingCyan
+            - blinkingWhite
+      additionalProperties: false
+      required:
+        - value
+    setter: setStatusLedFiveColor
+    enumCommands: []
+commands:
+  setStatusLedFiveColor:
+    name: setStatusLedFiveColor
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+          enum:
+            - "off"
+            - red
+            - green
+            - blue
+            - magenta
+            - yellow
+            - cyan
+            - white
+            - blinkingRed
+            - blinkingGreen
+            - blinkingBlue
+            - blinkingMagenta
+            - blinkingYellow
+            - blinkingCyan
+            - blinkingWhite

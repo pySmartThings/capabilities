@@ -55,6 +55,10 @@ attributes:
               - supplyingWater
               - sabbath
               - suspend
+              - emptyStation
+              - internalWash
+              - cleaningStart
+              - cleaningEnd
       additionalProperties: false
       required:
         - value
@@ -108,6 +112,10 @@ attributes:
             - supplyingWater
             - sabbath
             - suspend
+            - emptyStation
+            - internalWash
+            - cleaningStart
+            - cleaningEnd
       additionalProperties: false
       required:
         - value

@@ -1,0 +1,29 @@
+id: platemusic11009.hsStatusLedBlinkingFreq
+version: 1
+status: proposed
+name: HS Status Led Blinking Freq
+ephemeral: false
+attributes:
+  statusLedBlinkingFreq:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 0
+          maximum: 255
+      additionalProperties: false
+      required:
+        - value
+    setter: setStatusLedBlinkingFreq
+    enumCommands: []
+commands:
+  setStatusLedBlinkingFreq:
+    name: setStatusLedBlinkingFreq
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: integer
+          minimum: 0
+          maximum: 255

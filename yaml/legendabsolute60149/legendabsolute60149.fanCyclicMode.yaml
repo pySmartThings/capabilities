@@ -1,0 +1,27 @@
+id: legendabsolute60149.fanCyclicMode
+version: 1
+status: proposed
+name: Fan Cyclic Mode
+ephemeral: false
+attributes:
+  fanCyclicMode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          maxLength: 36
+      additionalProperties: false
+      required:
+        - value
+    setter: setFanCyclicMode
+    enumCommands: []
+commands:
+  setFanCyclicMode:
+    name: setFanCyclicMode
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+          maxLength: 36

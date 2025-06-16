@@ -1,0 +1,71 @@
+{
+  "id": "platemusic11009.hsStatusLedSevenColor",
+  "version": 1,
+  "status": "proposed",
+  "name": "HS Status Led Seven Color",
+  "ephemeral": false,
+  "attributes": {
+    "statusLedSevenColor": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "off",
+              "red",
+              "green",
+              "blue",
+              "magenta",
+              "yellow",
+              "cyan",
+              "white",
+              "blinkingRed",
+              "blinkingGreen",
+              "blinkingBlue",
+              "blinkingMagenta",
+              "blinkingYellow",
+              "blinkingCyan",
+              "blinkingWhite"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setStatusLedSevenColor",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setStatusLedSevenColor": {
+      "name": "setStatusLedSevenColor",
+      "arguments": [
+        {
+          "name": "value",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "off",
+              "red",
+              "green",
+              "blue",
+              "magenta",
+              "yellow",
+              "cyan",
+              "white",
+              "blinkingRed",
+              "blinkingGreen",
+              "blinkingBlue",
+              "blinkingMagenta",
+              "blinkingYellow",
+              "blinkingCyan",
+              "blinkingWhite"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

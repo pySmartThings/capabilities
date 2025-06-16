@@ -1,0 +1,55 @@
+{
+  "id": "platemusic11009.hsNormalLedColor",
+  "version": 1,
+  "status": "proposed",
+  "name": "HS Normal Led Color",
+  "ephemeral": false,
+  "attributes": {
+    "normalLedColor": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "red",
+              "green",
+              "blue",
+              "magenta",
+              "yellow",
+              "cyan",
+              "white"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setNormalLedColor",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setNormalLedColor": {
+      "name": "setNormalLedColor",
+      "arguments": [
+        {
+          "name": "value",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "red",
+              "green",
+              "blue",
+              "magenta",
+              "yellow",
+              "cyan",
+              "white"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
