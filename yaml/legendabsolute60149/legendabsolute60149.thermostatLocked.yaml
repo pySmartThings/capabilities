@@ -1,0 +1,27 @@
+id: legendabsolute60149.thermostatLocked
+version: 1
+status: proposed
+name: Thermostat Locked
+ephemeral: false
+attributes:
+  thermostatLocked:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          maxLength: 36
+      additionalProperties: false
+      required:
+        - value
+    setter: setThermostatLocked
+    enumCommands: []
+commands:
+  setThermostatLocked:
+    name: setThermostatLocked
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+          maxLength: 36

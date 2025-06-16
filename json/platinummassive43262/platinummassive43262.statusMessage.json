@@ -1,0 +1,19 @@
+{
+  "id": "platinummassive43262.statusMessage",
+  "version": 1,
+  "status": "proposed",
+  "name": "Status Message",
+  "ephemeral": false,
+  "attributes": {
+    "statusMessage": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

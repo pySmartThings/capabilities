@@ -1,0 +1,71 @@
+{
+  "id": "platemusic11009.hsStatusLedBlinkingColor",
+  "version": 1,
+  "status": "proposed",
+  "name": "HS Status Led Blinking Color",
+  "ephemeral": false,
+  "attributes": {
+    "statusLedColor": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "off",
+              "red",
+              "green",
+              "blue",
+              "magenta",
+              "yellow",
+              "cyan",
+              "white",
+              "blinkingRed",
+              "blinkingGreen",
+              "blinkingBlue",
+              "blinkingMagenta",
+              "blinkingYellow",
+              "blinkingCyan",
+              "blinkingWhite"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setStatusLedColor",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setStatusLedColor": {
+      "name": "setStatusLedColor",
+      "arguments": [
+        {
+          "name": "value",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "off",
+              "red",
+              "green",
+              "blue",
+              "magenta",
+              "yellow",
+              "cyan",
+              "white",
+              "blinkingRed",
+              "blinkingGreen",
+              "blinkingBlue",
+              "blinkingMagenta",
+              "blinkingYellow",
+              "blinkingCyan",
+              "blinkingWhite"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

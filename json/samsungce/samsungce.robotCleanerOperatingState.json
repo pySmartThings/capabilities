@@ -55,7 +55,11 @@
                 "preparingWater",
                 "supplyingWater",
                 "sabbath",
-                "suspend"
+                "suspend",
+                "emptyStation",
+                "internalWash",
+                "cleaningStart",
+                "cleaningEnd"
               ]
             }
           }
@@ -113,7 +117,11 @@
               "preparingWater",
               "supplyingWater",
               "sabbath",
-              "suspend"
+              "suspend",
+              "emptyStation",
+              "internalWash",
+              "cleaningStart",
+              "cleaningEnd"
             ]
           }
         },

@@ -1,0 +1,71 @@
+{
+  "id": "platemusic11009.hsStatusLedTwoColor",
+  "version": 1,
+  "status": "proposed",
+  "name": "HS Status Led Two Color",
+  "ephemeral": false,
+  "attributes": {
+    "statusLedTwoColor": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "off",
+              "red",
+              "green",
+              "blue",
+              "magenta",
+              "yellow",
+              "cyan",
+              "white",
+              "blinkingRed",
+              "blinkingGreen",
+              "blinkingBlue",
+              "blinkingMagenta",
+              "blinkingYellow",
+              "blinkingCyan",
+              "blinkingWhite"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setStatusLedTwoColor",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setStatusLedTwoColor": {
+      "name": "setStatusLedTwoColor",
+      "arguments": [
+        {
+          "name": "value",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "off",
+              "red",
+              "green",
+              "blue",
+              "magenta",
+              "yellow",
+              "cyan",
+              "white",
+              "blinkingRed",
+              "blinkingGreen",
+              "blinkingBlue",
+              "blinkingMagenta",
+              "blinkingYellow",
+              "blinkingCyan",
+              "blinkingWhite"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -4,6 +4,72 @@ status: proposed
 name: Robot Cleaner Pet Monitor
 ephemeral: false
 attributes:
+  areaIds:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  originator:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  waypoints:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              coordinates:
+                type: array
+                items:
+                  type: string
+            required:
+              - id
+              - coordinates
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  enabled:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+          default: false
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  excludeHolidays:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+          default: false
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
   dayOfWeek:
     schema:
       type: object
@@ -78,18 +144,6 @@ attributes:
       required:
         - value
     enumCommands: []
-  areaIds:
-    schema:
-      type: object
-      properties:
-        value:
-          type: array
-          items:
-            type: string
-      additionalProperties: false
-      required:
-        - value
-    enumCommands: []
   startTime:
     schema:
       type: object
@@ -128,50 +182,7 @@ attributes:
       required:
         - value
     enumCommands: []
-  originator:
-    schema:
-      type: object
-      properties:
-        value:
-          type: string
-      additionalProperties: false
-      required:
-        - value
-    enumCommands: []
   obsoleted:
-    schema:
-      type: object
-      properties:
-        value:
-          type: boolean
-          default: false
-      additionalProperties: false
-      required:
-        - value
-    enumCommands: []
-  waypoints:
-    schema:
-      type: object
-      properties:
-        value:
-          type: array
-          items:
-            type: object
-            properties:
-              id:
-                type: string
-              coordinates:
-                type: array
-                items:
-                  type: string
-            required:
-              - id
-              - coordinates
-      additionalProperties: false
-      required:
-        - value
-    enumCommands: []
-  enabled:
     schema:
       type: object
       properties:
@@ -255,3 +266,10 @@ commands:
         optional: true
         schema:
           type: string
+  setExcludeHolidays:
+    name: setExcludeHolidays
+    arguments:
+      - name: excludeHolidays
+        optional: false
+        schema:
+          type: boolean

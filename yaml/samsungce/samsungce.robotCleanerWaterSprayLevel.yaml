@@ -4,6 +4,25 @@ status: proposed
 name: Robot Cleaner Water Spray Level
 ephemeral: false
 attributes:
+  availableWaterSprayLevels:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - extraHigh
+              - high
+              - mediumHigh
+              - medium
+              - mediumLow
+              - low
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
   waterSprayLevel:
     schema:
       type: object
@@ -11,6 +30,7 @@ attributes:
         value:
           type: string
           enum:
+            - extraHigh
             - high
             - mediumHigh
             - medium
@@ -30,6 +50,7 @@ attributes:
           items:
             type: string
             enum:
+              - extraHigh
               - high
               - mediumHigh
               - medium
@@ -48,6 +69,7 @@ commands:
         schema:
           type: string
           enum:
+            - extraHigh
             - high
             - mediumHigh
             - medium
