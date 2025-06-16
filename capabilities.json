@@ -795,5 +795,19 @@
   "platemusic11009.hsLedMode",
   "platemusic11009.amperageMeasurement",
   "stsolutions.message",
-  "stsolutions.demandResponseMode"
+  "stsolutions.demandResponseMode",
+  "platemusic11009.hsNormalLedColor",
+  "platemusic11009.hsStatusLedTwoColor",
+  "platemusic11009.hsStatusLedSevenColor",
+  "platemusic11009.hsStatusLedFiveColor",
+  "platemusic11009.hsStatusLedBlinkingColor",
+  "platemusic11009.hsStatusLedBlinkingFreq",
+  "legendabsolute60149.thermostatLocked",
+  "legendabsolute60149.fanNextChange",
+  "legendabsolute60149.infoPanel",
+  "legendabsolute60149.fanCyclicMode",
+  "rivertalent14263.gasConsumptionReport",
+  "rivertalent14263.batchGasConsumptionReport",
+  "platinummassive43262.statusMessage",
+  "stus.softwareGeneration"
 ]
