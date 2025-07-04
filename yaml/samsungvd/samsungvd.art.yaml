@@ -1,0 +1,10 @@
+id: samsungvd.art
+version: 1
+status: proposed
+name: Art
+ephemeral: false
+attributes: {}
+commands:
+  setArtOn:
+    name: setArtOn
+    arguments: []

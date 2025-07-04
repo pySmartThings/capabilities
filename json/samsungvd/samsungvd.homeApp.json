@@ -1,0 +1,47 @@
+{
+  "id": "samsungvd.homeApp",
+  "version": 1,
+  "status": "proposed",
+  "name": "Home App",
+  "ephemeral": false,
+  "attributes": {
+    "supportedViewModesMap": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "string" },
+                "name": { "type": "string" }
+              }
+            },
+            "required": []
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "supportedViewModes": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "array" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setHomeApp": {
+      "name": "setHomeApp",
+      "arguments": [
+        { "name": "id", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}

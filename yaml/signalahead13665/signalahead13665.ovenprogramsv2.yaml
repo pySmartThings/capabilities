@@ -1,0 +1,110 @@
+id: signalahead13665.ovenprogramsv2
+version: 1
+status: proposed
+name: OvenProgramsv2
+ephemeral: false
+attributes:
+  availablePrograms:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - Cooking_Oven_Program_HeatingMode_HotAir
+              - Cooking_Oven_Program_HeatingMode_TopBottomHeating
+              - Cooking_Oven_Program_HeatingMode_HotAirGrilling
+              - Cooking_Oven_Program_HeatingMode_PizzaSetting
+              - Cooking_Oven_Program_HeatingMode_HotAirEco
+              - Cooking_Oven_Program_HeatingMode_KeepWarm
+              - Cooking_Oven_Program_HeatingMode_PreheatOvenware
+              - Cooking_Oven_Program_HeatingMode_TopBottomHeatingEco
+              - Cooking_Oven_Program_HeatingMode_FrozenHeatupSpecial
+              - Cooking_Oven_Program_HeatingMode_SlowCook
+              - Cooking_Oven_Program_HeatingMode_IntensiveHeat
+              - Cooking_Oven_Program_HeatingMode_Defrost
+              - Cooking_Oven_Program_HeatingMode_BottomHeating
+              - None
+              - UnknownProgram
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  program:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - Cooking_Oven_Program_HeatingMode_HotAir
+            - Cooking_Oven_Program_HeatingMode_TopBottomHeating
+            - Cooking_Oven_Program_HeatingMode_HotAirGrilling
+            - Cooking_Oven_Program_HeatingMode_PizzaSetting
+            - Cooking_Oven_Program_HeatingMode_HotAirEco
+            - Cooking_Oven_Program_HeatingMode_KeepWarm
+            - Cooking_Oven_Program_HeatingMode_PreheatOvenware
+            - Cooking_Oven_Program_HeatingMode_TopBottomHeatingEco
+            - Cooking_Oven_Program_HeatingMode_FrozenHeatupSpecial
+            - Cooking_Oven_Program_HeatingMode_SlowCook
+            - Cooking_Oven_Program_HeatingMode_IntensiveHeat
+            - Cooking_Oven_Program_HeatingMode_Defrost
+            - Cooking_Oven_Program_HeatingMode_BottomHeating
+            - None
+            - UnknownProgram
+        data:
+          type: object
+          additionalProperties: false
+          required: []
+          properties:
+            availablePrograms:
+              type: array
+              items:
+                type: string
+                enum:
+                  - Cooking_Oven_Program_HeatingMode_HotAir
+                  - Cooking_Oven_Program_HeatingMode_TopBottomHeating
+                  - Cooking_Oven_Program_HeatingMode_HotAirGrilling
+                  - Cooking_Oven_Program_HeatingMode_PizzaSetting
+                  - Cooking_Oven_Program_HeatingMode_HotAirEco
+                  - Cooking_Oven_Program_HeatingMode_KeepWarm
+                  - Cooking_Oven_Program_HeatingMode_PreheatOvenware
+                  - Cooking_Oven_Program_HeatingMode_TopBottomHeatingEco
+                  - Cooking_Oven_Program_HeatingMode_FrozenHeatupSpecial
+                  - Cooking_Oven_Program_HeatingMode_SlowCook
+                  - Cooking_Oven_Program_HeatingMode_IntensiveHeat
+                  - Cooking_Oven_Program_HeatingMode_Defrost
+                  - Cooking_Oven_Program_HeatingMode_BottomHeating
+                  - None
+                  - UnknownProgram
+      additionalProperties: false
+      required:
+        - value
+    setter: setProgram
+    enumCommands: []
+commands:
+  stop:
+    name: stop
+    arguments: []
+  setProgram:
+    name: setProgram
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+          enum:
+            - Cooking_Oven_Program_HeatingMode_HotAir
+            - Cooking_Oven_Program_HeatingMode_TopBottomHeating
+            - Cooking_Oven_Program_HeatingMode_HotAirGrilling
+            - Cooking_Oven_Program_HeatingMode_PizzaSetting
+            - Cooking_Oven_Program_HeatingMode_HotAirEco
+            - Cooking_Oven_Program_HeatingMode_KeepWarm
+            - Cooking_Oven_Program_HeatingMode_PreheatOvenware
+            - Cooking_Oven_Program_HeatingMode_TopBottomHeatingEco
+            - Cooking_Oven_Program_HeatingMode_FrozenHeatupSpecial
+            - Cooking_Oven_Program_HeatingMode_SlowCook
+            - Cooking_Oven_Program_HeatingMode_IntensiveHeat
+            - Cooking_Oven_Program_HeatingMode_Defrost
+            - Cooking_Oven_Program_HeatingMode_BottomHeating

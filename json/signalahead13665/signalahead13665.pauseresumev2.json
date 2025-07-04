@@ -1,0 +1,27 @@
+{
+  "id": "signalahead13665.pauseresumev2",
+  "version": 1,
+  "status": "proposed",
+  "name": "pauseResumev2",
+  "ephemeral": false,
+  "attributes": {
+    "pauseState": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setPauseState",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setPauseState": {
+      "name": "setPauseState",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "string" } }
+      ]
+    }
+  }
+}
