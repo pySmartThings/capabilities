@@ -1,0 +1,18 @@
+id: samsungvd.launchService
+version: 1
+status: proposed
+name: Launch Service
+ephemeral: false
+attributes: {}
+commands:
+  launchTVPlus:
+    name: launchTVPlus
+    arguments:
+      - name: providerId
+        optional: false
+        schema:
+          type: string
+      - name: serviceId
+        optional: false
+        schema:
+          type: string
