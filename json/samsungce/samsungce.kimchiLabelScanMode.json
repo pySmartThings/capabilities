@@ -1,0 +1,75 @@
+{
+  "id": "samsungce.kimchiLabelScanMode",
+  "version": 1,
+  "status": "proposed",
+  "name": "Kimchi Label Scan Mode",
+  "ephemeral": false,
+  "attributes": {
+    "supportedKimchiStorageModes": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "kimchiStorageMediumCooling",
+                "kimchiStorageHighCooling",
+                "kimchiStorageLowCooling",
+                "kimchiStorageLowSalt",
+                "kimchiStorageCrunch",
+                "kimchiStoragePurchased",
+                "kimchiStorageLowSaltMediumCooling",
+                "kimchiStorageLowSaltHighCooling",
+                "kimchiStorageLowSaltLowCooling",
+                "kimchiStorageSeasonal",
+                "kimchiStorageScanKeep"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setKimchiLabelScanMode": {
+      "name": "setKimchiLabelScanMode",
+      "arguments": [
+        {
+          "name": "coldShockTemperature",
+          "optional": false,
+          "schema": { "type": "number" }
+        },
+        {
+          "name": "coldShockDuration",
+          "optional": false,
+          "schema": { "type": "integer" }
+        },
+        {
+          "name": "kimchiStorageMode",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "kimchiStorageMediumCooling",
+              "kimchiStorageHighCooling",
+              "kimchiStorageLowCooling",
+              "kimchiStorageLowSalt",
+              "kimchiStorageCrunch",
+              "kimchiStoragePurchased",
+              "kimchiStorageLowSaltMediumCooling",
+              "kimchiStorageLowSaltHighCooling",
+              "kimchiStorageLowSaltLowCooling",
+              "kimchiStorageSeasonal",
+              "kimchiStorageScanKeep"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
