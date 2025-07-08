@@ -23,11 +23,22 @@
       },
       "enumCommands": []
     },
+    "supportedFullFridgeModes": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
     "supportedFridgeModes": {
       "schema": {
         "type": "object",
         "properties": {
-          "value": { "items": { "type": "string" }, "type": "array" }
+          "value": { "type": "array", "items": { "type": "string" } }
         },
         "additionalProperties": false,
         "required": ["value"]

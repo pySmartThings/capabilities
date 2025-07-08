@@ -1,0 +1,253 @@
+{
+  "id": "samsungce.kimchiRefrigeratorOperatingState",
+  "version": 1,
+  "status": "proposed",
+  "name": "Kimchi Refrigerator Operating State",
+  "ephemeral": false,
+  "attributes": {
+    "operatingState": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "mode": {
+                "type": "string",
+                "enum": [
+                  "kimchiStorageMediumCooling",
+                  "kimchiStorageHighCooling",
+                  "kimchiStorageLowCooling",
+                  "kimchiStorageLowSalt",
+                  "kimchiStorageCrunch",
+                  "kimchiStoragePurchased",
+                  "kimchiStorageLowSaltMediumCooling",
+                  "kimchiStorageLowSaltHighCooling",
+                  "kimchiStorageLowSaltLowCooling",
+                  "kimchiStorageSeasonal",
+                  "kimchiStorageScanKeep",
+                  "kimchiRipeNormal",
+                  "kimchiRipeLowTemp",
+                  "kimchiRipeDongchimi",
+                  "kimchiRipeGatKimchi",
+                  "kimchiRipeKkakdugi",
+                  "kimchiRipeYoungRadish",
+                  "kimchiRipeRipened",
+                  "kimchiRipeRoomTemp",
+                  "kimchiRipeWellFermented",
+                  "kimchiRipeSourCooking",
+                  "meatRipeNormal",
+                  "fruitRipeNormal",
+                  "doughFermentation",
+                  "topRackFitStorage",
+                  "fridge",
+                  "fridgeMediumCooling",
+                  "fridgeHighCooling",
+                  "fridgeLowCooling",
+                  "fridgeGeneral",
+                  "fridgeVegetablesFruit",
+                  "fridgeDrink",
+                  "storageRiceWine",
+                  "storageVegetables",
+                  "storageMeat",
+                  "storageRootVegetables",
+                  "freezer",
+                  "freezerMediumCooling",
+                  "freezerHighCooling",
+                  "freezerLowCooling",
+                  "freezerMeatFish",
+                  "freshGrain",
+                  "freshSoup",
+                  "freshPotatoBanana",
+                  "freshWine",
+                  "meatDefrost200g",
+                  "meatDefrost400g",
+                  "meatDefrost600g",
+                  "meatDefrost800g",
+                  "meatDefrost1000g",
+                  "meatDefrost1200g",
+                  "off",
+                  "unknown"
+                ]
+              },
+              "remainingRipeningTime": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "value": { "type": "integer", "minimum": 0 },
+                  "unit": {
+                    "type": "string",
+                    "enum": ["hour"],
+                    "default": "hour"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedModes": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "mode": {
+                  "type": "string",
+                  "enum": [
+                    "kimchiStorageMediumCooling",
+                    "kimchiStorageHighCooling",
+                    "kimchiStorageLowCooling",
+                    "kimchiStorageLowSalt",
+                    "kimchiStorageCrunch",
+                    "kimchiStoragePurchased",
+                    "kimchiStorageLowSaltMediumCooling",
+                    "kimchiStorageLowSaltHighCooling",
+                    "kimchiStorageLowSaltLowCooling",
+                    "kimchiStorageSeasonal",
+                    "kimchiStorageScanKeep",
+                    "kimchiRipeNormal",
+                    "kimchiRipeLowTemp",
+                    "kimchiRipeDongchimi",
+                    "kimchiRipeGatKimchi",
+                    "kimchiRipeKkakdugi",
+                    "kimchiRipeYoungRadish",
+                    "kimchiRipeRipened",
+                    "kimchiRipeRoomTemp",
+                    "kimchiRipeWellFermented",
+                    "kimchiRipeSourCooking",
+                    "meatRipeNormal",
+                    "fruitRipeNormal",
+                    "doughFermentation",
+                    "topRackFitStorage",
+                    "fridge",
+                    "fridgeMediumCooling",
+                    "fridgeHighCooling",
+                    "fridgeLowCooling",
+                    "fridgeGeneral",
+                    "fridgeVegetablesFruit",
+                    "fridgeDrink",
+                    "storageRiceWine",
+                    "storageVegetables",
+                    "storageMeat",
+                    "storageRootVegetables",
+                    "freezer",
+                    "freezerMediumCooling",
+                    "freezerHighCooling",
+                    "freezerLowCooling",
+                    "freezerMeatFish",
+                    "freshGrain",
+                    "freshSoup",
+                    "freshPotatoBanana",
+                    "freshWine",
+                    "meatDefrost200g",
+                    "meatDefrost400g",
+                    "meatDefrost600g",
+                    "meatDefrost800g",
+                    "meatDefrost1000g",
+                    "meatDefrost1200g",
+                    "off",
+                    "unknown"
+                  ]
+                },
+                "ripeningTime": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "value": { "type": "integer", "minimum": 0 },
+                    "unit": {
+                      "type": "string",
+                      "enum": ["hour"],
+                      "default": "hour"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setMode": {
+      "name": "setMode",
+      "arguments": [
+        {
+          "name": "mode",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "kimchiStorageMediumCooling",
+              "kimchiStorageHighCooling",
+              "kimchiStorageLowCooling",
+              "kimchiStorageLowSalt",
+              "kimchiStorageCrunch",
+              "kimchiStoragePurchased",
+              "kimchiStorageLowSaltMediumCooling",
+              "kimchiStorageLowSaltHighCooling",
+              "kimchiStorageLowSaltLowCooling",
+              "kimchiStorageSeasonal",
+              "kimchiStorageScanKeep",
+              "kimchiRipeNormal",
+              "kimchiRipeLowTemp",
+              "kimchiRipeDongchimi",
+              "kimchiRipeGatKimchi",
+              "kimchiRipeKkakdugi",
+              "kimchiRipeYoungRadish",
+              "kimchiRipeRipened",
+              "kimchiRipeRoomTemp",
+              "kimchiRipeWellFermented",
+              "kimchiRipeSourCooking",
+              "meatRipeNormal",
+              "fruitRipeNormal",
+              "doughFermentation",
+              "topRackFitStorage",
+              "fridge",
+              "fridgeMediumCooling",
+              "fridgeHighCooling",
+              "fridgeLowCooling",
+              "fridgeGeneral",
+              "fridgeVegetablesFruit",
+              "fridgeDrink",
+              "storageRiceWine",
+              "storageVegetables",
+              "storageMeat",
+              "storageRootVegetables",
+              "freezer",
+              "freezerMediumCooling",
+              "freezerHighCooling",
+              "freezerLowCooling",
+              "freezerMeatFish",
+              "freshGrain",
+              "freshSoup",
+              "freshPotatoBanana",
+              "freshWine",
+              "meatDefrost200g",
+              "meatDefrost400g",
+              "meatDefrost600g",
+              "meatDefrost800g",
+              "meatDefrost1000g",
+              "meatDefrost1200g",
+              "off",
+              "unknown"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
