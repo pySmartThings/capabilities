@@ -818,5 +818,7 @@
   "signalahead13665.pauseresumev2",
   "signalahead13665.programdurationv2",
   "samsungce.kimchiLabelScanMode",
-  "samsungce.kimchiRefrigeratorOperatingState"
+  "samsungce.kimchiRefrigeratorOperatingState",
+  "samsungce.autoOpenDoor",
+  "samsungce.fridgeIcemakerInfo"
 ]
