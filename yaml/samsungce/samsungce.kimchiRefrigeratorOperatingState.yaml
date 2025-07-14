@@ -36,6 +36,7 @@ attributes:
                 - kimchiRipeRoomTemp
                 - kimchiRipeWellFermented
                 - kimchiRipeSourCooking
+                - kimchiRipe6DaysColdPlus
                 - meatRipeNormal
                 - fruitRipeNormal
                 - doughFermentation
@@ -118,6 +119,7 @@ attributes:
                   - kimchiRipeRoomTemp
                   - kimchiRipeWellFermented
                   - kimchiRipeSourCooking
+                  - kimchiRipe6DaysColdPlus
                   - meatRipeNormal
                   - fruitRipeNormal
                   - doughFermentation
@@ -196,6 +198,7 @@ commands:
             - kimchiRipeRoomTemp
             - kimchiRipeWellFermented
             - kimchiRipeSourCooking
+            - kimchiRipe6DaysColdPlus
             - meatRipeNormal
             - fruitRipeNormal
             - doughFermentation
