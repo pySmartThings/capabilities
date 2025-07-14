@@ -75,6 +75,7 @@ attributes:
             enum:
               - helper_hotspot
               - ble_ocf
+              - ble_stdk_hub
               - ble_stdk
       additionalProperties: false
       required:
