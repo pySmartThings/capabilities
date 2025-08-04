@@ -324,6 +324,7 @@ commands:
             - lower
             - upper
             - all
+    sensitive: false
   setSanitize:
     name: setSanitize
     arguments:
@@ -331,6 +332,7 @@ commands:
         optional: false
         schema:
           type: boolean
+    sensitive: false
   setZoneBooster:
     name: setZoneBooster
     arguments:
@@ -343,6 +345,7 @@ commands:
             - left
             - right
             - all
+    sensitive: false
   setDryPlus:
     name: setDryPlus
     arguments:
@@ -350,6 +353,7 @@ commands:
         optional: false
         schema:
           type: boolean
+    sensitive: false
   setAddRinse:
     name: setAddRinse
     arguments:
@@ -357,6 +361,7 @@ commands:
         optional: false
         schema:
           type: boolean
+    sensitive: false
   setHotAirDry:
     name: setHotAirDry
     arguments:
@@ -364,6 +369,7 @@ commands:
         optional: false
         schema:
           type: boolean
+    sensitive: false
   setStormWash:
     name: setStormWash
     arguments:
@@ -371,6 +377,7 @@ commands:
         optional: false
         schema:
           type: boolean
+    sensitive: false
   setHeatedDry:
     name: setHeatedDry
     arguments:
@@ -385,6 +392,7 @@ commands:
             - medium
             - high
             - extraHigh
+    sensitive: false
   setHighTempWash:
     name: setHighTempWash
     arguments:
@@ -392,6 +400,7 @@ commands:
         optional: false
         schema:
           type: boolean
+    sensitive: false
   setSanitizingWash:
     name: setSanitizingWash
     arguments:
@@ -399,6 +408,7 @@ commands:
         optional: false
         schema:
           type: boolean
+    sensitive: false
   setSpeedBooster:
     name: setSpeedBooster
     arguments:
@@ -406,6 +416,7 @@ commands:
         optional: false
         schema:
           type: boolean
+    sensitive: false
   setRinsePlus:
     name: setRinsePlus
     arguments:
@@ -413,6 +424,7 @@ commands:
         optional: false
         schema:
           type: boolean
+    sensitive: false
   setOptions:
     name: setOptions
     arguments:
@@ -465,6 +477,7 @@ commands:
                 - medium
                 - high
                 - extraHigh
+    sensitive: false
   setSteamSoak:
     name: setSteamSoak
     arguments:
@@ -472,3 +485,4 @@ commands:
         optional: false
         schema:
           type: boolean
+    sensitive: false

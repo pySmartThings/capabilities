@@ -124,6 +124,7 @@ commands:
   resume:
     name: resume
     arguments: []
+    sensitive: false
   cancel:
     name: cancel
     arguments:
@@ -131,6 +132,7 @@ commands:
         optional: true
         schema:
           type: boolean
+    sensitive: false
   setOperatingState:
     name: setOperatingState
     arguments:
@@ -142,6 +144,7 @@ commands:
             - running
             - paused
             - ready
+    sensitive: false
   start:
     name: start
     arguments:
@@ -149,6 +152,7 @@ commands:
         optional: true
         schema:
           type: object
+    sensitive: false
   startLater:
     name: startLater
     arguments:
@@ -156,6 +160,8 @@ commands:
         optional: false
         schema:
           type: number
+    sensitive: false
   pause:
     name: pause
     arguments: []
+    sensitive: false

@@ -40,7 +40,7 @@
     }
   },
   "commands": {
-    "stop": { "name": "stop", "arguments": [] },
+    "stop": { "name": "stop", "arguments": [], "sensitive": false },
     "start": {
       "name": "start",
       "arguments": [
@@ -63,7 +63,8 @@
             }
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

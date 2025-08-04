@@ -171,6 +171,7 @@ commands:
   unsetRecommendedAmount:
     name: unsetRecommendedAmount
     arguments: []
+    sensitive: false
   setRecommendedAmount:
     name: setRecommendedAmount
     arguments:
@@ -193,6 +194,7 @@ commands:
           type: integer
           minimum: 1
           maximum: 20
+    sensitive: false
   setType:
     name: setType
     arguments:
@@ -209,6 +211,7 @@ commands:
             - scannedNeutralDetergent
             - scannedBabyDetergent
             - scannedRegularSoftener
+    sensitive: false
   setAmount:
     name: setAmount
     arguments:
@@ -222,6 +225,7 @@ commands:
             - standard
             - extra
             - custom
+    sensitive: false
   setDensity:
     name: setDensity
     arguments:
@@ -235,3 +239,4 @@ commands:
             - high
             - extraHigh
             - custom
+    sensitive: false

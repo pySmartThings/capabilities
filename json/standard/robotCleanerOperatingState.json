@@ -94,8 +94,8 @@
     }
   },
   "commands": {
-    "goHome": { "name": "goHome", "arguments": [] },
-    "start": { "name": "start", "arguments": [] },
-    "pause": { "name": "pause", "arguments": [] }
+    "goHome": { "name": "goHome", "arguments": [], "sensitive": false },
+    "start": { "name": "start", "arguments": [], "sensitive": false },
+    "pause": { "name": "pause", "arguments": [], "sensitive": false }
   }
 }

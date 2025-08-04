@@ -5,5 +5,7 @@
   "name": "Configuration",
   "ephemeral": false,
   "attributes": {},
-  "commands": { "configure": { "name": "configure", "arguments": [] } }
+  "commands": {
+    "configure": { "name": "configure", "arguments": [], "sensitive": false }
+  }
 }

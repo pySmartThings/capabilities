@@ -46,3 +46,4 @@ commands:
           required:
             - hue
             - saturation
+    sensitive: false

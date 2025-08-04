@@ -41,7 +41,8 @@
           "optional": false,
           "schema": { "type": "string", "enum": ["far", "medium", "near"] }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

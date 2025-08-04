@@ -54,6 +54,7 @@ commands:
           enum:
             - "off"
             - "on"
+    sensitive: false
   setRapidFreezing:
     name: setRapidFreezing
     arguments:
@@ -64,6 +65,7 @@ commands:
           enum:
             - "off"
             - "on"
+    sensitive: false
   setRapidCooling:
     name: setRapidCooling
     arguments:
@@ -74,3 +76,4 @@ commands:
           enum:
             - "off"
             - "on"
+    sensitive: false

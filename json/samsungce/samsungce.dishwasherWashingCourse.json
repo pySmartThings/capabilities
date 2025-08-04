@@ -215,7 +215,8 @@
             ]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setCustomCourse": {
       "name": "setCustomCourse",
@@ -265,7 +266,8 @@
             ]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "startWashingCourse": {
       "name": "startWashingCourse",
@@ -315,7 +317,8 @@
             ]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "startWashingCourseWithOptions": {
       "name": "startWashingCourseWithOptions",
@@ -393,7 +396,8 @@
             }
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

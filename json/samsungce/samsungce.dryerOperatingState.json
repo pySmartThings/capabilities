@@ -147,9 +147,9 @@
     }
   },
   "commands": {
-    "resume": { "name": "resume", "arguments": [] },
-    "cancel": { "name": "cancel", "arguments": [] },
-    "start": { "name": "start", "arguments": [] },
+    "resume": { "name": "resume", "arguments": [], "sensitive": false },
+    "cancel": { "name": "cancel", "arguments": [], "sensitive": false },
+    "start": { "name": "start", "arguments": [], "sensitive": false },
     "setDelayEnd": {
       "name": "setDelayEnd",
       "arguments": [
@@ -158,8 +158,9 @@
           "optional": false,
           "schema": { "type": "integer", "minimum": 0, "maximum": 1440 }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "pause": { "name": "pause", "arguments": [] }
+    "pause": { "name": "pause", "arguments": [], "sensitive": false }
   }
 }

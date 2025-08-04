@@ -33,7 +33,8 @@
           "optional": false,
           "schema": { "type": "string", "enum": ["on", "off"] }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

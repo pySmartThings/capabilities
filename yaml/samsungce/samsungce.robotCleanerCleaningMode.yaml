@@ -91,9 +91,12 @@ commands:
             - uncleanedObject
             - patternMap
             - creatingMap
+    sensitive: false
   disableRepeatMode:
     name: disableRepeatMode
     arguments: []
+    sensitive: false
   enableRepeatMode:
     name: enableRepeatMode
     arguments: []
+    sensitive: false

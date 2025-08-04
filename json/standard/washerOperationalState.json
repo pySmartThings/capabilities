@@ -95,7 +95,8 @@
             "enum": ["pause", "run", "stop"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

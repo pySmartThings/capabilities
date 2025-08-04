@@ -191,7 +191,8 @@
           "optional": true,
           "schema": { "type": "integer", "minimum": 1 }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setWeekDaySchedule": {
       "name": "setWeekDaySchedule",
@@ -236,7 +237,8 @@
             }
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setYearDaySchedule": {
       "name": "setYearDaySchedule",
@@ -271,7 +273,8 @@
             }
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "clearYearDaySchedules": {
       "name": "clearYearDaySchedules",
@@ -286,7 +289,8 @@
           "optional": true,
           "schema": { "type": "integer", "minimum": 1 }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

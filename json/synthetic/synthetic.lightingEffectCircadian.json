@@ -53,7 +53,8 @@
             "required": ["state", "timeZoneId"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

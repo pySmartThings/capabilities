@@ -32,8 +32,9 @@
         { "name": "x", "optional": false, "schema": { "type": "number" } },
         { "name": "y", "optional": false, "schema": { "type": "number" } },
         { "name": "theta", "optional": false, "schema": { "type": "number" } }
-      ]
+      ],
+      "sensitive": false
     },
-    "start": { "name": "start", "arguments": [] }
+    "start": { "name": "start", "arguments": [], "sensitive": false }
   }
 }

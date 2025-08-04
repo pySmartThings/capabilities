@@ -49,7 +49,8 @@
       "name": "setHoodFanSpeed",
       "arguments": [
         { "name": "speed", "optional": false, "schema": { "type": "integer" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

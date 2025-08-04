@@ -25,7 +25,8 @@
           "optional": false,
           "schema": { "type": "string", "maxLength": 10 }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

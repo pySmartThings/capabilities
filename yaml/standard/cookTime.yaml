@@ -59,3 +59,4 @@ commands:
           type: integer
           minimum: 1
           maximum: 86400
+    sensitive: false

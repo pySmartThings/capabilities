@@ -231,3 +231,4 @@ commands:
             - meatDefrost1200g
             - "off"
             - unknown
+    sensitive: false

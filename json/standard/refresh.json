@@ -5,5 +5,7 @@
   "name": "Refresh",
   "ephemeral": false,
   "attributes": {},
-  "commands": { "refresh": { "name": "refresh", "arguments": [] } }
+  "commands": {
+    "refresh": { "name": "refresh", "arguments": [], "sensitive": false }
+  }
 }

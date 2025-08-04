@@ -5,5 +5,7 @@
   "name": "Stateless Audio Volume Up",
   "ephemeral": false,
   "attributes": {},
-  "commands": { "volumeUp": { "name": "volumeUp", "arguments": [] } }
+  "commands": {
+    "volumeUp": { "name": "volumeUp", "arguments": [], "sensitive": false }
+  }
 }

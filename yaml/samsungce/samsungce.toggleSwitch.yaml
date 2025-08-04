@@ -25,9 +25,12 @@ commands:
   toggle:
     name: toggle
     arguments: []
+    sensitive: false
   "off":
     name: "off"
     arguments: []
+    sensitive: false
   "on":
     name: "on"
     arguments: []
+    sensitive: false

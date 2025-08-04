@@ -51,7 +51,8 @@
             "default": "manual"
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setUserLocation": {
       "name": "setUserLocation",
@@ -61,7 +62,8 @@
           "optional": false,
           "schema": { "type": "string", "enum": ["indoor", "outdoor"] }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

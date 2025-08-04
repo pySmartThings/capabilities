@@ -68,6 +68,10 @@
     }
   },
   "commands": {
-    "resetDrainFilter": { "name": "resetDrainFilter", "arguments": [] }
+    "resetDrainFilter": {
+      "name": "resetDrainFilter",
+      "arguments": [],
+      "sensitive": false
+    }
   }
 }

@@ -33,3 +33,4 @@ commands:
             - blue
             - green
             - red
+    sensitive: false

@@ -28,3 +28,4 @@ commands:
           type: string
           enum:
             - start
+    sensitive: false

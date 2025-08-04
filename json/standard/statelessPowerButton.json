@@ -29,7 +29,8 @@
           "optional": false,
           "schema": { "type": "string", "enum": ["powerOn", "powerOff"] }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

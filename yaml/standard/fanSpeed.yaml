@@ -27,3 +27,4 @@ commands:
           title: PositiveInteger
           type: integer
           minimum: 0
+    sensitive: false

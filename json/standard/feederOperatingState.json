@@ -17,5 +17,11 @@
       "enumCommands": [{ "command": "startFeeding", "value": "feeding" }]
     }
   },
-  "commands": { "startFeeding": { "name": "startFeeding", "arguments": [] } }
+  "commands": {
+    "startFeeding": {
+      "name": "startFeeding",
+      "arguments": [],
+      "sensitive": false
+    }
+  }
 }

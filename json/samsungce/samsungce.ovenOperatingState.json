@@ -103,10 +103,11 @@
             "pattern": "^\\d\\d+:[0-5]\\d:[0-5]\\d$"
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "stop": { "name": "stop", "arguments": [] },
-    "start": { "name": "start", "arguments": [] },
-    "pause": { "name": "pause", "arguments": [] }
+    "stop": { "name": "stop", "arguments": [], "sensitive": false },
+    "start": { "name": "start", "arguments": [], "sensitive": false },
+    "pause": { "name": "pause", "arguments": [], "sensitive": false }
   }
 }

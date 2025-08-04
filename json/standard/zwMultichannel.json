@@ -37,7 +37,8 @@
           "optional": false,
           "schema": { "title": "String", "type": "string", "maxLength": 255 }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "epCmd": {
       "name": "epCmd",
@@ -52,7 +53,8 @@
           "optional": false,
           "schema": { "title": "String", "type": "string", "maxLength": 255 }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

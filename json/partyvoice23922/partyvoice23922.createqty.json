@@ -27,7 +27,8 @@
           "optional": false,
           "schema": { "type": "integer", "minimum": 1, "maximum": 10 }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

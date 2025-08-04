@@ -89,8 +89,9 @@
             }
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "delete": { "name": "delete", "arguments": [] }
+    "delete": { "name": "delete", "arguments": [], "sensitive": false }
   }
 }

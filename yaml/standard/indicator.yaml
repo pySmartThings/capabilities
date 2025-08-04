@@ -28,9 +28,12 @@ commands:
   indicatorNever:
     name: indicatorNever
     arguments: []
+    sensitive: false
   indicatorWhenOn:
     name: indicatorWhenOn
     arguments: []
+    sensitive: false
   indicatorWhenOff:
     name: indicatorWhenOff
     arguments: []
+    sensitive: false

@@ -107,6 +107,7 @@ commands:
   periodicSensingOn:
     name: periodicSensingOn
     arguments: []
+    sensitive: false
   setPeriodicSensingInterval:
     name: setPeriodicSensingInterval
     arguments:
@@ -114,6 +115,7 @@ commands:
         optional: false
         schema:
           type: integer
+    sensitive: false
   setPeriodicSensing:
     name: setPeriodicSensing
     arguments:
@@ -128,6 +130,7 @@ commands:
         optional: false
         schema:
           type: integer
+    sensitive: false
   setAutomaticExecutionMode:
     name: setAutomaticExecutionMode
     arguments:
@@ -135,6 +138,7 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false
   setAutomaticExecutionSetting:
     name: setAutomaticExecutionSetting
     arguments:
@@ -142,9 +146,12 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false
   periodicSensingOff:
     name: periodicSensingOff
     arguments: []
+    sensitive: false
   triggerManualSensing:
     name: triggerManualSensing
     arguments: []
+    sensitive: false

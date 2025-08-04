@@ -104,9 +104,18 @@
             ]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "disableRepeatMode": { "name": "disableRepeatMode", "arguments": [] },
-    "enableRepeatMode": { "name": "enableRepeatMode", "arguments": [] }
+    "disableRepeatMode": {
+      "name": "disableRepeatMode",
+      "arguments": [],
+      "sensitive": false
+    },
+    "enableRepeatMode": {
+      "name": "enableRepeatMode",
+      "arguments": [],
+      "sensitive": false
+    }
   }
 }

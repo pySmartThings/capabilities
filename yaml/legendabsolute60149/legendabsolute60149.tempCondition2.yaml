@@ -33,3 +33,4 @@ commands:
           type: number
           minimum: -50
           maximum: 250
+    sensitive: false

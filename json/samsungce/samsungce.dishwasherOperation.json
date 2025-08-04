@@ -107,12 +107,13 @@
     }
   },
   "commands": {
-    "resume": { "name": "resume", "arguments": [] },
+    "resume": { "name": "resume", "arguments": [], "sensitive": false },
     "cancel": {
       "name": "cancel",
       "arguments": [
         { "name": "drain", "optional": true, "schema": { "type": "boolean" } }
-      ]
+      ],
+      "sensitive": false
     },
     "setOperatingState": {
       "name": "setOperatingState",
@@ -122,20 +123,23 @@
           "optional": false,
           "schema": { "type": "string", "enum": ["running", "paused", "ready"] }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "start": {
       "name": "start",
       "arguments": [
         { "name": "option", "optional": true, "schema": { "type": "object" } }
-      ]
+      ],
+      "sensitive": false
     },
     "startLater": {
       "name": "startLater",
       "arguments": [
         { "name": "delay", "optional": false, "schema": { "type": "number" } }
-      ]
+      ],
+      "sensitive": false
     },
-    "pause": { "name": "pause", "arguments": [] }
+    "pause": { "name": "pause", "arguments": [], "sensitive": false }
   }
 }

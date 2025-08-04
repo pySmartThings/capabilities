@@ -32,12 +32,16 @@ commands:
   siren:
     name: siren
     arguments: []
+    sensitive: false
   strobe:
     name: strobe
     arguments: []
+    sensitive: false
   "off":
     name: "off"
     arguments: []
+    sensitive: false
   both:
     name: both
     arguments: []
+    sensitive: false

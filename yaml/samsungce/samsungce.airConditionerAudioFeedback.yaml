@@ -52,3 +52,4 @@ commands:
             - normal
             - loud
             - effectiveToneOnly
+    sensitive: false

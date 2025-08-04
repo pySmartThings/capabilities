@@ -22,6 +22,8 @@ commands:
   unlock:
     name: unlock
     arguments: []
+    sensitive: false
   lock:
     name: lock
     arguments: []
+    sensitive: false

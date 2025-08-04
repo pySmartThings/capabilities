@@ -6,7 +6,11 @@
   "ephemeral": false,
   "attributes": {},
   "commands": {
-    "recordStart": { "name": "recordStart", "arguments": [] },
-    "recordStop": { "name": "recordStop", "arguments": [] }
+    "recordStart": {
+      "name": "recordStart",
+      "arguments": [],
+      "sensitive": false
+    },
+    "recordStop": { "name": "recordStop", "arguments": [], "sensitive": false }
   }
 }

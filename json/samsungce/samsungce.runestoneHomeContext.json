@@ -51,13 +51,15 @@
             "items": { "type": "string" }
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setContext": {
       "name": "setContext",
       "arguments": [
         { "name": "context", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     },
     "setRecentlyUsedApps": {
       "name": "setRecentlyUsedApps",
@@ -71,7 +73,8 @@
             "items": { "type": "string" }
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

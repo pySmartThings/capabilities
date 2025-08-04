@@ -26,3 +26,4 @@ commands:
   lock:
     name: lock
     arguments: []
+    sensitive: false

@@ -27,3 +27,4 @@ commands:
           type: string
           enum:
             - powerToggle
+    sensitive: false

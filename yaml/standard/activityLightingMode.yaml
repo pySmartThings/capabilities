@@ -41,3 +41,4 @@ commands:
             - day
             - cozy
             - soft
+    sensitive: false

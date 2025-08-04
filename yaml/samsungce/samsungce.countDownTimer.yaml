@@ -56,12 +56,15 @@ commands:
   resume:
     name: resume
     arguments: []
+    sensitive: false
   cancel:
     name: cancel
     arguments: []
+    sensitive: false
   start:
     name: start
     arguments: []
+    sensitive: false
   setStartValue:
     name: setStartValue
     arguments:
@@ -77,6 +80,8 @@ commands:
             - hour
             - min
             - sec
+    sensitive: false
   pause:
     name: pause
     arguments: []
+    sensitive: false

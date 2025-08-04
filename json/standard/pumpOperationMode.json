@@ -83,7 +83,8 @@
             "enum": ["normal", "minimum", "maximum", "localSetting"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

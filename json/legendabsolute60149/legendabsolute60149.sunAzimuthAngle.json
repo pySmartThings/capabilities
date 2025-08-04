@@ -24,7 +24,8 @@
       "name": "setSunAzimuthAngle",
       "arguments": [
         { "name": "value", "optional": false, "schema": { "type": "number" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

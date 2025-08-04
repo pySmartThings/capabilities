@@ -43,3 +43,4 @@ commands:
         schema:
           type: string
           maxLength: 4
+    sensitive: false

@@ -8,3 +8,4 @@ commands:
   beep:
     name: beep
     arguments: []
+    sensitive: false

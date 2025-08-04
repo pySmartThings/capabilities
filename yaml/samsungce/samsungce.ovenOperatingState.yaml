@@ -93,12 +93,16 @@ commands:
         schema:
           type: string
           pattern: ^\d\d+:[0-5]\d:[0-5]\d$
+    sensitive: false
   stop:
     name: stop
     arguments: []
+    sensitive: false
   start:
     name: start
     arguments: []
+    sensitive: false
   pause:
     name: pause
     arguments: []
+    sensitive: false

@@ -29,3 +29,4 @@ commands:
           enum:
             - normal
             - status
+    sensitive: false

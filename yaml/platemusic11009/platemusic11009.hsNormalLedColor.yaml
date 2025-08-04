@@ -39,3 +39,4 @@ commands:
             - yellow
             - cyan
             - white
+    sensitive: false

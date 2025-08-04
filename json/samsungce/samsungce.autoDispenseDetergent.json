@@ -148,7 +148,8 @@
   "commands": {
     "unsetRecommendedAmount": {
       "name": "unsetRecommendedAmount",
-      "arguments": []
+      "arguments": [],
+      "sensitive": false
     },
     "setRecommendedAmount": {
       "name": "setRecommendedAmount",
@@ -166,7 +167,8 @@
           "optional": false,
           "schema": { "type": "integer", "minimum": 1, "maximum": 20 }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setType": {
       "name": "setType",
@@ -179,7 +181,8 @@
             "enum": ["regularDetergent", "scannedRegularDetergent"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setAmount": {
       "name": "setAmount",
@@ -192,7 +195,8 @@
             "enum": ["none", "less", "standard", "extra", "custom"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setDensity": {
       "name": "setDensity",
@@ -205,7 +209,8 @@
             "enum": ["none", "normal", "high", "extraHigh", "custom"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

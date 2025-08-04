@@ -92,3 +92,4 @@ commands:
   resetHoodFilter:
     name: resetHoodFilter
     arguments: []
+    sensitive: false

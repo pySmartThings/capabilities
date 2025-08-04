@@ -36,3 +36,4 @@ commands:
         optional: false
         schema:
           type: object
+    sensitive: false

@@ -10,7 +10,8 @@
       "name": "cookCustomRecipe",
       "arguments": [
         { "name": "payload", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

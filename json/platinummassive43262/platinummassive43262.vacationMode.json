@@ -21,7 +21,7 @@
     }
   },
   "commands": {
-    "vacation": { "name": "vacation", "arguments": [] },
-    "off": { "name": "off", "arguments": [] }
+    "vacation": { "name": "vacation", "arguments": [], "sensitive": false },
+    "off": { "name": "off", "arguments": [], "sensitive": false }
   }
 }

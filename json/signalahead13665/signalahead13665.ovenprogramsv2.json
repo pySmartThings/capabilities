@@ -101,7 +101,7 @@
     }
   },
   "commands": {
-    "stop": { "name": "stop", "arguments": [] },
+    "stop": { "name": "stop", "arguments": [], "sensitive": false },
     "setProgram": {
       "name": "setProgram",
       "arguments": [
@@ -127,7 +127,8 @@
             ]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

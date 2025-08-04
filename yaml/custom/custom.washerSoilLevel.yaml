@@ -64,3 +64,4 @@ commands:
             - up
             - down
           type: string
+    sensitive: false

@@ -23,6 +23,8 @@ commands:
   previousTrack:
     name: previousTrack
     arguments: []
+    sensitive: false
   nextTrack:
     name: nextTrack
     arguments: []
+    sensitive: false

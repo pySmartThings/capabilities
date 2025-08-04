@@ -63,6 +63,7 @@ commands:
   fanOn:
     name: fanOn
     arguments: []
+    sensitive: false
   setThermostatFanMode:
     name: setThermostatFanMode
     arguments:
@@ -76,9 +77,12 @@ commands:
             - circulate
             - followschedule
             - "on"
+    sensitive: false
   fanAuto:
     name: fanAuto
     arguments: []
+    sensitive: false
   fanCirculate:
     name: fanCirculate
     arguments: []
+    sensitive: false

@@ -48,3 +48,4 @@ commands:
             - "off"
             - enabled
             - suppressed
+    sensitive: false

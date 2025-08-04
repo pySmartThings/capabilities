@@ -130,7 +130,8 @@
             }
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "capture": {
       "name": "capture",
@@ -182,7 +183,8 @@
           "optional": true,
           "schema": { "type": "integer" }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "uploadFailed": {
       "name": "uploadFailed",
@@ -201,7 +203,8 @@
           "optional": false,
           "schema": { "title": "JsonObject", "type": "object" }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "stopCapture": {
       "name": "stopCapture",
@@ -215,7 +218,8 @@
             "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

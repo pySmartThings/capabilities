@@ -56,3 +56,4 @@ commands:
             - kimchiStorageLowSaltLowCooling
             - kimchiStorageSeasonal
             - kimchiStorageScanKeep
+    sensitive: false

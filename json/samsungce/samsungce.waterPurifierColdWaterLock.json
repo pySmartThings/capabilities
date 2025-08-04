@@ -18,7 +18,7 @@
     }
   },
   "commands": {
-    "unlock": { "name": "unlock", "arguments": [] },
-    "lock": { "name": "lock", "arguments": [] }
+    "unlock": { "name": "unlock", "arguments": [], "sensitive": false },
+    "lock": { "name": "lock", "arguments": [], "sensitive": false }
   }
 }

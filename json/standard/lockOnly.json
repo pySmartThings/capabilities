@@ -21,5 +21,7 @@
       "enumCommands": [{ "command": "lock", "value": "locked" }]
     }
   },
-  "commands": { "lock": { "name": "lock", "arguments": [] } }
+  "commands": {
+    "lock": { "name": "lock", "arguments": [], "sensitive": false }
+  }
 }

@@ -27,3 +27,4 @@ commands:
           type: number
           minimum: 0
           maximum: 255
+    sensitive: false

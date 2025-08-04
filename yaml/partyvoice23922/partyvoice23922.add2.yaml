@@ -8,3 +8,4 @@ commands:
   push:
     name: push
     arguments: []
+    sensitive: false

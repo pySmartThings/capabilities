@@ -36,6 +36,7 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false
   setLedBarOnColor:
     name: setLedBarOnColor
     arguments:
@@ -43,3 +44,4 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false

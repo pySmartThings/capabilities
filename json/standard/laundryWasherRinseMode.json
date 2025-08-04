@@ -53,7 +53,8 @@
             "enum": ["none", "normal", "extra", "max"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

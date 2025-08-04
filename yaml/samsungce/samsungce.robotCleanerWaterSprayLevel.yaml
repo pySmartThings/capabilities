@@ -75,3 +75,4 @@ commands:
             - medium
             - mediumLow
             - low
+    sensitive: false

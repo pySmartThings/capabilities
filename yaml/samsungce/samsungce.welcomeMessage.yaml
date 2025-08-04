@@ -23,6 +23,7 @@ commands:
   deleteWelcomeMessage:
     name: deleteWelcomeMessage
     arguments: []
+    sensitive: false
   setWelcomeMessage:
     name: setWelcomeMessage
     arguments:
@@ -34,3 +35,4 @@ commands:
           properties:
             text:
               type: string
+    sensitive: false

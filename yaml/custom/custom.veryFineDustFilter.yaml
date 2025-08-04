@@ -92,3 +92,4 @@ commands:
   resetVeryFineDustFilter:
     name: resetVeryFineDustFilter
     arguments: []
+    sensitive: false

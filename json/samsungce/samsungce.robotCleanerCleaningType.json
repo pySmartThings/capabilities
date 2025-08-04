@@ -55,7 +55,8 @@
             "enum": ["mop", "vacuum", "vacuumAndMopTogether", "mopAfterVacuum"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

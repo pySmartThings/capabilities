@@ -105,6 +105,7 @@ commands:
   stop:
     name: stop
     arguments: []
+    sensitive: false
   setMachineState:
     name: setMachineState
     arguments:
@@ -114,6 +115,7 @@ commands:
           type: string
           enum:
             - stop
+    sensitive: false
   start:
     name: start
     arguments:
@@ -164,3 +166,4 @@ commands:
           title: PositiveInteger
           type: integer
           minimum: 0
+    sensitive: false

@@ -44,7 +44,8 @@
           "optional": false,
           "schema": { "type": "boolean" }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "stfInstalled": {
       "name": "stfInstalled",
@@ -54,7 +55,8 @@
           "optional": false,
           "schema": { "type": "string" }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "stfUninstalled": {
       "name": "stfUninstalled",
@@ -64,7 +66,8 @@
           "optional": false,
           "schema": { "type": "string" }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

@@ -28,7 +28,8 @@
           "optional": false,
           "schema": { "type": "number", "minimum": 0, "maximum": 7000 }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

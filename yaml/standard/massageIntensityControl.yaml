@@ -74,6 +74,7 @@ commands:
         optional: false
         schema:
           type: integer
+    sensitive: false
   setIntensityWhole:
     name: setIntensityWhole
     arguments:
@@ -81,6 +82,7 @@ commands:
         optional: false
         schema:
           type: integer
+    sensitive: false
   setIntensityHead:
     name: setIntensityHead
     arguments:
@@ -88,3 +90,4 @@ commands:
         optional: false
         schema:
           type: integer
+    sensitive: false

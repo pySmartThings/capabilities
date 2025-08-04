@@ -162,6 +162,7 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false
   clientIce:
     name: clientIce
     arguments:
@@ -185,6 +186,7 @@ commands:
             - candidate
             - sdpMid
             - sdpMLineIndex
+    sensitive: false
   sdpOffer:
     name: sdpOffer
     arguments:
@@ -212,6 +214,7 @@ commands:
               type: string
           required:
             - urls
+    sensitive: false
   stopTalkback:
     name: stopTalkback
     arguments:
@@ -219,6 +222,7 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false
   requestTurnInfo:
     name: requestTurnInfo
     arguments:
@@ -226,6 +230,7 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false
   end:
     name: end
     arguments:
@@ -233,3 +238,4 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false

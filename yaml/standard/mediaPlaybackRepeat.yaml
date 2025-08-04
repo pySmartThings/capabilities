@@ -31,3 +31,4 @@ commands:
             - all
             - "off"
             - one
+    sensitive: false

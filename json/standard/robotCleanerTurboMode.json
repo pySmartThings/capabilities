@@ -33,7 +33,8 @@
             "enum": ["on", "off", "silence", "extraSilence"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

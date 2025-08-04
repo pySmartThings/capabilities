@@ -75,3 +75,4 @@ commands:
             - constantFlow
             - constantTemperature
             - automatic
+    sensitive: false

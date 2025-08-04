@@ -20,7 +20,8 @@
       "name": "setFirmwareVersion",
       "arguments": [
         { "name": "version", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

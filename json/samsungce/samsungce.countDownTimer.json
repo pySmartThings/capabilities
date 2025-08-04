@@ -50,9 +50,9 @@
     }
   },
   "commands": {
-    "resume": { "name": "resume", "arguments": [] },
-    "cancel": { "name": "cancel", "arguments": [] },
-    "start": { "name": "start", "arguments": [] },
+    "resume": { "name": "resume", "arguments": [], "sensitive": false },
+    "cancel": { "name": "cancel", "arguments": [], "sensitive": false },
+    "start": { "name": "start", "arguments": [], "sensitive": false },
     "setStartValue": {
       "name": "setStartValue",
       "arguments": [
@@ -66,8 +66,9 @@
           "optional": true,
           "schema": { "type": "string", "enum": ["hour", "min", "sec"] }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "pause": { "name": "pause", "arguments": [] }
+    "pause": { "name": "pause", "arguments": [], "sensitive": false }
   }
 }

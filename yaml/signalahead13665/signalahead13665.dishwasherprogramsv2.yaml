@@ -78,6 +78,7 @@ commands:
   stop:
     name: stop
     arguments: []
+    sensitive: false
   setProgram:
     name: setProgram
     arguments:
@@ -96,3 +97,4 @@ commands:
             - Dishcare_Dishwasher_Program_MachineCare
             - Dishcare_Dishwasher_Program_PreRinse
             - Dishcare_Dishwasher_Program_Glas40
+    sensitive: false

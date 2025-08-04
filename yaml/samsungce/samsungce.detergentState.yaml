@@ -80,6 +80,7 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false
   setInitialAmount:
     name: setInitialAmount
     arguments:
@@ -87,6 +88,7 @@ commands:
         optional: false
         schema:
           type: number
+    sensitive: false
   setRemainingAmount:
     name: setRemainingAmount
     arguments:
@@ -94,6 +96,7 @@ commands:
         optional: false
         schema:
           type: number
+    sensitive: false
   setDosage:
     name: setDosage
     arguments:
@@ -101,3 +104,4 @@ commands:
         optional: false
         schema:
           type: number
+    sensitive: false

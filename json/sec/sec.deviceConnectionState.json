@@ -25,7 +25,8 @@
       "name": "refreshConnection",
       "arguments": [
         { "name": "value", "optional": false, "schema": { "type": "object" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

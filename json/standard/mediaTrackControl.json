@@ -25,7 +25,11 @@
     }
   },
   "commands": {
-    "previousTrack": { "name": "previousTrack", "arguments": [] },
-    "nextTrack": { "name": "nextTrack", "arguments": [] }
+    "previousTrack": {
+      "name": "previousTrack",
+      "arguments": [],
+      "sensitive": false
+    },
+    "nextTrack": { "name": "nextTrack", "arguments": [], "sensitive": false }
   }
 }

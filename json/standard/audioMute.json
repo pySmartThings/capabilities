@@ -38,9 +38,10 @@
             "enum": ["muted", "unmuted"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "mute": { "name": "mute", "arguments": [] },
-    "unmute": { "name": "unmute", "arguments": [] }
+    "mute": { "name": "mute", "arguments": [], "sensitive": false },
+    "unmute": { "name": "unmute", "arguments": [], "sensitive": false }
   }
 }

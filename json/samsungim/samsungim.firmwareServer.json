@@ -33,7 +33,8 @@
             "enum": ["SERVICE", "TEST", "UT", "TEST-UT", "DM", "TEST-DM"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

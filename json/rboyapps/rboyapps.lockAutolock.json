@@ -33,9 +33,18 @@
           "optional": false,
           "schema": { "type": "string", "enum": ["enabled", "disabled"] }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "disableAutolock": { "name": "disableAutolock", "arguments": [] },
-    "enableAutolock": { "name": "enableAutolock", "arguments": [] }
+    "disableAutolock": {
+      "name": "disableAutolock",
+      "arguments": [],
+      "sensitive": false
+    },
+    "enableAutolock": {
+      "name": "enableAutolock",
+      "arguments": [],
+      "sensitive": false
+    }
   }
 }

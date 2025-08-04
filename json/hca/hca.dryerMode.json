@@ -56,7 +56,8 @@
             "enum": ["normal", "mix", "quickDry", "timeDry", "antiWrinkle"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

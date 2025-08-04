@@ -21,8 +21,9 @@
       "name": "setOption",
       "arguments": [
         { "name": "value", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     },
-    "unlock": { "name": "unlock", "arguments": [] }
+    "unlock": { "name": "unlock", "arguments": [], "sensitive": false }
   }
 }

@@ -224,8 +224,8 @@
     }
   },
   "commands": {
-    "heat": { "name": "heat", "arguments": [] },
-    "auto": { "name": "auto", "arguments": [] },
+    "heat": { "name": "heat", "arguments": [], "sensitive": false },
+    "auto": { "name": "auto", "arguments": [], "sensitive": false },
     "setThermostatMode": {
       "name": "setThermostatMode",
       "arguments": [
@@ -292,10 +292,15 @@
             ]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "cool": { "name": "cool", "arguments": [] },
-    "emergencyHeat": { "name": "emergencyHeat", "arguments": [] },
-    "off": { "name": "off", "arguments": [] }
+    "cool": { "name": "cool", "arguments": [], "sensitive": false },
+    "emergencyHeat": {
+      "name": "emergencyHeat",
+      "arguments": [],
+      "sensitive": false
+    },
+    "off": { "name": "off", "arguments": [], "sensitive": false }
   }
 }

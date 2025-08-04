@@ -49,6 +49,7 @@ commands:
             - manual
             - userLocationBased
           default: manual
+    sensitive: false
   setUserLocation:
     name: setUserLocation
     arguments:
@@ -59,3 +60,4 @@ commands:
           enum:
             - indoor
             - outdoor
+    sensitive: false

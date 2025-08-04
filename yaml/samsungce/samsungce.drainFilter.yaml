@@ -70,3 +70,4 @@ commands:
   resetDrainFilter:
     name: resetDrainFilter
     arguments: []
+    sensitive: false

@@ -90,6 +90,7 @@ commands:
                 - memo
                 - cycle
                 - options
+    sensitive: false
   delete:
     name: delete
     arguments:
@@ -100,3 +101,4 @@ commands:
           items:
             type: string
             pattern: ^.{1,32}$
+    sensitive: false

@@ -103,6 +103,8 @@ commands:
               required:
                 - cycle
                 - options
+    sensitive: false
   delete:
     name: delete
     arguments: []
+    sensitive: false

@@ -141,7 +141,8 @@
       "name": "startTalkback",
       "arguments": [
         { "name": "id", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     },
     "clientIce": {
       "name": "clientIce",
@@ -161,7 +162,8 @@
             "required": ["candidate", "sdpMid", "sdpMLineIndex"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "sdpOffer": {
       "name": "sdpOffer",
@@ -182,25 +184,29 @@
             "required": ["urls"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "stopTalkback": {
       "name": "stopTalkback",
       "arguments": [
         { "name": "id", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     },
     "requestTurnInfo": {
       "name": "requestTurnInfo",
       "arguments": [
         { "name": "id", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     },
     "end": {
       "name": "end",
       "arguments": [
         { "name": "id", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

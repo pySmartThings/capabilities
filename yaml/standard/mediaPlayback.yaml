@@ -53,15 +53,19 @@ commands:
   play:
     name: play
     arguments: []
+    sensitive: false
   stop:
     name: stop
     arguments: []
+    sensitive: false
   rewind:
     name: rewind
     arguments: []
+    sensitive: false
   fastForward:
     name: fastForward
     arguments: []
+    sensitive: false
   setPlaybackStatus:
     name: setPlaybackStatus
     arguments:
@@ -75,6 +79,8 @@ commands:
             - stopped
             - fast forwarding
             - rewinding
+    sensitive: false
   pause:
     name: pause
     arguments: []
+    sensitive: false

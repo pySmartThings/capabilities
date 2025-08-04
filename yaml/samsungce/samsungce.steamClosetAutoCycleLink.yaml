@@ -29,6 +29,7 @@ commands:
           enum:
             - "on"
             - "off"
+    sensitive: false
   linkSteamClosetCycle:
     name: linkSteamClosetCycle
     arguments:
@@ -37,3 +38,4 @@ commands:
         schema:
           type: string
           pattern: ^AutoLinkCycle(_([A-Z]|[a-z]|\d){4})+$
+    sensitive: false

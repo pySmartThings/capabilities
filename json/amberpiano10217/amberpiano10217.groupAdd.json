@@ -24,8 +24,9 @@
           "optional": false,
           "schema": { "type": "number", "minimum": 0, "maximum": 65535 }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "push": { "name": "push", "arguments": [] }
+    "push": { "name": "push", "arguments": [], "sensitive": false }
   }
 }

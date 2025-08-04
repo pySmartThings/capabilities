@@ -47,7 +47,8 @@
             "enum": ["none", "cold", "warm", "hot"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

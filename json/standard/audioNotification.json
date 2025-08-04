@@ -19,7 +19,8 @@
           "optional": true,
           "schema": { "type": "integer", "minimum": 0, "maximum": 100 }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "playTrackAndRestore": {
       "name": "playTrackAndRestore",
@@ -34,7 +35,8 @@
           "optional": true,
           "schema": { "type": "integer", "minimum": 0, "maximum": 100 }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "playTrack": {
       "name": "playTrack",
@@ -49,7 +51,8 @@
           "optional": true,
           "schema": { "type": "integer", "minimum": 0, "maximum": 100 }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

@@ -8,3 +8,4 @@ commands:
   configure:
     name: configure
     arguments: []
+    sensitive: false

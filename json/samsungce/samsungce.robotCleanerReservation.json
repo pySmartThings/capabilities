@@ -86,7 +86,8 @@
             "required": ["enabled", "dayOfWeek", "startTime", "cleaningMode"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "deleteReservations": {
       "name": "deleteReservations",
@@ -100,7 +101,8 @@
             "items": { "type": "string" }
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "editReservation": {
       "name": "editReservation",
@@ -138,7 +140,8 @@
             ]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "deleteReservation": {
       "name": "deleteReservation",
@@ -148,7 +151,8 @@
           "optional": false,
           "schema": { "type": "string", "additionalProperties": false }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

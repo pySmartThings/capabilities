@@ -58,6 +58,7 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false
   setEnableState:
     name: setEnableState
     arguments:
@@ -69,6 +70,7 @@ commands:
           enum:
             - enabled
             - disabled
+    sensitive: false
   setGeofence:
     name: setGeofence
     arguments:
@@ -85,3 +87,4 @@ commands:
               type: number
             radius:
               type: number
+    sensitive: false

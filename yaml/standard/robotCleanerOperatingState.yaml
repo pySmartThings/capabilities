@@ -89,9 +89,12 @@ commands:
   goHome:
     name: goHome
     arguments: []
+    sensitive: false
   start:
     name: start
     arguments: []
+    sensitive: false
   pause:
     name: pause
     arguments: []
+    sensitive: false

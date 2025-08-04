@@ -45,6 +45,7 @@ commands:
         optional: false
         schema:
           type: boolean
+    sensitive: false
   requestDrlcAction:
     name: requestDrlcAction
     arguments:
@@ -80,3 +81,4 @@ commands:
           title: PositiveInteger
           type: integer
           minimum: 0
+    sensitive: false

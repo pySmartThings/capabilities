@@ -31,13 +31,15 @@
       "name": "setSource",
       "arguments": [
         { "name": "value", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     },
     "setAppName": {
       "name": "setAppName",
       "arguments": [
         { "name": "value", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

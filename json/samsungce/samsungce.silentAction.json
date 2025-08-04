@@ -5,5 +5,11 @@
   "name": "Silent Action",
   "ephemeral": false,
   "attributes": {},
-  "commands": { "actSilently": { "name": "actSilently", "arguments": [] } }
+  "commands": {
+    "actSilently": {
+      "name": "actSilently",
+      "arguments": [],
+      "sensitive": false
+    }
+  }
 }

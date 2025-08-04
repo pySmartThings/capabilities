@@ -51,7 +51,8 @@
             "pattern": "^((0|[1-9][0-9]|100)%|\\d+W|high|medium|low)$"
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

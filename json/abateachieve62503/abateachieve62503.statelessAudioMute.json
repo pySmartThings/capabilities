@@ -5,5 +5,7 @@
   "name": "Stateless Audio Mute",
   "ephemeral": false,
   "attributes": {},
-  "commands": { "muted": { "name": "muted", "arguments": [] } }
+  "commands": {
+    "muted": { "name": "muted", "arguments": [], "sensitive": false }
+  }
 }

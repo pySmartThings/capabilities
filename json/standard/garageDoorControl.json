@@ -24,7 +24,7 @@
     }
   },
   "commands": {
-    "close": { "name": "close", "arguments": [] },
-    "open": { "name": "open", "arguments": [] }
+    "close": { "name": "close", "arguments": [], "sensitive": false },
+    "open": { "name": "open", "arguments": [], "sensitive": false }
   }
 }

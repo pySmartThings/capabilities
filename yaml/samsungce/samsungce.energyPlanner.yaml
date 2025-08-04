@@ -70,6 +70,7 @@ commands:
             - costSaving
             - carbonReducing
             - none
+    sensitive: false
   setData:
     name: setData
     arguments:
@@ -107,3 +108,4 @@ commands:
             - end
             - interval
             - values
+    sensitive: false

@@ -60,7 +60,7 @@
     }
   },
   "commands": {
-    "fanOn": { "name": "fanOn", "arguments": [] },
+    "fanOn": { "name": "fanOn", "arguments": [], "sensitive": false },
     "setThermostatFanMode": {
       "name": "setThermostatFanMode",
       "arguments": [
@@ -73,9 +73,14 @@
             "enum": ["auto", "circulate", "followschedule", "on"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "fanAuto": { "name": "fanAuto", "arguments": [] },
-    "fanCirculate": { "name": "fanCirculate", "arguments": [] }
+    "fanAuto": { "name": "fanAuto", "arguments": [], "sensitive": false },
+    "fanCirculate": {
+      "name": "fanCirculate",
+      "arguments": [],
+      "sensitive": false
+    }
   }
 }

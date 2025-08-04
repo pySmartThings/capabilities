@@ -72,7 +72,7 @@
     }
   },
   "commands": {
-    "play": { "name": "play", "arguments": [] },
+    "play": { "name": "play", "arguments": [], "sensitive": false },
     "restoreTrack": {
       "name": "restoreTrack",
       "arguments": [
@@ -81,7 +81,8 @@
           "optional": false,
           "schema": { "title": "String", "type": "string", "maxLength": 255 }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "resumeTrack": {
       "name": "resumeTrack",
@@ -91,12 +92,17 @@
           "optional": false,
           "schema": { "title": "String", "type": "string", "maxLength": 255 }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "stop": { "name": "stop", "arguments": [] },
-    "previousTrack": { "name": "previousTrack", "arguments": [] },
-    "nextTrack": { "name": "nextTrack", "arguments": [] },
-    "mute": { "name": "mute", "arguments": [] },
+    "stop": { "name": "stop", "arguments": [], "sensitive": false },
+    "previousTrack": {
+      "name": "previousTrack",
+      "arguments": [],
+      "sensitive": false
+    },
+    "nextTrack": { "name": "nextTrack", "arguments": [], "sensitive": false },
+    "mute": { "name": "mute", "arguments": [], "sensitive": false },
     "setTrack": {
       "name": "setTrack",
       "arguments": [
@@ -105,9 +111,10 @@
           "optional": false,
           "schema": { "title": "String", "type": "string", "maxLength": 255 }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "unmute": { "name": "unmute", "arguments": [] },
+    "unmute": { "name": "unmute", "arguments": [], "sensitive": false },
     "playTrack": {
       "name": "playTrack",
       "arguments": [
@@ -116,9 +123,10 @@
           "optional": false,
           "schema": { "title": "String", "type": "string", "maxLength": 255 }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "pause": { "name": "pause", "arguments": [] },
+    "pause": { "name": "pause", "arguments": [], "sensitive": false },
     "setLevel": {
       "name": "setLevel",
       "arguments": [
@@ -131,7 +139,8 @@
             "minimum": 0
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

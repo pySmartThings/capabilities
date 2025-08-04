@@ -5,5 +5,11 @@
   "name": "Ambient18",
   "ephemeral": false,
   "attributes": {},
-  "commands": { "setAmbientOn": { "name": "setAmbientOn", "arguments": [] } }
+  "commands": {
+    "setAmbientOn": {
+      "name": "setAmbientOn",
+      "arguments": [],
+      "sensitive": false
+    }
+  }
 }

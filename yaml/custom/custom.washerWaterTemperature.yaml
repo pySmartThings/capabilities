@@ -115,3 +115,4 @@ commands:
             - medium
             - high
           type: string
+    sensitive: false

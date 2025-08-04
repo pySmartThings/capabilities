@@ -85,3 +85,4 @@ commands:
             - motionIndirect
             - motionDirect
           type: string
+    sensitive: false

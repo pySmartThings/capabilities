@@ -33,13 +33,15 @@
       "name": "setLedBarOnLevel",
       "arguments": [
         { "name": "level", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     },
     "setLedBarOnColor": {
       "name": "setLedBarOnColor",
       "arguments": [
         { "name": "color", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

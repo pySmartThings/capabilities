@@ -124,3 +124,4 @@ commands:
             - drum40
             - drum60
           type: string
+    sensitive: false

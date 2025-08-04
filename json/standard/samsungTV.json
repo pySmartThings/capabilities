@@ -105,9 +105,10 @@
             "enum": ["dynamic", "movie", "standard"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "volumeDown": { "name": "volumeDown", "arguments": [] },
+    "volumeDown": { "name": "volumeDown", "arguments": [], "sensitive": false },
     "setSoundMode": {
       "name": "setSoundMode",
       "arguments": [
@@ -119,7 +120,8 @@
             "enum": ["clear voice", "movie", "music", "standard"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "showMessage": {
       "name": "showMessage",
@@ -144,11 +146,12 @@
           "optional": false,
           "schema": { "title": "String", "type": "string", "maxLength": 255 }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "volumeUp": { "name": "volumeUp", "arguments": [] },
-    "mute": { "name": "mute", "arguments": [] },
-    "unmute": { "name": "unmute", "arguments": [] },
+    "volumeUp": { "name": "volumeUp", "arguments": [], "sensitive": false },
+    "mute": { "name": "mute", "arguments": [], "sensitive": false },
+    "unmute": { "name": "unmute", "arguments": [], "sensitive": false },
     "setVolume": {
       "name": "setVolume",
       "arguments": [
@@ -161,9 +164,10 @@
             "minimum": 0
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "off": { "name": "off", "arguments": [] },
-    "on": { "name": "on", "arguments": [] }
+    "off": { "name": "off", "arguments": [], "sensitive": false },
+    "on": { "name": "on", "arguments": [], "sensitive": false }
   }
 }

@@ -32,7 +32,8 @@
           "optional": false,
           "schema": { "type": "string", "enum": ["fanspeedUp", "fanspeedDown"] }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

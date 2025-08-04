@@ -25,6 +25,8 @@ commands:
   autolock:
     name: autolock
     arguments: []
+    sensitive: false
   "off":
     name: "off"
     arguments: []
+    sensitive: false

@@ -92,3 +92,4 @@ commands:
   resetHepaFilter:
     name: resetHepaFilter
     arguments: []
+    sensitive: false

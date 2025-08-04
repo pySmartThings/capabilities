@@ -19,7 +19,7 @@
     }
   },
   "commands": {
-    "push": { "name": "push", "arguments": [] },
+    "push": { "name": "push", "arguments": [], "sensitive": false },
     "remove": {
       "name": "remove",
       "arguments": [
@@ -28,7 +28,8 @@
           "optional": true,
           "schema": { "type": "number", "minimum": 0, "maximum": 65535 }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

@@ -157,5 +157,7 @@
       "enumCommands": []
     }
   },
-  "commands": { "ping": { "name": "ping", "arguments": [] } }
+  "commands": {
+    "ping": { "name": "ping", "arguments": [], "sensitive": false }
+  }
 }

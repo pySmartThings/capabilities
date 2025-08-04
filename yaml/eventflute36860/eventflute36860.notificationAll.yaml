@@ -60,6 +60,7 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false
   setNotificationDuration:
     name: setNotificationDuration
     arguments:
@@ -67,6 +68,7 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false
   setNotificationColor:
     name: setNotificationColor
     arguments:
@@ -74,6 +76,7 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false
   setNotificationEffect:
     name: setNotificationEffect
     arguments:
@@ -81,3 +84,4 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false

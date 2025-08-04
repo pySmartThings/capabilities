@@ -22,7 +22,8 @@
       "name": "setButton",
       "arguments": [
         { "name": "button", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

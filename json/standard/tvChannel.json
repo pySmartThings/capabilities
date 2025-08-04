@@ -31,7 +31,11 @@
     }
   },
   "commands": {
-    "channelDown": { "name": "channelDown", "arguments": [] },
+    "channelDown": {
+      "name": "channelDown",
+      "arguments": [],
+      "sensitive": false
+    },
     "setTvChannel": {
       "name": "setTvChannel",
       "arguments": [
@@ -40,9 +44,10 @@
           "optional": false,
           "schema": { "title": "String", "type": "string", "maxLength": 255 }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "channelUp": { "name": "channelUp", "arguments": [] },
+    "channelUp": { "name": "channelUp", "arguments": [], "sensitive": false },
     "setTvChannelName": {
       "name": "setTvChannelName",
       "arguments": [
@@ -51,7 +56,8 @@
           "optional": true,
           "schema": { "title": "String", "type": "string", "maxLength": 255 }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

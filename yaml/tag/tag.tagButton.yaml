@@ -31,6 +31,7 @@ commands:
           enum:
             - enabled
             - disabled
+    sensitive: false
   setButtonTriplePush:
     name: setButtonTriplePush
     arguments:
@@ -42,6 +43,7 @@ commands:
           enum:
             - enabled
             - disabled
+    sensitive: false
   setButtonPush:
     name: setButtonPush
     arguments:
@@ -53,6 +55,7 @@ commands:
           enum:
             - enabled
             - disabled
+    sensitive: false
   setButtonHold:
     name: setButtonHold
     arguments:
@@ -64,3 +67,4 @@ commands:
           enum:
             - enabled
             - disabled
+    sensitive: false

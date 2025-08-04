@@ -95,3 +95,4 @@ commands:
   resetDeodorFilter:
     name: resetDeodorFilter
     arguments: []
+    sensitive: false

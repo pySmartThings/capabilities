@@ -161,6 +161,7 @@ commands:
             - meatType
             - agingMethod
             - zones
+    sensitive: false
   cancelAging:
     name: cancelAging
     arguments:
@@ -169,6 +170,7 @@ commands:
         schema:
           type: integer
           minimum: 0
+    sensitive: false
   updateAging:
     name: updateAging
     arguments:
@@ -209,3 +211,4 @@ commands:
             - meatType
             - agingMethod
             - zones
+    sensitive: false

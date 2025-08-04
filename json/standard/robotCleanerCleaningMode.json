@@ -33,7 +33,8 @@
             "enum": ["auto", "part", "repeat", "manual", "stop", "map"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

@@ -106,6 +106,7 @@ commands:
             - dayOfWeek
             - startTime
             - cleaningMode
+    sensitive: false
   deleteReservations:
     name: deleteReservations
     arguments:
@@ -116,6 +117,7 @@ commands:
           additionalProperties: false
           items:
             type: string
+    sensitive: false
   editReservation:
     name: editReservation
     arguments:
@@ -161,6 +163,7 @@ commands:
             - dayOfWeek
             - startTime
             - cleaningMode
+    sensitive: false
   deleteReservation:
     name: deleteReservation
     arguments:
@@ -169,3 +172,4 @@ commands:
         schema:
           type: string
           additionalProperties: false
+    sensitive: false
