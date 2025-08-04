@@ -55,6 +55,8 @@ commands:
   call:
     name: call
     arguments: []
+    sensitive: false
   cancel:
     name: cancel
     arguments: []
+    sensitive: false

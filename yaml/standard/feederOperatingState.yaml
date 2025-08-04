@@ -24,3 +24,4 @@ commands:
   startFeeding:
     name: startFeeding
     arguments: []
+    sensitive: false

@@ -47,7 +47,11 @@
     }
   },
   "commands": {
-    "update": { "name": "update", "arguments": [] },
-    "getScanResults": { "name": "getScanResults", "arguments": [] }
+    "update": { "name": "update", "arguments": [], "sensitive": false },
+    "getScanResults": {
+      "name": "getScanResults",
+      "arguments": [],
+      "sensitive": false
+    }
   }
 }

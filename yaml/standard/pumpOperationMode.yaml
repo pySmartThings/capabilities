@@ -83,3 +83,4 @@ commands:
             - minimum
             - maximum
             - localSetting
+    sensitive: false

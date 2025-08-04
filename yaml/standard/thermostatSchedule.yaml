@@ -24,3 +24,4 @@ commands:
         schema:
           title: JsonObject
           type: object
+    sensitive: false

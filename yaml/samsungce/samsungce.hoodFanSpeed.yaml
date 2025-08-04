@@ -54,3 +54,4 @@ commands:
         optional: false
         schema:
           type: integer
+    sensitive: false

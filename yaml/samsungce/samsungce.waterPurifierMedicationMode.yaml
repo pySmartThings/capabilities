@@ -20,3 +20,4 @@ commands:
           enum:
             - cc
           default: cc
+    sensitive: false

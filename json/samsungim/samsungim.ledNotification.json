@@ -21,11 +21,13 @@
   "commands": {
     "enableLedNotification": {
       "name": "enableLedNotification",
-      "arguments": []
+      "arguments": [],
+      "sensitive": false
     },
     "disableLedNotification": {
       "name": "disableLedNotification",
-      "arguments": []
+      "arguments": [],
+      "sensitive": false
     }
   }
 }

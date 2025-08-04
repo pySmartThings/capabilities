@@ -37,3 +37,4 @@ commands:
             - manual
             - stop
             - map
+    sensitive: false

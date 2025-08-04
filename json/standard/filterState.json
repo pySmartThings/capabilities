@@ -33,5 +33,11 @@
       "enumCommands": []
     }
   },
-  "commands": { "resetFilter": { "name": "resetFilter", "arguments": [] } }
+  "commands": {
+    "resetFilter": {
+      "name": "resetFilter",
+      "arguments": [],
+      "sensitive": false
+    }
+  }
 }

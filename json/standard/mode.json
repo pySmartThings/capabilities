@@ -43,7 +43,8 @@
       "name": "setMode",
       "arguments": [
         { "name": "mode", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

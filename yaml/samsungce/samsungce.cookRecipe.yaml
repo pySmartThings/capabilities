@@ -171,3 +171,4 @@ commands:
             ^zone[1-9]$:
               type: string
               maxLength: 25
+    sensitive: false

@@ -103,6 +103,7 @@ commands:
             - standard
             - extra
             - custom
+    sensitive: false
   setDensity:
     name: setDensity
     arguments:
@@ -116,3 +117,4 @@ commands:
             - high
             - extraHigh
             - custom
+    sensitive: false

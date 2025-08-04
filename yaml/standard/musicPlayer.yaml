@@ -69,6 +69,7 @@ commands:
   play:
     name: play
     arguments: []
+    sensitive: false
   restoreTrack:
     name: restoreTrack
     arguments:
@@ -78,6 +79,7 @@ commands:
           title: String
           type: string
           maxLength: 255
+    sensitive: false
   resumeTrack:
     name: resumeTrack
     arguments:
@@ -87,18 +89,23 @@ commands:
           title: String
           type: string
           maxLength: 255
+    sensitive: false
   stop:
     name: stop
     arguments: []
+    sensitive: false
   previousTrack:
     name: previousTrack
     arguments: []
+    sensitive: false
   nextTrack:
     name: nextTrack
     arguments: []
+    sensitive: false
   mute:
     name: mute
     arguments: []
+    sensitive: false
   setTrack:
     name: setTrack
     arguments:
@@ -108,9 +115,11 @@ commands:
           title: String
           type: string
           maxLength: 255
+    sensitive: false
   unmute:
     name: unmute
     arguments: []
+    sensitive: false
   playTrack:
     name: playTrack
     arguments:
@@ -120,9 +129,11 @@ commands:
           title: String
           type: string
           maxLength: 255
+    sensitive: false
   pause:
     name: pause
     arguments: []
+    sensitive: false
   setLevel:
     name: setLevel
     arguments:
@@ -132,3 +143,4 @@ commands:
           title: PositiveInteger
           type: integer
           minimum: 0
+    sensitive: false

@@ -32,7 +32,15 @@
     }
   },
   "commands": {
-    "startEmptying": { "name": "startEmptying", "arguments": [] },
-    "stopEmptying": { "name": "stopEmptying", "arguments": [] }
+    "startEmptying": {
+      "name": "startEmptying",
+      "arguments": [],
+      "sensitive": false
+    },
+    "stopEmptying": {
+      "name": "stopEmptying",
+      "arguments": [],
+      "sensitive": false
+    }
   }
 }

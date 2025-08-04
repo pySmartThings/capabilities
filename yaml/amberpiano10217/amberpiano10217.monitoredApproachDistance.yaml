@@ -46,3 +46,4 @@ commands:
             - far
             - medium
             - near
+    sensitive: false

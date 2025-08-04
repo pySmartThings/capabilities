@@ -46,3 +46,4 @@ commands:
             - mute
             - voice
             - beep
+    sensitive: false

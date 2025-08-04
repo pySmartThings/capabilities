@@ -17,6 +17,7 @@ attributes:
             - medium
             - high
             - "off"
+            - turbo
       additionalProperties: false
       required: []
     setter: setFanMode
@@ -36,6 +37,7 @@ attributes:
               - medium
               - high
               - "off"
+              - turbo
       additionalProperties: false
       required: []
     enumCommands: []
@@ -54,3 +56,5 @@ commands:
             - medium
             - high
             - "off"
+            - turbo
+    sensitive: false

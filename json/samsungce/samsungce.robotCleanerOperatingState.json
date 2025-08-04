@@ -182,7 +182,7 @@
     }
   },
   "commands": {
-    "resume": { "name": "resume", "arguments": [] },
+    "resume": { "name": "resume", "arguments": [], "sensitive": false },
     "setOperatingState": {
       "name": "setOperatingState",
       "arguments": [
@@ -200,11 +200,20 @@
             ]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "returnToHome": { "name": "returnToHome", "arguments": [] },
-    "start": { "name": "start", "arguments": [] },
-    "pause": { "name": "pause", "arguments": [] },
-    "cancelRemainingJob": { "name": "cancelRemainingJob", "arguments": [] }
+    "returnToHome": {
+      "name": "returnToHome",
+      "arguments": [],
+      "sensitive": false
+    },
+    "start": { "name": "start", "arguments": [], "sensitive": false },
+    "pause": { "name": "pause", "arguments": [], "sensitive": false },
+    "cancelRemainingJob": {
+      "name": "cancelRemainingJob",
+      "arguments": [],
+      "sensitive": false
+    }
   }
 }

@@ -16,7 +16,8 @@
         },
         { "name": "menuId", "optional": false, "schema": { "type": "string" } },
         { "name": "option", "optional": true, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

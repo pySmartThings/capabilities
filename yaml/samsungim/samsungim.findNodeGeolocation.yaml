@@ -106,3 +106,4 @@ commands:
           type: number
           maximum: 180
           minimum: -180
+    sensitive: false

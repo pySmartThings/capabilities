@@ -32,6 +32,7 @@ commands:
   channelDown:
     name: channelDown
     arguments: []
+    sensitive: false
   setTvChannel:
     name: setTvChannel
     arguments:
@@ -41,9 +42,11 @@ commands:
           title: String
           type: string
           maxLength: 255
+    sensitive: false
   channelUp:
     name: channelUp
     arguments: []
+    sensitive: false
   setTvChannelName:
     name: setTvChannelName
     arguments:
@@ -53,3 +56,4 @@ commands:
           title: String
           type: string
           maxLength: 255
+    sensitive: false

@@ -49,3 +49,4 @@ commands:
             - oz
             - servings
           default: g
+    sensitive: false

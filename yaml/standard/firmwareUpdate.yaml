@@ -133,6 +133,8 @@ commands:
   updateFirmware:
     name: updateFirmware
     arguments: []
+    sensitive: false
   checkForFirmwareUpdate:
     name: checkForFirmwareUpdate
     arguments: []
+    sensitive: false

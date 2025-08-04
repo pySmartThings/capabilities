@@ -37,6 +37,8 @@ commands:
         optional: false
         schema:
           type: number
+    sensitive: false
   start:
     name: start
     arguments: []
+    sensitive: false

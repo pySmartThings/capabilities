@@ -25,7 +25,7 @@
     }
   },
   "commands": {
-    "reset": { "name": "reset", "arguments": [] },
+    "reset": { "name": "reset", "arguments": [], "sensitive": false },
     "onboarding": {
       "name": "onboarding",
       "arguments": [
@@ -55,7 +55,8 @@
             "required": ["userId", "locationId", "environment"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

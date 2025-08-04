@@ -12,7 +12,7 @@
           "value": {
             "title": "FanMode",
             "type": "string",
-            "enum": ["auto", "low", "medium", "high", "off"]
+            "enum": ["auto", "low", "medium", "high", "off", "turbo"]
           }
         },
         "additionalProperties": false,
@@ -30,7 +30,7 @@
             "items": {
               "title": "FanMode",
               "type": "string",
-              "enum": ["auto", "low", "medium", "high", "off"]
+              "enum": ["auto", "low", "medium", "high", "off", "turbo"]
             }
           }
         },
@@ -50,10 +50,11 @@
           "schema": {
             "title": "FanMode",
             "type": "string",
-            "enum": ["auto", "low", "medium", "high", "off"]
+            "enum": ["auto", "low", "medium", "high", "off", "turbo"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

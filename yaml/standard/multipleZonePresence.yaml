@@ -47,6 +47,7 @@ commands:
           title: String
           type: string
           maxLength: 255
+    sensitive: false
   createZone:
     name: createZone
     arguments:
@@ -62,6 +63,7 @@ commands:
           title: String
           type: string
           maxLength: 255
+    sensitive: false
   updateZoneName:
     name: updateZoneName
     arguments:
@@ -77,3 +79,4 @@ commands:
           title: String
           type: string
           maxLength: 255
+    sensitive: false

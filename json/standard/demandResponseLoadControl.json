@@ -51,7 +51,8 @@
       "name": "overrideDrlcAction",
       "arguments": [
         { "name": "value", "optional": false, "schema": { "type": "boolean" } }
-      ]
+      ],
+      "sensitive": false
     },
     "requestDrlcAction": {
       "name": "requestDrlcAction",
@@ -103,7 +104,8 @@
             "minimum": 0
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

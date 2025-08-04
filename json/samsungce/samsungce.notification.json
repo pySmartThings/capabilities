@@ -94,7 +94,8 @@
           "optional": false,
           "schema": { "type": "string" }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setContexts": {
       "name": "setContexts",
@@ -117,7 +118,8 @@
             }
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setActionSetting": {
       "name": "setActionSetting",
@@ -139,7 +141,8 @@
             }
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setContentText": {
       "name": "setContentText",
@@ -149,7 +152,8 @@
           "optional": false,
           "schema": { "type": "string" }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

@@ -8,3 +8,4 @@ commands:
   setArtOn:
     name: setArtOn
     arguments: []
+    sensitive: false

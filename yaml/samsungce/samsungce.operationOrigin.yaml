@@ -19,3 +19,4 @@ commands:
             - type: string
             - type: object
             - type: array
+    sensitive: false

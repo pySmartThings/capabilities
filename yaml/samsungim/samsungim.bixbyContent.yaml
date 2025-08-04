@@ -38,3 +38,4 @@ commands:
         optional: true
         schema:
           type: string
+    sensitive: false

@@ -41,7 +41,8 @@
       "name": "setHomeApp",
       "arguments": [
         { "name": "id", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

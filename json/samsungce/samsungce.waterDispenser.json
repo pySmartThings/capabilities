@@ -122,7 +122,8 @@
       "name": "setHotTemperature",
       "arguments": [
         { "name": "value", "optional": false, "schema": { "type": "number" } }
-      ]
+      ],
+      "sensitive": false
     },
     "setMode": {
       "name": "setMode",
@@ -135,7 +136,8 @@
             "enum": ["hotWater", "coldWater", "ambientWater"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setAmount": {
       "name": "setAmount",
@@ -145,7 +147,8 @@
           "optional": false,
           "schema": { "type": "integer", "minimum": 0 }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

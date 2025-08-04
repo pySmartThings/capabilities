@@ -61,7 +61,8 @@
             }
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setHue": {
       "name": "setHue",
@@ -75,7 +76,8 @@
             "minimum": 0
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setSaturation": {
       "name": "setSaturation",
@@ -89,7 +91,8 @@
             "minimum": 0
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

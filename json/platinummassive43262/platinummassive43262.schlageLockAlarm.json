@@ -67,7 +67,7 @@
     }
   },
   "commands": {
-    "tamper": { "name": "tamper", "arguments": [] },
+    "tamper": { "name": "tamper", "arguments": [], "sensitive": false },
     "setForcedSensitivity": {
       "name": "setForcedSensitivity",
       "arguments": [
@@ -76,9 +76,10 @@
           "optional": false,
           "schema": { "type": "integer", "minimum": 1, "maximum": 5 }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "activity": { "name": "activity", "arguments": [] },
+    "activity": { "name": "activity", "arguments": [], "sensitive": false },
     "setAlarmMode": {
       "name": "setAlarmMode",
       "arguments": [
@@ -91,7 +92,8 @@
             "enum": ["off", "activity", "tamper", "forcedentry"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setActivitySensitivity": {
       "name": "setActivitySensitivity",
@@ -101,7 +103,8 @@
           "optional": false,
           "schema": { "type": "integer", "minimum": 1, "maximum": 5 }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setTamperSensitivity": {
       "name": "setTamperSensitivity",
@@ -111,9 +114,14 @@
           "optional": false,
           "schema": { "type": "integer", "minimum": 1, "maximum": 5 }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "forcedentry": { "name": "forcedentry", "arguments": [] },
-    "off": { "name": "off", "arguments": [] }
+    "forcedentry": {
+      "name": "forcedentry",
+      "arguments": [],
+      "sensitive": false
+    },
+    "off": { "name": "off", "arguments": [], "sensitive": false }
   }
 }

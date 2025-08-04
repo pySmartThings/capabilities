@@ -65,6 +65,8 @@ commands:
         optional: false
         schema:
           type: number
+    sensitive: false
   refresh:
     name: refresh
     arguments: []
+    sensitive: false

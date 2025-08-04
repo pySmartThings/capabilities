@@ -103,9 +103,11 @@ commands:
             - dynamic
             - movie
             - standard
+    sensitive: false
   volumeDown:
     name: volumeDown
     arguments: []
+    sensitive: false
   setSoundMode:
     name: setSoundMode
     arguments:
@@ -118,6 +120,7 @@ commands:
             - movie
             - music
             - standard
+    sensitive: false
   showMessage:
     name: showMessage
     arguments:
@@ -145,15 +148,19 @@ commands:
           title: String
           type: string
           maxLength: 255
+    sensitive: false
   volumeUp:
     name: volumeUp
     arguments: []
+    sensitive: false
   mute:
     name: mute
     arguments: []
+    sensitive: false
   unmute:
     name: unmute
     arguments: []
+    sensitive: false
   setVolume:
     name: setVolume
     arguments:
@@ -163,9 +170,12 @@ commands:
           title: PositiveInteger
           type: integer
           minimum: 0
+    sensitive: false
   "off":
     name: "off"
     arguments: []
+    sensitive: false
   "on":
     name: "on"
     arguments: []
+    sensitive: false

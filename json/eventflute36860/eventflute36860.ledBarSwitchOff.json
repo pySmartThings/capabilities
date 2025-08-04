@@ -33,13 +33,15 @@
       "name": "setLedBarOffLevel",
       "arguments": [
         { "name": "level", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     },
     "setLedBarOffColor": {
       "name": "setLedBarOffColor",
       "arguments": [
         { "name": "color", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

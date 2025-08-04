@@ -70,12 +70,16 @@ commands:
   resume:
     name: resume
     arguments: []
+    sensitive: false
   stop:
     name: stop
     arguments: []
+    sensitive: false
   start:
     name: start
     arguments: []
+    sensitive: false
   pause:
     name: pause
     arguments: []
+    sensitive: false

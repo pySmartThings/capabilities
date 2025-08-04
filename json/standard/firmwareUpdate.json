@@ -145,10 +145,15 @@
     }
   },
   "commands": {
-    "updateFirmware": { "name": "updateFirmware", "arguments": [] },
+    "updateFirmware": {
+      "name": "updateFirmware",
+      "arguments": [],
+      "sensitive": false
+    },
     "checkForFirmwareUpdate": {
       "name": "checkForFirmwareUpdate",
-      "arguments": []
+      "arguments": [],
+      "sensitive": false
     }
   }
 }

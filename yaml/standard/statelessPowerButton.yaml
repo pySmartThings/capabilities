@@ -29,3 +29,4 @@ commands:
           enum:
             - powerOn
             - powerOff
+    sensitive: false

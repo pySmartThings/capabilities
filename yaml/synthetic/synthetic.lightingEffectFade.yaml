@@ -159,3 +159,4 @@ commands:
             - fadeType
             - duration
             - effects
+    sensitive: false

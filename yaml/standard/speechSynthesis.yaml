@@ -13,3 +13,4 @@ commands:
         schema:
           type: string
           maxLength: 1000
+    sensitive: false

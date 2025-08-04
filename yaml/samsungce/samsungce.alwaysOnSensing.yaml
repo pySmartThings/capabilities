@@ -45,6 +45,7 @@ commands:
             - devicePlugin
             - automation
             - airCare
+    sensitive: false
   "on":
     name: "on"
     arguments:
@@ -56,3 +57,4 @@ commands:
             - devicePlugin
             - automation
             - airCare
+    sensitive: false

@@ -116,3 +116,4 @@ commands:
             - mid
             - spot
             - swing
+    sensitive: false

@@ -41,8 +41,8 @@
     }
   },
   "commands": {
-    "off": { "name": "off", "arguments": [] },
-    "on": { "name": "on", "arguments": [] },
+    "off": { "name": "off", "arguments": [], "sensitive": false },
+    "on": { "name": "on", "arguments": [], "sensitive": false },
     "setPressureLevel": {
       "name": "setPressureLevel",
       "arguments": [
@@ -51,7 +51,8 @@
           "optional": false,
           "schema": { "type": "string", "enum": ["light", "medium", "firm"] }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

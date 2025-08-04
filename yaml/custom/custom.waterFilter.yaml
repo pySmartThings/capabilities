@@ -92,3 +92,4 @@ commands:
   resetWaterFilter:
     name: resetWaterFilter
     arguments: []
+    sensitive: false

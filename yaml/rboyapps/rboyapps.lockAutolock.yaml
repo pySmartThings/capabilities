@@ -34,9 +34,12 @@ commands:
           enum:
             - enabled
             - disabled
+    sensitive: false
   disableAutolock:
     name: disableAutolock
     arguments: []
+    sensitive: false
   enableAutolock:
     name: enableAutolock
     arguments: []
+    sensitive: false

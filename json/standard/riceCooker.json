@@ -545,7 +545,7 @@
     }
   },
   "commands": {
-    "stop": { "name": "stop", "arguments": [] },
+    "stop": { "name": "stop", "arguments": [], "sensitive": false },
     "startCooking": {
       "name": "startCooking",
       "arguments": [
@@ -554,7 +554,8 @@
           "optional": false,
           "schema": { "title": "String", "type": "string", "maxLength": 255 }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setMode": {
       "name": "setMode",
@@ -568,7 +569,8 @@
             "enum": ["keepWarm", "reheating", "autoClean", "soakInnerPot"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "scheduleCooking": {
       "name": "scheduleCooking",
@@ -587,7 +589,8 @@
           "optional": false,
           "schema": { "title": "String", "type": "string", "maxLength": 255 }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

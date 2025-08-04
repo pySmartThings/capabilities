@@ -396,6 +396,7 @@ commands:
   heat:
     name: heat
     arguments: []
+    sensitive: false
   setSchedule:
     name: setSchedule
     arguments:
@@ -404,15 +405,19 @@ commands:
         schema:
           title: JsonObject
           type: object
+    sensitive: false
   auto:
     name: auto
     arguments: []
+    sensitive: false
   cool:
     name: cool
     arguments: []
+    sensitive: false
   emergencyHeat:
     name: emergencyHeat
     arguments: []
+    sensitive: false
   setThermostatFanMode:
     name: setThermostatFanMode
     arguments:
@@ -426,15 +431,19 @@ commands:
             - circulate
             - followschedule
             - "on"
+    sensitive: false
   fanAuto:
     name: fanAuto
     arguments: []
+    sensitive: false
   fanCirculate:
     name: fanCirculate
     arguments: []
+    sensitive: false
   "off":
     name: "off"
     arguments: []
+    sensitive: false
   setCoolingSetpoint:
     name: setCoolingSetpoint
     arguments:
@@ -445,6 +454,7 @@ commands:
           type: number
           minimum: -460
           maximum: 10000
+    sensitive: false
   setHeatingSetpoint:
     name: setHeatingSetpoint
     arguments:
@@ -455,6 +465,7 @@ commands:
           type: number
           minimum: -460
           maximum: 10000
+    sensitive: false
   setThermostatMode:
     name: setThermostatMode
     arguments:
@@ -501,6 +512,8 @@ commands:
             - rushhour
             - schedule
             - southernaway
+    sensitive: false
   fanOn:
     name: fanOn
     arguments: []
+    sensitive: false

@@ -209,6 +209,7 @@ commands:
           type: number
           minimum: 0
           maximum: 31
+    sensitive: false
   setServiceMessage:
     name: setServiceMessage
     arguments:
@@ -216,3 +217,4 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false

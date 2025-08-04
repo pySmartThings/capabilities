@@ -57,3 +57,4 @@ commands:
             - clothesDrying
             - max
             - smart
+    sensitive: false

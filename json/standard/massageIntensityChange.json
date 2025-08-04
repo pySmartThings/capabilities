@@ -29,7 +29,8 @@
           "optional": false,
           "schema": { "type": "string", "enum": ["head", "foot", "whole"] }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

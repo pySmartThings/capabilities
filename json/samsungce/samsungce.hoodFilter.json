@@ -85,6 +85,10 @@
     }
   },
   "commands": {
-    "resetHoodFilter": { "name": "resetHoodFilter", "arguments": [] }
+    "resetHoodFilter": {
+      "name": "resetHoodFilter",
+      "arguments": [],
+      "sensitive": false
+    }
   }
 }

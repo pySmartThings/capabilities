@@ -51,9 +51,11 @@ commands:
   "off":
     name: "off"
     arguments: []
+    sensitive: false
   "on":
     name: "on"
     arguments: []
+    sensitive: false
   setPressureLevel:
     name: setPressureLevel
     arguments:
@@ -65,3 +67,4 @@ commands:
             - light
             - medium
             - firm
+    sensitive: false

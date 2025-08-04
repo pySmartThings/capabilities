@@ -25,8 +25,8 @@
     }
   },
   "commands": {
-    "refresh": { "name": "refresh", "arguments": [] },
-    "off": { "name": "off", "arguments": [] },
-    "on": { "name": "on", "arguments": [] }
+    "refresh": { "name": "refresh", "arguments": [], "sensitive": false },
+    "off": { "name": "off", "arguments": [], "sensitive": false },
+    "on": { "name": "on", "arguments": [], "sensitive": false }
   }
 }

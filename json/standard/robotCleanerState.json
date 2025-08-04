@@ -103,9 +103,10 @@
             "enum": ["cleaningAuto", "cleaningStop"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "stop": { "name": "stop", "arguments": [] },
+    "stop": { "name": "stop", "arguments": [], "sensitive": false },
     "setRobotCleanerControlState": {
       "name": "setRobotCleanerControlState",
       "arguments": [
@@ -114,7 +115,8 @@
           "optional": false,
           "schema": { "type": "string", "enum": ["controlHoming"] }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setRobotCleanerTurboState": {
       "name": "setRobotCleanerTurboState",
@@ -127,7 +129,8 @@
             "enum": ["turboOff", "turboOn", "turboSilence"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

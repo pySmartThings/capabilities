@@ -28,6 +28,8 @@ commands:
   close:
     name: close
     arguments: []
+    sensitive: false
   open:
     name: open
     arguments: []
+    sensitive: false

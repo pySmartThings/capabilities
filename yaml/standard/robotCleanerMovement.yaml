@@ -45,3 +45,4 @@ commands:
             - after
             - cleaning
             - pause
+    sensitive: false

@@ -92,3 +92,4 @@ commands:
   resetElectricHepaFilter:
     name: resetElectricHepaFilter
     arguments: []
+    sensitive: false

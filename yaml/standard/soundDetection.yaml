@@ -36,11 +36,24 @@ attributes:
               - babyCrying
               - glassBreaking
               - fireAlarm
+              - applianceAlarm
+              - emergencyAlarm
+              - screaming
               - dogBarking
+              - dogGrowling
+              - dogHowling
               - catMeowing
+              - catPurring
               - doorKnocking
+              - doorbell
+              - faucetRunning
+              - hairDrying
+              - kettleBoiling
               - siren
               - fingerSnapping
+              - clapping
+              - coughing
+              - speech
               - snoring
       additionalProperties: false
       required:
@@ -58,11 +71,24 @@ attributes:
             - babyCrying
             - glassBreaking
             - fireAlarm
+            - applianceAlarm
+            - emergencyAlarm
+            - screaming
             - dogBarking
+            - dogGrowling
+            - dogHowling
             - catMeowing
+            - catPurring
             - doorKnocking
+            - doorbell
+            - faucetRunning
+            - hairDrying
+            - kettleBoiling
             - siren
             - fingerSnapping
+            - clapping
+            - coughing
+            - speech
             - snoring
       additionalProperties: false
       required:
@@ -72,6 +98,8 @@ commands:
   disableSoundDetection:
     name: disableSoundDetection
     arguments: []
+    sensitive: false
   enableSoundDetection:
     name: enableSoundDetection
     arguments: []
+    sensitive: false

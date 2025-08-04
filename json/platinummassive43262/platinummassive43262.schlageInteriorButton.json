@@ -21,7 +21,7 @@
     }
   },
   "commands": {
-    "disable": { "name": "disable", "arguments": [] },
-    "enable": { "name": "enable", "arguments": [] }
+    "disable": { "name": "disable", "arguments": [], "sensitive": false },
+    "enable": { "name": "enable", "arguments": [], "sensitive": false }
   }
 }

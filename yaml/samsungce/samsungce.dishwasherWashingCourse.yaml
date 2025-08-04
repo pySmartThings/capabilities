@@ -195,6 +195,7 @@ commands:
             - eco_08
             - eco_10
             - quick_14
+    sensitive: false
   setCustomCourse:
     name: setCustomCourse
     arguments:
@@ -239,6 +240,7 @@ commands:
             - eco_08
             - eco_10
             - quick_14
+    sensitive: false
   startWashingCourse:
     name: startWashingCourse
     arguments:
@@ -283,6 +285,7 @@ commands:
             - eco_08
             - eco_10
             - quick_14
+    sensitive: false
   startWashingCourseWithOptions:
     name: startWashingCourseWithOptions
     arguments:
@@ -367,3 +370,4 @@ commands:
               type: boolean
             hotAirDry:
               type: boolean
+    sensitive: false

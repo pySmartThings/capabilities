@@ -25,6 +25,7 @@ commands:
   alarmToggle:
     name: alarmToggle
     arguments: []
+    sensitive: false
   setAlarm:
     name: setAlarm
     arguments:
@@ -37,3 +38,4 @@ commands:
             - alert
             - tamper
             - forced
+    sensitive: false

@@ -21,3 +21,4 @@ commands:
   turnWelcomeCareOn:
     name: turnWelcomeCareOn
     arguments: []
+    sensitive: false

@@ -27,6 +27,7 @@ commands:
   disableKeypad:
     name: disableKeypad
     arguments: []
+    sensitive: false
   setKeypad:
     name: setKeypad
     arguments:
@@ -37,6 +38,8 @@ commands:
           enum:
             - enabled
             - disabled
+    sensitive: false
   enableKeypad:
     name: enableKeypad
     arguments: []
+    sensitive: false

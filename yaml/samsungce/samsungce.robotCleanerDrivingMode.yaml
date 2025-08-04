@@ -48,3 +48,4 @@ commands:
             - areaThenWalls
             - wallFirst
             - quickCleaningZigzagPattern
+    sensitive: false

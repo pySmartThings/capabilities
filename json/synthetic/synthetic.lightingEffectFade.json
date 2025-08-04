@@ -150,7 +150,8 @@
             "required": ["state", "fadeType", "duration", "effects"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

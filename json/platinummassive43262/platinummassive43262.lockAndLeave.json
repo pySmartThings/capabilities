@@ -21,7 +21,11 @@
     }
   },
   "commands": {
-    "lockandleave": { "name": "lockandleave", "arguments": [] },
-    "off": { "name": "off", "arguments": [] }
+    "lockandleave": {
+      "name": "lockandleave",
+      "arguments": [],
+      "sensitive": false
+    },
+    "off": { "name": "off", "arguments": [], "sensitive": false }
   }
 }

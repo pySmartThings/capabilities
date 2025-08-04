@@ -41,9 +41,11 @@ commands:
   doNotDisturbOff:
     name: doNotDisturbOff
     arguments: []
+    sensitive: false
   doNotDisturbOn:
     name: doNotDisturbOn
     arguments: []
+    sensitive: false
   setDoNotDisturbMode:
     name: setDoNotDisturbMode
     arguments:
@@ -62,3 +64,4 @@ commands:
           enum:
             - "on"
             - "off"
+    sensitive: false

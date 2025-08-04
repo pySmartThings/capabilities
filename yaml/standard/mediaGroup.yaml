@@ -84,12 +84,15 @@ commands:
   groupVolumeUp:
     name: groupVolumeUp
     arguments: []
+    sensitive: false
   groupVolumeDown:
     name: groupVolumeDown
     arguments: []
+    sensitive: false
   muteGroup:
     name: muteGroup
     arguments: []
+    sensitive: false
   setGroupVolume:
     name: setGroupVolume
     arguments:
@@ -99,9 +102,11 @@ commands:
           type: integer
           minimum: 0
           maximum: 100
+    sensitive: false
   unmuteGroup:
     name: unmuteGroup
     arguments: []
+    sensitive: false
   setGroupMute:
     name: setGroupMute
     arguments:
@@ -113,3 +118,4 @@ commands:
           enum:
             - muted
             - unmuted
+    sensitive: false

@@ -77,9 +77,11 @@ commands:
             - leftDoorShelves
             - rightDoorShelves
           default: mainShelves
+    sensitive: false
   refreshAll:
     name: refreshAll
     arguments: []
+    sensitive: false
   refresh:
     name: refresh
     arguments:
@@ -87,3 +89,4 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false

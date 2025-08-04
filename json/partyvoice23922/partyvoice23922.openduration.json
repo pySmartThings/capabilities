@@ -32,7 +32,8 @@
           "optional": false,
           "schema": { "type": "integer", "minimum": 0, "maximum": 180 }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

@@ -21,8 +21,8 @@
     }
   },
   "commands": {
-    "volumeDown": { "name": "volumeDown", "arguments": [] },
-    "volumeUp": { "name": "volumeUp", "arguments": [] },
+    "volumeDown": { "name": "volumeDown", "arguments": [], "sensitive": false },
+    "volumeUp": { "name": "volumeUp", "arguments": [], "sensitive": false },
     "setVolume": {
       "name": "setVolume",
       "arguments": [
@@ -31,7 +31,8 @@
           "optional": false,
           "schema": { "type": "integer", "minimum": 0, "maximum": 100 }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

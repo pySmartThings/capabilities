@@ -14,7 +14,8 @@
           "optional": false,
           "schema": { "title": "AudioTrackAddress", "type": "object" }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

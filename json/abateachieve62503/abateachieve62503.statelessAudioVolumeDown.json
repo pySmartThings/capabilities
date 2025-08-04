@@ -5,5 +5,7 @@
   "name": "Stateless Audio Volume Down",
   "ephemeral": false,
   "attributes": {},
-  "commands": { "volumeDown": { "name": "volumeDown", "arguments": [] } }
+  "commands": {
+    "volumeDown": { "name": "volumeDown", "arguments": [], "sensitive": false }
+  }
 }

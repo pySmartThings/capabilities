@@ -15,5 +15,7 @@
       "enumCommands": []
     }
   },
-  "commands": { "update": { "name": "update", "arguments": [] } }
+  "commands": {
+    "update": { "name": "update", "arguments": [], "sensitive": false }
+  }
 }

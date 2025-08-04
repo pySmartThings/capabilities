@@ -46,3 +46,4 @@ commands:
             - low
             - medium
             - high
+    sensitive: false

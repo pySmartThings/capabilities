@@ -43,3 +43,4 @@ commands:
           enum:
             - undirected
             - left_right
+    sensitive: false

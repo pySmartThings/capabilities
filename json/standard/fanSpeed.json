@@ -35,7 +35,8 @@
             "minimum": 0
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

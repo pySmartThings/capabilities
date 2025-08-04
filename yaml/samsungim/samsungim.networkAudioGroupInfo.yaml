@@ -100,6 +100,7 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false
   setAcmMode:
     name: setAcmMode
     arguments:
@@ -107,6 +108,7 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false
   setRole:
     name: setRole
     arguments:
@@ -114,6 +116,7 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false
   setMasterDi:
     name: setMasterDi
     arguments:
@@ -121,6 +124,7 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false
   setMasterName:
     name: setMasterName
     arguments:
@@ -128,6 +132,7 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false
   setChannel:
     name: setChannel
     arguments:
@@ -135,6 +140,7 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false
   setStereoType:
     name: setStereoType
     arguments:
@@ -142,6 +148,7 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false
   setStatus:
     name: setStatus
     arguments:
@@ -149,3 +156,4 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false

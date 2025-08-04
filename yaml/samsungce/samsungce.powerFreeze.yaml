@@ -18,6 +18,8 @@ commands:
   activate:
     name: activate
     arguments: []
+    sensitive: false
   deactivate:
     name: deactivate
     arguments: []
+    sensitive: false

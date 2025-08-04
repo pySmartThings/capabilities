@@ -5,5 +5,7 @@
   "name": "Stateless Channel Up",
   "ephemeral": false,
   "attributes": {},
-  "commands": { "channelUp": { "name": "channelUp", "arguments": [] } }
+  "commands": {
+    "channelUp": { "name": "channelUp", "arguments": [], "sensitive": false }
+  }
 }

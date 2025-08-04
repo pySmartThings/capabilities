@@ -33,3 +33,4 @@ commands:
             - onWhenOn
             - alwaysOff
             - alwaysOn
+    sensitive: false

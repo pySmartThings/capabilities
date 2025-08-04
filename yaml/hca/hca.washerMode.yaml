@@ -56,3 +56,4 @@ commands:
             - rinseOnly
             - spinOnly
             - eco
+    sensitive: false

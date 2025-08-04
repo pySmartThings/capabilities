@@ -36,7 +36,8 @@
           "optional": true,
           "schema": { "title": "JsonObject", "type": "object" }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

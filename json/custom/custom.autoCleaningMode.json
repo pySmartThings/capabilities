@@ -151,9 +151,10 @@
             "type": "string"
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "stop": { "name": "stop", "arguments": [] },
+    "stop": { "name": "stop", "arguments": [], "sensitive": false },
     "setTimedCleanDuration": {
       "name": "setTimedCleanDuration",
       "arguments": [
@@ -162,7 +163,8 @@
           "optional": false,
           "schema": { "type": "integer", "minimum": 0 }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "start": {
       "name": "setOperatingState",
@@ -180,7 +182,8 @@
           "optional": true,
           "schema": { "type": "integer", "minimum": 0, "maximum": 1440 }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setAutoCleaningMode": {
       "name": "setAutoCleaningMode",
@@ -193,7 +196,8 @@
             "type": "string"
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

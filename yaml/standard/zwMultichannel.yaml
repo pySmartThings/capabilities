@@ -36,6 +36,7 @@ commands:
           title: String
           type: string
           maxLength: 255
+    sensitive: false
   epCmd:
     name: epCmd
     arguments:
@@ -50,3 +51,4 @@ commands:
           title: String
           type: string
           maxLength: 255
+    sensitive: false

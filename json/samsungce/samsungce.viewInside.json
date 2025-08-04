@@ -92,14 +92,16 @@
             "default": "mainShelves"
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "refreshAll": { "name": "refreshAll", "arguments": [] },
+    "refreshAll": { "name": "refreshAll", "arguments": [], "sensitive": false },
     "refresh": {
       "name": "refresh",
       "arguments": [
         { "name": "fileId", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

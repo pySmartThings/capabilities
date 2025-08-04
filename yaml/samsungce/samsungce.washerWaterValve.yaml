@@ -50,3 +50,4 @@ commands:
             - cold
             - warm
             - hot
+    sensitive: false

@@ -210,7 +210,8 @@
           "optional": false,
           "schema": { "type": "number", "minimum": 0, "maximum": 31 }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setServiceMessage": {
       "name": "setServiceMessage",
@@ -220,7 +221,8 @@
           "optional": false,
           "schema": { "type": "string" }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

@@ -69,7 +69,8 @@
             }
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "cookDefinedRecipe": {
       "name": "cookDefinedRecipe",
@@ -104,7 +105,8 @@
           "optional": true,
           "schema": { "type": "integer", "minimum": 0, "maximum": 255 }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

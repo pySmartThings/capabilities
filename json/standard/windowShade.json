@@ -47,8 +47,8 @@
     }
   },
   "commands": {
-    "close": { "name": "close", "arguments": [] },
-    "open": { "name": "open", "arguments": [] },
-    "pause": { "name": "pause", "arguments": [] }
+    "close": { "name": "close", "arguments": [], "sensitive": false },
+    "open": { "name": "open", "arguments": [], "sensitive": false },
+    "pause": { "name": "pause", "arguments": [], "sensitive": false }
   }
 }

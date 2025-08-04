@@ -38,3 +38,4 @@ commands:
             - PRESSED
             - RELEASED
             - PRESS_AND_RELEASED
+    sensitive: false

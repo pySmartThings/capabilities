@@ -23,6 +23,7 @@ commands:
         schema:
           title: JsonObject
           type: object
+    sensitive: false
   signOut:
     name: signOut
     arguments:
@@ -30,3 +31,4 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false

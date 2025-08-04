@@ -25,6 +25,8 @@ commands:
   beep:
     name: beep
     arguments: []
+    sensitive: false
   "off":
     name: "off"
     arguments: []
+    sensitive: false

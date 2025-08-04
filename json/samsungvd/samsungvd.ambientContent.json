@@ -20,7 +20,8 @@
       "name": "setAmbientContent",
       "arguments": [
         { "name": "id", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

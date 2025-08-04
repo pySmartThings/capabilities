@@ -21,7 +21,8 @@
       "name": "setStandbyMode",
       "arguments": [
         { "name": "value", "optional": false, "schema": { "type": "boolean" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

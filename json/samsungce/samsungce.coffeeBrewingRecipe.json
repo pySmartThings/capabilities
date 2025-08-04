@@ -113,7 +113,8 @@
           }
         },
         { "name": "titleID", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

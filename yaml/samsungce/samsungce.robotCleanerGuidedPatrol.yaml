@@ -40,6 +40,7 @@ commands:
   stop:
     name: stop
     arguments: []
+    sensitive: false
   start:
     name: start
     arguments:
@@ -63,3 +64,4 @@ commands:
             required:
               - id
               - coordinates
+    sensitive: false

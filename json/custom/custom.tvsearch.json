@@ -11,7 +11,8 @@
       "arguments": [
         { "name": "query", "optional": false, "schema": { "type": "string" } },
         { "name": "url", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

@@ -47,7 +47,8 @@
           "optional": false,
           "schema": { "title": "String", "type": "string", "maxLength": 255 }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "createZone": {
       "name": "createZone",
@@ -62,7 +63,8 @@
           "optional": true,
           "schema": { "title": "String", "type": "string", "maxLength": 255 }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "updateZoneName": {
       "name": "updateZoneName",
@@ -77,7 +79,8 @@
           "optional": false,
           "schema": { "title": "String", "type": "string", "maxLength": 255 }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

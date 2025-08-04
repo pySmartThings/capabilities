@@ -85,6 +85,10 @@
     }
   },
   "commands": {
-    "resetHepaFilter": { "name": "resetHepaFilter", "arguments": [] }
+    "resetHepaFilter": {
+      "name": "resetHepaFilter",
+      "arguments": [],
+      "sensitive": false
+    }
   }
 }

@@ -156,6 +156,7 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false
   setSteamClosetMachineState:
     name: setSteamClosetMachineState
     arguments:
@@ -167,3 +168,4 @@ commands:
             - run
             - stop
           type: string
+    sensitive: false

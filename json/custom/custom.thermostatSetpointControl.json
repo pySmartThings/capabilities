@@ -31,7 +31,15 @@
     }
   },
   "commands": {
-    "raiseSetpoint": { "name": "raiseSetpoint", "arguments": [] },
-    "lowerSetpoint": { "name": "lowerSetpoint", "arguments": [] }
+    "raiseSetpoint": {
+      "name": "raiseSetpoint",
+      "arguments": [],
+      "sensitive": false
+    },
+    "lowerSetpoint": {
+      "name": "lowerSetpoint",
+      "arguments": [],
+      "sensitive": false
+    }
   }
 }

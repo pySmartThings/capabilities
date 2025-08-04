@@ -40,5 +40,7 @@
       "enumCommands": []
     }
   },
-  "commands": { "reset": { "name": "reset", "arguments": [] } }
+  "commands": {
+    "reset": { "name": "reset", "arguments": [], "sensitive": false }
+  }
 }

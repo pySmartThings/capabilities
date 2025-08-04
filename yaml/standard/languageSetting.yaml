@@ -35,3 +35,4 @@ commands:
           title: String
           type: string
           maxLength: 255
+    sensitive: false

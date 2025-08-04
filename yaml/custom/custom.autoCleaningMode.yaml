@@ -154,9 +154,11 @@ commands:
             - timedClean
             - ready
           type: string
+    sensitive: false
   stop:
     name: stop
     arguments: []
+    sensitive: false
   setTimedCleanDuration:
     name: setTimedCleanDuration
     arguments:
@@ -165,6 +167,7 @@ commands:
         schema:
           type: integer
           minimum: 0
+    sensitive: false
   start:
     name: setOperatingState
     arguments:
@@ -183,6 +186,7 @@ commands:
           type: integer
           minimum: 0
           maximum: 1440
+    sensitive: false
   setAutoCleaningMode:
     name: setAutoCleaningMode
     arguments:
@@ -196,3 +200,4 @@ commands:
             - timedClean
             - "off"
           type: string
+    sensitive: false

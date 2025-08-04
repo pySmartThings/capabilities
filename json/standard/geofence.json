@@ -58,7 +58,8 @@
       "name": "setName",
       "arguments": [
         { "name": "name", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     },
     "setEnableState": {
       "name": "setEnableState",
@@ -72,7 +73,8 @@
             "enum": ["enabled", "disabled"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setGeofence": {
       "name": "setGeofence",
@@ -91,7 +93,8 @@
             }
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

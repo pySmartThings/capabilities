@@ -65,7 +65,8 @@
           "optional": false,
           "schema": { "title": "String", "type": "string", "maxLength": 255 }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "encryptKek": {
       "name": "encryptKek",
@@ -86,7 +87,8 @@
           "optional": false,
           "schema": { "title": "String", "type": "string", "maxLength": 255 }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

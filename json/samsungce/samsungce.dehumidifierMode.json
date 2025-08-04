@@ -58,7 +58,8 @@
             "enum": ["high", "medium", "quiet", "clothesDrying", "max", "smart"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

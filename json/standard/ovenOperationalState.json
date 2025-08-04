@@ -111,7 +111,7 @@
     }
   },
   "commands": {
-    "stop": { "name": "stop", "arguments": [] },
+    "stop": { "name": "stop", "arguments": [], "sensitive": false },
     "setMachineState": {
       "name": "setMachineState",
       "arguments": [
@@ -120,7 +120,8 @@
           "optional": false,
           "schema": { "type": "string", "enum": ["stop"] }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

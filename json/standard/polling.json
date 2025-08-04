@@ -5,5 +5,7 @@
   "name": "Polling",
   "ephemeral": false,
   "attributes": {},
-  "commands": { "poll": { "name": "poll", "arguments": [] } }
+  "commands": {
+    "poll": { "name": "poll", "arguments": [], "sensitive": false }
+  }
 }

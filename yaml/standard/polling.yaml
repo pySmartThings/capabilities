@@ -8,3 +8,4 @@ commands:
   poll:
     name: poll
     arguments: []
+    sensitive: false

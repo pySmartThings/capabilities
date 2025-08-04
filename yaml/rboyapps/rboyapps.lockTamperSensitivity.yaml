@@ -37,6 +37,8 @@ commands:
             - medium
             - high
             - highest
+    sensitive: false
   sensitiveToggle:
     name: sensitiveToggle
     arguments: []
+    sensitive: false

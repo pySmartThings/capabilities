@@ -5,5 +5,11 @@
   "name": "Weight Measurement Calibration",
   "ephemeral": false,
   "attributes": {},
-  "commands": { "zeroCalibrate": { "name": "zeroCalibrate", "arguments": [] } }
+  "commands": {
+    "zeroCalibrate": {
+      "name": "zeroCalibrate",
+      "arguments": [],
+      "sensitive": false
+    }
+  }
 }

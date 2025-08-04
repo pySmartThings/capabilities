@@ -37,11 +37,24 @@
                 "babyCrying",
                 "glassBreaking",
                 "fireAlarm",
+                "applianceAlarm",
+                "emergencyAlarm",
+                "screaming",
                 "dogBarking",
+                "dogGrowling",
+                "dogHowling",
                 "catMeowing",
+                "catPurring",
                 "doorKnocking",
+                "doorbell",
+                "faucetRunning",
+                "hairDrying",
+                "kettleBoiling",
                 "siren",
                 "fingerSnapping",
+                "clapping",
+                "coughing",
+                "speech",
                 "snoring"
               ]
             }
@@ -64,11 +77,24 @@
               "babyCrying",
               "glassBreaking",
               "fireAlarm",
+              "applianceAlarm",
+              "emergencyAlarm",
+              "screaming",
               "dogBarking",
+              "dogGrowling",
+              "dogHowling",
               "catMeowing",
+              "catPurring",
               "doorKnocking",
+              "doorbell",
+              "faucetRunning",
+              "hairDrying",
+              "kettleBoiling",
               "siren",
               "fingerSnapping",
+              "clapping",
+              "coughing",
+              "speech",
               "snoring"
             ]
           }
@@ -82,8 +108,13 @@
   "commands": {
     "disableSoundDetection": {
       "name": "disableSoundDetection",
-      "arguments": []
+      "arguments": [],
+      "sensitive": false
     },
-    "enableSoundDetection": { "name": "enableSoundDetection", "arguments": [] }
+    "enableSoundDetection": {
+      "name": "enableSoundDetection",
+      "arguments": [],
+      "sensitive": false
+    }
   }
 }

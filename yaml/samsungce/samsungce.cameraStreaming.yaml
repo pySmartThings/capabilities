@@ -32,6 +32,8 @@ commands:
   cancelOnboarding:
     name: cancelOnboarding
     arguments: []
+    sensitive: false
   register:
     name: register
     arguments: []
+    sensitive: false

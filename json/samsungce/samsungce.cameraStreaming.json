@@ -30,7 +30,11 @@
     }
   },
   "commands": {
-    "cancelOnboarding": { "name": "cancelOnboarding", "arguments": [] },
-    "register": { "name": "register", "arguments": [] }
+    "cancelOnboarding": {
+      "name": "cancelOnboarding",
+      "arguments": [],
+      "sensitive": false
+    },
+    "register": { "name": "register", "arguments": [], "sensitive": false }
   }
 }

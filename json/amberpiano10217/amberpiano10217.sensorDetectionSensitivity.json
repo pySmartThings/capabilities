@@ -41,7 +41,8 @@
           "optional": false,
           "schema": { "type": "string", "enum": ["low", "medium", "high"] }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

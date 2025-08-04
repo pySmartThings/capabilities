@@ -55,3 +55,4 @@ commands:
             - blinkingYellow
             - blinkingCyan
             - blinkingWhite
+    sensitive: false

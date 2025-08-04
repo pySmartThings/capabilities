@@ -85,6 +85,10 @@
     }
   },
   "commands": {
-    "resetWaterFilter": { "name": "resetWaterFilter", "arguments": [] }
+    "resetWaterFilter": {
+      "name": "resetWaterFilter",
+      "arguments": [],
+      "sensitive": false
+    }
   }
 }
