@@ -66,7 +66,8 @@
       "name": "setNotificationLevel",
       "arguments": [
         { "name": "level", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     },
     "setNotificationDuration": {
       "name": "setNotificationDuration",
@@ -76,25 +77,29 @@
           "optional": false,
           "schema": { "type": "string" }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setNotificationNumber": {
       "name": "setNotificationNumber",
       "arguments": [
         { "name": "number", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     },
     "setNotificationColor": {
       "name": "setNotificationColor",
       "arguments": [
         { "name": "color", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     },
     "setNotificationEffect": {
       "name": "setNotificationEffect",
       "arguments": [
         { "name": "effect", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

@@ -20,7 +20,8 @@
       "name": "setError",
       "arguments": [
         { "name": "error", "optional": false, "schema": { "type": "object" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

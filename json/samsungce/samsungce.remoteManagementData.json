@@ -34,7 +34,8 @@
       "name": "rmCommand",
       "arguments": [
         { "name": "rawData", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

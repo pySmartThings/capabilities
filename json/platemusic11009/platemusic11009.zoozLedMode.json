@@ -33,7 +33,8 @@
             "enum": ["onWhenOff", "onWhenOn", "alwaysOff", "alwaysOn"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

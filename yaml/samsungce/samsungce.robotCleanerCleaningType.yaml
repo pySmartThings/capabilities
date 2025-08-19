@@ -50,3 +50,4 @@ commands:
             - vacuum
             - vacuumAndMopTogether
             - mopAfterVacuum
+    sensitive: false

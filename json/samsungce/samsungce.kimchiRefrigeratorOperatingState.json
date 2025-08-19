@@ -37,6 +37,7 @@
                   "kimchiRipeRoomTemp",
                   "kimchiRipeWellFermented",
                   "kimchiRipeSourCooking",
+                  "kimchiRipe6DaysColdPlus",
                   "meatRipeNormal",
                   "fruitRipeNormal",
                   "doughFermentation",
@@ -125,6 +126,7 @@
                     "kimchiRipeRoomTemp",
                     "kimchiRipeWellFermented",
                     "kimchiRipeSourCooking",
+                    "kimchiRipe6DaysColdPlus",
                     "meatRipeNormal",
                     "fruitRipeNormal",
                     "doughFermentation",
@@ -212,6 +214,7 @@
               "kimchiRipeRoomTemp",
               "kimchiRipeWellFermented",
               "kimchiRipeSourCooking",
+              "kimchiRipe6DaysColdPlus",
               "meatRipeNormal",
               "fruitRipeNormal",
               "doughFermentation",
@@ -247,7 +250,8 @@
             ]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

@@ -11,7 +11,8 @@
       "arguments": [
         { "name": "appId", "optional": true, "schema": { "type": "string" } },
         { "name": "appName", "optional": true, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

@@ -32,3 +32,4 @@ commands:
           type: integer
           minimum: -12
           maximum: 12
+    sensitive: false

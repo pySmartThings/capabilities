@@ -58,6 +58,7 @@ commands:
           title: String
           type: string
           maxLength: 255
+    sensitive: false
   encryptKek:
     name: encryptKek
     arguments:
@@ -79,3 +80,4 @@ commands:
           title: String
           type: string
           maxLength: 255
+    sensitive: false

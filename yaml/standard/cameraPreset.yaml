@@ -51,6 +51,7 @@ commands:
         schema:
           title: JsonObject
           type: object
+    sensitive: false
   update:
     name: update
     arguments:
@@ -71,6 +72,7 @@ commands:
         schema:
           title: JsonObject
           type: object
+    sensitive: false
   execute:
     name: execute
     arguments:
@@ -78,6 +80,7 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false
   delete:
     name: delete
     arguments:
@@ -85,3 +88,4 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false

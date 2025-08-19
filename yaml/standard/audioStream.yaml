@@ -19,6 +19,8 @@ commands:
   startAudio:
     name: startAudio
     arguments: []
+    sensitive: false
   stopAudio:
     name: stopAudio
     arguments: []
+    sensitive: false

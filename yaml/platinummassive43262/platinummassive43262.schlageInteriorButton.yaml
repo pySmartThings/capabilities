@@ -25,6 +25,8 @@ commands:
   disable:
     name: disable
     arguments: []
+    sensitive: false
   enable:
     name: enable
     arguments: []
+    sensitive: false

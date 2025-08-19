@@ -38,6 +38,8 @@ commands:
   raiseSetpoint:
     name: raiseSetpoint
     arguments: []
+    sensitive: false
   lowerSetpoint:
     name: lowerSetpoint
     arguments: []
+    sensitive: false

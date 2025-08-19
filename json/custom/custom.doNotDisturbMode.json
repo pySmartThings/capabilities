@@ -44,8 +44,16 @@
     }
   },
   "commands": {
-    "doNotDisturbOff": { "name": "doNotDisturbOff", "arguments": [] },
-    "doNotDisturbOn": { "name": "doNotDisturbOn", "arguments": [] },
+    "doNotDisturbOff": {
+      "name": "doNotDisturbOff",
+      "arguments": [],
+      "sensitive": false
+    },
+    "doNotDisturbOn": {
+      "name": "doNotDisturbOn",
+      "arguments": [],
+      "sensitive": false
+    },
     "setDoNotDisturbMode": {
       "name": "setDoNotDisturbMode",
       "arguments": [
@@ -64,7 +72,8 @@
           "optional": false,
           "schema": { "type": "string", "enum": ["on", "off"] }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

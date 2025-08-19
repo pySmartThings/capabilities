@@ -8,3 +8,4 @@ commands:
   enableMonitoringAutomation:
     name: enableMonitoringAutomation
     arguments: []
+    sensitive: false

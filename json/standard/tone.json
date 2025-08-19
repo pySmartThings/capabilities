@@ -5,5 +5,7 @@
   "name": "Tone",
   "ephemeral": false,
   "attributes": {},
-  "commands": { "beep": { "name": "beep", "arguments": [] } }
+  "commands": {
+    "beep": { "name": "beep", "arguments": [], "sensitive": false }
+  }
 }

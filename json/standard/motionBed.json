@@ -106,7 +106,8 @@
             ]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setMode": {
       "name": "setMode",
@@ -127,7 +128,8 @@
             ]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "start": {
       "name": "start",
@@ -147,7 +149,8 @@
             ]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

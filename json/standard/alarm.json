@@ -27,9 +27,9 @@
     }
   },
   "commands": {
-    "siren": { "name": "siren", "arguments": [] },
-    "strobe": { "name": "strobe", "arguments": [] },
-    "off": { "name": "off", "arguments": [] },
-    "both": { "name": "both", "arguments": [] }
+    "siren": { "name": "siren", "arguments": [], "sensitive": false },
+    "strobe": { "name": "strobe", "arguments": [], "sensitive": false },
+    "off": { "name": "off", "arguments": [], "sensitive": false },
+    "both": { "name": "both", "arguments": [], "sensitive": false }
   }
 }

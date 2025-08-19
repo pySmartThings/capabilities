@@ -19,7 +19,15 @@
     }
   },
   "commands": {
-    "enableAutoUpdate": { "name": "enableAutoUpdate", "arguments": [] },
-    "disableAutoUpdate": { "name": "disableAutoUpdate", "arguments": [] }
+    "enableAutoUpdate": {
+      "name": "enableAutoUpdate",
+      "arguments": [],
+      "sensitive": false
+    },
+    "disableAutoUpdate": {
+      "name": "disableAutoUpdate",
+      "arguments": [],
+      "sensitive": false
+    }
   }
 }

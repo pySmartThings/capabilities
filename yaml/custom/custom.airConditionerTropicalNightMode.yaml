@@ -26,3 +26,4 @@ commands:
           minimum: 0
           type: integer
           maximum: 35
+    sensitive: false

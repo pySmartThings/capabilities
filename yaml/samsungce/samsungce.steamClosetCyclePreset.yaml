@@ -58,6 +58,7 @@ commands:
           items:
             type: string
             pattern: ^.{1,32}$
+    sensitive: false
   setSteamClosetCyclePreset:
     name: setSteamClosetCyclePreset
     arguments:
@@ -91,3 +92,4 @@ commands:
                 - title
                 - memo
                 - cycle
+    sensitive: false

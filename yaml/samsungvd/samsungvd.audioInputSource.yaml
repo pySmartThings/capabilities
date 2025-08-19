@@ -30,3 +30,4 @@ commands:
   setNextInputSource:
     name: setNextInputSource
     arguments: []
+    sensitive: false

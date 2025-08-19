@@ -15,5 +15,11 @@
       "enumCommands": []
     }
   },
-  "commands": { "setAmbientOn": { "name": "setAmbientOn", "arguments": [] } }
+  "commands": {
+    "setAmbientOn": {
+      "name": "setAmbientOn",
+      "arguments": [],
+      "sensitive": false
+    }
+  }
 }

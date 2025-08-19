@@ -38,7 +38,8 @@
           "optional": false,
           "schema": { "type": "string", "pattern": "^.{4}$" }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

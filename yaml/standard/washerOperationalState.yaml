@@ -84,3 +84,4 @@ commands:
             - pause
             - run
             - stop
+    sensitive: false

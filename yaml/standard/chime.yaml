@@ -25,6 +25,8 @@ commands:
   "off":
     name: "off"
     arguments: []
+    sensitive: false
   chime:
     name: chime
     arguments: []
+    sensitive: false

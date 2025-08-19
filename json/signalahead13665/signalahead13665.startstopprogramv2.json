@@ -27,7 +27,8 @@
           "optional": false,
           "schema": { "type": "string", "enum": ["play", "stop"] }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

@@ -62,10 +62,10 @@
     }
   },
   "commands": {
-    "mute": { "name": "mute", "arguments": [] },
-    "unmute": { "name": "unmute", "arguments": [] },
-    "flip": { "name": "flip", "arguments": [] },
-    "off": { "name": "off", "arguments": [] },
-    "on": { "name": "on", "arguments": [] }
+    "mute": { "name": "mute", "arguments": [], "sensitive": false },
+    "unmute": { "name": "unmute", "arguments": [], "sensitive": false },
+    "flip": { "name": "flip", "arguments": [], "sensitive": false },
+    "off": { "name": "off", "arguments": [], "sensitive": false },
+    "on": { "name": "on", "arguments": [], "sensitive": false }
   }
 }

@@ -27,9 +27,11 @@ commands:
   disableAudio:
     name: disableAudio
     arguments: []
+    sensitive: false
   enableAudio:
     name: enableAudio
     arguments: []
+    sensitive: false
   setAudio:
     name: setAudio
     arguments:
@@ -40,3 +42,4 @@ commands:
           enum:
             - enabled
             - disabled
+    sensitive: false

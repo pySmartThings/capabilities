@@ -23,6 +23,8 @@ commands:
   enableLedNotification:
     name: enableLedNotification
     arguments: []
+    sensitive: false
   disableLedNotification:
     name: disableLedNotification
     arguments: []
+    sensitive: false

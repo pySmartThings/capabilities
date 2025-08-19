@@ -46,6 +46,7 @@ commands:
           uniqueItems: true
           items:
             type: string
+    sensitive: false
   setContext:
     name: setContext
     arguments:
@@ -53,6 +54,7 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false
   setRecentlyUsedApps:
     name: setRecentlyUsedApps
     arguments:
@@ -63,3 +65,4 @@ commands:
           uniqueItems: true
           items:
             type: string
+    sensitive: false

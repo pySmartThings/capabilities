@@ -8,3 +8,4 @@ commands:
   refresh:
     name: refresh
     arguments: []
+    sensitive: false

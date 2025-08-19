@@ -184,11 +184,20 @@
             "minimum": 0
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "reloadAllCodes": { "name": "reloadAllCodes", "arguments": [] },
-    "unlock": { "name": "unlock", "arguments": [] },
-    "unlockWithTimeout": { "name": "unlockWithTimeout", "arguments": [] },
+    "reloadAllCodes": {
+      "name": "reloadAllCodes",
+      "arguments": [],
+      "sensitive": false
+    },
+    "unlock": { "name": "unlock", "arguments": [], "sensitive": false },
+    "unlockWithTimeout": {
+      "name": "unlockWithTimeout",
+      "arguments": [],
+      "sensitive": false
+    },
     "setCode": {
       "name": "setCode",
       "arguments": [
@@ -211,7 +220,8 @@
           "optional": false,
           "schema": { "title": "String", "type": "string", "maxLength": 255 }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "updateCodes": {
       "name": "updateCodes",
@@ -221,9 +231,10 @@
           "optional": false,
           "schema": { "title": "JsonObject", "type": "object" }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "lock": { "name": "lock", "arguments": [] },
+    "lock": { "name": "lock", "arguments": [], "sensitive": false },
     "requestCode": {
       "name": "requestCode",
       "arguments": [
@@ -236,7 +247,8 @@
             "minimum": 0
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "deleteCode": {
       "name": "deleteCode",
@@ -250,7 +262,8 @@
             "minimum": 0
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "nameSlot": {
       "name": "nameSlot",
@@ -269,7 +282,8 @@
           "optional": false,
           "schema": { "title": "String", "type": "string", "maxLength": 255 }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

@@ -49,7 +49,8 @@
           "optional": false,
           "schema": { "type": "integer", "minimum": 1, "maximum": 30000 }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

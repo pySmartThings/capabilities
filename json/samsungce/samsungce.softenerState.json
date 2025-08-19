@@ -62,19 +62,22 @@
       "name": "setInitialAmount",
       "arguments": [
         { "name": "amount", "optional": false, "schema": { "type": "number" } }
-      ]
+      ],
+      "sensitive": false
     },
     "setRemainingAmount": {
       "name": "setRemainingAmount",
       "arguments": [
         { "name": "amount", "optional": false, "schema": { "type": "number" } }
-      ]
+      ],
+      "sensitive": false
     },
     "setDosage": {
       "name": "setDosage",
       "arguments": [
         { "name": "amount", "optional": false, "schema": { "type": "number" } }
-      ]
+      ],
+      "sensitive": false
     },
     "setSoftenerType": {
       "name": "setSoftenerType",
@@ -84,7 +87,8 @@
           "optional": false,
           "schema": { "type": "string" }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

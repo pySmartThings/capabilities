@@ -147,7 +147,8 @@
             ]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "cancelAging": {
       "name": "cancelAging",
@@ -157,7 +158,8 @@
           "optional": false,
           "schema": { "type": "integer", "minimum": 0 }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "updateAging": {
       "name": "updateAging",
@@ -194,7 +196,8 @@
             ]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

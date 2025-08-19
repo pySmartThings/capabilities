@@ -110,3 +110,4 @@ commands:
                 - auto
             - type: number
               minimum: 0
+    sensitive: false

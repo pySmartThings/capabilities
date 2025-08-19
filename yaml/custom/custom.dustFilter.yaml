@@ -91,3 +91,4 @@ commands:
   resetDustFilter:
     name: resetDustFilter
     arguments: []
+    sensitive: false

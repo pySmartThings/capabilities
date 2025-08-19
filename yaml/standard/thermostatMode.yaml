@@ -214,9 +214,11 @@ commands:
   heat:
     name: heat
     arguments: []
+    sensitive: false
   auto:
     name: auto
     arguments: []
+    sensitive: false
   setThermostatMode:
     name: setThermostatMode
     arguments:
@@ -279,12 +281,16 @@ commands:
             - bath
             - iterativeReservation
             - 24hourReservation
+    sensitive: false
   cool:
     name: cool
     arguments: []
+    sensitive: false
   emergencyHeat:
     name: emergencyHeat
     arguments: []
+    sensitive: false
   "off":
     name: "off"
     arguments: []
+    sensitive: false

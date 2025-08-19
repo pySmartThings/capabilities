@@ -212,7 +212,8 @@
           "optional": false,
           "schema": { "title": "JsonObject", "type": "object" }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

@@ -39,7 +39,8 @@
           "optional": false,
           "schema": { "type": "number" }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

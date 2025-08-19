@@ -97,6 +97,10 @@
     }
   },
   "commands": {
-    "resetDeodorFilter": { "name": "resetDeodorFilter", "arguments": [] }
+    "resetDeodorFilter": {
+      "name": "resetDeodorFilter",
+      "arguments": [],
+      "sensitive": false
+    }
   }
 }

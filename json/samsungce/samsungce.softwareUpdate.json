@@ -117,13 +117,15 @@
       "name": "agreeUpdate",
       "arguments": [
         { "name": "module", "optional": true, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     },
     "disagreeUpdate": {
       "name": "disagreeUpdate",
       "arguments": [
         { "name": "module", "optional": true, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

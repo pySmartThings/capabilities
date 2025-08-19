@@ -16,6 +16,10 @@
     }
   },
   "commands": {
-    "turnWelcomeCareOn": { "name": "turnWelcomeCareOn", "arguments": [] }
+    "turnWelcomeCareOn": {
+      "name": "turnWelcomeCareOn",
+      "arguments": [],
+      "sensitive": false
+    }
   }
 }

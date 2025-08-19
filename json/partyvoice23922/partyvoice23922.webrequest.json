@@ -10,13 +10,15 @@
       "name": "POST",
       "arguments": [
         { "name": "url", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     },
     "GET": {
       "name": "GET",
       "arguments": [
         { "name": "url", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

@@ -26,6 +26,7 @@ commands:
   reset:
     name: reset
     arguments: []
+    sensitive: false
   onboarding:
     name: onboarding
     arguments:
@@ -56,3 +57,4 @@ commands:
             - userId
             - locationId
             - environment
+    sensitive: false

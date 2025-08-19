@@ -67,9 +67,12 @@ attributes:
                   - adminMember
                   - controlOnlyMember
                   - guest
+              userName:
+                type: string
             required:
               - userIndex
               - userType
+      sensitive: true
       additionalProperties: false
       required: []
     enumCommands: []
@@ -91,9 +94,11 @@ commands:
             - adminMember
             - controlOnlyMember
             - guest
+    sensitive: false
   deleteAllUsers:
     name: deleteAllUsers
     arguments: []
+    sensitive: false
   deleteUser:
     name: deleteUser
     arguments:
@@ -102,6 +107,7 @@ commands:
         schema:
           type: integer
           minimum: 1
+    sensitive: false
   updateUser:
     name: updateUser
     arguments:
@@ -124,3 +130,4 @@ commands:
             - adminMember
             - controlOnlyMember
             - guest
+    sensitive: false

@@ -1,0 +1,58 @@
+{
+  "id": "samsungce.autoOpenDoor",
+  "version": 1,
+  "status": "proposed",
+  "name": "Auto Open Door",
+  "ephemeral": false,
+  "attributes": {
+    "autoOpenDoor": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string", "enum": ["on", "off"] } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedPressureLevels": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["light", "medium", "firm"] }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "pressureLevel": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["light", "medium", "firm"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "off": { "name": "off", "arguments": [], "sensitive": false },
+    "on": { "name": "on", "arguments": [], "sensitive": false },
+    "setPressureLevel": {
+      "name": "setPressureLevel",
+      "arguments": [
+        {
+          "name": "pressureLevel",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["light", "medium", "firm"] }
+        }
+      ],
+      "sensitive": false
+    }
+  }
+}

@@ -27,7 +27,8 @@
           "optional": false,
           "schema": { "type": "string", "enum": ["disabled", "enabled"] }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

@@ -120,7 +120,8 @@
             "type": "string"
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

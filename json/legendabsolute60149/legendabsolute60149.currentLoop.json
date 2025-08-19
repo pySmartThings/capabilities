@@ -21,7 +21,8 @@
       "name": "setCurrentLoop",
       "arguments": [
         { "name": "value", "optional": false, "schema": { "type": "integer" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

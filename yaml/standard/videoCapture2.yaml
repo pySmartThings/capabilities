@@ -104,6 +104,7 @@ commands:
                 type: string
                 maxLength: 255
               optional: true
+    sensitive: false
   capture:
     name: capture
     arguments:
@@ -145,6 +146,7 @@ commands:
         optional: true
         schema:
           type: integer
+    sensitive: false
   uploadFailed:
     name: uploadFailed
     arguments:
@@ -159,6 +161,7 @@ commands:
         schema:
           title: JsonObject
           type: object
+    sensitive: false
   stopCapture:
     name: stopCapture
     arguments:
@@ -168,3 +171,4 @@ commands:
           title: UUID
           type: string
           pattern: ^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$
+    sensitive: false

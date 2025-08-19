@@ -20,6 +20,7 @@ commands:
   push:
     name: push
     arguments: []
+    sensitive: false
   remove:
     name: remove
     arguments:
@@ -29,3 +30,4 @@ commands:
           type: number
           minimum: 0
           maximum: 65535
+    sensitive: false

@@ -20,6 +20,7 @@ commands:
           type: integer
           minimum: 0
           maximum: 100
+    sensitive: false
   playTrackAndRestore:
     name: playTrackAndRestore
     arguments:
@@ -35,6 +36,7 @@ commands:
           type: integer
           minimum: 0
           maximum: 100
+    sensitive: false
   playTrack:
     name: playTrack
     arguments:
@@ -50,3 +52,4 @@ commands:
           type: integer
           minimum: 0
           maximum: 100
+    sensitive: false

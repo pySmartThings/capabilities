@@ -22,7 +22,11 @@
     }
   },
   "commands": {
-    "alarmToggle": { "name": "alarmToggle", "arguments": [] },
+    "alarmToggle": {
+      "name": "alarmToggle",
+      "arguments": [],
+      "sensitive": false
+    },
     "setAlarm": {
       "name": "setAlarm",
       "arguments": [
@@ -34,7 +38,8 @@
             "enum": ["off", "alert", "tamper", "forced"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

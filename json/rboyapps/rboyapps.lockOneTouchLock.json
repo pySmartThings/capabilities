@@ -33,9 +33,18 @@
           "optional": false,
           "schema": { "type": "string", "enum": ["enabled", "disabled"] }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "enableOneTouchLock": { "name": "enableOneTouchLock", "arguments": [] },
-    "disableOneTouchLock": { "name": "disableOneTouchLock", "arguments": [] }
+    "enableOneTouchLock": {
+      "name": "enableOneTouchLock",
+      "arguments": [],
+      "sensitive": false
+    },
+    "disableOneTouchLock": {
+      "name": "disableOneTouchLock",
+      "arguments": [],
+      "sensitive": false
+    }
   }
 }

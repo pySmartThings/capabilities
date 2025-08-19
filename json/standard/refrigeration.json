@@ -45,7 +45,8 @@
           "optional": false,
           "schema": { "type": "string", "enum": ["off", "on"] }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setRapidFreezing": {
       "name": "setRapidFreezing",
@@ -55,7 +56,8 @@
           "optional": false,
           "schema": { "type": "string", "enum": ["off", "on"] }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setRapidCooling": {
       "name": "setRapidCooling",
@@ -65,7 +67,8 @@
           "optional": false,
           "schema": { "type": "string", "enum": ["off", "on"] }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

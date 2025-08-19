@@ -104,3 +104,4 @@ commands:
             - medium
             - high
             - extraHigh
+    sensitive: false

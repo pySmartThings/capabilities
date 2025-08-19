@@ -45,3 +45,4 @@ commands:
   reset:
     name: reset
     arguments: []
+    sensitive: false

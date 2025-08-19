@@ -44,7 +44,8 @@
             "enum": ["devicePlugin", "automation", "airCare"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "on": {
       "name": "on",
@@ -57,7 +58,8 @@
             "enum": ["devicePlugin", "automation", "airCare"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

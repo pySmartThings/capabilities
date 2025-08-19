@@ -33,3 +33,4 @@ commands:
             - "off"
             - silence
             - extraSilence
+    sensitive: false

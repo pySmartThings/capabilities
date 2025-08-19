@@ -5,5 +5,11 @@
   "name": "Stateless Channel Down",
   "ephemeral": false,
   "attributes": {},
-  "commands": { "channelDown": { "name": "channelDown", "arguments": [] } }
+  "commands": {
+    "channelDown": {
+      "name": "channelDown",
+      "arguments": [],
+      "sensitive": false
+    }
+  }
 }

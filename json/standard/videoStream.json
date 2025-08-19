@@ -37,7 +37,11 @@
     }
   },
   "commands": {
-    "stopStream": { "name": "stopStream", "arguments": [] },
-    "startStream": { "name": "startStream", "arguments": [] }
+    "stopStream": { "name": "stopStream", "arguments": [], "sensitive": false },
+    "startStream": {
+      "name": "startStream",
+      "arguments": [],
+      "sensitive": false
+    }
   }
 }

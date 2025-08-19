@@ -132,10 +132,11 @@
           "schema": { "type": "string" }
         },
         { "name": "mapId", "optional": true, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     },
-    "enable": { "name": "enable", "arguments": [] },
-    "disable": { "name": "disable", "arguments": [] },
+    "enable": { "name": "enable", "arguments": [], "sensitive": false },
+    "disable": { "name": "disable", "arguments": [], "sensitive": false },
     "setExcludeHolidays": {
       "name": "setExcludeHolidays",
       "arguments": [
@@ -144,7 +145,8 @@
           "optional": false,
           "schema": { "type": "boolean" }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

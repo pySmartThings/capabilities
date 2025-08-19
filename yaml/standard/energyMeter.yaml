@@ -26,3 +26,4 @@ commands:
   resetEnergyMeter:
     name: resetEnergyMeter
     arguments: []
+    sensitive: false

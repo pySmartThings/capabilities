@@ -156,15 +156,19 @@ commands:
           title: PositiveInteger
           type: integer
           minimum: 0
+    sensitive: false
   reloadAllCodes:
     name: reloadAllCodes
     arguments: []
+    sensitive: false
   unlock:
     name: unlock
     arguments: []
+    sensitive: false
   unlockWithTimeout:
     name: unlockWithTimeout
     arguments: []
+    sensitive: false
   setCode:
     name: setCode
     arguments:
@@ -186,6 +190,7 @@ commands:
           title: String
           type: string
           maxLength: 255
+    sensitive: false
   updateCodes:
     name: updateCodes
     arguments:
@@ -194,9 +199,11 @@ commands:
         schema:
           title: JsonObject
           type: object
+    sensitive: false
   lock:
     name: lock
     arguments: []
+    sensitive: false
   requestCode:
     name: requestCode
     arguments:
@@ -206,6 +213,7 @@ commands:
           title: PositiveInteger
           type: integer
           minimum: 0
+    sensitive: false
   deleteCode:
     name: deleteCode
     arguments:
@@ -215,6 +223,7 @@ commands:
           title: PositiveInteger
           type: integer
           minimum: 0
+    sensitive: false
   nameSlot:
     name: nameSlot
     arguments:
@@ -230,3 +239,4 @@ commands:
           title: String
           type: string
           maxLength: 255
+    sensitive: false

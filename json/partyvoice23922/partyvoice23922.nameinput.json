@@ -21,7 +21,8 @@
       "name": "setInput",
       "arguments": [
         { "name": "name", "optional": true, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

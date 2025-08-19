@@ -75,6 +75,7 @@ commands:
   tamper:
     name: tamper
     arguments: []
+    sensitive: false
   setForcedSensitivity:
     name: setForcedSensitivity
     arguments:
@@ -84,9 +85,11 @@ commands:
           type: integer
           minimum: 1
           maximum: 5
+    sensitive: false
   activity:
     name: activity
     arguments: []
+    sensitive: false
   setAlarmMode:
     name: setAlarmMode
     arguments:
@@ -100,6 +103,7 @@ commands:
             - activity
             - tamper
             - forcedentry
+    sensitive: false
   setActivitySensitivity:
     name: setActivitySensitivity
     arguments:
@@ -109,6 +113,7 @@ commands:
           type: integer
           minimum: 1
           maximum: 5
+    sensitive: false
   setTamperSensitivity:
     name: setTamperSensitivity
     arguments:
@@ -118,9 +123,12 @@ commands:
           type: integer
           minimum: 1
           maximum: 5
+    sensitive: false
   forcedentry:
     name: forcedentry
     arguments: []
+    sensitive: false
   "off":
     name: "off"
     arguments: []
+    sensitive: false

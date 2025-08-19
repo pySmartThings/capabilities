@@ -67,12 +67,14 @@
                   "title": "LockUserType",
                   "type": "string",
                   "enum": ["adminMember", "controlOnlyMember", "guest"]
-                }
+                },
+                "userName": { "type": "string" }
               },
               "required": ["userIndex", "userType"]
             }
           }
         },
+        "sensitive": true,
         "additionalProperties": false,
         "required": []
       },
@@ -97,9 +99,14 @@
             "enum": ["adminMember", "controlOnlyMember", "guest"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "deleteAllUsers": { "name": "deleteAllUsers", "arguments": [] },
+    "deleteAllUsers": {
+      "name": "deleteAllUsers",
+      "arguments": [],
+      "sensitive": false
+    },
     "deleteUser": {
       "name": "deleteUser",
       "arguments": [
@@ -108,7 +115,8 @@
           "optional": false,
           "schema": { "type": "integer", "minimum": 1 }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "updateUser": {
       "name": "updateUser",
@@ -132,7 +140,8 @@
             "enum": ["adminMember", "controlOnlyMember", "guest"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

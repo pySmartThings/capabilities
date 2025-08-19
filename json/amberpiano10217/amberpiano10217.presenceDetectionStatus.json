@@ -65,7 +65,8 @@
       "name": "setStatus",
       "arguments": [
         { "name": "value", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

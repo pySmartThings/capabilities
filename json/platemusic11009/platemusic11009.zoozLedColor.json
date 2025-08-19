@@ -33,7 +33,8 @@
             "enum": ["white", "blue", "green", "red"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

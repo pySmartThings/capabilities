@@ -12,7 +12,8 @@
         { "name": "url", "optional": false, "schema": { "type": "string" } },
         { "name": "body", "optional": true, "schema": { "type": "string" } },
         { "name": "headers", "optional": true, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     },
     "GET": {
       "name": "GET",
@@ -20,7 +21,8 @@
         { "name": "url", "optional": false, "schema": { "type": "string" } },
         { "name": "body", "optional": true, "schema": { "type": "string" } },
         { "name": "headers", "optional": true, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

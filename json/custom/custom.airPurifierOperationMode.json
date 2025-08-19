@@ -31,7 +31,8 @@
       "name": "setApOperationMode",
       "arguments": [
         { "name": "mode", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

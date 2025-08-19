@@ -25,5 +25,7 @@
       "enumCommands": []
     }
   },
-  "commands": { "register": { "name": "register", "arguments": [] } }
+  "commands": {
+    "register": { "name": "register", "arguments": [], "sensitive": false }
+  }
 }

@@ -33,3 +33,4 @@ commands:
             - regular
             - lowHeat
             - highHeat
+    sensitive: false

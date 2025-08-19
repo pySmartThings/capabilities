@@ -173,6 +173,7 @@ commands:
   resume:
     name: resume
     arguments: []
+    sensitive: false
   setOperatingState:
     name: setOperatingState
     arguments:
@@ -186,15 +187,20 @@ commands:
             - paused
             - findingPet
             - monitoringAutomation
+    sensitive: false
   returnToHome:
     name: returnToHome
     arguments: []
+    sensitive: false
   start:
     name: start
     arguments: []
+    sensitive: false
   pause:
     name: pause
     arguments: []
+    sensitive: false
   cancelRemainingJob:
     name: cancelRemainingJob
     arguments: []
+    sensitive: false

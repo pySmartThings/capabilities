@@ -130,7 +130,8 @@
             "type": "string"
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

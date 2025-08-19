@@ -22,3 +22,4 @@ commands:
   call:
     name: call
     arguments: []
+    sensitive: false

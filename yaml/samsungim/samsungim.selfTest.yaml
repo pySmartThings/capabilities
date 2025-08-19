@@ -27,3 +27,4 @@ commands:
         optional: false
         schema:
           type: boolean
+    sensitive: false

@@ -34,7 +34,8 @@
             "enum": ["auto", "low", "medium", "high"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

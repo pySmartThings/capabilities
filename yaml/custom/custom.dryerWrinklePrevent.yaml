@@ -42,3 +42,4 @@ commands:
           enum:
             - "on"
             - "off"
+    sensitive: false

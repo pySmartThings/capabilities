@@ -45,6 +45,8 @@ commands:
   stopStream:
     name: stopStream
     arguments: []
+    sensitive: false
   startStream:
     name: startStream
     arguments: []
+    sensitive: false

@@ -87,7 +87,8 @@
   "commands": {
     "resetElectricHepaFilter": {
       "name": "resetElectricHepaFilter",
-      "arguments": []
+      "arguments": [],
+      "sensitive": false
     }
   }
 }

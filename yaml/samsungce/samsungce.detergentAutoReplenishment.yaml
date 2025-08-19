@@ -283,6 +283,7 @@ commands:
             - regularDetergent
             - neutralDetergent
             - babyDetergent
+    sensitive: false
   setOrderThreshold:
     name: setOrderThreshold
     arguments:
@@ -299,6 +300,7 @@ commands:
         schema:
           type: number
           minimum: 0
+    sensitive: false
   disableAlarm:
     name: disableAlarm
     arguments:
@@ -310,6 +312,7 @@ commands:
             - regularDetergent
             - neutralDetergent
             - babyDetergent
+    sensitive: false
   setAutoReplenishment:
     name: setAutoReplenishment
     arguments:
@@ -364,6 +367,7 @@ commands:
               - amount
               - amountUnit
               - alarmEnabled
+    sensitive: false
   setInitialAmount:
     name: setInitialAmount
     arguments:
@@ -380,6 +384,7 @@ commands:
         schema:
           type: number
           minimum: 0
+    sensitive: false
   setRemainingAmount:
     name: setRemainingAmount
     arguments:
@@ -396,6 +401,7 @@ commands:
         schema:
           type: number
           minimum: 0
+    sensitive: false
   setDosage:
     name: setDosage
     arguments:
@@ -412,6 +418,7 @@ commands:
         schema:
           type: number
           minimum: 0
+    sensitive: false
   setType:
     name: setType
     arguments:
@@ -432,3 +439,4 @@ commands:
             - liquid
             - capsule
             - drySheet
+    sensitive: false

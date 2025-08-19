@@ -12,3 +12,4 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false

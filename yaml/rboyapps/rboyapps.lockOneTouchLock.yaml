@@ -34,9 +34,12 @@ commands:
           enum:
             - enabled
             - disabled
+    sensitive: false
   enableOneTouchLock:
     name: enableOneTouchLock
     arguments: []
+    sensitive: false
   disableOneTouchLock:
     name: disableOneTouchLock
     arguments: []
+    sensitive: false

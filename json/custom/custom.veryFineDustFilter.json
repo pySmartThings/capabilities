@@ -87,7 +87,8 @@
   "commands": {
     "resetVeryFineDustFilter": {
       "name": "resetVeryFineDustFilter",
-      "arguments": []
+      "arguments": [],
+      "sensitive": false
     }
   }
 }

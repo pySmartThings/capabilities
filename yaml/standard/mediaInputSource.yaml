@@ -116,3 +116,4 @@ commands:
             - analog2
             - analog3
             - phono
+    sensitive: false

@@ -5,5 +5,7 @@
   "name": "refresh",
   "ephemeral": false,
   "attributes": {},
-  "commands": { "push": { "name": "push", "arguments": [] } }
+  "commands": {
+    "push": { "name": "push", "arguments": [], "sensitive": false }
+  }
 }

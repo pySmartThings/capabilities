@@ -35,3 +35,4 @@ commands:
             - heavy
             - rinse
             - spinDry
+    sensitive: false

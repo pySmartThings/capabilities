@@ -163,3 +163,4 @@ commands:
   ping:
     name: ping
     arguments: []
+    sensitive: false

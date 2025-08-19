@@ -100,7 +100,8 @@
             "type": "string"
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

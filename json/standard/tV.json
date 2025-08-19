@@ -81,9 +81,13 @@
     }
   },
   "commands": {
-    "volumeDown": { "name": "volumeDown", "arguments": [] },
-    "volumeUp": { "name": "volumeUp", "arguments": [] },
-    "channelDown": { "name": "channelDown", "arguments": [] },
-    "channelUp": { "name": "channelUp", "arguments": [] }
+    "volumeDown": { "name": "volumeDown", "arguments": [], "sensitive": false },
+    "volumeUp": { "name": "volumeUp", "arguments": [], "sensitive": false },
+    "channelDown": {
+      "name": "channelDown",
+      "arguments": [],
+      "sensitive": false
+    },
+    "channelUp": { "name": "channelUp", "arguments": [], "sensitive": false }
   }
 }

@@ -53,6 +53,8 @@ commands:
   update:
     name: update
     arguments: []
+    sensitive: false
   getScanResults:
     name: getScanResults
     arguments: []
+    sensitive: false

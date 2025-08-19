@@ -12,6 +12,7 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false
   GET:
     name: GET
     arguments:
@@ -19,3 +20,4 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false

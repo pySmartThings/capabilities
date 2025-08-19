@@ -91,49 +91,57 @@
       "name": "setGroupName",
       "arguments": [
         { "name": "value", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     },
     "setAcmMode": {
       "name": "setAcmMode",
       "arguments": [
         { "name": "value", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     },
     "setRole": {
       "name": "setRole",
       "arguments": [
         { "name": "value", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     },
     "setMasterDi": {
       "name": "setMasterDi",
       "arguments": [
         { "name": "value", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     },
     "setMasterName": {
       "name": "setMasterName",
       "arguments": [
         { "name": "value", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     },
     "setChannel": {
       "name": "setChannel",
       "arguments": [
         { "name": "value", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     },
     "setStereoType": {
       "name": "setStereoType",
       "arguments": [
         { "name": "value", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     },
     "setStatus": {
       "name": "setStatus",
       "arguments": [
         { "name": "value", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

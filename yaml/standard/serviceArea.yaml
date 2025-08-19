@@ -49,3 +49,4 @@ commands:
           items:
             type: integer
             minimum: 0
+    sensitive: false

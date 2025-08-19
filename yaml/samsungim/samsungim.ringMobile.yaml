@@ -84,3 +84,4 @@ commands:
           required:
             - event
             - enabled
+    sensitive: false

@@ -5,5 +5,7 @@
   "name": "Massage Time Change",
   "ephemeral": false,
   "attributes": {},
-  "commands": { "nextTime": { "name": "nextTime", "arguments": [] } }
+  "commands": {
+    "nextTime": { "name": "nextTime", "arguments": [], "sensitive": false }
+  }
 }

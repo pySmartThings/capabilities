@@ -197,9 +197,11 @@ commands:
   enable:
     name: enable
     arguments: []
+    sensitive: false
   disable:
     name: disable
     arguments: []
+    sensitive: false
   setMonitor:
     name: setMonitor
     arguments:
@@ -266,6 +268,7 @@ commands:
         optional: true
         schema:
           type: string
+    sensitive: false
   setExcludeHolidays:
     name: setExcludeHolidays
     arguments:
@@ -273,3 +276,4 @@ commands:
         optional: false
         schema:
           type: boolean
+    sensitive: false

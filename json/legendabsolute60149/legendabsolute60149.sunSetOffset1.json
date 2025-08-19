@@ -24,7 +24,8 @@
       "name": "setSunSetOffset",
       "arguments": [
         { "name": "value", "optional": false, "schema": { "type": "integer" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

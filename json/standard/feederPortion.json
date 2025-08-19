@@ -48,7 +48,8 @@
             "default": "g"
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

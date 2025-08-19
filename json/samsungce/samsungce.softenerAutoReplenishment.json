@@ -86,7 +86,8 @@
           "optional": false,
           "schema": { "type": "string", "enum": ["regularSoftener"] }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setOrderThreshold": {
       "name": "setOrderThreshold",
@@ -101,7 +102,8 @@
           "optional": false,
           "schema": { "type": "number", "minimum": 0 }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "disableAlarm": {
       "name": "disableAlarm",
@@ -111,7 +113,8 @@
           "optional": false,
           "schema": { "type": "string", "enum": ["regularSoftener"] }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setAutoReplenishment": {
       "name": "setAutoReplenishment",
@@ -154,7 +157,8 @@
             }
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setInitialAmount": {
       "name": "setInitialAmount",
@@ -169,7 +173,8 @@
           "optional": false,
           "schema": { "type": "number", "minimum": 0 }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setRemainingAmount": {
       "name": "setRemainingAmount",
@@ -184,7 +189,8 @@
           "optional": false,
           "schema": { "type": "number", "minimum": 0 }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setDosage": {
       "name": "setDosage",
@@ -199,7 +205,8 @@
           "optional": false,
           "schema": { "type": "number", "minimum": 0 }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setType": {
       "name": "setType",
@@ -217,7 +224,8 @@
             "enum": ["none", "liquid", "capsule", "drySheet"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

@@ -18,3 +18,4 @@ commands:
   setAmbientOn:
     name: setAmbientOn
     arguments: []
+    sensitive: false

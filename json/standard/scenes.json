@@ -32,7 +32,8 @@
       "name": "setScene",
       "arguments": [
         { "name": "scene", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

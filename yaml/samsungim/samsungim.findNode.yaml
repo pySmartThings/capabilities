@@ -38,6 +38,7 @@ commands:
         optional: false
         schema:
           type: boolean
+    sensitive: false
   stfInstalled:
     name: stfInstalled
     arguments:
@@ -45,6 +46,7 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false
   stfUninstalled:
     name: stfUninstalled
     arguments:
@@ -52,3 +54,4 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false

@@ -29,3 +29,4 @@ commands:
           enum:
             - play
             - stop
+    sensitive: false

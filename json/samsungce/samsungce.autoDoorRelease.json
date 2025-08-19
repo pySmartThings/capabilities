@@ -16,7 +16,7 @@
     }
   },
   "commands": {
-    "enable": { "name": "enable", "arguments": [] },
-    "disable": { "name": "disable", "arguments": [] }
+    "enable": { "name": "enable", "arguments": [], "sensitive": false },
+    "disable": { "name": "disable", "arguments": [], "sensitive": false }
   }
 }

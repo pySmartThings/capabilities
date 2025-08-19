@@ -86,6 +86,11 @@
               "codeId": { "type": "string" },
               "codeName": { "type": "string" },
               "userIndex": { "type": "integer" },
+              "userName": { "type": "string" },
+              "userType": {
+                "type": "string",
+                "enum": ["adminMember", "controlOnlyMember", "guest"]
+              },
               "timeout": {
                 "title": "Iso8601Date",
                 "type": "string",
@@ -98,6 +103,7 @@
             }
           }
         },
+        "sensitive": true,
         "additionalProperties": false,
         "required": ["value"]
       },
@@ -123,8 +129,8 @@
     }
   },
   "commands": {
-    "unlock": { "name": "unlock", "arguments": [] },
-    "unlatch": { "name": "unlatch", "arguments": [] },
-    "lock": { "name": "lock", "arguments": [] }
+    "unlock": { "name": "unlock", "arguments": [], "sensitive": false },
+    "unlatch": { "name": "unlatch", "arguments": [], "sensitive": false },
+    "lock": { "name": "lock", "arguments": [], "sensitive": false }
   }
 }

@@ -70,6 +70,7 @@ commands:
           enum:
             - disabled
             - enabled
+    sensitive: false
   setReportStateRealtime:
     name: setReportStateRealtime
     arguments:
@@ -96,6 +97,7 @@ commands:
               default: minute
               enum:
                 - minute
+    sensitive: false
   setReportStateRealtimePeriod:
     name: setReportStateRealtimePeriod
     arguments:
@@ -106,3 +108,4 @@ commands:
           enum:
             - disabled
             - enabled
+    sensitive: false

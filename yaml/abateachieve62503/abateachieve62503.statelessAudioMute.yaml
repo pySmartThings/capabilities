@@ -8,3 +8,4 @@ commands:
   muted:
     name: muted
     arguments: []
+    sensitive: false

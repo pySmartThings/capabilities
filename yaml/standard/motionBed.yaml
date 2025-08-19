@@ -83,6 +83,7 @@ commands:
             - footDown
             - elevationUp
             - elevationDown
+    sensitive: false
   setMode:
     name: setMode
     arguments:
@@ -98,6 +99,7 @@ commands:
             - tv
             - reading
             - antiSnore
+    sensitive: false
   start:
     name: start
     arguments:
@@ -112,3 +114,4 @@ commands:
             - footDown
             - elevationUp
             - elevationDown
+    sensitive: false

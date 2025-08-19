@@ -5,5 +5,7 @@
   "name": "Factory reset",
   "ephemeral": false,
   "attributes": {},
-  "commands": { "reset": { "name": "reset", "arguments": [] } }
+  "commands": {
+    "reset": { "name": "reset", "arguments": [], "sensitive": false }
+  }
 }

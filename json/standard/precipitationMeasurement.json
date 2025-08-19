@@ -25,7 +25,8 @@
   "commands": {
     "resetPrecipitationLevel": {
       "name": "resetPrecipitationLevel",
-      "arguments": []
+      "arguments": [],
+      "sensitive": false
     }
   }
 }

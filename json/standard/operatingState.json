@@ -53,7 +53,8 @@
             "enum": ["paused", "running", "ready"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

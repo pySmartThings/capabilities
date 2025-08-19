@@ -3,8 +3,54 @@ version: 1
 status: live
 name: Window Shade Preset
 ephemeral: false
-attributes: {}
+attributes:
+  supportedCommands:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            title: WindowShadePresetCommand
+            type: string
+            enum:
+              - presetPosition
+              - setPresetPosition
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  position:
+    schema:
+      title: IntegerPercent
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 0
+          maximum: 100
+        unit:
+          type: string
+          enum:
+            - "%"
+          default: "%"
+      additionalProperties: false
+      required:
+        - value
+    setter: setPresetPosition
+    enumCommands: []
 commands:
+  setPresetPosition:
+    name: setPresetPosition
+    arguments:
+      - name: position
+        optional: false
+        schema:
+          type: integer
+          minimum: 0
+          maximum: 100
+    sensitive: false
   presetPosition:
     name: presetPosition
     arguments: []
+    sensitive: false

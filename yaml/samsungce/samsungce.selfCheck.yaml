@@ -88,6 +88,8 @@ commands:
   cancelSelfCheck:
     name: cancelSelfCheck
     arguments: []
+    sensitive: false
   startSelfCheck:
     name: startSelfCheck
     arguments: []
+    sensitive: false

@@ -112,9 +112,11 @@ commands:
         optional: true
         schema:
           type: boolean
+    sensitive: false
   disarm:
     name: disarm
     arguments: []
+    sensitive: false
   armAway:
     name: armAway
     arguments:
@@ -122,3 +124,4 @@ commands:
         optional: true
         schema:
           type: boolean
+    sensitive: false

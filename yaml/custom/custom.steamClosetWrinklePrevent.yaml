@@ -30,3 +30,4 @@ commands:
             - "on"
             - "off"
           title: SteamClosetWrinklePrevent
+    sensitive: false

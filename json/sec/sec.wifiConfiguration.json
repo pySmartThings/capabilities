@@ -77,7 +77,7 @@
             "items": {
               "title": "protocolType",
               "type": "string",
-              "enum": ["helper_hotspot", "ble_ocf", "ble_stdk"]
+              "enum": ["helper_hotspot", "ble_ocf", "ble_stdk_hub", "ble_stdk"]
             }
           }
         },

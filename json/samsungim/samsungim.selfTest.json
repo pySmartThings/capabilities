@@ -28,7 +28,8 @@
       "name": "run",
       "arguments": [
         { "name": "run", "optional": false, "schema": { "type": "boolean" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

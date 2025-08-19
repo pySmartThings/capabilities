@@ -501,6 +501,7 @@ commands:
   stop:
     name: stop
     arguments: []
+    sensitive: false
   startCooking:
     name: startCooking
     arguments:
@@ -510,6 +511,7 @@ commands:
           title: String
           type: string
           maxLength: 255
+    sensitive: false
   setMode:
     name: setMode
     arguments:
@@ -523,6 +525,7 @@ commands:
             - reheating
             - autoClean
             - soakInnerPot
+    sensitive: false
   scheduleCooking:
     name: scheduleCooking
     arguments:
@@ -538,3 +541,4 @@ commands:
           title: String
           type: string
           maxLength: 255
+    sensitive: false

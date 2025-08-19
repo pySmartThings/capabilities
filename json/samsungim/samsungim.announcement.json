@@ -104,7 +104,8 @@
             "enum": ["enabled", "disabled"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "announce": {
       "name": "announce",
@@ -148,7 +149,8 @@
           }
         },
         { "name": "message", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

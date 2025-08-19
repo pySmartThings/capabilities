@@ -51,7 +51,8 @@
             "enum": ["noWind", "sleepWind", "naturalWind"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

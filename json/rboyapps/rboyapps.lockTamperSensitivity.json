@@ -41,8 +41,13 @@
             "enum": ["lowest", "low", "medium", "high", "highest"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "sensitiveToggle": { "name": "sensitiveToggle", "arguments": [] }
+    "sensitiveToggle": {
+      "name": "sensitiveToggle",
+      "arguments": [],
+      "sensitive": false
+    }
   }
 }

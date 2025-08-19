@@ -39,3 +39,4 @@ commands:
   resetFilter:
     name: resetFilter
     arguments: []
+    sensitive: false

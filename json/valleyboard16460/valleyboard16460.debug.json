@@ -21,8 +21,9 @@
       "name": "setValue",
       "arguments": [
         { "name": "value", "optional": false, "schema": { "type": "string" } }
-      ]
+      ],
+      "sensitive": false
     },
-    "clear": { "name": "clear", "arguments": [] }
+    "clear": { "name": "clear", "arguments": [], "sensitive": false }
   }
 }

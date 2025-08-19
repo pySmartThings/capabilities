@@ -16,6 +16,10 @@
     }
   },
   "commands": {
-    "resetFilterUsageTime": { "name": "resetFilterUsageTime", "arguments": [] }
+    "resetFilterUsageTime": {
+      "name": "resetFilterUsageTime",
+      "arguments": [],
+      "sensitive": false
+    }
   }
 }

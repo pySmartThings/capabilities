@@ -52,8 +52,9 @@
       "arguments": [
         { "name": "id", "optional": false, "schema": { "type": "string" } },
         { "name": "value", "optional": false, "schema": { "type": "number" } }
-      ]
+      ],
+      "sensitive": false
     },
-    "refresh": { "name": "refresh", "arguments": [] }
+    "refresh": { "name": "refresh", "arguments": [], "sensitive": false }
   }
 }

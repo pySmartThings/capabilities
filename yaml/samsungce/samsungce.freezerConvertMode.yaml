@@ -70,3 +70,4 @@ commands:
             - kimchiStorageMediumCooling
             - kimchiStorageLowCooling
             - kimchiStorageHighCooling
+    sensitive: false

@@ -62,7 +62,8 @@
             "required": ["event", "enabled"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

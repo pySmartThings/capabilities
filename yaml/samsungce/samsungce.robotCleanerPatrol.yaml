@@ -261,9 +261,12 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false
   enable:
     name: enable
     arguments: []
+    sensitive: false
   disable:
     name: disable
     arguments: []
+    sensitive: false

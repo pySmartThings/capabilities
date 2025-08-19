@@ -51,3 +51,4 @@ commands:
             - rgb
             - colorTemperature
             - dimmer
+    sensitive: false

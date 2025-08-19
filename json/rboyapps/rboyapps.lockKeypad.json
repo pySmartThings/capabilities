@@ -25,7 +25,11 @@
     }
   },
   "commands": {
-    "disableKeypad": { "name": "disableKeypad", "arguments": [] },
+    "disableKeypad": {
+      "name": "disableKeypad",
+      "arguments": [],
+      "sensitive": false
+    },
     "setKeypad": {
       "name": "setKeypad",
       "arguments": [
@@ -34,8 +38,13 @@
           "optional": false,
           "schema": { "type": "string", "enum": ["enabled", "disabled"] }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "enableKeypad": { "name": "enableKeypad", "arguments": [] }
+    "enableKeypad": {
+      "name": "enableKeypad",
+      "arguments": [],
+      "sensitive": false
+    }
   }
 }

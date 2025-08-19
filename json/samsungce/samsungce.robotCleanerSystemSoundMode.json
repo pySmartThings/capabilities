@@ -40,7 +40,8 @@
           "optional": false,
           "schema": { "type": "string", "enum": ["mute", "voice", "beep"] }
         }
-      ]
+      ],
+      "sensitive": false
     }
   }
 }

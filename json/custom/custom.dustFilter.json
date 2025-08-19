@@ -82,6 +82,10 @@
     }
   },
   "commands": {
-    "resetDustFilter": { "name": "resetDustFilter", "arguments": [] }
+    "resetDustFilter": {
+      "name": "resetDustFilter",
+      "arguments": [],
+      "sensitive": false
+    }
   }
 }

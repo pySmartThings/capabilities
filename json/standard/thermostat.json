@@ -423,7 +423,7 @@
     }
   },
   "commands": {
-    "heat": { "name": "heat", "arguments": [] },
+    "heat": { "name": "heat", "arguments": [], "sensitive": false },
     "setSchedule": {
       "name": "setSchedule",
       "arguments": [
@@ -432,11 +432,16 @@
           "optional": false,
           "schema": { "title": "JsonObject", "type": "object" }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "auto": { "name": "auto", "arguments": [] },
-    "cool": { "name": "cool", "arguments": [] },
-    "emergencyHeat": { "name": "emergencyHeat", "arguments": [] },
+    "auto": { "name": "auto", "arguments": [], "sensitive": false },
+    "cool": { "name": "cool", "arguments": [], "sensitive": false },
+    "emergencyHeat": {
+      "name": "emergencyHeat",
+      "arguments": [],
+      "sensitive": false
+    },
     "setThermostatFanMode": {
       "name": "setThermostatFanMode",
       "arguments": [
@@ -449,11 +454,16 @@
             "enum": ["auto", "circulate", "followschedule", "on"]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "fanAuto": { "name": "fanAuto", "arguments": [] },
-    "fanCirculate": { "name": "fanCirculate", "arguments": [] },
-    "off": { "name": "off", "arguments": [] },
+    "fanAuto": { "name": "fanAuto", "arguments": [], "sensitive": false },
+    "fanCirculate": {
+      "name": "fanCirculate",
+      "arguments": [],
+      "sensitive": false
+    },
+    "off": { "name": "off", "arguments": [], "sensitive": false },
     "setCoolingSetpoint": {
       "name": "setCoolingSetpoint",
       "arguments": [
@@ -467,7 +477,8 @@
             "maximum": 10000
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setHeatingSetpoint": {
       "name": "setHeatingSetpoint",
@@ -482,7 +493,8 @@
             "maximum": 10000
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
     "setThermostatMode": {
       "name": "setThermostatMode",
@@ -534,8 +546,9 @@
             ]
           }
         }
-      ]
+      ],
+      "sensitive": false
     },
-    "fanOn": { "name": "fanOn", "arguments": [] }
+    "fanOn": { "name": "fanOn", "arguments": [], "sensitive": false }
   }
 }

@@ -20,5 +20,7 @@
       "enumCommands": []
     }
   },
-  "commands": { "call": { "name": "call", "arguments": [] } }
+  "commands": {
+    "call": { "name": "call", "arguments": [], "sensitive": false }
+  }
 }
