@@ -820,5 +820,8 @@
   "samsungce.kimchiLabelScanMode",
   "samsungce.kimchiRefrigeratorOperatingState",
   "samsungce.autoOpenDoor",
-  "samsungce.fridgeIcemakerInfo"
+  "samsungce.fridgeIcemakerInfo",
+  "samsungce.powerSavingWhileAway",
+  "samsungce.absenceDetection",
+  "samsungce.colorTemperature"
 ]
