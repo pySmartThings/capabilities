@@ -114,6 +114,16 @@ attributes:
       additionalProperties: false
       required: []
     enumCommands: []
+  migrated:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
   codeReport:
     schema:
       type: object
@@ -239,4 +249,8 @@ commands:
           title: String
           type: string
           maxLength: 255
+    sensitive: false
+  migrate:
+    name: migrate
+    arguments: []
     sensitive: false

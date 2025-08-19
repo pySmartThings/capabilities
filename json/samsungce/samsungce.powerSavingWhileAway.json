@@ -1,0 +1,56 @@
+{
+  "id": "samsungce.powerSavingWhileAway",
+  "version": 1,
+  "status": "proposed",
+  "name": "Power Saving While Away",
+  "ephemeral": false,
+  "attributes": {
+    "supportedPowerSavings": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "items": { "type": "string", "enum": ["off", "on"] },
+            "type": "array"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "detectionMethod": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["csi", "radar"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "powerSaving": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string", "enum": ["off", "on"] } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setPowerSaving": {
+      "name": "setPowerSaving",
+      "arguments": [
+        {
+          "name": "powerSaving",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["off", "on"] }
+        }
+      ],
+      "sensitive": false
+    }
+  }
+}
