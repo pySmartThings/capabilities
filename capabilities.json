@@ -823,5 +823,7 @@
   "samsungce.fridgeIcemakerInfo",
   "samsungce.powerSavingWhileAway",
   "samsungce.absenceDetection",
-  "samsungce.colorTemperature"
+  "samsungce.colorTemperature",
+  "safe.panicButton",
+  "safe.users"
 ]
