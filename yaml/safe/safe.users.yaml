@@ -1,0 +1,20 @@
+id: safe.users
+version: 1
+status: proposed
+name: Users
+ephemeral: false
+attributes:
+  users:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+      sensitive: true
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

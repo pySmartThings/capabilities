@@ -392,7 +392,8 @@
               "stormWash": { "type": "boolean" },
               "sanitizingWash": { "type": "boolean" },
               "rinsePlus": { "type": "boolean" },
-              "hotAirDry": { "type": "boolean" }
+              "hotAirDry": { "type": "boolean" },
+              "multiTab": { "type": "boolean" }
             }
           }
         }

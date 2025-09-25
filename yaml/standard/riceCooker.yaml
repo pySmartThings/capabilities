@@ -188,6 +188,14 @@ attributes:
               - customMenu18
               - customMenu19
               - customMenu20
+              - babyFood
+              - quickMeal
+              - noPressureSteaming
+              - germinatedBrownRice
+              - vegetableRice
+              - highHeatMixedGrains
+              - whiteRice
+              - grains
       additionalProperties: false
       required: []
     enumCommands: []
@@ -336,6 +344,14 @@ attributes:
             - customMenu18
             - customMenu19
             - customMenu20
+            - babyFood
+            - quickMeal
+            - noPressureSteaming
+            - germinatedBrownRice
+            - vegetableRice
+            - highHeatMixedGrains
+            - whiteRice
+            - grains
       additionalProperties: false
       required:
         - value
@@ -459,6 +475,14 @@ attributes:
               - customMenu18
               - customMenu19
               - customMenu20
+              - babyFood
+              - quickMeal
+              - noPressureSteaming
+              - germinatedBrownRice
+              - vegetableRice
+              - highHeatMixedGrains
+              - whiteRice
+              - grains
       additionalProperties: false
       required: []
     enumCommands: []

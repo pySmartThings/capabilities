@@ -1,7 +1,7 @@
 {
   "id": "mediaController",
   "version": 1,
-  "status": "proposed",
+  "status": "deprecated",
   "name": "Media Controller",
   "ephemeral": false,
   "attributes": {

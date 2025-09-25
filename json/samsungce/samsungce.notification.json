@@ -64,6 +64,7 @@
                 "incomingCall",
                 "outgoingCall",
                 "duringCall",
+                "endCall",
                 "offHook",
                 "messageReceived"
               ]
@@ -112,6 +113,7 @@
                 "incomingCall",
                 "outgoingCall",
                 "duringCall",
+                "endCall",
                 "offHook",
                 "messageReceived"
               ]
