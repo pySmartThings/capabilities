@@ -101,6 +101,25 @@ attributes:
       required:
         - value
     enumCommands: []
+  sdpOffer:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            id:
+              type: string
+            sdp:
+              type: string
+          required:
+            - id
+            - sdp
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
   deviceIce:
     schema:
       type: object
@@ -154,11 +173,33 @@ attributes:
       required:
         - value
     enumCommands: []
+  standbyMode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
 commands:
   startTalkback:
     name: startTalkback
     arguments:
       - name: id
+        optional: false
+        schema:
+          type: string
+    sensitive: false
+  sdpAnswer:
+    name: sdpAnswer
+    arguments:
+      - name: id
+        optional: false
+        schema:
+          type: string
+      - name: sdp
         optional: false
         schema:
           type: string
@@ -195,6 +236,30 @@ commands:
         schema:
           type: string
       - name: sdp
+        optional: false
+        schema:
+          type: string
+      - name: iceServers
+        optional: true
+        schema:
+          type: object
+          additionalProperties: false
+          properties:
+            urls:
+              type: array
+              items:
+                type: string
+            username:
+              type: string
+            password:
+              type: string
+          required:
+            - urls
+    sensitive: false
+  solicitOffer:
+    name: solicitOffer
+    arguments:
+      - name: id
         optional: false
         schema:
           type: string

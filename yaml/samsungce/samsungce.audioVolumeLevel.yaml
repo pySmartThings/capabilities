@@ -41,6 +41,10 @@ attributes:
             - minimum
             - maximum
             - step
+        data:
+          type: object
+          additionalProperties: true
+          required: []
       additionalProperties: false
       required:
         - value

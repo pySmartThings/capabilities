@@ -1,6 +1,6 @@
 id: precipitationMeasurement
 version: 1
-status: proposed
+status: deprecated
 name: Precipitation Measurement
 ephemeral: false
 attributes:

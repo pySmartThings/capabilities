@@ -20,6 +20,7 @@ attributes:
               - unableToStartOrResume
               - unableToCompleteOperation
               - commandInvalidInCurrentState
+              - standby
       additionalProperties: false
       required: []
     enumCommands: []
@@ -54,6 +55,7 @@ attributes:
             - unableToStartOrResume
             - unableToCompleteOperation
             - commandInvalidInCurrentState
+            - standby
       additionalProperties: false
       required:
         - value

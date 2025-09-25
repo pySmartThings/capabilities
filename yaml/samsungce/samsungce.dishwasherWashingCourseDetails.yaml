@@ -262,6 +262,18 @@ attributes:
                     required:
                       - default
                       - settable
+                  multiTab:
+                    type: object
+                    properties:
+                      default:
+                        type: boolean
+                      settable:
+                        type: array
+                        items:
+                          type: boolean
+                    required:
+                      - default
+                      - settable
             required:
               - courseName
               - energyUsage

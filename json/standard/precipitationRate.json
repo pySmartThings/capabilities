@@ -1,7 +1,7 @@
 {
   "id": "precipitationRate",
   "version": 1,
-  "status": "proposed",
+  "status": "deprecated",
   "name": "Precipitation Rate",
   "ephemeral": false,
   "attributes": {

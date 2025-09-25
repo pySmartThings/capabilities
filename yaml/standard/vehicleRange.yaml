@@ -19,6 +19,7 @@ attributes:
             - mi
             - km
             - m
+          default: km
       additionalProperties: false
       required:
         - value

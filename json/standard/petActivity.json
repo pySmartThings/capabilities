@@ -26,7 +26,8 @@
                 "walking",
                 "running",
                 "barking",
-                "meowing"
+                "meowing",
+                "toileting"
               ]
             }
           }
@@ -55,7 +56,8 @@
               "walking",
               "running",
               "barking",
-              "meowing"
+              "meowing",
+              "toileting"
             ]
           }
         },
