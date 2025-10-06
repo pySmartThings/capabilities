@@ -1,0 +1,38 @@
+{
+  "id": "platinummassive43262.tvChannel",
+  "version": 1,
+  "status": "proposed",
+  "name": "Tv Channel",
+  "ephemeral": false,
+  "attributes": {
+    "tvChannel": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setTvChannel",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "channelDown": {
+      "name": "channelDown",
+      "arguments": [],
+      "sensitive": false
+    },
+    "setTvChannel": {
+      "name": "setTvChannel",
+      "arguments": [
+        {
+          "name": "tvChannel",
+          "optional": false,
+          "schema": { "type": "string" }
+        }
+      ],
+      "sensitive": false
+    },
+    "channelUp": { "name": "channelUp", "arguments": [], "sensitive": false }
+  }
+}

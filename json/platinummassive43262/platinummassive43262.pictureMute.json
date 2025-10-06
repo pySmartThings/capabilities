@@ -1,0 +1,36 @@
+{
+  "id": "platinummassive43262.pictureMute",
+  "version": 1,
+  "status": "proposed",
+  "name": "Picture Mute",
+  "ephemeral": false,
+  "attributes": {
+    "pictureMute": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["muted", "unmuted"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setMute",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setMute": {
+      "name": "setMute",
+      "arguments": [
+        {
+          "name": "value",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["muted", "unmuted"] }
+        }
+      ],
+      "sensitive": false
+    },
+    "mute": { "name": "mute", "arguments": [], "sensitive": false },
+    "unmute": { "name": "unmute", "arguments": [], "sensitive": false }
+  }
+}
