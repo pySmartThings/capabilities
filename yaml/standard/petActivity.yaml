@@ -26,6 +26,7 @@ attributes:
               - running
               - barking
               - meowing
+              - toileting
       additionalProperties: false
       required: []
     enumCommands: []
@@ -49,6 +50,7 @@ attributes:
             - running
             - barking
             - meowing
+            - toileting
       additionalProperties: false
       required:
         - value

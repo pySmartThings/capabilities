@@ -1,0 +1,32 @@
+id: safe.panicButton
+version: 1
+status: proposed
+name: Panic Button
+ephemeral: false
+attributes:
+  serviceProvider:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          default: samsung
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  status:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - STANDBY
+            - TRIGGERED
+          default: STANDBY
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

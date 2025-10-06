@@ -41,6 +41,24 @@
       },
       "enumCommands": []
     },
+    "multiTab": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "properties": {
+              "value": { "type": "boolean" },
+              "settable": { "type": "array", "items": { "type": "boolean" } }
+            },
+            "required": ["value", "settable"]
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
     "hotAirDry": {
       "schema": {
         "type": "object",
@@ -247,7 +265,8 @@
                 "sanitizingWash",
                 "rinsePlus",
                 "hotAirDry",
-                "heatedDry"
+                "heatedDry",
+                "multiTab"
               ]
             }
           }
@@ -432,6 +451,17 @@
       ],
       "sensitive": false
     },
+    "setMultiTab": {
+      "name": "setMultiTab",
+      "arguments": [
+        {
+          "name": "multiTab",
+          "optional": false,
+          "schema": { "type": "boolean" }
+        }
+      ],
+      "sensitive": false
+    },
     "setSpeedBooster": {
       "name": "setSpeedBooster",
       "arguments": [
@@ -492,7 +522,8 @@
                   "high",
                   "extraHigh"
                 ]
-              }
+              },
+              "multiTab": { "type": "boolean" }
             }
           }
         }

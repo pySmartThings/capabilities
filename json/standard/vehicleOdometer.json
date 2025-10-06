@@ -15,7 +15,11 @@
             "type": "number",
             "minimum": 0
           },
-          "unit": { "type": "string", "enum": ["mi", "km", "m"] }
+          "unit": {
+            "type": "string",
+            "enum": ["mi", "km", "m"],
+            "default": "km"
+          }
         },
         "additionalProperties": false,
         "required": ["value", "unit"]

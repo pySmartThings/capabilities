@@ -20,7 +20,8 @@
                 "paused",
                 "unableToStartOrResume",
                 "unableToCompleteOperation",
-                "commandInvalidInCurrentState"
+                "commandInvalidInCurrentState",
+                "standby"
               ]
             }
           }
@@ -61,7 +62,8 @@
               "paused",
               "unableToStartOrResume",
               "unableToCompleteOperation",
-              "commandInvalidInCurrentState"
+              "commandInvalidInCurrentState",
+              "standby"
             ]
           }
         },

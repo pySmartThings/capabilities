@@ -370,4 +370,6 @@ commands:
               type: boolean
             hotAirDry:
               type: boolean
+            multiTab:
+              type: boolean
     sensitive: false

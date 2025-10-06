@@ -30,6 +30,11 @@
               "step": { "type": "integer", "minimum": 0, "maximum": 100 }
             },
             "required": ["minimum", "maximum", "step"]
+          },
+          "data": {
+            "type": "object",
+            "additionalProperties": true,
+            "required": []
           }
         },
         "additionalProperties": false,
