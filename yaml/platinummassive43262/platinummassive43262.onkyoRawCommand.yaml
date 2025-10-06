@@ -1,0 +1,15 @@
+id: platinummassive43262.onkyoRawCommand
+version: 1
+status: proposed
+name: Onkyo Raw Command
+ephemeral: false
+attributes: {}
+commands:
+  sendCommand:
+    name: sendCommand
+    arguments:
+      - name: command
+        optional: false
+        schema:
+          type: string
+    sensitive: false

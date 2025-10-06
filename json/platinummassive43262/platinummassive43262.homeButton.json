@@ -1,0 +1,11 @@
+{
+  "id": "platinummassive43262.homeButton",
+  "version": 1,
+  "status": "proposed",
+  "name": "Home Button",
+  "ephemeral": false,
+  "attributes": {},
+  "commands": {
+    "home": { "name": "home", "arguments": [], "sensitive": false }
+  }
+}

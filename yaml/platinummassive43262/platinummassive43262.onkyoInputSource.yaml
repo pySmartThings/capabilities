@@ -1,0 +1,37 @@
+id: platinummassive43262.onkyoInputSource
+version: 1
+status: proposed
+name: Onkyo Input Source
+ephemeral: false
+attributes:
+  supportedInputSources:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  inputSource:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setInputSource
+    enumCommands: []
+commands:
+  setInputSource:
+    name: setInputSource
+    arguments:
+      - name: inputSource
+        optional: false
+        schema:
+          type: string
+    sensitive: false
