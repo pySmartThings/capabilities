@@ -825,5 +825,10 @@
   "samsungce.absenceDetection",
   "samsungce.colorTemperature",
   "safe.panicButton",
-  "safe.users"
+  "safe.users",
+  "platinummassive43262.homeButton",
+  "platinummassive43262.onkyoRawCommand",
+  "platinummassive43262.tvChannel",
+  "platinummassive43262.pictureMute",
+  "platinummassive43262.onkyoInputSource"
 ]
