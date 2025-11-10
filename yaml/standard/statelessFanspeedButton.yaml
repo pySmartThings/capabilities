@@ -1,6 +1,6 @@
 id: statelessFanspeedButton
 version: 1
-status: live
+status: deprecated
 name: Stateless Fanspeed Button
 ephemeral: false
 attributes:

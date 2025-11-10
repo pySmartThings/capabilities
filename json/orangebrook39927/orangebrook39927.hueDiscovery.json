@@ -1,0 +1,70 @@
+{
+  "id": "orangebrook39927.hueDiscovery",
+  "version": 1,
+  "status": "proposed",
+  "name": "Hue Discovery",
+  "ephemeral": false,
+  "attributes": {
+    "mode": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "ready",
+              "error",
+              "found",
+              "none",
+              "room",
+              "zone",
+              "motion",
+              "contact",
+              "button",
+              "camera_motion",
+              "light"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedModes": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "discover": {
+      "name": "discover",
+      "arguments": [
+        {
+          "name": "mode",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "room",
+              "zone",
+              "motion",
+              "contact",
+              "button",
+              "camera_motion",
+              "light"
+            ]
+          }
+        }
+      ],
+      "sensitive": false
+    }
+  }
+}

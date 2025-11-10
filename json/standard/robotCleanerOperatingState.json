@@ -78,6 +78,20 @@
       },
       "enumCommands": []
     },
+    "supportedCommands": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["start", "pause", "goHome"] }
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
     "supportedOperatingStateCommands": {
       "schema": {
         "type": "object",

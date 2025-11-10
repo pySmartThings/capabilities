@@ -5,11 +5,39 @@
   "name": "End to End Encryption",
   "ephemeral": true,
   "attributes": {
+    "error": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "code": { "type": "integer" },
+                "reason": { "type": "string" },
+                "clientId": {
+                  "title": "String",
+                  "type": "string",
+                  "maxLength": 255
+                }
+              },
+              "required": ["code", "reason", "clientId"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
     "nonce": {
       "schema": {
         "type": "object",
         "properties": {
           "value": {
+            "type": "object",
             "schema": {
               "type": "object",
               "additionalProperties": false,
@@ -35,6 +63,7 @@
         "type": "object",
         "properties": {
           "value": {
+            "type": "object",
             "schema": {
               "type": "object",
               "additionalProperties": false,

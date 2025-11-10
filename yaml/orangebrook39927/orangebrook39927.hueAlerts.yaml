@@ -1,10 +1,10 @@
-id: statelessCustomButton
+id: orangebrook39927.hueAlerts
 version: 1
-status: deprecated
-name: Stateless Custom Button
+status: proposed
+name: Hue Alerts
 ephemeral: false
 attributes:
-  availableCustomButtons:
+  supportedAlerts:
     schema:
       type: object
       properties:
@@ -16,10 +16,10 @@ attributes:
       required: []
     enumCommands: []
 commands:
-  setButton:
-    name: setButton
+  apply:
+    name: apply
     arguments:
-      - name: button
+      - name: alert
         optional: false
         schema:
           type: string
