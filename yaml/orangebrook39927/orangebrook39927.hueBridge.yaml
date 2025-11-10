@@ -1,0 +1,41 @@
+id: orangebrook39927.hueBridge
+version: 1
+status: proposed
+name: Hue Bridge
+ephemeral: false
+attributes:
+  status:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - unlinked
+            - linked
+            - linking
+            - timeout
+            - error
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  disconnect:
+    name: disconnect
+    arguments: []
+    sensitive: false
+  link:
+    name: link
+    arguments:
+      - name: status
+        optional: false
+        schema:
+          type: string
+          enum:
+            - linking
+    sensitive: false
+  connect:
+    name: connect
+    arguments: []
+    sensitive: false

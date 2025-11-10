@@ -130,6 +130,17 @@
       },
       "enumCommands": []
     },
+    "talkbackDuplex": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["halfDuplex", "fullDuplex"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
     "audioOnly": {
       "schema": {
         "type": "object",

@@ -1,0 +1,22 @@
+id: orangebrook39927.hueGeofence
+version: 1
+status: proposed
+name: Hue Geofence
+ephemeral: false
+attributes: {}
+commands:
+  update:
+    name: update
+    arguments:
+      - name: mode
+        optional: false
+        schema:
+          type: string
+          enum:
+            - away
+            - home
+    sensitive: false
+  remove:
+    name: remove
+    arguments: []
+    sensitive: false

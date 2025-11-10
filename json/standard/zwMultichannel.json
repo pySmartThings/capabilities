@@ -1,7 +1,7 @@
 {
   "id": "zwMultichannel",
   "version": 1,
-  "status": "live",
+  "status": "deprecated",
   "name": "Zw Multichannel",
   "ephemeral": false,
   "attributes": {

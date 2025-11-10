@@ -5,6 +5,28 @@
   "name": "Robot Cleaner Guided Patrol",
   "ephemeral": false,
   "attributes": {
+    "patrolState": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "ready",
+              "patrol",
+              "paused",
+              "stopped",
+              "completed",
+              "blocked"
+            ],
+            "default": "ready"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
     "mapId": {
       "schema": {
         "type": "object",

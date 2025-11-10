@@ -15,6 +15,14 @@ attributes:
         - value
     enumCommands: []
 commands:
+  sendData:
+    name: sendData
+    arguments:
+      - name: data
+        optional: false
+        schema:
+          type: object
+    sensitive: false
   setAmbientOn:
     name: setAmbientOn
     arguments: []

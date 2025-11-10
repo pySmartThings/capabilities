@@ -1,6 +1,6 @@
 id: networkMeter
 version: 1
-status: live
+status: deprecated
 name: Network Meter
 ephemeral: false
 attributes:

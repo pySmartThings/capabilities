@@ -1,7 +1,7 @@
 {
   "id": "refrigeration",
   "version": 1,
-  "status": "live",
+  "status": "deprecated",
   "name": "Refrigeration",
   "ephemeral": false,
   "attributes": {

@@ -1,7 +1,7 @@
 {
   "id": "logTrigger",
   "version": 1,
-  "status": "proposed",
+  "status": "deprecated",
   "name": "Log Trigger",
   "ephemeral": false,
   "attributes": {
