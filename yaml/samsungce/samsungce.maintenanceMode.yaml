@@ -1,0 +1,40 @@
+id: samsungce.maintenanceMode
+version: 1
+status: proposed
+name: Maintenance Mode
+ephemeral: false
+attributes:
+  mode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - none
+            - calibration
+            - freezeProtection
+            - installationCheck
+            - pumpClean
+            - defrostInside
+            - selfDiagnosis
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  operatingState:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - ready
+            - running
+            - paused
+            - finished
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}
