@@ -1,0 +1,47 @@
+{
+  "id": "samsungvd.audioSoundMode",
+  "version": 1,
+  "status": "proposed",
+  "name": "Audio Sound Mode",
+  "ephemeral": true,
+  "attributes": {
+    "soundMode": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "displayStatus": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "supportedSoundModes": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "items": { "type": "string" }, "type": "array" }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setSoundMode": {
+      "name": "setSoundMode",
+      "arguments": [
+        { "name": "mode", "optional": false, "schema": { "type": "string" } }
+      ],
+      "sensitive": false
+    }
+  }
+}
