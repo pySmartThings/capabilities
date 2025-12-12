@@ -14,10 +14,12 @@
             "enum": [
               "sleep",
               "ready",
-              "sterilize",
               "filterClean",
-              "sterilizeCancel",
               "filterMaxOut",
+              "sterilize",
+              "sterilizeCancel",
+              "iceStorageSterilize",
+              "iceStorageSterilizeCancel",
               "unavailable"
             ]
           }

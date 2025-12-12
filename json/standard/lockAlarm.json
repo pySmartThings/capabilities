@@ -22,7 +22,8 @@
                 "notClosedForALongTime",
                 "highTemperature",
                 "attemptsExceeded",
-                "physicalImpact"
+                "physicalImpact",
+                "failedOpeningAttempt"
               ]
             }
           }
@@ -47,7 +48,8 @@
               "notClosedForALongTime",
               "highTemperature",
               "attemptsExceeded",
-              "physicalImpact"
+              "physicalImpact",
+              "failedOpeningAttempt"
             ]
           }
         },

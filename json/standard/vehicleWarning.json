@@ -1,0 +1,185 @@
+{
+  "id": "vehicleWarning",
+  "version": 1,
+  "status": "proposed",
+  "name": "Vehicle Warning",
+  "ephemeral": false,
+  "attributes": {
+    "fuel": {
+      "schema": {
+        "title": "VehicleWarningState",
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["normal", "warning"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "tirePressureFrontLeft": {
+      "schema": {
+        "title": "VehicleWarningState",
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["normal", "warning"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "electricVehicleBattery": {
+      "schema": {
+        "title": "VehicleWarningState",
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["normal", "warning"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedAttributes": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "title": "VehicleWarning",
+              "type": "string",
+              "enum": [
+                "fuel",
+                "smartKeyBattery",
+                "washerFluid",
+                "brakeFluid",
+                "engineOil",
+                "lampWire",
+                "tirePressureFrontLeft",
+                "tirePressureFrontRight",
+                "tirePressureRearLeft",
+                "tirePressureRearRight",
+                "electricVehicleBattery",
+                "auxiliaryBattery"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "lampWire": {
+      "schema": {
+        "title": "VehicleWarningState",
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["normal", "warning"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "auxiliaryBattery": {
+      "schema": {
+        "title": "VehicleWarningState",
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["normal", "warning"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "brakeFluid": {
+      "schema": {
+        "title": "VehicleWarningState",
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["normal", "warning"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "tirePressureFrontRight": {
+      "schema": {
+        "title": "VehicleWarningState",
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["normal", "warning"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "washerFluid": {
+      "schema": {
+        "title": "VehicleWarningState",
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["normal", "warning"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "smartKeyBattery": {
+      "schema": {
+        "title": "VehicleWarningState",
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["normal", "warning"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "engineOil": {
+      "schema": {
+        "title": "VehicleWarningState",
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["normal", "warning"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "tirePressureRearLeft": {
+      "schema": {
+        "title": "VehicleWarningState",
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["normal", "warning"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "tirePressureRearRight": {
+      "schema": {
+        "title": "VehicleWarningState",
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["normal", "warning"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

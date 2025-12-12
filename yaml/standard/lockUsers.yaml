@@ -84,7 +84,7 @@ commands:
         optional: false
         schema:
           type: string
-          maxLength: 10
+          maxLength: 64
       - name: userType
         optional: false
         schema:
@@ -120,7 +120,7 @@ commands:
         optional: false
         schema:
           type: string
-          maxLength: 10
+          maxLength: 64
       - name: userType
         optional: false
         schema:

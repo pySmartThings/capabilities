@@ -1,0 +1,80 @@
+id: vehicleWindowState
+version: 1
+status: proposed
+name: Vehicle Window State
+ephemeral: false
+attributes:
+  frontRightWindow:
+    schema:
+      title: VehicleWindowState
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - open
+            - closed
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  rearRightWindow:
+    schema:
+      title: VehicleWindowState
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - open
+            - closed
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedAttributes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - frontLeftWindow
+              - frontRightWindow
+              - rearLeftWindow
+              - rearRightWindow
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  frontLeftWindow:
+    schema:
+      title: VehicleWindowState
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - open
+            - closed
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  rearLeftWindow:
+    schema:
+      title: VehicleWindowState
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - open
+            - closed
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

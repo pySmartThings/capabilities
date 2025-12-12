@@ -22,6 +22,7 @@ attributes:
               - highTemperature
               - attemptsExceeded
               - physicalImpact
+              - failedOpeningAttempt
       additionalProperties: false
       required: []
     enumCommands: []
@@ -41,6 +42,7 @@ attributes:
             - highTemperature
             - attemptsExceeded
             - physicalImpact
+            - failedOpeningAttempt
       additionalProperties: false
       required:
         - value
