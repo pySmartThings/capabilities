@@ -1,0 +1,118 @@
+id: vehicleHvac
+version: 1
+status: proposed
+name: Vehicle Hvac
+ephemeral: false
+attributes:
+  temperatureRange:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            minimum:
+              title: TemperatureValue
+              type: number
+              minimum: -460
+              maximum: 10000
+            maximum:
+              title: TemperatureValue
+              type: number
+              minimum: -460
+              maximum: 10000
+            step:
+              title: TemperatureValue
+              type: number
+              minimum: -460
+              maximum: 10000
+          required:
+            - minimum
+            - maximum
+        unit:
+          type: string
+          enum:
+            - F
+            - C
+      additionalProperties: false
+      required:
+        - value
+        - unit
+    enumCommands: []
+  defogState:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - "on"
+            - "off"
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  hvacSpeedRange:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            minimum:
+              type: integer
+            maximum:
+              type: integer
+            step:
+              type: integer
+          required:
+            - minimum
+            - maximum
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  temperature:
+    schema:
+      type: object
+      properties:
+        value:
+          title: TemperatureValue
+          type: number
+          minimum: -460
+          maximum: 10000
+        unit:
+          type: string
+          enum:
+            - F
+            - C
+      additionalProperties: false
+      required:
+        - value
+        - unit
+    enumCommands: []
+  hvacState:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - "on"
+            - "off"
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  hvacSpeed:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}
