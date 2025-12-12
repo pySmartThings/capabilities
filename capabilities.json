@@ -838,5 +838,17 @@
   "orangebrook39927.hueBridge",
   "samsungce.maintenanceMode",
   "samsungvd.audioSoundMode",
-  "partyvoice23922.textfield"
+  "partyvoice23922.textfield",
+  "vehicleBattery",
+  "vehicleDoorState",
+  "vehicleEngine",
+  "vehicleFuelLevel",
+  "vehicleHvacRemoteSwitch",
+  "vehicleHvac",
+  "vehicleInformation",
+  "vehicleOdometer",
+  "vehicleRange",
+  "vehicleTirePressureMonitor",
+  "vehicleWarning",
+  "vehicleWindowState"
 ]
