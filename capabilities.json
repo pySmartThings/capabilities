@@ -841,14 +841,8 @@
   "partyvoice23922.textfield",
   "vehicleBattery",
   "vehicleDoorState",
-  "vehicleEngine",
-  "vehicleFuelLevel",
   "vehicleHvacRemoteSwitch",
   "vehicleHvac",
-  "vehicleInformation",
-  "vehicleOdometer",
-  "vehicleRange",
-  "vehicleTirePressureMonitor",
   "vehicleWarning",
   "vehicleWindowState"
 ]
