@@ -1,0 +1,111 @@
+id: vehicleDoorState
+version: 1
+status: proposed
+name: Vehicle Door State
+ephemeral: false
+attributes:
+  frontLeftDoor:
+    schema:
+      title: VehicleDoorState
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - open
+            - closed
+            - locked
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  rearRightDoor:
+    schema:
+      title: VehicleDoorState
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - open
+            - closed
+            - locked
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  rearLeftDoor:
+    schema:
+      title: VehicleDoorState
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - open
+            - closed
+            - locked
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedAttributes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - frontLeftDoor
+              - frontRightDoor
+              - rearLeftDoor
+              - rearRightDoor
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  lockState:
+    schema:
+      type: object
+      properties:
+        value:
+          title: VehicleDoorLockState
+          type: string
+          enum:
+            - locked
+            - unknown
+            - unlocked
+      additionalProperties: false
+      required:
+        - value
+    enumCommands:
+      - command: lock
+        value: locked
+      - command: unlock
+        value: unlocked
+  frontRightDoor:
+    schema:
+      title: VehicleDoorState
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - open
+            - closed
+            - locked
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  unlock:
+    name: unlock
+    arguments: []
+    sensitive: false
+  lock:
+    name: lock
+    arguments: []
+    sensitive: false

@@ -1,0 +1,93 @@
+{
+  "id": "vehicleBattery",
+  "version": 1,
+  "status": "proposed",
+  "name": "Vehicle Battery",
+  "ephemeral": false,
+  "attributes": {
+    "chargingRemainTime": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "title": "PositiveInteger",
+            "type": "integer",
+            "minimum": 0
+          },
+          "unit": { "type": "string", "enum": ["mins"], "default": "mins" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "chargingDetail": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "title": "VehicleChargingDetail",
+            "type": "string",
+            "enum": [
+              "noCharging",
+              "charging",
+              "veryFastCharging",
+              "fastCharging",
+              "v2lDischarge",
+              "v2lCharging",
+              "v2lStop",
+              "v2xDischarge",
+              "v2xCharging",
+              "reseveredCharging"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "chargingPlug": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["connected", "disconnected"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "batteryLevel": {
+      "schema": {
+        "title": "IntegerPercent",
+        "type": "object",
+        "properties": {
+          "value": { "type": "integer", "minimum": 0, "maximum": 100 },
+          "unit": { "type": "string", "enum": ["%"], "default": "%" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "chargingState": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["charging", "stopped"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": [
+        { "command": "charge", "value": "charging" },
+        { "command": "stop", "value": "stopped" }
+      ]
+    }
+  },
+  "commands": {
+    "charge": { "name": "charge", "arguments": [], "sensitive": false },
+    "stop": { "name": "stop", "arguments": [], "sensitive": false }
+  }
+}

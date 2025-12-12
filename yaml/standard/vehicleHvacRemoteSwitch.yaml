@@ -1,0 +1,50 @@
+id: vehicleHvacRemoteSwitch
+version: 1
+status: proposed
+name: Vehicle Hvac Remote Switch
+ephemeral: false
+attributes: {}
+commands:
+  "off":
+    name: "off"
+    arguments: []
+    sensitive: false
+  "on":
+    name: "on"
+    arguments:
+      - name: hvacRemote
+        optional: false
+        schema:
+          title: HvacRemoteMap
+          type: object
+          additionalProperties: false
+          properties:
+            ignitionDuration:
+              title: PositiveInteger
+              type: integer
+              minimum: 0
+            temperature:
+              title: Temperature
+              type: object
+              additionalProperties: false
+              properties:
+                value:
+                  title: TemperatureValue
+                  type: number
+                  minimum: -460
+                  maximum: 10000
+                unit:
+                  title: TemperatureUnit
+                  type: string
+                  enum:
+                    - F
+                    - C
+              required:
+                - value
+                - unit
+            defog:
+              type: string
+              enum:
+                - "on"
+                - "off"
+    sensitive: false

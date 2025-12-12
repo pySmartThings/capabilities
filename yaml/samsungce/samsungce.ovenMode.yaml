@@ -19,6 +19,7 @@ attributes:
               - AiSousvide
               - AirFry
               - AirFryer
+              - AirFryMax
               - AirSousvide
               - Autocook
               - AutocookCustom
@@ -99,6 +100,7 @@ attributes:
               - MultiLevelCook
               - NaturalSteam
               - NoOperation
+              - Pizza
               - PizzaCook
               - PizzaNaan
               - PlateWarm
@@ -180,6 +182,7 @@ attributes:
             - AiSousvide
             - AirFry
             - AirFryer
+            - AirFryMax
             - AirSousvide
             - Autocook
             - AutocookCustom
@@ -260,6 +263,7 @@ attributes:
             - MultiLevelCook
             - NaturalSteam
             - NoOperation
+            - Pizza
             - PizzaCook
             - PizzaNaan
             - PlateWarm
@@ -342,6 +346,7 @@ commands:
             - AiSousvide
             - AirFry
             - AirFryer
+            - AirFryMax
             - AirSousvide
             - Autocook
             - AutocookCustom
@@ -422,6 +427,7 @@ commands:
             - MultiLevelCook
             - NaturalSteam
             - NoOperation
+            - Pizza
             - PizzaCook
             - PizzaNaan
             - PlateWarm

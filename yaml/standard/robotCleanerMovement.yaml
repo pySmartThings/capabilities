@@ -21,6 +21,7 @@ attributes:
             - after
             - cleaning
             - pause
+            - washingMop
       additionalProperties: false
       required:
         - value
@@ -45,4 +46,5 @@ commands:
             - after
             - cleaning
             - pause
+            - washingMop
     sensitive: false
