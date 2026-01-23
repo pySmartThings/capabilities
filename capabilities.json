@@ -844,5 +844,6 @@
   "vehicleHvacRemoteSwitch",
   "vehicleHvac",
   "vehicleWarning",
-  "vehicleWindowState"
+  "vehicleWindowState",
+  "statelessCurtainPowerButton"
 ]
