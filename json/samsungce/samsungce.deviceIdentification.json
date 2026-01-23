@@ -41,6 +41,17 @@
       },
       "enumCommands": []
     },
+    "releaseCountry": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["US", "KR", "ZZ"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
     "modelClassificationCode": {
       "schema": {
         "type": "object",

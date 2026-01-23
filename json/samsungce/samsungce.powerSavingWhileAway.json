@@ -5,6 +5,17 @@
   "name": "Power Saving While Away",
   "ephemeral": false,
   "attributes": {
+    "switchToSaverMode": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["60", "100", "180"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
     "supportedPowerSavings": {
       "schema": {
         "type": "object",
@@ -19,11 +30,56 @@
       },
       "enumCommands": []
     },
+    "supportedSaverModes": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "items": {
+              "type": "string",
+              "enum": ["keepCoolingHeating", "keepCooling", "standby"]
+            },
+            "type": "array"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedSwitchToSaverModes": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "items": { "type": "string", "enum": ["60", "100", "180"] },
+            "type": "array"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
     "detectionMethod": {
       "schema": {
         "type": "object",
         "properties": {
           "value": { "type": "string", "enum": ["csi", "radar"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "saverMode": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["keepCoolingHeating", "keepCooling", "standby"]
+          }
         },
         "additionalProperties": false,
         "required": ["value"]
@@ -48,6 +104,31 @@
           "name": "powerSaving",
           "optional": false,
           "schema": { "type": "string", "enum": ["off", "on"] }
+        }
+      ],
+      "sensitive": false
+    },
+    "setSaverMode": {
+      "name": "setSaverMode",
+      "arguments": [
+        {
+          "name": "saverMode",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["keepCoolingHeating", "keepCooling", "standby"]
+          }
+        }
+      ],
+      "sensitive": false
+    },
+    "setSwitchToSaverMode": {
+      "name": "setSwitchToSaverMode",
+      "arguments": [
+        {
+          "name": "switchToSaverMode",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["60", "100", "180"] }
         }
       ],
       "sensitive": false

@@ -4,12 +4,87 @@ status: proposed
 name: Coffee Brewing Recipe
 ephemeral: false
 attributes:
+  preloadedBrewingRecipes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          additionalProperties: false
+          items:
+            type: object
+            properties:
+              cups:
+                type: integer
+                minimum: 0
+                maximum: 2
+              recipe:
+                type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
   supportedPublisherIDs:
     schema:
       type: object
       properties:
         value:
           type: array
+          items:
+            type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  userDefinedBrewingRecipes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          additionalProperties: false
+          items:
+            type: object
+            properties:
+              cups:
+                type: integer
+                minimum: 0
+                maximum: 2
+              stages:
+                type: array
+                maxItems: 6
+                items:
+                  type: object
+                  additionalProperties: false
+                  properties:
+                    temperature:
+                      type: integer
+                      default: 95
+                      minimum: 0
+                      maximum: 100
+                    waterAmount:
+                      type: integer
+                      minimum: 0
+                      maximum: 2000
+                    timeSecond:
+                      type: integer
+                      minimum: 0
+                      maximum: 250
+                    turnOver:
+                      type: integer
+                      minimum: 0
+                      maximum: 255
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  visibleList:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          additionalProperties: false
           items:
             type: string
       additionalProperties: false
@@ -47,6 +122,19 @@ attributes:
       required:
         - value
     enumCommands: []
+  invisibleList:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          additionalProperties: false
+          items:
+            type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
   coffeeBrewingStatus:
     schema:
       type: object
@@ -56,6 +144,16 @@ attributes:
           enum:
             - brewing
             - ready
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  activated:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
       additionalProperties: false
       required:
         - value
@@ -73,6 +171,60 @@ attributes:
         - value
     enumCommands: []
 commands:
+  setUserDefinedBrewingRecipes:
+    name: setUserDefinedBrewingRecipes
+    arguments:
+      - name: userDefinedBrewingRecipes
+        optional: false
+        schema:
+          type: array
+          items:
+            type: object
+            properties:
+              cups:
+                type: integer
+                minimum: 0
+                maximum: 2
+              stages:
+                type: array
+                maxItems: 6
+                items:
+                  type: object
+                  additionalProperties: false
+                  properties:
+                    temperature:
+                      type: integer
+                      default: 95
+                      minimum: 0
+                      maximum: 100
+                    waterAmount:
+                      type: integer
+                      minimum: 0
+                      maximum: 2000
+                    timeSecond:
+                      type: integer
+                      minimum: 0
+                      maximum: 250
+                    turnOver:
+                      type: integer
+                      minimum: 0
+                      maximum: 255
+          maxItems: 1
+    sensitive: false
+  setInvisibleList:
+    name: setInvisibleList
+    arguments:
+      - name: invisibleList
+        optional: false
+        schema:
+          type: array
+          items:
+            type: string
+    sensitive: false
+  activate:
+    name: activate
+    arguments: []
+    sensitive: false
   setCoffeeBrewingRecipe:
     name: setCoffeeBrewingRecipe
     arguments:
@@ -123,4 +275,18 @@ commands:
         optional: false
         schema:
           type: string
+    sensitive: false
+  setVisibleList:
+    name: setVisibleList
+    arguments:
+      - name: visibleList
+        optional: false
+        schema:
+          type: array
+          items:
+            type: string
+    sensitive: false
+  deactivate:
+    name: deactivate
+    arguments: []
     sensitive: false

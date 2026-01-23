@@ -20,6 +20,31 @@
       },
       "enumCommands": []
     },
+    "availableDehumidifierModes": {
+      "schema": {
+        "title": "Available Dehumidifer Modes",
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "high",
+                "medium",
+                "quiet",
+                "clothesDrying",
+                "max",
+                "smart"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
     "supportedDehumidifierModes": {
       "schema": {
         "title": "Supported Dehumidifer Modes",

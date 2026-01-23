@@ -13,7 +13,16 @@
             "type": "array",
             "items": {
               "type": "string",
-              "enum": ["on", "dim", "bright", "off", "smart", "high", "low"]
+              "enum": [
+                "on",
+                "dim",
+                "bright",
+                "off",
+                "smart",
+                "high",
+                "medium",
+                "low"
+              ]
             }
           }
         },
@@ -28,7 +37,16 @@
         "properties": {
           "value": {
             "type": "string",
-            "enum": ["on", "dim", "bright", "off", "smart", "high", "low"]
+            "enum": [
+              "on",
+              "dim",
+              "bright",
+              "off",
+              "smart",
+              "high",
+              "medium",
+              "low"
+            ]
           }
         },
         "additionalProperties": false,
@@ -46,7 +64,16 @@
           "optional": false,
           "schema": {
             "type": "string",
-            "enum": ["on", "dim", "bright", "off", "smart", "high", "low"]
+            "enum": [
+              "on",
+              "dim",
+              "bright",
+              "off",
+              "smart",
+              "high",
+              "medium",
+              "low"
+            ]
           }
         }
       ],

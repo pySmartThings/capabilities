@@ -19,6 +19,7 @@ attributes:
               - "off"
               - smart
               - high
+              - medium
               - low
       additionalProperties: false
       required:
@@ -37,6 +38,7 @@ attributes:
             - "off"
             - smart
             - high
+            - medium
             - low
       additionalProperties: false
       required:
@@ -57,6 +59,7 @@ commands:
             - "off"
             - smart
             - high
+            - medium
             - low
     sensitive: false
   "off":

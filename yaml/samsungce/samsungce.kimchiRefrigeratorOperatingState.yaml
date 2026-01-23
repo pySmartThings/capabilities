@@ -48,11 +48,14 @@ attributes:
                 - fridgeGeneral
                 - fridgeVegetablesFruit
                 - fridgeDrink
+                - fridgeDegree2
                 - storageRiceWine
                 - storageVegetables
                 - storageMeat
                 - storageRootVegetables
                 - freezer
+                - freezerDegree19
+                - freezerSoftFreeze5
                 - freezerMediumCooling
                 - freezerHighCooling
                 - freezerLowCooling
@@ -131,11 +134,14 @@ attributes:
                   - fridgeGeneral
                   - fridgeVegetablesFruit
                   - fridgeDrink
+                  - fridgeDegree2
                   - storageRiceWine
                   - storageVegetables
                   - storageMeat
                   - storageRootVegetables
                   - freezer
+                  - freezerDegree19
+                  - freezerSoftFreeze5
                   - freezerMediumCooling
                   - freezerHighCooling
                   - freezerLowCooling
@@ -210,11 +216,14 @@ commands:
             - fridgeGeneral
             - fridgeVegetablesFruit
             - fridgeDrink
+            - fridgeDegree2
             - storageRiceWine
             - storageVegetables
             - storageMeat
             - storageRootVegetables
             - freezer
+            - freezerDegree19
+            - freezerSoftFreeze5
             - freezerMediumCooling
             - freezerHighCooling
             - freezerLowCooling
