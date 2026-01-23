@@ -250,13 +250,7 @@
                   }
                 }
               },
-              "required": [
-                "courseName",
-                "energyUsage",
-                "waterUsage",
-                "expectedTime",
-                "options"
-              ]
+              "required": ["courseName", "options"]
             }
           }
         },
