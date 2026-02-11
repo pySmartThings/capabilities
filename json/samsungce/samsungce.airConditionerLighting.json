@@ -52,6 +52,7 @@
         "additionalProperties": false,
         "required": ["value"]
       },
+      "setter": "setLightingLevel",
       "enumCommands": []
     }
   },

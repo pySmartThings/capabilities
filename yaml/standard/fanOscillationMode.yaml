@@ -29,6 +29,8 @@ attributes:
               - mid
               - spot
               - swing
+              - leftZone
+              - rightZone
           type: array
       additionalProperties: false
       required:
@@ -59,6 +61,8 @@ attributes:
               - mid
               - spot
               - swing
+              - leftZone
+              - rightZone
           type: array
       additionalProperties: false
       required: []
@@ -87,6 +91,8 @@ attributes:
             - mid
             - spot
             - swing
+            - leftZone
+            - rightZone
       additionalProperties: false
       required: []
     enumCommands: []
@@ -116,4 +122,6 @@ commands:
             - mid
             - spot
             - swing
+            - leftZone
+            - rightZone
     sensitive: false

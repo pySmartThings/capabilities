@@ -19,6 +19,7 @@ attributes:
       additionalProperties: false
       required:
         - value
+    setter: setVolumeLevel
     enumCommands: []
   supportedVolumeLevels:
     schema:
