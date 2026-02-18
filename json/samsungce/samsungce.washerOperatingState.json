@@ -5,6 +5,30 @@
   "name": "Washer Operating State",
   "ephemeral": false,
   "attributes": {
+    "washingProgress": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "integer", "minimum": 0, "maximum": 100 },
+          "unit": { "type": "string", "enum": ["%"], "default": "%" }
+        },
+        "additionalProperties": false,
+        "required": ["value", "unit"]
+      },
+      "enumCommands": []
+    },
+    "dryingProgress": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "integer", "minimum": 0, "maximum": 100 },
+          "unit": { "type": "string", "enum": ["%"], "default": "%" }
+        },
+        "additionalProperties": false,
+        "required": ["value", "unit"]
+      },
+      "enumCommands": []
+    },
     "washerJobState": {
       "schema": {
         "type": "object",

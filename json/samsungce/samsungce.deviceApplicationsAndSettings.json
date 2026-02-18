@@ -1,0 +1,92 @@
+{
+  "id": "samsungce.deviceApplicationsAndSettings",
+  "version": 1,
+  "status": "proposed",
+  "name": "Device Applications and Settings",
+  "ephemeral": false,
+  "attributes": {
+    "deviceApplications": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true,
+              "properties": {
+                "appId": {
+                  "type": "string",
+                  "description": "Unique identifier for the application"
+                },
+                "i18n": {
+                  "type": "object",
+                  "description": "Localized application names",
+                  "additionalProperties": false,
+                  "patternProperties": {
+                    "^[a-z]{2}-[a-zA-Z]{2}$": {
+                      "type": "string",
+                      "description": "Application name in the specified locale"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "deviceSettings": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true,
+              "properties": {
+                "appId": {
+                  "type": "string",
+                  "description": "Unique identifier for the application"
+                },
+                "enabled": { "type": "boolean" },
+                "key": { "type": "string" },
+                "parentKey": { "type": "string" },
+                "extraDatas": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "key": { "type": "string" },
+                      "value": { "type": "string" }
+                    }
+                  }
+                },
+                "i18n": {
+                  "type": "object",
+                  "description": "Localized setting names",
+                  "additionalProperties": false,
+                  "patternProperties": {
+                    "^[a-z]{2}-[a-zA-Z]{2}$": {
+                      "type": "string",
+                      "description": "Setting name in the specified locale"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}
