@@ -1,0 +1,335 @@
+id: samsungce.accessibility
+version: 1
+status: proposed
+name: Accessibility
+ephemeral: false
+attributes:
+  supportedColorInversions:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - "on"
+              - "off"
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  magnification:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - "on"
+            - "off"
+      additionalProperties: false
+      required:
+        - value
+    setter: setMagnification
+    enumCommands: []
+  magnificationLevel:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 1
+      additionalProperties: false
+      required:
+        - value
+    setter: setMagnificationLevel
+    enumCommands: []
+  highContrast:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - "on"
+            - "off"
+      additionalProperties: false
+      required:
+        - value
+    setter: setHighContrast
+    enumCommands: []
+  voiceGuide:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - "on"
+            - "off"
+      additionalProperties: false
+      required:
+        - value
+    setter: setVoiceGuide
+    enumCommands: []
+  supportedVoiceGuides:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - "on"
+              - "off"
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  colorInversion:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - "on"
+            - "off"
+      additionalProperties: false
+      required:
+        - value
+    setter: setColorInversion
+    enumCommands: []
+  grayscale:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - "on"
+            - "off"
+      additionalProperties: false
+      required:
+        - value
+    setter: setGrayscale
+    enumCommands: []
+  supportedReluminos:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - "on"
+              - "off"
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedMagnificationLevels:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: integer
+            minimum: 1
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedMagnifications:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - "on"
+              - "off"
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  relumino:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - "on"
+            - "off"
+      additionalProperties: false
+      required:
+        - value
+    setter: setRelumino
+    enumCommands: []
+  supportedOptions:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - voiceGuide
+              - grayscale
+              - colorInversion
+              - highContrast
+              - fontSize
+              - magnification
+              - relumino
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedHighContrasts:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - "on"
+              - "off"
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedFontSizes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: integer
+            minimum: 0
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  fontSize:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 0
+      additionalProperties: false
+      required:
+        - value
+    setter: setFontSize
+    enumCommands: []
+  supportedGrayscales:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - "on"
+              - "off"
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setVoiceGuide:
+    name: setVoiceGuide
+    arguments:
+      - name: voiceGuide
+        optional: false
+        schema:
+          type: string
+          enum:
+            - "on"
+            - "off"
+    sensitive: false
+  setRelumino:
+    name: setRelumino
+    arguments:
+      - name: relumino
+        optional: false
+        schema:
+          type: string
+          enum:
+            - "on"
+            - "off"
+    sensitive: false
+  setMagnification:
+    name: setMagnification
+    arguments:
+      - name: magnification
+        optional: false
+        schema:
+          type: string
+          enum:
+            - "on"
+            - "off"
+    sensitive: false
+  setHighContrast:
+    name: setHighContrast
+    arguments:
+      - name: highContrast
+        optional: false
+        schema:
+          type: string
+          enum:
+            - "on"
+            - "off"
+    sensitive: false
+  setGrayscale:
+    name: setGrayscale
+    arguments:
+      - name: grayscale
+        optional: false
+        schema:
+          type: string
+          enum:
+            - "on"
+            - "off"
+    sensitive: false
+  setColorInversion:
+    name: setColorInversion
+    arguments:
+      - name: colorInversion
+        optional: false
+        schema:
+          type: string
+          enum:
+            - "on"
+            - "off"
+    sensitive: false
+  setMagnificationLevel:
+    name: setMagnificationLevel
+    arguments:
+      - name: magnificationLevel
+        optional: false
+        schema:
+          type: integer
+          minimum: 1
+    sensitive: false
+  setFontSize:
+    name: setFontSize
+    arguments:
+      - name: fontSize
+        optional: false
+        schema:
+          type: integer
+          minimum: 0
+    sensitive: false

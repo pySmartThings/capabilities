@@ -36,6 +36,22 @@
                   "enum": ["allInOne", "washingOnly", "dryingOnly"],
                   "default": "washingOnly"
                 },
+                "supportedCycleTypes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": ["allInOne", "washingOnly", "dryingOnly"],
+                    "default": "washingOnly"
+                  }
+                },
+                "unavailableCycleTypes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": ["allInOne", "washingOnly", "dryingOnly"],
+                    "default": "washingOnly"
+                  }
+                },
                 "supportedOptions": {
                   "type": "object",
                   "additionalProperties": false,
@@ -130,6 +146,24 @@
       },
       "enumCommands": []
     },
+    "availableCycleTypes": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["allInOne", "washingOnly", "dryingOnly"],
+              "default": "washingOnly"
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
     "washerCycle": {
       "schema": {
         "type": "object",
@@ -172,6 +206,26 @@
         {
           "name": "washerCycle",
           "optional": false,
+          "schema": { "type": "string" }
+        }
+      ],
+      "sensitive": false
+    },
+    "setCycleType": {
+      "name": "setCycleType",
+      "arguments": [
+        {
+          "name": "cycleType",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["allInOne", "washingOnly", "dryingOnly"],
+            "default": "washingOnly"
+          }
+        },
+        {
+          "name": "washerCycle",
+          "optional": true,
           "schema": { "type": "string" }
         }
       ],

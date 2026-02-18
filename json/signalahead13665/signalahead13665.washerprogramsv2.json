@@ -1,0 +1,138 @@
+{
+  "id": "signalahead13665.washerprogramsv2",
+  "version": 1,
+  "status": "proposed",
+  "name": "WasherProgramsv2",
+  "ephemeral": false,
+  "attributes": {
+    "availablePrograms": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "LaundryCare_Washer_Program_Cotton",
+                "LaundryCare_Washer_Program_Mix",
+                "LaundryCare_Washer_Program_EasyCare",
+                "LaundryCare_Washer_Program_Auto40",
+                "LaundryCare_Washer_Program_Super153045_Super15",
+                "LaundryCare_Washer_Program_DelicatesSilk",
+                "LaundryCare_Washer_Program_Auto30",
+                "LaundryCare_Washer_Program_Super153045_Super1530",
+                "LaundryCare_Washer_Program_Wool",
+                "LaundryCare_Washer_Program_DarkWash",
+                "LaundryCare_Washer_Program_Cotton_CottonEco",
+                "LaundryCare_Washer_Program_Auto60",
+                "LaundryCare_Washer_Program_ShirtsBlouses",
+                "LaundryCare_Washer_Program_Sensitive",
+                "None",
+                "UnknownProgram"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "program": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "LaundryCare_Washer_Program_Cotton",
+              "LaundryCare_Washer_Program_Mix",
+              "LaundryCare_Washer_Program_EasyCare",
+              "LaundryCare_Washer_Program_Auto40",
+              "LaundryCare_Washer_Program_Super153045_Super15",
+              "LaundryCare_Washer_Program_DelicatesSilk",
+              "LaundryCare_Washer_Program_Auto30",
+              "LaundryCare_Washer_Program_Super153045_Super1530",
+              "LaundryCare_Washer_Program_Wool",
+              "LaundryCare_Washer_Program_DarkWash",
+              "LaundryCare_Washer_Program_Cotton_CottonEco",
+              "LaundryCare_Washer_Program_Auto60",
+              "LaundryCare_Washer_Program_ShirtsBlouses",
+              "LaundryCare_Washer_Program_Sensitive",
+              "None",
+              "UnknownProgram"
+            ]
+          },
+          "data": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [],
+            "properties": {
+              "availablePrograms": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "LaundryCare_Washer_Program_Cotton",
+                    "LaundryCare_Washer_Program_Mix",
+                    "LaundryCare_Washer_Program_EasyCare",
+                    "LaundryCare_Washer_Program_Auto40",
+                    "LaundryCare_Washer_Program_Super153045_Super15",
+                    "LaundryCare_Washer_Program_DelicatesSilk",
+                    "LaundryCare_Washer_Program_Auto30",
+                    "LaundryCare_Washer_Program_Super153045_Super1530",
+                    "LaundryCare_Washer_Program_Wool",
+                    "LaundryCare_Washer_Program_DarkWash",
+                    "LaundryCare_Washer_Program_Cotton_CottonEco",
+                    "LaundryCare_Washer_Program_Auto60",
+                    "LaundryCare_Washer_Program_ShirtsBlouses",
+                    "LaundryCare_Washer_Program_Sensitive",
+                    "None",
+                    "UnknownProgram"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setProgram",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "stop": { "name": "stop", "arguments": [], "sensitive": false },
+    "setProgram": {
+      "name": "setProgram",
+      "arguments": [
+        {
+          "name": "value",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "LaundryCare_Washer_Program_Cotton",
+              "LaundryCare_Washer_Program_Mix",
+              "LaundryCare_Washer_Program_EasyCare",
+              "LaundryCare_Washer_Program_Auto40",
+              "LaundryCare_Washer_Program_Super153045_Super15",
+              "LaundryCare_Washer_Program_DelicatesSilk",
+              "LaundryCare_Washer_Program_Auto30",
+              "LaundryCare_Washer_Program_Super153045_Super1530",
+              "LaundryCare_Washer_Program_Wool",
+              "LaundryCare_Washer_Program_DarkWash",
+              "LaundryCare_Washer_Program_Cotton_CottonEco",
+              "LaundryCare_Washer_Program_Auto60",
+              "LaundryCare_Washer_Program_ShirtsBlouses",
+              "LaundryCare_Washer_Program_Sensitive"
+            ]
+          }
+        }
+      ],
+      "sensitive": false
+    }
+  }
+}

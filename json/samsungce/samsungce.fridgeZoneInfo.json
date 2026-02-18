@@ -1,0 +1,19 @@
+{
+  "id": "samsungce.fridgeZoneInfo",
+  "version": 1,
+  "status": "proposed",
+  "name": "Fridge Zone Info",
+  "ephemeral": false,
+  "attributes": {
+    "name": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}
