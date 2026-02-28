@@ -1,0 +1,22 @@
+{
+  "id": "watchforge35799.dailyEnergy",
+  "version": 1,
+  "status": "proposed",
+  "name": "Daily Energy",
+  "ephemeral": false,
+  "attributes": {
+    "dailyenergy": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number" },
+          "unit": { "type": "string", "enum": ["Wh", "kWh"], "default": "kWh" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

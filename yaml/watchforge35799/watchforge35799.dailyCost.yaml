@@ -1,0 +1,22 @@
+id: watchforge35799.dailyCost
+version: 1
+status: proposed
+name: Daily Cost
+ephemeral: false
+attributes:
+  dailycost:
+    schema:
+      type: object
+      properties:
+        value:
+          type: number
+        unit:
+          type: string
+          enum:
+            - $
+          default: $
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}
