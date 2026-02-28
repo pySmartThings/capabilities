@@ -1,0 +1,22 @@
+id: watchforge35799.monthlyCost
+version: 1
+status: proposed
+name: Monthly Cost
+ephemeral: false
+attributes:
+  monthlycost:
+    schema:
+      type: object
+      properties:
+        value:
+          type: number
+        unit:
+          type: string
+          enum:
+            - $
+          default: $
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

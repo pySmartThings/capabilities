@@ -1,0 +1,17 @@
+id: watchforge35799.eyedroLicense
+version: 1
+status: proposed
+name: Eyedro License
+ephemeral: false
+attributes:
+  license:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

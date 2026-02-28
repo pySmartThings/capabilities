@@ -1,0 +1,19 @@
+{
+  "id": "watchforge35799.manual",
+  "version": 1,
+  "status": "proposed",
+  "name": "Manual",
+  "ephemeral": false,
+  "attributes": {
+    "manual": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

@@ -1,0 +1,23 @@
+id: watchforge35799.averagePower
+version: 1
+status: proposed
+name: Average Power
+ephemeral: false
+attributes:
+  averagepower:
+    schema:
+      type: object
+      properties:
+        value:
+          type: number
+        unit:
+          type: string
+          enum:
+            - W
+            - kW
+          default: W
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}
