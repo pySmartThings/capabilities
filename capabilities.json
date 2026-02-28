@@ -851,5 +851,13 @@
   "samsungce.switch",
   "samsungce.fridgeZoneInfo",
   "signalahead13665.washerprogramsv2",
-  "samsungce.accessibility"
+  "samsungce.accessibility",
+  "watchforge35799.dailyEnergy",
+  "watchforge35799.refreshRate",
+  "watchforge35799.averagePower",
+  "watchforge35799.monthlyCost",
+  "watchforge35799.eyedroLicense",
+  "watchforge35799.monthlyEnergy",
+  "watchforge35799.manual",
+  "watchforge35799.dailyCost"
 ]
