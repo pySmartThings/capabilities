@@ -1,0 +1,21 @@
+{
+  "id": "statelessColorTemperatureStep",
+  "version": 1,
+  "status": "proposed",
+  "name": "Stateless Color Temperature Step",
+  "ephemeral": false,
+  "attributes": {},
+  "commands": {
+    "stepColorTemperatureByPercent": {
+      "name": "stepColorTemperatureByPercent",
+      "arguments": [
+        {
+          "name": "stepSize",
+          "optional": false,
+          "schema": { "type": "integer", "minimum": -100, "maximum": 100 }
+        }
+      ],
+      "sensitive": false
+    }
+  }
+}

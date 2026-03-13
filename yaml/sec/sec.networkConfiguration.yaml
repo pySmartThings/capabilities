@@ -1,0 +1,36 @@
+id: sec.networkConfiguration
+version: 1
+status: proposed
+name: Network Configuration
+ephemeral: false
+attributes:
+  activatedNetwork:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - wifi
+            - ethernet
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedNetwork:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            title: supportedNetwork
+            type: string
+            enum:
+              - wifi
+              - ethernet
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

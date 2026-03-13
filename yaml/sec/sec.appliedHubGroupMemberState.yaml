@@ -1,0 +1,79 @@
+id: sec.appliedHubGroupMemberState
+version: 1
+status: proposed
+name: Applied Hub Group Member State
+ephemeral: false
+attributes:
+  hubGroupId:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          maxLength: 36
+          description: Hub group UUID identifier
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  role:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - primary
+            - secondary
+            - standalone
+          description: Last applied hub group role
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  lastTriggerType:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - manual
+            - automatic
+            - unknown
+          description: Last trigger type
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  primaryZigbeeReachable:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - reachable
+            - unreachable
+            - unknown
+          description: Primary hub Zigbee reachability status
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  preferredHubStatus:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - preferred
+            - notPreferred
+            - unknown
+          description: Last applied preferred hub status
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

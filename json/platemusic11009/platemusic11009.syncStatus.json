@@ -1,0 +1,19 @@
+{
+  "id": "platemusic11009.syncStatus",
+  "version": 1,
+  "status": "proposed",
+  "name": "Sync Status",
+  "ephemeral": false,
+  "attributes": {
+    "syncStatus": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "title": "Sync Status", "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {}
+}

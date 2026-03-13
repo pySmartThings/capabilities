@@ -1,0 +1,54 @@
+id: wifiInformation
+version: 1
+status: proposed
+name: Wifi Information
+ephemeral: false
+attributes:
+  supportedWiFiAuthTypes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            title: WiFiAuthType
+            type: string
+            enum:
+              - OPEN
+              - WEP
+              - WPA-PSK
+              - WPA2-PSK
+              - EAP
+              - SAE
+              - OWE
+              - FT-PSK
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  ssid:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedWiFiFrequencies:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            title: WiFiFrequency
+            type: string
+            enum:
+              - 2.4G
+              - 5G
+              - 6G
+      additionalProperties: false
+      required: []
+    enumCommands: []
+commands: {}

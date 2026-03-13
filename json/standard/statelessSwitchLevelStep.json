@@ -1,0 +1,21 @@
+{
+  "id": "statelessSwitchLevelStep",
+  "version": 1,
+  "status": "proposed",
+  "name": "Stateless Switch Level Step",
+  "ephemeral": false,
+  "attributes": {},
+  "commands": {
+    "stepLevel": {
+      "name": "stepLevel",
+      "arguments": [
+        {
+          "name": "stepSize",
+          "optional": false,
+          "schema": { "type": "integer", "minimum": -100, "maximum": 100 }
+        }
+      ],
+      "sensitive": false
+    }
+  }
+}
