@@ -859,5 +859,10 @@
   "watchforge35799.eyedroLicense",
   "watchforge35799.monthlyEnergy",
   "watchforge35799.manual",
-  "watchforge35799.dailyCost"
+  "watchforge35799.dailyCost",
+  "statelessColorTemperatureStep",
+  "statelessSwitchLevelStep",
+  "wifiInformation",
+  "sec.networkConfiguration",
+  "sec.appliedHubGroupMemberState"
 ]
