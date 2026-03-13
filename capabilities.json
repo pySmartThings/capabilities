@@ -864,5 +864,8 @@
   "statelessSwitchLevelStep",
   "wifiInformation",
   "sec.networkConfiguration",
-  "sec.appliedHubGroupMemberState"
+  "sec.appliedHubGroupMemberState",
+  "platemusic11009.syncStatus",
+  "samsungce.airPurifierLighting",
+  "samsungce.openAutomatedDemandResponse2"
 ]
