@@ -1,0 +1,218 @@
+{
+  "id": "samsungce.openAutomatedDemandResponse2",
+  "version": 1,
+  "status": "proposed",
+  "name": "Open Automated Demand Response 2",
+  "ephemeral": false,
+  "attributes": {
+    "operatingState": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 12,
+            "description": "| Operating state code\n| 0 - Idel Normal\n| 1 - Running Normal\n| 2 - Running Curtailed\n| 3 - Running Heightened\n| 4 - Idle Curtailed\n| 5 - SGD Error Condition\n| 6 - Idel Heightened\n| 7 - Unused\n| 8 - Unused\n| 9 - Unused\n| 10 - Unused\n| 11 - Idle Opted Out\n| 12 - Running Opted Out\n"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "override": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "integer", "minimum": 0, "maximum": 1 }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "event": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "eventId": { "type": "string" },
+              "activePeriod": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "start": {
+                    "type": "string",
+                    "pattern": "^(?:[1-9]\\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)T(?:[01]\\d|2[0-3]):?[0-5]\\d:?[0-5]\\d(?:\\.\\d{3})?(?:Z|[+-][01]\\d(?::?[0-5]\\d)?)$"
+                  },
+                  "duration": {
+                    "type": "string",
+                    "pattern": "^P(?!$)(\\d+Y)?(\\d+M)?(\\d+D)?(T(?=\\d)(\\d+H)?(\\d+M)?(\\d+S)?)?$"
+                  }
+                }
+              },
+              "eventStatus": {
+                "type": "string",
+                "enum": ["far", "near", "active", "cancelled"]
+              },
+              "eventSignals": {
+                "type": "array",
+                "additionalProperties": false,
+                "properties": {
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "signalName": {
+                        "type": "string",
+                        "enum": ["SIMPLE", "ELECTRICITY_PRICE", "LOAD_CONTROL"]
+                      },
+                      "signalType": {
+                        "type": "string",
+                        "enum": [
+                          "level",
+                          "priceMultiplier",
+                          "x-loadControlLevelOffset"
+                        ]
+                      },
+                      "signalUnit": { "type": "string" },
+                      "intervals": {
+                        "type": "array",
+                        "additionalProperties": false,
+                        "properties": {
+                          "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "duration": {
+                                "type": "string",
+                                "pattern": "^P(?!$)(\\d+Y)?(\\d+M)?(\\d+D)?(T(?=\\d)(\\d+H)?(\\d+M)?(\\d+S)?)?$"
+                              },
+                              "signalPayload": { "type": "number" }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "required": ["signalName", "signalType", "intervals"]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "cancelEvent": {
+      "name": "cancelEvent",
+      "arguments": [
+        { "name": "eventId", "optional": true, "schema": { "type": "string" } }
+      ],
+      "sensitive": false
+    },
+    "setOverride": {
+      "name": "setOverride",
+      "arguments": [
+        {
+          "name": "override",
+          "optional": false,
+          "schema": { "type": "integer", "minimum": 0, "maximum": 1 }
+        }
+      ],
+      "sensitive": false
+    },
+    "setEvent": {
+      "name": "setEvent",
+      "arguments": [
+        {
+          "name": "eventId",
+          "optional": false,
+          "schema": { "type": "string" }
+        },
+        {
+          "name": "activePeriod",
+          "optional": false,
+          "schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "start": {
+                "type": "string",
+                "pattern": "^(?:[1-9]\\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)T(?:[01]\\d|2[0-3]):?[0-5]\\d:?[0-5]\\d(?:\\.\\d{3})?(?:Z|[+-][01]\\d(?::?[0-5]\\d)?)$"
+              },
+              "duration": {
+                "type": "string",
+                "pattern": "^P(?!$)(\\d+Y)?(\\d+M)?(\\d+D)?(T(?=\\d)(\\d+H)?(\\d+M)?(\\d+S)?)?$"
+              }
+            }
+          }
+        },
+        {
+          "name": "eventStatus",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["far", "near", "active", "cancelled"]
+          }
+        },
+        {
+          "name": "eventSignals",
+          "optional": false,
+          "schema": {
+            "type": "array",
+            "additionalProperties": false,
+            "properties": {
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "signalName": {
+                    "type": "string",
+                    "enum": ["SIMPLE", "ELECTRICITY_PRICE", "LOAD_CONTROL"]
+                  },
+                  "signalType": {
+                    "type": "string",
+                    "enum": [
+                      "level",
+                      "priceMultiplier",
+                      "x-loadControlLevelOffset"
+                    ]
+                  },
+                  "signalUnit": { "type": "string" },
+                  "intervals": {
+                    "type": "array",
+                    "additionalProperties": false,
+                    "properties": {
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "duration": {
+                            "type": "string",
+                            "pattern": "^P(?!$)(\\d+Y)?(\\d+M)?(\\d+D)?(T(?=\\d)(\\d+H)?(\\d+M)?(\\d+S)?)?$"
+                          },
+                          "signalPayload": { "type": "number" }
+                        }
+                      }
+                    }
+                  }
+                },
+                "required": ["signalName", "signalType", "intervals"]
+              }
+            }
+          }
+        }
+      ],
+      "sensitive": false
+    }
+  }
+}
