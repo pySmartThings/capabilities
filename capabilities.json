@@ -867,5 +867,8 @@
   "sec.appliedHubGroupMemberState",
   "platemusic11009.syncStatus",
   "samsungce.airPurifierLighting",
-  "samsungce.openAutomatedDemandResponse2"
+  "samsungce.openAutomatedDemandResponse2",
+  "videoStreamSettings",
+  "nightVision",
+  "cameraViewportSettings"
 ]
