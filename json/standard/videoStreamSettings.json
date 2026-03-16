@@ -1,0 +1,226 @@
+{
+  "id": "videoStreamSettings",
+  "version": 1,
+  "status": "proposed",
+  "name": "Video Stream Settings",
+  "ephemeral": false,
+  "attributes": {
+    "supportedFeatures": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "liveStreaming",
+                "clipRecording",
+                "perStreamViewports",
+                "watermark",
+                "onScreenDisplay"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "videoStreams": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "title": "VideoStream",
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "streamId": { "type": "integer" },
+                "data": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "label": { "type": "string" },
+                    "type": {
+                      "type": "string",
+                      "enum": ["liveStream", "clipRecording"]
+                    },
+                    "resolution": {
+                      "title": "VideoResolution",
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "width": { "type": "integer" },
+                        "height": { "type": "integer" },
+                        "fps": { "type": "integer" }
+                      },
+                      "required": ["width", "height"]
+                    },
+                    "viewport": {
+                      "title": "Viewport",
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "upperLeftVertex": {
+                          "title": "CartesianCoordinate",
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "x": { "type": "integer" },
+                            "y": { "type": "integer" }
+                          },
+                          "required": ["x", "y"]
+                        },
+                        "lowerRightVertex": {
+                          "title": "CartesianCoordinate",
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "x": { "type": "integer" },
+                            "y": { "type": "integer" }
+                          },
+                          "required": ["x", "y"]
+                        }
+                      },
+                      "required": ["upperLeftVertex", "lowerRightVertex"]
+                    },
+                    "watermark": {
+                      "title": "EnableState",
+                      "type": "string",
+                      "enum": ["enabled", "disabled"]
+                    },
+                    "onScreenDisplay": {
+                      "title": "EnableState",
+                      "type": "string",
+                      "enum": ["enabled", "disabled"]
+                    }
+                  },
+                  "required": ["label", "type", "resolution"]
+                }
+              },
+              "required": ["streamId", "data"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedResolutions": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "title": "VideoResolution",
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "width": { "type": "integer" },
+                "height": { "type": "integer" },
+                "fps": { "type": "integer" }
+              },
+              "required": ["width", "height"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setStream": {
+      "name": "setStream",
+      "arguments": [
+        {
+          "name": "streamId",
+          "optional": false,
+          "schema": { "type": "integer" }
+        },
+        {
+          "name": "type",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["liveStream", "clipRecording"]
+          }
+        },
+        { "name": "label", "optional": true, "schema": { "type": "string" } },
+        {
+          "name": "resolution",
+          "optional": true,
+          "schema": {
+            "title": "VideoResolution",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "width": { "type": "integer" },
+              "height": { "type": "integer" },
+              "fps": { "type": "integer" }
+            },
+            "required": ["width", "height"]
+          }
+        },
+        {
+          "name": "viewport",
+          "optional": true,
+          "schema": {
+            "title": "Viewport",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "upperLeftVertex": {
+                "title": "CartesianCoordinate",
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "x": { "type": "integer" },
+                  "y": { "type": "integer" }
+                },
+                "required": ["x", "y"]
+              },
+              "lowerRightVertex": {
+                "title": "CartesianCoordinate",
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "x": { "type": "integer" },
+                  "y": { "type": "integer" }
+                },
+                "required": ["x", "y"]
+              }
+            },
+            "required": ["upperLeftVertex", "lowerRightVertex"]
+          }
+        },
+        {
+          "name": "watermark",
+          "optional": true,
+          "schema": {
+            "title": "EnableState",
+            "type": "string",
+            "enum": ["enabled", "disabled"]
+          }
+        },
+        {
+          "name": "onScreenDisplay",
+          "optional": true,
+          "schema": {
+            "title": "EnableState",
+            "type": "string",
+            "enum": ["enabled", "disabled"]
+          }
+        }
+      ],
+      "sensitive": false
+    }
+  }
+}

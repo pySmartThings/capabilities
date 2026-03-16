@@ -1,0 +1,130 @@
+id: cameraViewportSettings
+version: 1
+status: proposed
+name: Camera Viewport Settings
+ephemeral: false
+attributes:
+  defaultViewport:
+    schema:
+      type: object
+      properties:
+        value:
+          title: Viewport
+          type: object
+          additionalProperties: false
+          properties:
+            upperLeftVertex:
+              title: CartesianCoordinate
+              type: object
+              additionalProperties: false
+              properties:
+                x:
+                  type: integer
+                y:
+                  type: integer
+              required:
+                - x
+                - y
+            lowerRightVertex:
+              title: CartesianCoordinate
+              type: object
+              additionalProperties: false
+              properties:
+                x:
+                  type: integer
+                y:
+                  type: integer
+              required:
+                - x
+                - y
+          required:
+            - upperLeftVertex
+            - lowerRightVertex
+      additionalProperties: false
+      required:
+        - value
+    setter: setDefaultViewport
+    enumCommands: []
+  minViewportResolution:
+    schema:
+      type: object
+      properties:
+        value:
+          title: VideoResolution
+          type: object
+          additionalProperties: false
+          properties:
+            width:
+              type: integer
+            height:
+              type: integer
+            fps:
+              type: integer
+          required:
+            - width
+            - height
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  videoSensorParameters:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            width:
+              type: integer
+            height:
+              type: integer
+            maxFPS:
+              type: integer
+          required:
+            - width
+            - height
+            - maxFPS
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setDefaultViewport:
+    name: setDefaultViewport
+    arguments:
+      - name: viewport
+        optional: false
+        schema:
+          title: Viewport
+          type: object
+          additionalProperties: false
+          properties:
+            upperLeftVertex:
+              title: CartesianCoordinate
+              type: object
+              additionalProperties: false
+              properties:
+                x:
+                  type: integer
+                y:
+                  type: integer
+              required:
+                - x
+                - y
+            lowerRightVertex:
+              title: CartesianCoordinate
+              type: object
+              additionalProperties: false
+              properties:
+                x:
+                  type: integer
+                y:
+                  type: integer
+              required:
+                - x
+                - y
+          required:
+            - upperLeftVertex
+            - lowerRightVertex
+    sensitive: false
