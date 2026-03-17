@@ -1,0 +1,33 @@
+{
+  "id": "samsungce.microfiberFilterSettings",
+  "version": 1,
+  "status": "proposed",
+  "name": "Microfiber filter settings",
+  "ephemeral": false,
+  "attributes": {
+    "bypassMode": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["enabled", "disabled"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setBypassMode": {
+      "name": "setBypassMode",
+      "arguments": [
+        {
+          "name": "bypassMode",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["enabled", "disabled"] }
+        }
+      ],
+      "sensitive": false
+    }
+  }
+}
