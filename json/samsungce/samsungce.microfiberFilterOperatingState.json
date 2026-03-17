@@ -1,0 +1,88 @@
+{
+  "id": "samsungce.microfiberFilterOperatingState",
+  "version": 1,
+  "status": "proposed",
+  "name": "Microfiber Filter Operating State",
+  "ephemeral": false,
+  "attributes": {
+    "operatingState": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["ready", "running", "paused"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedJobStates": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "none",
+                "waiting",
+                "sensing",
+                "filtering",
+                "bypassing",
+                "stopping"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedOperatingStates": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["ready", "running", "paused"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "microfiberFilterJobState": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "none",
+              "waiting",
+              "sensing",
+              "filtering",
+              "bypassing",
+              "stopping"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "resume": { "name": "resume", "arguments": [], "sensitive": false },
+    "cancel": { "name": "cancel", "arguments": [], "sensitive": false },
+    "start": { "name": "start", "arguments": [], "sensitive": false },
+    "pause": { "name": "pause", "arguments": [], "sensitive": false }
+  }
+}
