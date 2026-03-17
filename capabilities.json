@@ -870,5 +870,9 @@
   "samsungce.openAutomatedDemandResponse2",
   "videoStreamSettings",
   "nightVision",
-  "cameraViewportSettings"
+  "cameraViewportSettings",
+  "samsungce.microfiberFilterOperatingState",
+  "samsungce.microfiberFilterSettings",
+  "samsungce.bladeFilter",
+  "samsungce.microfiberFilterStatus"
 ]
