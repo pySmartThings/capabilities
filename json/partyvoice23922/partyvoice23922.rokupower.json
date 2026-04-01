@@ -1,0 +1,37 @@
+{
+  "id": "partyvoice23922.rokupower",
+  "version": 1,
+  "status": "proposed",
+  "name": "rokupower",
+  "ephemeral": false,
+  "attributes": {
+    "powerSwitch": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string", "enum": ["On", "Off"] } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setPower",
+      "enumCommands": [
+        { "command": "powerOn", "value": "On" },
+        { "command": "powerOff", "value": "Off" }
+      ]
+    }
+  },
+  "commands": {
+    "powerOn": { "name": "powerOn", "arguments": [], "sensitive": false },
+    "powerOff": { "name": "powerOff", "arguments": [], "sensitive": false },
+    "setPower": {
+      "name": "setPower",
+      "arguments": [
+        {
+          "name": "state",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["On", "Off"] }
+        }
+      ],
+      "sensitive": false
+    }
+  }
+}

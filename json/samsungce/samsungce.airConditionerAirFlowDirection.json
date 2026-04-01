@@ -1,0 +1,197 @@
+{
+  "id": "samsungce.airConditionerAirFlowDirection",
+  "version": 1,
+  "status": "proposed",
+  "name": "Air Conditioner Air Flow Direction",
+  "ephemeral": false,
+  "attributes": {
+    "supportedHorizontalAngleSteps": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "items": {
+              "type": "string",
+              "enum": ["1", "2", "3", "4", "5", "6"]
+            },
+            "type": "array"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedVerticalDirections": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "items": { "type": "string", "enum": ["swing", "fixed"] },
+            "type": "array"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "horizontalDirection": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["swing", "fixed"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedHorizontalDirections": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "items": { "type": "string", "enum": ["swing", "fixed"] },
+            "type": "array"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedVerticalAngleSteps": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "items": {
+              "type": "string",
+              "enum": ["1", "2", "3", "4", "5", "6"]
+            },
+            "type": "array"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "horizontalAngleStep": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["1", "2", "3", "4", "5", "6"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "verticalDirection": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["swing", "fixed"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "verticalAngleStep": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["1", "2", "3", "4", "5", "6"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "horizontalSwingRange": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["all", "left", "right"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedHorizontalSwingRanges": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "items": { "type": "string", "enum": ["all", "left", "right"] },
+            "type": "array"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setVerticalAngleStep": {
+      "name": "setVerticalAngleStep",
+      "arguments": [
+        {
+          "name": "verticalAngleStep",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["1", "2", "3", "4", "5", "6"] }
+        }
+      ],
+      "sensitive": false
+    },
+    "setVerticalDirection": {
+      "name": "setVerticalDirection",
+      "arguments": [
+        {
+          "name": "verticalDirection",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["swing", "fixed"] }
+        }
+      ],
+      "sensitive": false
+    },
+    "setHorizontalDirection": {
+      "name": "setHorizontalDirection",
+      "arguments": [
+        {
+          "name": "horizontalDirection",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["swing", "fixed"] }
+        }
+      ],
+      "sensitive": false
+    },
+    "setHorizontalAngleStep": {
+      "name": "setHorizontalAngleStep",
+      "arguments": [
+        {
+          "name": "horizontalAngleStep",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["1", "2", "3", "4", "5", "6"] }
+        }
+      ],
+      "sensitive": false
+    },
+    "setHorizontalSwingRange": {
+      "name": "setHorizontalSwingRange",
+      "arguments": [
+        {
+          "name": "horizontalSwingRange",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["all", "left", "right"] }
+        }
+      ],
+      "sensitive": false
+    }
+  }
+}
