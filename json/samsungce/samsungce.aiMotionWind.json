@@ -1,0 +1,110 @@
+{
+  "id": "samsungce.aiMotionWind",
+  "version": 1,
+  "status": "proposed",
+  "name": "AI Motion Wind",
+  "ephemeral": false,
+  "attributes": {
+    "mode": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "off",
+              "surround",
+              "longReach",
+              "down",
+              "power",
+              "windFree",
+              "aiDirect",
+              "aiIndirect"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setMode",
+      "enumCommands": []
+    },
+    "availableModes": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "off",
+                "surround",
+                "longReach",
+                "down",
+                "power",
+                "windFree",
+                "aiDirect",
+                "aiIndirect"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedModes": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "off",
+                "surround",
+                "longReach",
+                "down",
+                "power",
+                "windFree",
+                "aiDirect",
+                "aiIndirect"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setMode": {
+      "name": "setMode",
+      "arguments": [
+        {
+          "name": "mode",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "off",
+              "surround",
+              "longReach",
+              "down",
+              "power",
+              "windFree",
+              "aiDirect",
+              "aiIndirect"
+            ]
+          }
+        }
+      ],
+      "sensitive": false
+    }
+  }
+}

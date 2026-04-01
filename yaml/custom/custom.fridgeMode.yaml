@@ -24,6 +24,18 @@ attributes:
       required:
         - value
     enumCommands: []
+  supportedFridgeOptions:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
   supportedFullFridgeModes:
     schema:
       type: object
