@@ -37,6 +37,23 @@ attributes:
       required:
         - value
     enumCommands: []
+  availableCleaningTypes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - mop
+              - vacuum
+              - vacuumAndMopTogether
+              - mopAfterVacuum
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
 commands:
   setCleaningType:
     name: setCleaningType

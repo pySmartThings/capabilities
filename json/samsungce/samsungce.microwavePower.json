@@ -36,6 +36,7 @@
         "additionalProperties": false,
         "required": ["value"]
       },
+      "setter": "setPowerLevel",
       "enumCommands": []
     }
   },

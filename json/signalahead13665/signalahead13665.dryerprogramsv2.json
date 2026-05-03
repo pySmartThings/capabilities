@@ -1,0 +1,126 @@
+{
+  "id": "signalahead13665.dryerprogramsv2",
+  "version": 1,
+  "status": "proposed",
+  "name": "DryerProgramsv2",
+  "ephemeral": false,
+  "attributes": {
+    "availablePrograms": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "LaundryCare_Dryer_Program_Cotton",
+                "LaundryCare_Dryer_Program_Mix",
+                "LaundryCare_Dryer_Program_TimeWarm",
+                "LaundryCare_Dryer_Program_Towels",
+                "LaundryCare_Dryer_Program_Synthetic",
+                "LaundryCare_Dryer_Program_Blankets",
+                "LaundryCare_Dryer_Program_Super40",
+                "LaundryCare_Dryer_Program_Delicates",
+                "LaundryCare_Dryer_Program_Outdoor",
+                "LaundryCare_Dryer_Program_TimeCold",
+                "LaundryCare_Dryer_Program_Hygiene",
+                "None",
+                "UnknownProgram"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "program": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "LaundryCare_Dryer_Program_Cotton",
+              "LaundryCare_Dryer_Program_Mix",
+              "LaundryCare_Dryer_Program_TimeWarm",
+              "LaundryCare_Dryer_Program_Towels",
+              "LaundryCare_Dryer_Program_Synthetic",
+              "LaundryCare_Dryer_Program_Blankets",
+              "LaundryCare_Dryer_Program_Super40",
+              "LaundryCare_Dryer_Program_Delicates",
+              "LaundryCare_Dryer_Program_Outdoor",
+              "LaundryCare_Dryer_Program_TimeCold",
+              "LaundryCare_Dryer_Program_Hygiene",
+              "None",
+              "UnknownProgram"
+            ]
+          },
+          "data": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [],
+            "properties": {
+              "availablePrograms": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "LaundryCare_Dryer_Program_Cotton",
+                    "LaundryCare_Dryer_Program_Mix",
+                    "LaundryCare_Dryer_Program_TimeWarm",
+                    "LaundryCare_Dryer_Program_Towels",
+                    "LaundryCare_Dryer_Program_Synthetic",
+                    "LaundryCare_Dryer_Program_Blankets",
+                    "LaundryCare_Dryer_Program_Super40",
+                    "LaundryCare_Dryer_Program_Delicates",
+                    "LaundryCare_Dryer_Program_Outdoor",
+                    "LaundryCare_Dryer_Program_TimeCold",
+                    "LaundryCare_Dryer_Program_Hygiene",
+                    "None",
+                    "UnknownProgram"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setProgram",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "stop": { "name": "stop", "arguments": [], "sensitive": false },
+    "setProgram": {
+      "name": "setProgram",
+      "arguments": [
+        {
+          "name": "value",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "LaundryCare_Dryer_Program_Cotton",
+              "LaundryCare_Dryer_Program_Mix",
+              "LaundryCare_Dryer_Program_TimeWarm",
+              "LaundryCare_Dryer_Program_Towels",
+              "LaundryCare_Dryer_Program_Synthetic",
+              "LaundryCare_Dryer_Program_Blankets",
+              "LaundryCare_Dryer_Program_Super40",
+              "LaundryCare_Dryer_Program_Delicates",
+              "LaundryCare_Dryer_Program_Outdoor",
+              "LaundryCare_Dryer_Program_TimeCold",
+              "LaundryCare_Dryer_Program_Hygiene"
+            ]
+          }
+        }
+      ],
+      "sensitive": false
+    }
+  }
+}
