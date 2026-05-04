@@ -29,6 +29,7 @@ attributes:
       additionalProperties: false
       required:
         - value
+    setter: setPowerLevel
     enumCommands: []
 commands:
   setPowerLevel:
