@@ -1,0 +1,118 @@
+{
+  "id": "signalahead13665.coffeemakerprogramsv2",
+  "version": 1,
+  "status": "proposed",
+  "name": "CoffeemakerProgramsv2",
+  "ephemeral": false,
+  "attributes": {
+    "availablePrograms": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "ConsumerProducts_CoffeeMaker_Program_Beverage_Coffee",
+                "ConsumerProducts_CoffeeMaker_Program_Beverage_Cappuccino",
+                "ConsumerProducts_CoffeeMaker_Program_Beverage_LatteMacchiato",
+                "ConsumerProducts_CoffeeMaker_Program_Beverage_Espresso",
+                "ConsumerProducts_CoffeeMaker_Program_Beverage_CaffeLatte",
+                "ConsumerProducts_CoffeeMaker_Program_Beverage_EspressoDoppio",
+                "ConsumerProducts_CoffeeMaker_Program_Beverage_XLCoffee",
+                "ConsumerProducts_CoffeeMaker_Program_Beverage_Ristretto",
+                "ConsumerProducts_CoffeeMaker_Program_Beverage_EspressoMacchiato",
+                "None",
+                "UnknownProgram"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
+    "program": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "ConsumerProducts_CoffeeMaker_Program_Beverage_Coffee",
+              "ConsumerProducts_CoffeeMaker_Program_Beverage_Cappuccino",
+              "ConsumerProducts_CoffeeMaker_Program_Beverage_LatteMacchiato",
+              "ConsumerProducts_CoffeeMaker_Program_Beverage_Espresso",
+              "ConsumerProducts_CoffeeMaker_Program_Beverage_CaffeLatte",
+              "ConsumerProducts_CoffeeMaker_Program_Beverage_EspressoDoppio",
+              "ConsumerProducts_CoffeeMaker_Program_Beverage_XLCoffee",
+              "ConsumerProducts_CoffeeMaker_Program_Beverage_Ristretto",
+              "ConsumerProducts_CoffeeMaker_Program_Beverage_EspressoMacchiato",
+              "None",
+              "UnknownProgram"
+            ]
+          },
+          "data": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [],
+            "properties": {
+              "availablePrograms": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "ConsumerProducts_CoffeeMaker_Program_Beverage_Coffee",
+                    "ConsumerProducts_CoffeeMaker_Program_Beverage_Cappuccino",
+                    "ConsumerProducts_CoffeeMaker_Program_Beverage_LatteMacchiato",
+                    "ConsumerProducts_CoffeeMaker_Program_Beverage_Espresso",
+                    "ConsumerProducts_CoffeeMaker_Program_Beverage_CaffeLatte",
+                    "ConsumerProducts_CoffeeMaker_Program_Beverage_EspressoDoppio",
+                    "ConsumerProducts_CoffeeMaker_Program_Beverage_XLCoffee",
+                    "ConsumerProducts_CoffeeMaker_Program_Beverage_Ristretto",
+                    "ConsumerProducts_CoffeeMaker_Program_Beverage_EspressoMacchiato",
+                    "None",
+                    "UnknownProgram"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setProgram",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "stop": { "name": "stop", "arguments": [], "sensitive": false },
+    "setProgram": {
+      "name": "setProgram",
+      "arguments": [
+        {
+          "name": "value",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "ConsumerProducts_CoffeeMaker_Program_Beverage_Coffee",
+              "ConsumerProducts_CoffeeMaker_Program_Beverage_Cappuccino",
+              "ConsumerProducts_CoffeeMaker_Program_Beverage_LatteMacchiato",
+              "ConsumerProducts_CoffeeMaker_Program_Beverage_Espresso",
+              "ConsumerProducts_CoffeeMaker_Program_Beverage_CaffeLatte",
+              "ConsumerProducts_CoffeeMaker_Program_Beverage_EspressoDoppio",
+              "ConsumerProducts_CoffeeMaker_Program_Beverage_XLCoffee",
+              "ConsumerProducts_CoffeeMaker_Program_Beverage_Ristretto",
+              "ConsumerProducts_CoffeeMaker_Program_Beverage_EspressoMacchiato"
+            ]
+          }
+        }
+      ],
+      "sensitive": false
+    }
+  }
+}

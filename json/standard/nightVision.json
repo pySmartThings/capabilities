@@ -5,6 +5,22 @@
   "name": "Night Vision",
   "ephemeral": false,
   "attributes": {
+    "nightVisionMode": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "title": "NightVisionMode",
+            "type": "string",
+            "enum": ["Color", "BlackAndWhite"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setNightVisionMode",
+      "enumCommands": []
+    },
     "illumination": {
       "schema": {
         "type": "object",
@@ -35,7 +51,10 @@
         "properties": {
           "value": {
             "type": "array",
-            "items": { "type": "string", "enum": ["illumination"] }
+            "items": {
+              "type": "string",
+              "enum": ["illumination", "nightVisionMode"]
+            }
           }
         },
         "additionalProperties": false,
@@ -52,6 +71,21 @@
           "name": "mode",
           "optional": false,
           "schema": { "type": "string", "enum": ["on", "off", "auto"] }
+        }
+      ],
+      "sensitive": false
+    },
+    "setNightVisionMode": {
+      "name": "setNightVisionMode",
+      "arguments": [
+        {
+          "name": "mode",
+          "optional": false,
+          "schema": {
+            "title": "NightVisionMode",
+            "type": "string",
+            "enum": ["Color", "BlackAndWhite"]
+          }
         }
       ],
       "sensitive": false

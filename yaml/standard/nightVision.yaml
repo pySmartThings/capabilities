@@ -4,6 +4,21 @@ status: proposed
 name: Night Vision
 ephemeral: false
 attributes:
+  nightVisionMode:
+    schema:
+      type: object
+      properties:
+        value:
+          title: NightVisionMode
+          type: string
+          enum:
+            - Color
+            - BlackAndWhite
+      additionalProperties: false
+      required:
+        - value
+    setter: setNightVisionMode
+    enumCommands: []
   illumination:
     schema:
       type: object
@@ -44,6 +59,7 @@ attributes:
             type: string
             enum:
               - illumination
+              - nightVisionMode
       additionalProperties: false
       required:
         - value
@@ -60,6 +76,18 @@ commands:
             - "on"
             - "off"
             - auto
+    sensitive: false
+  setNightVisionMode:
+    name: setNightVisionMode
+    arguments:
+      - name: mode
+        optional: false
+        schema:
+          title: NightVisionMode
+          type: string
+          enum:
+            - Color
+            - BlackAndWhite
     sensitive: false
   setNightVision:
     name: setNightVision
