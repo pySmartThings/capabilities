@@ -18,9 +18,26 @@ attributes:
               - perStreamViewports
               - watermark
               - onScreenDisplay
+              - globalWatermark
+              - globalOnScreenDisplay
       additionalProperties: false
       required:
         - value
+    enumCommands: []
+  globalOnScreenDisplay:
+    schema:
+      type: object
+      properties:
+        value:
+          title: EnableState
+          type: string
+          enum:
+            - enabled
+            - disabled
+      additionalProperties: false
+      required:
+        - value
+    setter: setGlobalOnScreenDisplay
     enumCommands: []
   videoStreams:
     schema:
@@ -115,6 +132,21 @@ attributes:
       required:
         - value
     enumCommands: []
+  globalWatermark:
+    schema:
+      type: object
+      properties:
+        value:
+          title: EnableState
+          type: string
+          enum:
+            - enabled
+            - disabled
+      additionalProperties: false
+      required:
+        - value
+    setter: setGlobalWatermark
+    enumCommands: []
   supportedResolutions:
     schema:
       type: object
@@ -140,6 +172,18 @@ attributes:
         - value
     enumCommands: []
 commands:
+  setGlobalWatermark:
+    name: setGlobalWatermark
+    arguments:
+      - name: state
+        optional: false
+        schema:
+          title: EnableState
+          type: string
+          enum:
+            - enabled
+            - disabled
+    sensitive: false
   setStream:
     name: setStream
     arguments:
@@ -218,6 +262,18 @@ commands:
             - disabled
       - name: onScreenDisplay
         optional: true
+        schema:
+          title: EnableState
+          type: string
+          enum:
+            - enabled
+            - disabled
+    sensitive: false
+  setGlobalOnScreenDisplay:
+    name: setGlobalOnScreenDisplay
+    arguments:
+      - name: state
+        optional: false
         schema:
           title: EnableState
           type: string

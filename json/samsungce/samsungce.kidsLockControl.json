@@ -5,6 +5,20 @@
   "name": "Kids Lock Control",
   "ephemeral": false,
   "attributes": {
+    "allowedActionsWhileLocked": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["pauseDuringCleaning"] }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
     "lockState": {
       "schema": {
         "type": "object",

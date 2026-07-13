@@ -1,7 +1,7 @@
 {
   "id": "windowShadeTiltLevel",
   "version": 1,
-  "status": "proposed",
+  "status": "live",
   "name": "Window Shade Tilt Level",
   "ephemeral": false,
   "attributes": {

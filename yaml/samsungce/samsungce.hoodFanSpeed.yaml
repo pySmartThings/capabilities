@@ -23,6 +23,7 @@ attributes:
       additionalProperties: false
       required:
         - value
+    setter: setHoodFanSpeed
     enumCommands: []
   supportedHoodFanSpeed:
     schema:

@@ -1,6 +1,6 @@
 id: motionBed
 version: 1
-status: proposed
+status: live
 name: Motion Bed
 ephemeral: false
 attributes:

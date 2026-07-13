@@ -1,6 +1,6 @@
 id: multipleZonePresence
 version: 1
-status: proposed
+status: live
 name: Multiple Zone Presence
 ephemeral: false
 attributes:

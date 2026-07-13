@@ -28,4 +28,21 @@ attributes:
       required:
         - value
     enumCommands: []
+  platformVersion:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          properties:
+            platform:
+              type: string
+            oneUiVersion:
+              type: string
+            osVersion:
+              type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
 commands: {}

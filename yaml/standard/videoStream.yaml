@@ -37,6 +37,7 @@ attributes:
         value:
           title: JsonObject
           type: object
+      sensitive: true
       additionalProperties: false
       required:
         - value

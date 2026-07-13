@@ -18,6 +18,7 @@
         "additionalProperties": false,
         "required": ["value"]
       },
+      "setter": "setDehumidifierMode",
       "enumCommands": []
     },
     "availableDehumidifierModes": {

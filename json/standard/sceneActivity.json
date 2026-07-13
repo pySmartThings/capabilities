@@ -1,7 +1,7 @@
 {
   "id": "sceneActivity",
   "version": 1,
-  "status": "proposed",
+  "status": "live",
   "name": "Scene Activity",
   "ephemeral": false,
   "attributes": {

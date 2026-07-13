@@ -18,7 +18,9 @@
                 "clipRecording",
                 "perStreamViewports",
                 "watermark",
-                "onScreenDisplay"
+                "onScreenDisplay",
+                "globalWatermark",
+                "globalOnScreenDisplay"
               ]
             }
           }
@@ -26,6 +28,22 @@
         "additionalProperties": false,
         "required": ["value"]
       },
+      "enumCommands": []
+    },
+    "globalOnScreenDisplay": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "title": "EnableState",
+            "type": "string",
+            "enum": ["enabled", "disabled"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setGlobalOnScreenDisplay",
       "enumCommands": []
     },
     "videoStreams": {
@@ -111,6 +129,22 @@
       },
       "enumCommands": []
     },
+    "globalWatermark": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "title": "EnableState",
+            "type": "string",
+            "enum": ["enabled", "disabled"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setGlobalWatermark",
+      "enumCommands": []
+    },
     "supportedResolutions": {
       "schema": {
         "type": "object",
@@ -137,6 +171,21 @@
     }
   },
   "commands": {
+    "setGlobalWatermark": {
+      "name": "setGlobalWatermark",
+      "arguments": [
+        {
+          "name": "state",
+          "optional": false,
+          "schema": {
+            "title": "EnableState",
+            "type": "string",
+            "enum": ["enabled", "disabled"]
+          }
+        }
+      ],
+      "sensitive": false
+    },
     "setStream": {
       "name": "setStream",
       "arguments": [
@@ -213,6 +262,21 @@
         {
           "name": "onScreenDisplay",
           "optional": true,
+          "schema": {
+            "title": "EnableState",
+            "type": "string",
+            "enum": ["enabled", "disabled"]
+          }
+        }
+      ],
+      "sensitive": false
+    },
+    "setGlobalOnScreenDisplay": {
+      "name": "setGlobalOnScreenDisplay",
+      "arguments": [
+        {
+          "name": "state",
+          "optional": false,
           "schema": {
             "title": "EnableState",
             "type": "string",

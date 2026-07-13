@@ -23,7 +23,8 @@
                 "highTemperature",
                 "attemptsExceeded",
                 "physicalImpact",
-                "failedOpeningAttempt"
+                "failedOpeningAttempt",
+                "forcedUser"
               ]
             }
           }
@@ -49,7 +50,8 @@
               "highTemperature",
               "attemptsExceeded",
               "physicalImpact",
-              "failedOpeningAttempt"
+              "failedOpeningAttempt",
+              "forcedUser"
             ]
           }
         },

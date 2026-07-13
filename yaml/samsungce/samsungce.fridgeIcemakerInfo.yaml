@@ -4,12 +4,66 @@ status: proposed
 name: Fridge Icemaker Info
 ephemeral: false
 attributes:
+  controlType:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - mode
+            - toggle
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
   name:
     schema:
       type: object
       properties:
         value:
           type: string
+          enum:
+            - ICE_MAKER
+            - STANDARD_ICE
+            - COCKTAIL_ICE
+            - FRIDGE
+            - FREEZER
+            - TRANS
+            - CUBED_ICE
+            - ICE_BITES
+            - WHISKEY_BALL
+            - WHISKEY_ICE_BALL
+            - SPHERE_ICE
+            - STANDARD_ICE_GLOBAL
+            - COCKTAIL_ICE_GLOBAL
+            - ICE_DISPENSER
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  attachmentStatus:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - attached
+            - detached
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  room:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - fridge
+            - freezer
       additionalProperties: false
       required:
         - value

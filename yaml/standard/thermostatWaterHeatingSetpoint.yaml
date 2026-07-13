@@ -1,6 +1,6 @@
 id: thermostatWaterHeatingSetpoint
 version: 1
-status: proposed
+status: live
 name: Thermostat Water Heating Setpoint
 ephemeral: false
 attributes:

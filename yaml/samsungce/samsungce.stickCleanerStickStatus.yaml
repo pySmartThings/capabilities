@@ -34,6 +34,7 @@ attributes:
             - fullyCharged
             - waiting
             - errorStatus
+            - coolingDown
       additionalProperties: false
       required:
         - value

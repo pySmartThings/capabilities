@@ -1,0 +1,31 @@
+id: legendabsolute60149.atmPressureRateChange
+version: 1
+status: proposed
+name: Atm Pressure Rate Change
+ephemeral: false
+attributes:
+  atmPressureRateChange:
+    schema:
+      type: object
+      properties:
+        value:
+          type: number
+        unit:
+          type: string
+          enum:
+            - mBar/h
+          default: mBar/h
+      additionalProperties: false
+      required:
+        - value
+    setter: setAtmPressureRateChange
+    enumCommands: []
+commands:
+  setAtmPressureRateChange:
+    name: setAtmPressureRateChange
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: number
+    sensitive: false

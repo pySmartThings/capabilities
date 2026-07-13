@@ -1,0 +1,18 @@
+id: orangebrook39927.virtualInventory
+version: 1
+status: proposed
+name: Virtual Inventory
+ephemeral: false
+attributes:
+  count:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 0
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

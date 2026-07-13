@@ -1,7 +1,7 @@
 {
   "id": "serviceArea",
   "version": 1,
-  "status": "proposed",
+  "status": "live",
   "name": "Service Area",
   "ephemeral": false,
   "attributes": {

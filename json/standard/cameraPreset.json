@@ -1,7 +1,7 @@
 {
   "id": "cameraPreset",
   "version": 1,
-  "status": "proposed",
+  "status": "live",
   "name": "Camera Preset",
   "ephemeral": false,
   "attributes": {

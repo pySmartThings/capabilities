@@ -34,6 +34,15 @@
       },
       "enumCommands": []
     },
+    "supportSpotSuctionPowerControl": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean", "default": false } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
     "repeatModeEnabled": {
       "schema": {
         "type": "object",
@@ -102,6 +111,32 @@
               "patternMap",
               "creatingMap"
             ]
+          }
+        },
+        {
+          "name": "extraData",
+          "optional": true,
+          "schema": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+              "mapId": { "type": "string" },
+              "areaIds": { "type": "array", "items": { "type": "string" } },
+              "objectIds": { "type": "array", "items": { "type": "string" } },
+              "spots": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": { "type": "string" },
+                    "topLeftX": { "type": "integer" },
+                    "topLeftY": { "type": "integer" },
+                    "bottomRightX": { "type": "integer" },
+                    "bottomRightY": { "type": "integer" }
+                  }
+                }
+              }
+            }
           }
         }
       ],

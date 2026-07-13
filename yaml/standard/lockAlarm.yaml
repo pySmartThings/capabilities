@@ -23,6 +23,7 @@ attributes:
               - attemptsExceeded
               - physicalImpact
               - failedOpeningAttempt
+              - forcedUser
       additionalProperties: false
       required: []
     enumCommands: []
@@ -43,6 +44,7 @@ attributes:
             - attemptsExceeded
             - physicalImpact
             - failedOpeningAttempt
+            - forcedUser
       additionalProperties: false
       required:
         - value

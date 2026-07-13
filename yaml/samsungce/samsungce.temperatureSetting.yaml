@@ -37,6 +37,7 @@ attributes:
       required:
         - value
         - unit
+    setter: setDesiredTemperature
     enumCommands: []
 commands:
   setDesiredTemperature:

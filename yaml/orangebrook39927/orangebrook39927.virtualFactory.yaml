@@ -1,0 +1,63 @@
+id: orangebrook39927.virtualFactory
+version: 1
+status: proposed
+name: Virtual Factory
+ephemeral: false
+attributes:
+  supportedModels:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  model:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - none
+            - air
+            - alarm
+            - battery
+            - blind
+            - carbonmonoxide
+            - contact
+            - consumable
+            - door
+            - fan
+            - garage
+            - humidifier
+            - light
+            - lock
+            - momentary
+            - motion
+            - network
+            - occupancy
+            - presence
+            - smoke
+            - switch
+            - tamper
+            - thermostat
+            - valve
+            - water
+      additionalProperties: false
+      required:
+        - value
+    setter: build
+    enumCommands: []
+commands:
+  build:
+    name: build
+    arguments:
+      - name: model
+        optional: false
+        schema:
+          type: string
+    sensitive: false

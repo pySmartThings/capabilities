@@ -1,7 +1,7 @@
 {
   "id": "waterUsageMeter",
   "version": 1,
-  "status": "proposed",
+  "status": "live",
   "name": "Water Usage Meter",
   "ephemeral": false,
   "attributes": {

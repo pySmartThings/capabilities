@@ -14,4 +14,30 @@ attributes:
       required:
         - value
     enumCommands: []
+  attachmentStatus:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - attached
+            - detached
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  room:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - fridge
+            - freezer
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
 commands: {}

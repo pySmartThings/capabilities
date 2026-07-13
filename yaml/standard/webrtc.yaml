@@ -25,6 +25,7 @@ attributes:
           required:
             - id
             - sdp
+      sensitive: true
       additionalProperties: false
       required:
         - value
@@ -116,6 +117,7 @@ attributes:
           required:
             - id
             - sdp
+      sensitive: true
       additionalProperties: false
       required:
         - value
@@ -147,6 +149,7 @@ attributes:
           required:
             - id
             - ice
+      sensitive: true
       additionalProperties: false
       required:
         - value

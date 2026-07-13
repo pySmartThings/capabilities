@@ -14,6 +14,8 @@ attributes:
           items:
             type: object
             properties:
+              id:
+                type: string
               cups:
                 type: integer
                 minimum: 0
@@ -46,6 +48,8 @@ attributes:
           items:
             type: object
             properties:
+              id:
+                type: string
               cups:
                 type: integer
                 minimum: 0
@@ -87,9 +91,16 @@ attributes:
           additionalProperties: false
           items:
             type: string
+            enum:
+              - "0"
+              - "1"
+              - "2"
+              - "3"
+              - "4"
       additionalProperties: false
       required:
         - value
+    setter: setVisibleList
     enumCommands: []
   coffeeBrewingRecipes:
     schema:
@@ -131,9 +142,16 @@ attributes:
           additionalProperties: false
           items:
             type: string
+            enum:
+              - "0"
+              - "1"
+              - "2"
+              - "3"
+              - "4"
       additionalProperties: false
       required:
         - value
+    setter: setInvisibleList
     enumCommands: []
   coffeeBrewingStatus:
     schema:
@@ -220,6 +238,25 @@ commands:
           type: array
           items:
             type: string
+            enum:
+              - "0"
+              - "1"
+              - "2"
+              - "3"
+              - "4"
+    sensitive: false
+  deleteRecipes:
+    name: deleteRecipes
+    arguments:
+      - name: recipeIds
+        optional: false
+        schema:
+          type: array
+          items:
+            type: string
+            enum:
+              - "3"
+              - "4"
     sensitive: false
   activate:
     name: activate
@@ -285,6 +322,12 @@ commands:
           type: array
           items:
             type: string
+            enum:
+              - "0"
+              - "1"
+              - "2"
+              - "3"
+              - "4"
     sensitive: false
   deactivate:
     name: deactivate

@@ -1,6 +1,6 @@
 id: carbonMonoxideHealthConcern
 version: 1
-status: proposed
+status: live
 name: Carbon Monoxide Health Concern
 ephemeral: false
 attributes:

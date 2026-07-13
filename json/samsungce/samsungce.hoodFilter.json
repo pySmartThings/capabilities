@@ -50,11 +50,6 @@
           "value": {
             "type": "string",
             "enum": ["normal", "replace", "wash", "notused"]
-          },
-          "data": {
-            "type": "object",
-            "additionalProperties": true,
-            "required": []
           }
         },
         "additionalProperties": false,

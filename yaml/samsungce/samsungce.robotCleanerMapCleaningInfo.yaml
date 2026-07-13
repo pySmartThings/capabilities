@@ -15,19 +15,45 @@ attributes:
       required:
         - value
     enumCommands: []
-  cleanedExtent:
+  drawingMapArea:
     schema:
       type: object
       properties:
         value:
           type: number
-        unit:
-          type: string
-          enum:
-            - "m\xB2"
-          default: "m\xB2"
       additionalProperties: false
       required: []
+    enumCommands: []
+  objectCleaningDetails:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              id:
+                type: string
+              jobState:
+                type: string
+                enum:
+                  - none
+                  - selected
+                  - moving
+                  - cleaning
+                  - paused
+                  - finished
+                  - unknownError
+                  - error
+              errorCodes:
+                type: array
+                items:
+                  type: string
+      additionalProperties: false
+      required:
+        - value
     enumCommands: []
   nearObject:
     schema:
@@ -50,9 +76,186 @@ attributes:
         unit:
           type: string
           enum:
-            - hour
             - minute
-            - second
+          default: minute
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  cleanedArea:
+    schema:
+      type: object
+      properties:
+        value:
+          type: number
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  spotCleaningDetails:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              id:
+                type: string
+              jobState:
+                type: string
+                enum:
+                  - none
+                  - selected
+                  - moving
+                  - cleaning
+                  - paused
+                  - finished
+                  - unknownError
+                  - error
+              errorCodes:
+                type: array
+                items:
+                  type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  moppingArea:
+    schema:
+      type: object
+      properties:
+        value:
+          type: number
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  areaCleaningDetails:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              id:
+                type: string
+              jobState:
+                type: string
+                enum:
+                  - none
+                  - selected
+                  - moving
+                  - cleaning
+                  - paused
+                  - finished
+                  - unknownError
+                  - error
+              errorCodes:
+                type: array
+                items:
+                  type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  extraCleaningInfo:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - none
+            - stain
+            - liquid
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  stainCleaningDetails:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              id:
+                type: string
+              jobState:
+                type: string
+                enum:
+                  - none
+                  - selected
+                  - moving
+                  - cleaning
+                  - paused
+                  - finished
+                  - unknownError
+                  - error
+              errorCodes:
+                type: array
+                items:
+                  type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  mapId:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  cleanedExtent:
+    schema:
+      type: object
+      properties:
+        value:
+          type: number
+        unit:
+          type: string
+          enum:
+            - "m\xB2"
+          default: "m\xB2"
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  avoidanceCleaningInfo:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - none
+            - avoidance
+            - following
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  elapsedTime:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          min: -1
+        unit:
+          type: string
+          enum:
+            - minute
           default: minute
       additionalProperties: false
       required:

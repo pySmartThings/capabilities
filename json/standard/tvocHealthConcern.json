@@ -1,7 +1,7 @@
 {
   "id": "tvocHealthConcern",
   "version": 1,
-  "status": "proposed",
+  "status": "live",
   "name": "Tvoc Health Concern",
   "ephemeral": false,
   "attributes": {

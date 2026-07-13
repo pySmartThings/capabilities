@@ -1,7 +1,7 @@
 {
   "id": "refrigerationSetpoint",
   "version": 1,
-  "status": "proposed",
+  "status": "live",
   "name": "Refrigeration Setpoint",
   "ephemeral": false,
   "attributes": {

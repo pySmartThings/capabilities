@@ -13,6 +13,7 @@
         "additionalProperties": false,
         "required": ["value"]
       },
+      "setter": "setMode",
       "enumCommands": []
     },
     "supportedModes": {

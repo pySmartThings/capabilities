@@ -1,6 +1,6 @@
 id: waterPressureMeasurement
 version: 1
-status: proposed
+status: live
 name: Water Pressure Measurement
 ephemeral: false
 attributes:

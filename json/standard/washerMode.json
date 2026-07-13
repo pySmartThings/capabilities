@@ -1,7 +1,7 @@
 {
   "id": "washerMode",
   "version": 1,
-  "status": "proposed",
+  "status": "live",
   "name": "Washer Mode",
   "ephemeral": false,
   "attributes": {

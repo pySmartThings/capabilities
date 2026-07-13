@@ -1,6 +1,6 @@
 id: relativeBrightness
 version: 1
-status: proposed
+status: live
 name: Relative Brightness
 ephemeral: false
 attributes:

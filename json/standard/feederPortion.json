@@ -1,7 +1,7 @@
 {
   "id": "feederPortion",
   "version": 1,
-  "status": "proposed",
+  "status": "live",
   "name": "Feeder Portion",
   "ephemeral": false,
   "attributes": {

@@ -49,6 +49,7 @@ attributes:
                 - fridgeVegetablesFruit
                 - fridgeDrink
                 - fridgeDegree2
+                - fridgeSoftFreeze5
                 - storageRiceWine
                 - storageVegetables
                 - storageMeat
@@ -72,6 +73,18 @@ attributes:
                 - meatDefrost1200g
                 - "off"
                 - unknown
+            ripeningTime:
+              type: object
+              additionalProperties: false
+              properties:
+                value:
+                  type: integer
+                  minimum: 0
+                unit:
+                  type: string
+                  enum:
+                    - hour
+                  default: hour
             remainingRipeningTime:
               type: object
               additionalProperties: false
@@ -135,6 +148,7 @@ attributes:
                   - fridgeVegetablesFruit
                   - fridgeDrink
                   - fridgeDegree2
+                  - fridgeSoftFreeze5
                   - storageRiceWine
                   - storageVegetables
                   - storageMeat
@@ -175,6 +189,10 @@ attributes:
         - value
     enumCommands: []
 commands:
+  cancelRipening:
+    name: cancelRipening
+    arguments: []
+    sensitive: false
   setMode:
     name: setMode
     arguments:
@@ -217,6 +235,7 @@ commands:
             - fridgeVegetablesFruit
             - fridgeDrink
             - fridgeDegree2
+            - fridgeSoftFreeze5
             - storageRiceWine
             - storageVegetables
             - storageMeat

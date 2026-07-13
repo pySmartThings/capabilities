@@ -1,7 +1,7 @@
 {
   "id": "geolocation",
   "version": 1,
-  "status": "proposed",
+  "status": "live",
   "name": "Geolocation",
   "ephemeral": false,
   "attributes": {

@@ -1,6 +1,6 @@
 id: level
 version: 1
-status: proposed
+status: live
 name: Level
 ephemeral: false
 attributes:

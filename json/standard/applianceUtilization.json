@@ -1,7 +1,7 @@
 {
   "id": "applianceUtilization",
   "version": 1,
-  "status": "proposed",
+  "status": "live",
   "name": "Appliance Utilization",
   "ephemeral": false,
   "attributes": {

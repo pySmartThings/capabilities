@@ -1,0 +1,72 @@
+id: samsungce.bixbyPlaylist
+version: 1
+status: proposed
+name: Bixby Playlist
+ephemeral: false
+attributes:
+  currentTrack:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            trackIndex:
+              type: string
+            title:
+              type: string
+            artist:
+              type: string
+            thumbnail:
+              type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  playlist:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              trackIndex:
+                type: string
+              title:
+                type: string
+              artist:
+                type: string
+              thumbnail:
+                type: string
+            required:
+              - trackIndex
+              - title
+              - artist
+              - thumbnail
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  appName:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  selectTrack:
+    name: selectTrack
+    arguments:
+      - name: trackIndex
+        optional: false
+        schema:
+          type: string
+    sensitive: false

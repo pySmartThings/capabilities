@@ -1,7 +1,7 @@
 {
   "id": "chargingState",
   "version": 1,
-  "status": "proposed",
+  "status": "live",
   "name": "Charging State",
   "ephemeral": false,
   "attributes": {

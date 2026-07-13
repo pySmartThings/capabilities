@@ -1,0 +1,132 @@
+id: samsungce.bixbyPrivacyPermissionManagement
+version: 1
+status: proposed
+name: Bixby Privacy Permission Management
+ephemeral: false
+attributes:
+  capsulePermissions:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+            properties:
+              capsuleSummary:
+                type: object
+                additionalProperties: true
+                properties:
+                  id:
+                    type: string
+                  displayName:
+                    type: string
+                  iconUrl:
+                    type: string
+                  imageUrl:
+                    type: string
+                  isBuiltin:
+                    type: boolean
+                  isFavorite:
+                    type: boolean
+                  version:
+                    type: string
+              accountPermissions:
+                type: array
+                items:
+                  type: object
+                  additionalProperties: true
+              devicePermissions:
+                type: array
+                items:
+                  type: object
+                  additionalProperties: true
+                  properties:
+                    detail:
+                      type: string
+                    granted:
+                      type: boolean
+                    justification:
+                      type: string
+                    label:
+                      type: string
+                    payload:
+                      type: object
+                      additionalProperties: true
+                      properties:
+                        args:
+                          type: object
+                          additionalProperties: true
+                          properties:
+                            permissionCode:
+                              type: number
+                        type:
+                          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setCapsulePermissions
+    enumCommands: []
+commands:
+  setCapsulePermissions:
+    name: setCapsulePermissions
+    arguments:
+      - name: capsulePermissions
+        optional: false
+        schema:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+            properties:
+              capsuleSummary:
+                type: object
+                additionalProperties: true
+                properties:
+                  id:
+                    type: string
+                  displayName:
+                    type: string
+                  iconUrl:
+                    type: string
+                  imageUrl:
+                    type: string
+                  isBuiltin:
+                    type: boolean
+                  isFavorite:
+                    type: boolean
+                  version:
+                    type: string
+              accountPermissions:
+                type: array
+                items:
+                  type: object
+                  additionalProperties: true
+              devicePermissions:
+                type: array
+                items:
+                  type: object
+                  additionalProperties: true
+                  properties:
+                    detail:
+                      type: string
+                    granted:
+                      type: boolean
+                    justification:
+                      type: string
+                    label:
+                      type: string
+                    payload:
+                      type: object
+                      additionalProperties: true
+                      properties:
+                        args:
+                          type: object
+                          additionalProperties: true
+                          properties:
+                            permissionCode:
+                              type: number
+                        type:
+                          type: string
+    sensitive: false

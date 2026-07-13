@@ -1,7 +1,7 @@
 {
   "id": "pumpControlMode",
   "version": 1,
-  "status": "proposed",
+  "status": "live",
   "name": "Pump Control Mode",
   "ephemeral": false,
   "attributes": {

@@ -1,6 +1,6 @@
 id: movementSensor
 version: 1
-status: proposed
+status: live
 name: Movement Sensor
 ephemeral: false
 attributes:

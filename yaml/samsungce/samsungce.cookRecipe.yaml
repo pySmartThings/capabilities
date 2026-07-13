@@ -144,6 +144,8 @@ commands:
                 type: object
             visionIndex:
               type: string
+            vaporData:
+              type: string
       - name: recipeDisplay
         optional: false
         schema:

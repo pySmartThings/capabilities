@@ -5,11 +5,55 @@
   "name": "Fridge Welcome Lighting",
   "ephemeral": false,
   "attributes": {
+    "reactionTime": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["fast", "normal", "slow"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setReactionTime",
+      "enumCommands": []
+    },
     "detectionProximity": {
       "schema": {
         "type": "object",
         "properties": {
-          "value": { "type": "string", "enum": ["near", "middle", "far"] }
+          "value": {
+            "type": "string",
+            "enum": ["nearest", "near", "middle", "far"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setDetectionProximity",
+      "enumCommands": []
+    },
+    "supportedReactionTimes": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["fast", "normal", "slow"] }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "name": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["WelcomeLighting", "AutoView", "WelcomeDisplay"]
+          }
         },
         "additionalProperties": false,
         "required": ["value"]
@@ -22,7 +66,10 @@
         "properties": {
           "value": {
             "type": "array",
-            "items": { "type": "string", "enum": ["near", "middle", "far"] }
+            "items": {
+              "type": "string",
+              "enum": ["nearest", "near", "middle", "far"]
+            }
           }
         },
         "additionalProperties": false,
@@ -41,13 +88,27 @@
     }
   },
   "commands": {
+    "setReactionTime": {
+      "name": "setReactionTime",
+      "arguments": [
+        {
+          "name": "reactionTime",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["fast", "normal", "slow"] }
+        }
+      ],
+      "sensitive": false
+    },
     "setDetectionProximity": {
       "name": "setDetectionProximity",
       "arguments": [
         {
           "name": "detectionProximity",
           "optional": false,
-          "schema": { "type": "string", "enum": ["near", "middle", "far"] }
+          "schema": {
+            "type": "string",
+            "enum": ["nearest", "near", "middle", "far"]
+          }
         }
       ],
       "sensitive": false

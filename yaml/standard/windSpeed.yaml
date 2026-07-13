@@ -1,6 +1,6 @@
 id: windSpeed
 version: 1
-status: proposed
+status: live
 name: Wind Speed
 ephemeral: false
 attributes:

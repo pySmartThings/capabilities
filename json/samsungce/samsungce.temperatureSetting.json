@@ -27,6 +27,7 @@
         "additionalProperties": false,
         "required": ["value", "unit"]
       },
+      "setter": "setDesiredTemperature",
       "enumCommands": []
     }
   },

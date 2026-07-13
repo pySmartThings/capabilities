@@ -1,6 +1,6 @@
 id: waterFlowAlarm
 version: 1
-status: proposed
+status: live
 name: Water Flow Alarm
 ephemeral: false
 attributes:
