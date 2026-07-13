@@ -883,5 +883,22 @@
   "partyvoice23922.rokupower",
   "samsungce.sleepDataInteroperation",
   "signalahead13665.dryerprogramsv2",
-  "signalahead13665.coffeemakerprogramsv2"
+  "signalahead13665.coffeemakerprogramsv2",
+  "samsungce.bixbyPrivacyPermissionManagement",
+  "samsungce.bixbySettings",
+  "samsungce.audioMute",
+  "samsungce.bixbyPlaylist",
+  "samsungce.bixbyAdvancedSettings",
+  "legendabsolute60149.atmPressureRateChange",
+  "stse.invisibleCapabilities",
+  "abateachieve62503.statelessPowerOff",
+  "abateachieve62503.statelessPowerOn",
+  "abateachieve62503.statelessFanspeedIncrease",
+  "abateachieve62503.statelessFanspeedDecrease",
+  "samsungce.colorPreset",
+  "samsungce.statefulLamp",
+  "samsungce.dehumidifierDisplay",
+  "samsungvd.tvChannel",
+  "orangebrook39927.virtualInventory",
+  "orangebrook39927.virtualFactory"
 ]
