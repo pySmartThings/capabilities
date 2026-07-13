@@ -21,9 +21,17 @@
                 "cool",
                 "softFreezing",
                 "cold",
+                "temperatureAdjustableFridge",
+                "kimchiStorage",
                 "kimchiStorageMediumCooling",
                 "kimchiStorageLowCooling",
-                "kimchiStorageHighCooling"
+                "kimchiStorageHighCooling",
+                "multiRoomFreezer",
+                "multiRoomFridge",
+                "multiRoomKimchiStorageLowCooling",
+                "multiRoomKimchiStorageMediumCooling",
+                "multiRoomKimchiStorageHighCooling",
+                "multiRoomLambFreezer"
               ]
             },
             "type": "array"
@@ -49,15 +57,24 @@
               "cool",
               "softFreezing",
               "cold",
+              "temperatureAdjustableFridge",
+              "kimchiStorage",
               "kimchiStorageMediumCooling",
               "kimchiStorageLowCooling",
-              "kimchiStorageHighCooling"
+              "kimchiStorageHighCooling",
+              "multiRoomFreezer",
+              "multiRoomFridge",
+              "multiRoomKimchiStorageLowCooling",
+              "multiRoomKimchiStorageMediumCooling",
+              "multiRoomKimchiStorageHighCooling",
+              "multiRoomLambFreezer"
             ]
           }
         },
         "additionalProperties": false,
         "required": ["value"]
       },
+      "setter": "setFreezerConvertMode",
       "enumCommands": []
     }
   },
@@ -79,9 +96,17 @@
               "cool",
               "softFreezing",
               "cold",
+              "temperatureAdjustableFridge",
+              "kimchiStorage",
               "kimchiStorageMediumCooling",
               "kimchiStorageLowCooling",
-              "kimchiStorageHighCooling"
+              "kimchiStorageHighCooling",
+              "multiRoomFreezer",
+              "multiRoomFridge",
+              "multiRoomKimchiStorageLowCooling",
+              "multiRoomKimchiStorageMediumCooling",
+              "multiRoomKimchiStorageHighCooling",
+              "multiRoomLambFreezer"
             ]
           }
         }

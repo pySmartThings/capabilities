@@ -1,7 +1,7 @@
 {
   "id": "cameraViewportSettings",
   "version": 1,
-  "status": "proposed",
+  "status": "live",
   "name": "Camera Viewport Settings",
   "ephemeral": false,
   "attributes": {

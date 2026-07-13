@@ -1,0 +1,11 @@
+{
+  "id": "abateachieve62503.statelessPowerOff",
+  "version": 1,
+  "status": "proposed",
+  "name": "Stateless Power Off",
+  "ephemeral": false,
+  "attributes": {},
+  "commands": {
+    "powerOff": { "name": "powerOff", "arguments": [], "sensitive": false }
+  }
+}

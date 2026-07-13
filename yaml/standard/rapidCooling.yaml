@@ -1,6 +1,6 @@
 id: rapidCooling
 version: 1
-status: proposed
+status: live
 name: Rapid Cooling
 ephemeral: false
 attributes:

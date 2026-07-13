@@ -1,7 +1,7 @@
 {
   "id": "mediaPresets",
   "version": 1,
-  "status": "proposed",
+  "status": "live",
   "name": "Media Presets",
   "ephemeral": false,
   "attributes": {

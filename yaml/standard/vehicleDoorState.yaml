@@ -1,6 +1,6 @@
 id: vehicleDoorState
 version: 1
-status: proposed
+status: live
 name: Vehicle Door State
 ephemeral: false
 attributes:

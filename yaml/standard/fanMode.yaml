@@ -1,6 +1,6 @@
 id: fanMode
 version: 1
-status: proposed
+status: live
 name: Fan Mode
 ephemeral: false
 attributes:

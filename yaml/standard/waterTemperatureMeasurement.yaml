@@ -1,6 +1,6 @@
 id: waterTemperatureMeasurement
 version: 1
-status: proposed
+status: live
 name: Water Temperature Measurement
 ephemeral: false
 attributes:

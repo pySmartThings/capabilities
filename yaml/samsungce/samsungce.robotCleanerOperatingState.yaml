@@ -14,11 +14,13 @@ attributes:
             type: string
             enum:
               - idle
+              - standby
               - homing
               - cleaning
               - charging
               - chargingForRemainingJob
               - charged
+              - creatingMap
               - drainingWater
               - flexCharged
               - moving
@@ -37,7 +39,6 @@ attributes:
               - mediaPlaying
               - messaging
               - findingPet
-              - powerSaving
               - reserved
               - factoryReset
               - calibrating
@@ -54,11 +55,39 @@ attributes:
               - preparingWater
               - supplyingWater
               - sabbath
+              - powerSaving
               - suspend
               - emptyStation
               - internalWash
               - cleaningStart
               - cleaningEnd
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  powerSavingReason:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            reason:
+              type: string
+              enum:
+                - none
+                - userCommand
+                - powerSaving
+                - lowBattery
+                - lowBatteryWhileCleaning
+                - noStationSignal
+                - noStationFound
+                - liquidBlockStation
+                - error
+            lastUpdatedTime:
+              type: string
+              pattern: ^(?:[1-9]\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)T(?:[01]\d|2[0-3]):?[0-5]\d:?[0-5]\d(?:\.\d{3})?(?:Z|[+-][01]\d(?::?[0-5]\d)?)$
       additionalProperties: false
       required:
         - value
@@ -71,11 +100,13 @@ attributes:
           type: string
           enum:
             - idle
+            - standby
             - homing
             - cleaning
             - charging
             - chargingForRemainingJob
             - charged
+            - creatingMap
             - drainingWater
             - flexCharged
             - moving
@@ -94,7 +125,6 @@ attributes:
             - mediaPlaying
             - messaging
             - findingPet
-            - powerSaving
             - reserved
             - factoryReset
             - calibrating
@@ -111,6 +141,7 @@ attributes:
             - preparingWater
             - supplyingWater
             - sabbath
+            - powerSaving
             - suspend
             - emptyStation
             - internalWash
@@ -154,6 +185,55 @@ attributes:
             - changingMopPad
             - washingMop
             - supplyingWater
+            - completeVacuuming
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  wheelsLiftedUp:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+          default: false
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  showLiveMapOnSuspend:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+          default: false
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  batteryOverheating:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+          default: false
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  flexChargingPlan:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - avoidPeak
+            - onlyOffPeak
+            - carbonReducing
+            - none
       additionalProperties: false
       required:
         - value
@@ -186,7 +266,11 @@ commands:
             - cleaning
             - paused
             - findingPet
+            - findingPerson
             - monitoringAutomation
+            - emitDust
+            - suspend
+            - wakeup
     sensitive: false
   returnToHome:
     name: returnToHome
@@ -195,6 +279,14 @@ commands:
   start:
     name: start
     arguments: []
+    sensitive: false
+  drawMap:
+    name: drawMap
+    arguments:
+      - name: withCleaning
+        optional: false
+        schema:
+          type: boolean
     sensitive: false
   pause:
     name: pause

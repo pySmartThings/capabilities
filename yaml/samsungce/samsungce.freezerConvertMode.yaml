@@ -20,9 +20,17 @@ attributes:
               - cool
               - softFreezing
               - cold
+              - temperatureAdjustableFridge
+              - kimchiStorage
               - kimchiStorageMediumCooling
               - kimchiStorageLowCooling
               - kimchiStorageHighCooling
+              - multiRoomFreezer
+              - multiRoomFridge
+              - multiRoomKimchiStorageLowCooling
+              - multiRoomKimchiStorageMediumCooling
+              - multiRoomKimchiStorageHighCooling
+              - multiRoomLambFreezer
           type: array
       additionalProperties: false
       required:
@@ -43,12 +51,21 @@ attributes:
             - cool
             - softFreezing
             - cold
+            - temperatureAdjustableFridge
+            - kimchiStorage
             - kimchiStorageMediumCooling
             - kimchiStorageLowCooling
             - kimchiStorageHighCooling
+            - multiRoomFreezer
+            - multiRoomFridge
+            - multiRoomKimchiStorageLowCooling
+            - multiRoomKimchiStorageMediumCooling
+            - multiRoomKimchiStorageHighCooling
+            - multiRoomLambFreezer
       additionalProperties: false
       required:
         - value
+    setter: setFreezerConvertMode
     enumCommands: []
 commands:
   setFreezerConvertMode:
@@ -67,7 +84,15 @@ commands:
             - cool
             - softFreezing
             - cold
+            - temperatureAdjustableFridge
+            - kimchiStorage
             - kimchiStorageMediumCooling
             - kimchiStorageLowCooling
             - kimchiStorageHighCooling
+            - multiRoomFreezer
+            - multiRoomFridge
+            - multiRoomKimchiStorageLowCooling
+            - multiRoomKimchiStorageMediumCooling
+            - multiRoomKimchiStorageHighCooling
+            - multiRoomLambFreezer
     sensitive: false

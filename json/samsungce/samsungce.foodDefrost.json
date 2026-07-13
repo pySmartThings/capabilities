@@ -19,12 +19,7 @@
                   "type": "object",
                   "additionalProperties": false,
                   "properties": {
-                    "weight": {
-                      "oneOf": [
-                        { "type": "string", "enum": ["auto"] },
-                        { "type": "number", "minimum": 0 }
-                      ]
-                    }
+                    "weight": { "type": "number", "minimum": 0 }
                   },
                   "required": ["weight"]
                 }
@@ -40,7 +35,9 @@
     "foodType": {
       "schema": {
         "type": "object",
-        "properties": { "value": { "type": "string" } },
+        "properties": {
+          "value": { "type": "string", "enum": ["none", "meat"] }
+        },
         "additionalProperties": false,
         "required": ["value"]
       },
@@ -50,12 +47,7 @@
       "schema": {
         "type": "object",
         "properties": {
-          "value": {
-            "oneOf": [
-              { "type": "string", "enum": ["auto"] },
-              { "type": "number", "minimum": 0 }
-            ]
-          },
+          "value": { "type": "number", "minimum": 0 },
           "unit": { "type": "string", "enum": ["g"], "default": "g" }
         },
         "additionalProperties": false,
@@ -89,23 +81,23 @@
     }
   },
   "commands": {
+    "cancelDefrost": {
+      "name": "cancelDefrost",
+      "arguments": [],
+      "sensitive": false
+    },
     "setDefrost": {
       "name": "setDefrost",
       "arguments": [
         {
           "name": "foodType",
           "optional": false,
-          "schema": { "type": "string" }
+          "schema": { "type": "string", "enum": ["none", "meat"] }
         },
         {
           "name": "weight",
           "optional": false,
-          "schema": {
-            "oneOf": [
-              { "type": "string", "enum": ["auto"] },
-              { "type": "number", "minimum": 0 }
-            ]
-          }
+          "schema": { "type": "number", "minimum": 0 }
         }
       ],
       "sensitive": false

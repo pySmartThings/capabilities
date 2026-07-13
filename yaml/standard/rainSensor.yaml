@@ -1,6 +1,6 @@
 id: rainSensor
 version: 1
-status: proposed
+status: live
 name: Rain Sensor
 ephemeral: false
 attributes:

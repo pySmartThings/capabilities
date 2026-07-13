@@ -18,6 +18,7 @@
       "schema": {
         "type": "object",
         "properties": { "value": { "title": "JsonObject", "type": "object" } },
+        "sensitive": true,
         "additionalProperties": false,
         "required": ["value"]
       },

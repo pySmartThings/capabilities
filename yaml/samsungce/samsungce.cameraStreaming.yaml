@@ -28,6 +28,16 @@ attributes:
       required:
         - value
     enumCommands: []
+  avpVersion:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
 commands:
   cancelOnboarding:
     name: cancelOnboarding

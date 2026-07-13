@@ -4,6 +4,20 @@ status: proposed
 name: Fridge Pantry Info
 ephemeral: false
 attributes:
+  pantryType:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - singlePantry
+            - kimchiRipeZone
+            - oldPantry
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
   name:
     schema:
       type: object

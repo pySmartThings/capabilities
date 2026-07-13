@@ -5,6 +5,15 @@
   "name": "Robot Cleaner Reservation",
   "ephemeral": false,
   "attributes": {
+    "allowOverlapReservation": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean", "default": false } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
     "reservations": {
       "schema": {
         "type": "object",
@@ -15,10 +24,16 @@
               "type": "object",
               "properties": {
                 "id": { "type": "string" },
+                "reservationType": {
+                  "type": "string",
+                  "enum": ["scheduledTime", "whileAway"],
+                  "default": "scheduledTime"
+                },
                 "enabled": { "type": "boolean" },
                 "repeatMode": {
                   "type": "string",
-                  "enum": ["once", "daily", "weekly"]
+                  "enum": ["once", "daily", "weekly"],
+                  "default": "weekly"
                 },
                 "dayOfWeek": {
                   "type": "array",
@@ -27,17 +42,86 @@
                     "enum": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
                   }
                 },
+                "excludeHolidays": { "type": "boolean" },
                 "startTime": { "type": "string" },
-                "cleaningMode": { "type": "string" },
-                "areaId": { "type": "array", "items": { "type": "string" } }
+                "endTime": { "type": "string" },
+                "cleaningMode": {
+                  "type": "string",
+                  "enum": ["auto", "area", "spot", "object"]
+                },
+                "suctionPower": {
+                  "type": "string",
+                  "enum": ["max", "smart", "normal", "quiet"]
+                },
+                "cleaningType": {
+                  "type": "string",
+                  "enum": [
+                    "mop",
+                    "vacuum",
+                    "vacuumAndMopTogether",
+                    "mopAfterVacuum"
+                  ]
+                },
+                "drivingMode": {
+                  "type": "string",
+                  "enum": [
+                    "areaThenWalls",
+                    "wallFirst",
+                    "quickCleaningZigzagPattern"
+                  ]
+                },
+                "waterLevel": {
+                  "type": "string",
+                  "enum": [
+                    "extraHigh",
+                    "high",
+                    "mediumHigh",
+                    "medium",
+                    "mediumLow",
+                    "low"
+                  ]
+                },
+                "mapId": { "type": "string" },
+                "areaIds": { "type": "array", "items": { "type": "string" } },
+                "spotInfo": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": { "type": "string" },
+                      "topLeftX": { "type": "integer" },
+                      "topLeftY": { "type": "integer" },
+                      "bottomRightX": { "type": "integer" },
+                      "bottomRightY": { "type": "integer" }
+                    },
+                    "required": [
+                      "id",
+                      "topLeftX",
+                      "topLeftY",
+                      "bottomRightX",
+                      "bottomRightY"
+                    ]
+                  }
+                }
               },
-              "required": [
-                "id",
-                "enabled",
-                "dayOfWeek",
-                "startTime",
-                "cleaningMode"
-              ]
+              "required": ["enabled", "dayOfWeek", "startTime", "cleaningMode"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedOptionalFeatures": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["excludeHolidays", "overlapReservation", "whileAway"]
             }
           }
         },
@@ -49,7 +133,25 @@
     "maxNumberOfReservations": {
       "schema": {
         "type": "object",
-        "properties": { "value": { "type": "number" } },
+        "properties": { "value": { "type": "integer" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedReservationTypes": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["scheduledTime", "whileAway"],
+              "default": "scheduledTime"
+            }
+          }
+        },
         "additionalProperties": false,
         "required": ["value"]
       },
@@ -65,12 +167,18 @@
           "optional": false,
           "schema": {
             "type": "object",
-            "additionalProperties": false,
             "properties": {
+              "id": { "type": "string" },
+              "reservationType": {
+                "type": "string",
+                "enum": ["scheduledTime", "whileAway"],
+                "default": "scheduledTime"
+              },
               "enabled": { "type": "boolean" },
               "repeatMode": {
                 "type": "string",
-                "enum": ["once", "daily", "weekly"]
+                "enum": ["once", "daily", "weekly"],
+                "default": "weekly"
               },
               "dayOfWeek": {
                 "type": "array",
@@ -79,9 +187,67 @@
                   "enum": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
                 }
               },
+              "excludeHolidays": { "type": "boolean" },
               "startTime": { "type": "string" },
-              "cleaningMode": { "type": "string" },
-              "areaId": { "type": "array", "items": { "type": "string" } }
+              "endTime": { "type": "string" },
+              "cleaningMode": {
+                "type": "string",
+                "enum": ["auto", "area", "spot", "object"]
+              },
+              "suctionPower": {
+                "type": "string",
+                "enum": ["max", "smart", "normal", "quiet"]
+              },
+              "cleaningType": {
+                "type": "string",
+                "enum": [
+                  "mop",
+                  "vacuum",
+                  "vacuumAndMopTogether",
+                  "mopAfterVacuum"
+                ]
+              },
+              "drivingMode": {
+                "type": "string",
+                "enum": [
+                  "areaThenWalls",
+                  "wallFirst",
+                  "quickCleaningZigzagPattern"
+                ]
+              },
+              "waterLevel": {
+                "type": "string",
+                "enum": [
+                  "extraHigh",
+                  "high",
+                  "mediumHigh",
+                  "medium",
+                  "mediumLow",
+                  "low"
+                ]
+              },
+              "mapId": { "type": "string" },
+              "areaIds": { "type": "array", "items": { "type": "string" } },
+              "spotInfo": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": { "type": "string" },
+                    "topLeftX": { "type": "integer" },
+                    "topLeftY": { "type": "integer" },
+                    "bottomRightX": { "type": "integer" },
+                    "bottomRightY": { "type": "integer" }
+                  },
+                  "required": [
+                    "id",
+                    "topLeftX",
+                    "topLeftY",
+                    "bottomRightX",
+                    "bottomRightY"
+                  ]
+                }
+              }
             },
             "required": ["enabled", "dayOfWeek", "startTime", "cleaningMode"]
           }
@@ -112,13 +278,18 @@
           "optional": false,
           "schema": {
             "type": "object",
-            "additionalProperties": false,
             "properties": {
               "id": { "type": "string" },
+              "reservationType": {
+                "type": "string",
+                "enum": ["scheduledTime", "whileAway"],
+                "default": "scheduledTime"
+              },
               "enabled": { "type": "boolean" },
               "repeatMode": {
                 "type": "string",
-                "enum": ["once", "daily", "weekly"]
+                "enum": ["once", "daily", "weekly"],
+                "default": "weekly"
               },
               "dayOfWeek": {
                 "type": "array",
@@ -127,17 +298,69 @@
                   "enum": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
                 }
               },
+              "excludeHolidays": { "type": "boolean" },
               "startTime": { "type": "string" },
-              "cleaningMode": { "type": "string" },
-              "areaId": { "type": "array", "items": { "type": "string" } }
+              "endTime": { "type": "string" },
+              "cleaningMode": {
+                "type": "string",
+                "enum": ["auto", "area", "spot", "object"]
+              },
+              "suctionPower": {
+                "type": "string",
+                "enum": ["max", "smart", "normal", "quiet"]
+              },
+              "cleaningType": {
+                "type": "string",
+                "enum": [
+                  "mop",
+                  "vacuum",
+                  "vacuumAndMopTogether",
+                  "mopAfterVacuum"
+                ]
+              },
+              "drivingMode": {
+                "type": "string",
+                "enum": [
+                  "areaThenWalls",
+                  "wallFirst",
+                  "quickCleaningZigzagPattern"
+                ]
+              },
+              "waterLevel": {
+                "type": "string",
+                "enum": [
+                  "extraHigh",
+                  "high",
+                  "mediumHigh",
+                  "medium",
+                  "mediumLow",
+                  "low"
+                ]
+              },
+              "mapId": { "type": "string" },
+              "areaIds": { "type": "array", "items": { "type": "string" } },
+              "spotInfo": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": { "type": "string" },
+                    "topLeftX": { "type": "integer" },
+                    "topLeftY": { "type": "integer" },
+                    "bottomRightX": { "type": "integer" },
+                    "bottomRightY": { "type": "integer" }
+                  },
+                  "required": [
+                    "id",
+                    "topLeftX",
+                    "topLeftY",
+                    "bottomRightX",
+                    "bottomRightY"
+                  ]
+                }
+              }
             },
-            "required": [
-              "id",
-              "enabled",
-              "dayOfWeek",
-              "startTime",
-              "cleaningMode"
-            ]
+            "required": ["enabled", "dayOfWeek", "startTime", "cleaningMode"]
           }
         }
       ],

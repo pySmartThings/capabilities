@@ -19,12 +19,8 @@ attributes:
                 additionalProperties: false
                 properties:
                   weight:
-                    oneOf:
-                      - type: string
-                        enum:
-                          - auto
-                      - type: number
-                        minimum: 0
+                    type: number
+                    minimum: 0
                 required:
                   - weight
       additionalProperties: false
@@ -37,6 +33,9 @@ attributes:
       properties:
         value:
           type: string
+          enum:
+            - none
+            - meat
       additionalProperties: false
       required:
         - value
@@ -46,12 +45,8 @@ attributes:
       type: object
       properties:
         value:
-          oneOf:
-            - type: string
-              enum:
-                - auto
-            - type: number
-              minimum: 0
+          type: number
+          minimum: 0
         unit:
           type: string
           enum:
@@ -94,6 +89,10 @@ attributes:
         - value
     enumCommands: []
 commands:
+  cancelDefrost:
+    name: cancelDefrost
+    arguments: []
+    sensitive: false
   setDefrost:
     name: setDefrost
     arguments:
@@ -101,13 +100,12 @@ commands:
         optional: false
         schema:
           type: string
+          enum:
+            - none
+            - meat
       - name: weight
         optional: false
         schema:
-          oneOf:
-            - type: string
-              enum:
-                - auto
-            - type: number
-              minimum: 0
+          type: number
+          minimum: 0
     sensitive: false

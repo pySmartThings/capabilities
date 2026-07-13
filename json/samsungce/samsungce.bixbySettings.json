@@ -1,0 +1,471 @@
+{
+  "id": "samsungce.bixbySettings",
+  "version": 1,
+  "status": "proposed",
+  "name": "Bixby Settings",
+  "ephemeral": false,
+  "attributes": {
+    "languageAndVoiceStyle": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "localeCode": {
+                "type": "string",
+                "enum": [
+                  "cs-CZ",
+                  "da-DK",
+                  "de-DE",
+                  "el-GR",
+                  "en-AU",
+                  "en-GB",
+                  "en-IN",
+                  "en-US",
+                  "es-ES",
+                  "es-MX",
+                  "fi-FI",
+                  "fr-FR",
+                  "hu-HU",
+                  "it-IT",
+                  "ko-KR",
+                  "nb-NO",
+                  "nl-NL",
+                  "pl-PL",
+                  "pt-BR",
+                  "pt-PT",
+                  "ro-RO",
+                  "ru-RU",
+                  "sk-SK",
+                  "sv-SE",
+                  "th-TH",
+                  "tr-TR",
+                  "zh-CN",
+                  "zh-TW",
+                  "zh-HK",
+                  "ja-JP"
+                ]
+              },
+              "voiceStyleCode": { "type": "string" }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedLanguageAndVoiceStyles": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "localeCode": {
+                  "type": "string",
+                  "enum": [
+                    "cs-CZ",
+                    "da-DK",
+                    "de-DE",
+                    "el-GR",
+                    "en-AU",
+                    "en-GB",
+                    "en-IN",
+                    "en-US",
+                    "es-ES",
+                    "es-MX",
+                    "fi-FI",
+                    "fr-FR",
+                    "hu-HU",
+                    "it-IT",
+                    "ko-KR",
+                    "nb-NO",
+                    "nl-NL",
+                    "pl-PL",
+                    "pt-BR",
+                    "pt-PT",
+                    "ro-RO",
+                    "ru-RU",
+                    "sk-SK",
+                    "sv-SE",
+                    "th-TH",
+                    "tr-TR",
+                    "zh-CN",
+                    "zh-TW",
+                    "zh-HK",
+                    "ja-JP"
+                  ]
+                },
+                "voiceStyles": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "name": { "type": "string" },
+                      "code": { "type": "string" },
+                      "soundId": { "type": "string" },
+                      "productSoundId": { "type": "string" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedSingleBixbyResponses": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["on", "off"] }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedWakeUpPhrases": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["hiBixby", "bixby"] }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedSoundFeedbacks": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["on", "noVoiceInput", "off"] }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "soundFeedbackWhenStop": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["on", "noVoiceInput", "off"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "wakeUpPhrase": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["hiBixby", "bixby"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setWakeUpPhrase",
+      "enumCommands": []
+    },
+    "supportedSoundFeedbackWhenStart": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["on", "noVoiceInput", "off"] }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "bixbyStatus": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["enabled", "disabled"],
+            "default": "enabled"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setBixbyStatus",
+      "enumCommands": []
+    },
+    "soundFeedback": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["on", "noVoiceInput", "off"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedSoundFeedbackWhenStop": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["on", "noVoiceInput", "off"] }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "wakeUpSensitivity": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["low", "medium", "high"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setWakeUpSensitivity",
+      "enumCommands": []
+    },
+    "supportedWakeUpSensitivities": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["low", "medium", "high"] }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedBixbyStatuses": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["enabled", "disabled"],
+              "default": "enabled"
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "singleBixbyResponse": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string", "enum": ["on", "off"] } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setSingleBixbyResponse",
+      "enumCommands": []
+    },
+    "soundFeedbackWhenStart": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["on", "noVoiceInput", "off"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setLocaleCode": {
+      "name": "setLocaleCode",
+      "arguments": [
+        {
+          "name": "localeCode",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "cs-CZ",
+              "da-DK",
+              "de-DE",
+              "el-GR",
+              "en-AU",
+              "en-GB",
+              "en-IN",
+              "en-US",
+              "es-ES",
+              "es-MX",
+              "fi-FI",
+              "fr-FR",
+              "hu-HU",
+              "it-IT",
+              "ko-KR",
+              "nb-NO",
+              "nl-NL",
+              "pl-PL",
+              "pt-BR",
+              "pt-PT",
+              "ro-RO",
+              "ru-RU",
+              "sk-SK",
+              "sv-SE",
+              "th-TH",
+              "tr-TR",
+              "zh-CN",
+              "zh-TW",
+              "zh-HK",
+              "ja-JP"
+            ]
+          }
+        }
+      ],
+      "sensitive": false
+    },
+    "setWakeUpPhrase": {
+      "name": "setWakeUpPhrase",
+      "arguments": [
+        {
+          "name": "wakeUpPhrase",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["hiBixby", "bixby"] }
+        }
+      ],
+      "sensitive": false
+    },
+    "setLocation": {
+      "name": "setLocation",
+      "arguments": [
+        {
+          "name": "location",
+          "optional": false,
+          "schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "latitude": { "type": "number" },
+              "longitude": { "type": "number" }
+            },
+            "required": ["latitude", "longitude"]
+          }
+        }
+      ],
+      "sensitive": false
+    },
+    "setSoundFeedback": {
+      "name": "setSoundFeedback",
+      "arguments": [
+        {
+          "name": "soundFeedback",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["on", "noVoiceInput", "off"] }
+        }
+      ],
+      "sensitive": false
+    },
+    "setBixbyStatus": {
+      "name": "setBixbyStatus",
+      "arguments": [
+        {
+          "name": "bixbyStatus",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["enabled", "disabled"],
+            "default": "enabled"
+          }
+        }
+      ],
+      "sensitive": false
+    },
+    "setVoiceStyleCode": {
+      "name": "setVoiceStyleCode",
+      "arguments": [
+        {
+          "name": "voiceStyleCode",
+          "optional": false,
+          "schema": { "type": "string" }
+        }
+      ],
+      "sensitive": false
+    },
+    "setSoundFeedbackWhenStart": {
+      "name": "setSoundFeedbackWhenStart",
+      "arguments": [
+        {
+          "name": "soundFeedbackWhenStart",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["on", "noVoiceInput", "off"] }
+        }
+      ],
+      "sensitive": false
+    },
+    "setWakeUpSensitivity": {
+      "name": "setWakeUpSensitivity",
+      "arguments": [
+        {
+          "name": "wakeUpSensitivity",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["low", "medium", "high"] }
+        }
+      ],
+      "sensitive": false
+    },
+    "setSingleBixbyResponse": {
+      "name": "setSingleBixbyResponse",
+      "arguments": [
+        {
+          "name": "singleBixbyResponse",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["on", "off"] }
+        }
+      ],
+      "sensitive": false
+    },
+    "setSoundFeedbackWhenStop": {
+      "name": "setSoundFeedbackWhenStop",
+      "arguments": [
+        {
+          "name": "soundFeedbackWhenStop",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["on", "noVoiceInput", "off"] }
+        }
+      ],
+      "sensitive": false
+    }
+  }
+}

@@ -56,10 +56,6 @@ attributes:
             - replace
             - wash
             - notused
-        data:
-          type: object
-          additionalProperties: true
-          required: []
       additionalProperties: false
       required:
         - value

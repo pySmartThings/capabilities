@@ -1,7 +1,7 @@
 {
   "id": "feederOperatingState",
   "version": 1,
-  "status": "proposed",
+  "status": "live",
   "name": "Feeder Operating State",
   "ephemeral": false,
   "attributes": {

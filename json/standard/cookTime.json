@@ -1,7 +1,7 @@
 {
   "id": "cookTime",
   "version": 1,
-  "status": "proposed",
+  "status": "live",
   "name": "Cook Time",
   "ephemeral": false,
   "attributes": {

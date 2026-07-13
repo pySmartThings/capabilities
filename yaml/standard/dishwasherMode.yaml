@@ -1,6 +1,6 @@
 id: dishwasherMode
 version: 1
-status: proposed
+status: live
 name: Dishwasher Mode
 ephemeral: false
 attributes:

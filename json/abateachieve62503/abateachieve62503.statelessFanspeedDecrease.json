@@ -1,0 +1,15 @@
+{
+  "id": "abateachieve62503.statelessFanspeedDecrease",
+  "version": 1,
+  "status": "proposed",
+  "name": "Stateless Fanspeed Decrease",
+  "ephemeral": false,
+  "attributes": {},
+  "commands": {
+    "fanspeedDown": {
+      "name": "fanspeedDown",
+      "arguments": [],
+      "sensitive": false
+    }
+  }
+}

@@ -1,6 +1,6 @@
 id: containerState
 version: 1
-status: proposed
+status: live
 name: Container State
 ephemeral: false
 attributes:

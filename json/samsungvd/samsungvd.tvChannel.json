@@ -1,0 +1,71 @@
+{
+  "id": "samsungvd.tvChannel",
+  "version": 1,
+  "status": "proposed",
+  "name": "Tv Channel",
+  "ephemeral": false,
+  "attributes": {
+    "tvChannel": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "title": "PositiveInteger",
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "setter": "setTvChannel",
+      "enumCommands": []
+    },
+    "tvChannelName": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "title": "String", "type": "string", "maxLength": 255 }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "setter": "setTvChannelName",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "channelDown": {
+      "name": "channelDown",
+      "arguments": [],
+      "sensitive": false
+    },
+    "setTvChannel": {
+      "name": "setTvChannel",
+      "arguments": [
+        {
+          "name": "tvChannel",
+          "optional": false,
+          "schema": {
+            "title": "PositiveInteger",
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      ],
+      "sensitive": false
+    },
+    "channelUp": { "name": "channelUp", "arguments": [], "sensitive": false },
+    "setTvChannelName": {
+      "name": "setTvChannelName",
+      "arguments": [
+        {
+          "name": "tvChannelName",
+          "optional": true,
+          "schema": { "title": "String", "type": "string", "maxLength": 255 }
+        }
+      ],
+      "sensitive": false
+    }
+  }
+}

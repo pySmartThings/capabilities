@@ -1,0 +1,84 @@
+{
+  "id": "samsungce.colorPreset",
+  "version": 1,
+  "status": "proposed",
+  "name": "Color Preset",
+  "ephemeral": false,
+  "attributes": {
+    "colorPreset": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": [
+              "warmWhite",
+              "naturalWhite",
+              "coolWhite",
+              "green",
+              "purple",
+              "blue",
+              "orange",
+              "pink"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setColorPreset",
+      "enumCommands": []
+    },
+    "supportedColorPresets": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "warmWhite",
+                "naturalWhite",
+                "coolWhite",
+                "green",
+                "purple",
+                "blue",
+                "orange",
+                "pink"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setColorPreset": {
+      "name": "setColorPreset",
+      "arguments": [
+        {
+          "name": "colorPreset",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": [
+              "warmWhite",
+              "naturalWhite",
+              "coolWhite",
+              "green",
+              "purple",
+              "blue",
+              "orange",
+              "pink"
+            ]
+          }
+        }
+      ],
+      "sensitive": false
+    }
+  }
+}

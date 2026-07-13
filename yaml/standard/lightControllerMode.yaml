@@ -1,6 +1,6 @@
 id: lightControllerMode
 version: 1
-status: proposed
+status: live
 name: Light Controller Mode
 ephemeral: false
 attributes:

@@ -19,6 +19,7 @@
         "additionalProperties": false,
         "required": ["value"]
       },
+      "setter": "setStartValue",
       "enumCommands": []
     },
     "currentValue": {

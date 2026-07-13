@@ -22,6 +22,7 @@
             "required": ["id", "sdp"]
           }
         },
+        "sensitive": true,
         "additionalProperties": false,
         "required": ["value"]
       },
@@ -97,6 +98,7 @@
             "required": ["id", "sdp"]
           }
         },
+        "sensitive": true,
         "additionalProperties": false,
         "required": ["value"]
       },
@@ -125,6 +127,7 @@
             "required": ["id", "ice"]
           }
         },
+        "sensitive": true,
         "additionalProperties": false,
         "required": ["value"]
       },

@@ -30,7 +30,8 @@
               "cleaning",
               "fullyCharged",
               "waiting",
-              "errorStatus"
+              "errorStatus",
+              "coolingDown"
             ]
           }
         },

@@ -1,6 +1,6 @@
 id: mediaPlaybackRepeat
 version: 1
-status: proposed
+status: live
 name: Media Playback Repeat
 ephemeral: false
 attributes:

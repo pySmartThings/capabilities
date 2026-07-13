@@ -1,7 +1,7 @@
 {
   "id": "lockUsers",
   "version": 1,
-  "status": "proposed",
+  "status": "live",
   "name": "Lock Users",
   "ephemeral": false,
   "attributes": {

@@ -136,7 +136,8 @@
                 "enum": ["default", "off"]
               },
               "stages": { "type": "array", "items": { "type": "object" } },
-              "visionIndex": { "type": "string" }
+              "visionIndex": { "type": "string" },
+              "vaporData": { "type": "string" }
             }
           }
         },

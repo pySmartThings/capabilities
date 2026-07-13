@@ -15,6 +15,7 @@
             "items": {
               "type": "object",
               "properties": {
+                "id": { "type": "string" },
                 "cups": { "type": "integer", "minimum": 0, "maximum": 2 },
                 "recipe": { "type": "string" }
               }
@@ -47,6 +48,7 @@
             "items": {
               "type": "object",
               "properties": {
+                "id": { "type": "string" },
                 "cups": { "type": "integer", "minimum": 0, "maximum": 2 },
                 "stages": {
                   "type": "array",
@@ -95,12 +97,13 @@
           "value": {
             "type": "array",
             "additionalProperties": false,
-            "items": { "type": "string" }
+            "items": { "type": "string", "enum": ["0", "1", "2", "3", "4"] }
           }
         },
         "additionalProperties": false,
         "required": ["value"]
       },
+      "setter": "setVisibleList",
       "enumCommands": []
     },
     "coffeeBrewingRecipes": {
@@ -134,12 +137,13 @@
           "value": {
             "type": "array",
             "additionalProperties": false,
-            "items": { "type": "string" }
+            "items": { "type": "string", "enum": ["0", "1", "2", "3", "4"] }
           }
         },
         "additionalProperties": false,
         "required": ["value"]
       },
+      "setter": "setInvisibleList",
       "enumCommands": []
     },
     "coffeeBrewingStatus": {
@@ -231,7 +235,24 @@
         {
           "name": "invisibleList",
           "optional": false,
-          "schema": { "type": "array", "items": { "type": "string" } }
+          "schema": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["0", "1", "2", "3", "4"] }
+          }
+        }
+      ],
+      "sensitive": false
+    },
+    "deleteRecipes": {
+      "name": "deleteRecipes",
+      "arguments": [
+        {
+          "name": "recipeIds",
+          "optional": false,
+          "schema": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["3", "4"] }
+          }
         }
       ],
       "sensitive": false
@@ -296,7 +317,10 @@
         {
           "name": "visibleList",
           "optional": false,
-          "schema": { "type": "array", "items": { "type": "string" } }
+          "schema": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["0", "1", "2", "3", "4"] }
+          }
         }
       ],
       "sensitive": false

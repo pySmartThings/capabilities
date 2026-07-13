@@ -1,6 +1,6 @@
 id: pumpOperationMode
 version: 1
-status: proposed
+status: live
 name: Pump Operation Mode
 ephemeral: false
 attributes:

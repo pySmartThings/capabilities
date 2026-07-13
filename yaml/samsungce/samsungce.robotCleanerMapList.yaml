@@ -4,6 +4,64 @@ status: proposed
 name: Robot Cleaner Map List
 ephemeral: false
 attributes:
+  exploringMapId:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: selectMap
+    enumCommands: []
+  spotInfo:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            mapId:
+              type: string
+            spots:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  topLeftX:
+                    type: integer
+                  topLeftY:
+                    type: integer
+                  bottomRightX:
+                    type: integer
+                  bottomRightY:
+                    type: integer
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  onlineStation:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            isValidCoordinates:
+              type: boolean
+              default: true
+            coordinates:
+              type: array
+              items:
+                type: string
+              maxItems: 2
+      additionalProperties: false
+      required: []
+    enumCommands: []
   maps:
     schema:
       type: object
@@ -16,6 +74,9 @@ attributes:
             properties:
               id:
                 type: string
+              uuid:
+                type: string
+                pattern: ^(?:[0-9]+|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$
               name:
                 type: string
               userEdited:
@@ -40,11 +101,39 @@ attributes:
                       type: string
                     name:
                       type: string
+                    userEdited:
+                      type: boolean
                     coordinates:
                       type: array
                       items:
                         type: string
                       maxItems: 2
+                    displayType:
+                      type: string
+                      enum:
+                        - icon
+                        - polygon
+                    imageName:
+                      type: string
+                    centerCoordinates:
+                      type: array
+                      items:
+                        type: string
+                      maxItems: 2
+                    vertices:
+                      type: array
+                      items:
+                        type: array
+                        items:
+                          type: string
+                        maxItems: 2
+                    theta:
+                      type: integer
+                      minimum: -180
+                      maximum: 180
+                  required:
+                    - name
+                    - coordinates
               createdTime:
                 type: string
                 pattern: ^(?:[1-9]\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)T(?:[01]\d|2[0-3]):?[0-5]\d:?[0-5]\d(?:\.\d{3})?(?:Z|[+-][01]\d(?::?[0-5]\d)?)$
@@ -60,4 +149,1027 @@ attributes:
       required:
         - value
     enumCommands: []
-commands: {}
+  stationModelType:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - type0
+            - type1
+            - type2
+            - type3
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  noGoZones:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            mapId:
+              type: string
+            supportedNogoZoneTypes:
+              type: array
+              items:
+                type: string
+                enum:
+                  - polygon
+                  - noMopZone
+                  - unsafeZone
+                  - suggestedZone
+                  - virtualWall
+            maxNumberOfNoGoZones:
+              type: integer
+              minimum: 0
+            latestAutoAddedNogoZoneUUIDs:
+              type: array
+              items:
+                type: string
+                pattern: ^(?:[0-9]+|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$
+            noGoZoneInfo:
+              type: array
+              items:
+                oneOf:
+                  - type: object
+                    additionalProperties: false
+                    properties:
+                      id:
+                        type: string
+                      uuid:
+                        type: string
+                        pattern: ^(?:[0-9]+|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$
+                      name:
+                        type: string
+                      shape:
+                        type: string
+                        enum:
+                          - rectangle
+                          - line
+                        default: rectangle
+                      style:
+                        anyOf:
+                          - type: string
+                            enum:
+                              - noGoZone
+                              - noMopZone
+                              - unsafeZone
+                              - suggestedZone
+                          - type: string
+                            enum:
+                              - thickMat
+                              - threshold
+                              - steppedThreshold
+                              - slopedThreshold
+                              - suggestedZone
+                      isClimbSuccess:
+                        type: boolean
+                        default: false
+                      editable:
+                        type: boolean
+                        default: true
+                      centerCoordinates:
+                        type: array
+                        items:
+                          type: string
+                        maxItems: 2
+                      vertices:
+                        type: array
+                        items:
+                          type: array
+                          items:
+                            type: string
+                          maxItems: 2
+                      theta:
+                        type: integer
+                        minimum: -180
+                        maximum: 180
+                      suggestedReason:
+                        type: string
+                        enum:
+                          - cliff
+                          - object
+                          - unsafeZone
+                    required:
+                      - id
+                  - type: object
+                    additionalProperties: false
+                    properties:
+                      id:
+                        type: string
+                      name:
+                        type: string
+                      rect:
+                        type: object
+                        additionalProperties: false
+                        properties:
+                          left:
+                            type: integer
+                          top:
+                            type: integer
+                          right:
+                            type: integer
+                          bottom:
+                            type: integer
+                      suggestedReason:
+                        type: string
+                        enum:
+                          - cliff
+                          - object
+                          - unsafeZone
+                    required:
+                      - id
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  suggestedNoGoZones:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            mapId:
+              type: string
+            reason:
+              type: string
+              enum:
+                - cliff
+                - object
+                - unsafeZone
+            noGoZones:
+              type: array
+              items:
+                oneOf:
+                  - type: object
+                    additionalProperties: false
+                    properties:
+                      id:
+                        type: string
+                      uuid:
+                        type: string
+                        pattern: ^(?:[0-9]+|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$
+                      name:
+                        type: string
+                      shape:
+                        type: string
+                        enum:
+                          - rectangle
+                          - line
+                        default: rectangle
+                      style:
+                        anyOf:
+                          - type: string
+                            enum:
+                              - noGoZone
+                              - noMopZone
+                              - unsafeZone
+                              - suggestedZone
+                          - type: string
+                            enum:
+                              - thickMat
+                              - threshold
+                              - steppedThreshold
+                              - slopedThreshold
+                              - suggestedZone
+                      isClimbSuccess:
+                        type: boolean
+                        default: false
+                      editable:
+                        type: boolean
+                        default: true
+                      centerCoordinates:
+                        type: array
+                        items:
+                          type: string
+                        maxItems: 2
+                      vertices:
+                        type: array
+                        items:
+                          type: array
+                          items:
+                            type: string
+                          maxItems: 2
+                      theta:
+                        type: integer
+                        minimum: -180
+                        maximum: 180
+                      suggestedReason:
+                        type: string
+                        enum:
+                          - cliff
+                          - object
+                          - unsafeZone
+                    required:
+                      - id
+                  - type: object
+                    additionalProperties: false
+                    properties:
+                      id:
+                        type: string
+                      name:
+                        type: string
+                      rect:
+                        type: object
+                        additionalProperties: false
+                        properties:
+                          left:
+                            type: integer
+                          top:
+                            type: integer
+                          right:
+                            type: integer
+                          bottom:
+                            type: integer
+                      suggestedReason:
+                        type: string
+                        enum:
+                          - cliff
+                          - object
+                          - unsafeZone
+                    required:
+                      - id
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  mapEditResult:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            mapId:
+              type: string
+            result:
+              type: string
+              enum:
+                - success
+                - failure
+            errorCode:
+              type: string
+              enum:
+                - requestDuplicated
+                - requestTimeout
+                - currentUnavailable
+                - areaFulled
+                - areaInvalid
+                - areaUnconnected
+                - areaUndivided
+                - areaOverdivided
+                - areaWrong
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  mopPads:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            mapId:
+              type: string
+            mopPadInfo:
+              type: array
+              items:
+                type: object
+                additionalProperties: false
+                properties:
+                  id:
+                    type: string
+                  visibility:
+                    type: string
+                    enum:
+                      - visible
+                      - invisible
+                  coordinates:
+                    type: array
+                    items:
+                      type: string
+                    maxItems: 2
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  areaInfo:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            mapId:
+              type: string
+            areas:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  name:
+                    type: string
+                  userEdited:
+                    type: boolean
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  currentMap:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            id:
+              type: string
+            uuid:
+              type: string
+              pattern: ^(?:[0-9]+|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$
+            masterMapExist:
+              type: boolean
+            onlineMapExist:
+              type: boolean
+            needEditName:
+              type: boolean
+            createdTime:
+              type: string
+              pattern: ^(?:[1-9]\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)T(?:[01]\d|2[0-3]):?[0-5]\d:?[0-5]\d(?:\.\d{3})?(?:Z|[+-][01]\d(?::?[0-5]\d)?)$
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  maxNumberOfMaps:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 1
+          default: 1
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  station:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            mapId:
+              type: string
+            isValidCoordinates:
+              type: boolean
+              default: true
+            modelType:
+              type: string
+              enum:
+                - type0
+                - type1
+                - type2
+                - type3
+            coordinates:
+              type: array
+              items:
+                type: string
+              maxItems: 2
+            theta:
+              type: integer
+              minimum: -180
+              maximum: 180
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  currentMapId:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  climbZones:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            mapId:
+              type: string
+            supportedClimbZoneStyles:
+              type: array
+              items:
+                type: string
+                enum:
+                  - thickMat
+                  - threshold
+                  - steppedThreshold
+                  - slopedThreshold
+                  - suggestedZone
+            maxNumberOfClimbZones:
+              type: integer
+              minimum: 0
+            existFailedClimbZone:
+              type: boolean
+              default: false
+            existNewSuggestedZone:
+              type: boolean
+              default: false
+            climbZoneInfo:
+              type: array
+              items:
+                type: object
+                additionalProperties: false
+                properties:
+                  id:
+                    type: string
+                  uuid:
+                    type: string
+                    pattern: ^(?:[0-9]+|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$
+                  name:
+                    type: string
+                  shape:
+                    type: string
+                    enum:
+                      - rectangle
+                      - line
+                    default: rectangle
+                  style:
+                    anyOf:
+                      - type: string
+                        enum:
+                          - noGoZone
+                          - noMopZone
+                          - unsafeZone
+                          - suggestedZone
+                      - type: string
+                        enum:
+                          - thickMat
+                          - threshold
+                          - steppedThreshold
+                          - slopedThreshold
+                          - suggestedZone
+                  isClimbSuccess:
+                    type: boolean
+                    default: false
+                  editable:
+                    type: boolean
+                    default: true
+                  centerCoordinates:
+                    type: array
+                    items:
+                      type: string
+                    maxItems: 2
+                  vertices:
+                    type: array
+                    items:
+                      type: array
+                      items:
+                        type: string
+                      maxItems: 2
+                  theta:
+                    type: integer
+                    minimum: -180
+                    maximum: 180
+                  suggestedReason:
+                    type: string
+                    enum:
+                      - cliff
+                      - object
+                      - unsafeZone
+                required:
+                  - id
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  objectInfo:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            mapId:
+              type: string
+            objects:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  name:
+                    type: string
+                  userEdited:
+                    type: boolean
+                  coordinates:
+                    type: array
+                    items:
+                      type: string
+                    maxItems: 2
+                  displayType:
+                    type: string
+                    enum:
+                      - icon
+                      - polygon
+                  imageName:
+                    type: string
+                  centerCoordinates:
+                    type: array
+                    items:
+                      type: string
+                    maxItems: 2
+                  vertices:
+                    type: array
+                    items:
+                      type: array
+                      items:
+                        type: string
+                      maxItems: 2
+                  theta:
+                    type: integer
+                    minimum: -180
+                    maximum: 180
+                required:
+                  - name
+                  - coordinates
+      additionalProperties: false
+      required: []
+    enumCommands: []
+  map:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            mapId:
+              type: string
+            uuid:
+              type: string
+              pattern: ^(?:[0-9]+|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$
+            masterMapExist:
+              type: boolean
+            onlineMapExist:
+              type: boolean
+            needEditName:
+              type: boolean
+            createdTime:
+              type: string
+              pattern: ^(?:[1-9]\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)T(?:[01]\d|2[0-3]):?[0-5]\d:?[0-5]\d(?:\.\d{3})?(?:Z|[+-][01]\d(?::?[0-5]\d)?)$
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  clearNoGoZone:
+    name: clearNoGoZone
+    arguments:
+      - name: mapId
+        optional: true
+        schema:
+          type: string
+    sensitive: false
+  updateObjects:
+    name: updateObjects
+    arguments:
+      - name: objects
+        optional: false
+        schema:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              userEdited:
+                type: boolean
+              coordinates:
+                type: array
+                items:
+                  type: string
+                maxItems: 2
+              displayType:
+                type: string
+                enum:
+                  - icon
+                  - polygon
+              imageName:
+                type: string
+              centerCoordinates:
+                type: array
+                items:
+                  type: string
+                maxItems: 2
+              vertices:
+                type: array
+                items:
+                  type: array
+                  items:
+                    type: string
+                  maxItems: 2
+              theta:
+                type: integer
+                minimum: -180
+                maximum: 180
+            required:
+              - name
+              - coordinates
+      - name: mapId
+        optional: true
+        schema:
+          type: string
+    sensitive: false
+  clearSpots:
+    name: clearSpots
+    arguments:
+      - name: mapId
+        optional: true
+        schema:
+          type: string
+    sensitive: false
+  clearFailedClimbZones:
+    name: clearFailedClimbZones
+    arguments:
+      - name: mapId
+        optional: true
+        schema:
+          type: string
+    sensitive: false
+  updateNoGoZones:
+    name: addNoGoZones
+    arguments:
+      - name: noGoZones
+        optional: false
+        schema:
+          type: array
+          items:
+            oneOf:
+              - type: object
+                additionalProperties: false
+                properties:
+                  id:
+                    type: string
+                  uuid:
+                    type: string
+                    pattern: ^(?:[0-9]+|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$
+                  name:
+                    type: string
+                  shape:
+                    type: string
+                    enum:
+                      - rectangle
+                      - line
+                    default: rectangle
+                  style:
+                    anyOf:
+                      - type: string
+                        enum:
+                          - noGoZone
+                          - noMopZone
+                          - unsafeZone
+                          - suggestedZone
+                      - type: string
+                        enum:
+                          - thickMat
+                          - threshold
+                          - steppedThreshold
+                          - slopedThreshold
+                          - suggestedZone
+                  isClimbSuccess:
+                    type: boolean
+                    default: false
+                  editable:
+                    type: boolean
+                    default: true
+                  centerCoordinates:
+                    type: array
+                    items:
+                      type: string
+                    maxItems: 2
+                  vertices:
+                    type: array
+                    items:
+                      type: array
+                      items:
+                        type: string
+                      maxItems: 2
+                  theta:
+                    type: integer
+                    minimum: -180
+                    maximum: 180
+                  suggestedReason:
+                    type: string
+                    enum:
+                      - cliff
+                      - object
+                      - unsafeZone
+                required:
+                  - id
+              - type: object
+                additionalProperties: false
+                properties:
+                  id:
+                    type: string
+                  name:
+                    type: string
+                  rect:
+                    type: object
+                    additionalProperties: false
+                    properties:
+                      left:
+                        type: integer
+                      top:
+                        type: integer
+                      right:
+                        type: integer
+                      bottom:
+                        type: integer
+                  suggestedReason:
+                    type: string
+                    enum:
+                      - cliff
+                      - object
+                      - unsafeZone
+                required:
+                  - id
+      - name: mapId
+        optional: true
+        schema:
+          type: string
+    sensitive: false
+  clearNewlySuggestedClimbZones:
+    name: clearNewlySuggestedClimbZones
+    arguments:
+      - name: mapId
+        optional: true
+        schema:
+          type: string
+    sensitive: false
+  divideArea:
+    name: divideArea
+    arguments:
+      - name: divideAreaInfo
+        optional: false
+        schema:
+          type: object
+          additionalProperties: false
+          properties:
+            areaId:
+              type: string
+            startCoordinates:
+              type: array
+              items:
+                type: string
+              maxItems: 2
+            endCoordinates:
+              type: array
+              items:
+                type: string
+              maxItems: 2
+      - name: mapId
+        optional: true
+        schema:
+          type: string
+    sensitive: false
+  renameArea:
+    name: renameArea
+    arguments:
+      - name: areaId
+        optional: false
+        schema:
+          type: string
+      - name: areaName
+        optional: false
+        schema:
+          type: string
+      - name: userEdited
+        optional: false
+        schema:
+          type: boolean
+      - name: mapId
+        optional: true
+        schema:
+          type: string
+    sensitive: false
+  renameMap:
+    name: renameMap
+    arguments:
+      - name: mapName
+        optional: false
+        schema:
+          type: string
+      - name: userEdited
+        optional: false
+        schema:
+          type: boolean
+      - name: mapId
+        optional: true
+        schema:
+          type: string
+    sensitive: false
+  deleteMap:
+    name: deleteMap
+    arguments:
+      - name: mapId
+        optional: true
+        schema:
+          type: string
+    sensitive: false
+  updateSpots:
+    name: updateSpots
+    arguments:
+      - name: spots
+        optional: false
+        schema:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              topLeftX:
+                type: integer
+              topLeftY:
+                type: integer
+              bottomRightX:
+                type: integer
+              bottomRightY:
+                type: integer
+      - name: mapId
+        optional: true
+        schema:
+          type: string
+    sensitive: false
+  deleteObjects:
+    name: deleteObject
+    arguments:
+      - name: objectIds
+        optional: false
+        schema:
+          type: array
+          items:
+            type: string
+      - name: mapId
+        optional: true
+        schema:
+          type: string
+    sensitive: false
+  selectMap:
+    name: selectMap
+    arguments:
+      - name: mapId
+        optional: false
+        schema:
+          type: string
+    sensitive: false
+  clearNewlySuggestedNoGoZones:
+    name: clearNewlySuggestedNoGoZones
+    arguments:
+      - name: mapId
+        optional: true
+        schema:
+          type: string
+    sensitive: false
+  clearAutoAddedNoGoZones:
+    name: clearAutoAddedNoGoZones
+    arguments:
+      - name: mapId
+        optional: true
+        schema:
+          type: string
+    sensitive: false
+  setNeedEditName:
+    name: setNeedEditName
+    arguments:
+      - name: needEditName
+        optional: false
+        schema:
+          type: boolean
+      - name: mapId
+        optional: true
+        schema:
+          type: string
+    sensitive: false
+  updateClimbZones:
+    name: addClimbZones
+    arguments:
+      - name: climbZones
+        optional: false
+        schema:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              id:
+                type: string
+              uuid:
+                type: string
+                pattern: ^(?:[0-9]+|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$
+              name:
+                type: string
+              shape:
+                type: string
+                enum:
+                  - rectangle
+                  - line
+                default: rectangle
+              style:
+                anyOf:
+                  - type: string
+                    enum:
+                      - noGoZone
+                      - noMopZone
+                      - unsafeZone
+                      - suggestedZone
+                  - type: string
+                    enum:
+                      - thickMat
+                      - threshold
+                      - steppedThreshold
+                      - slopedThreshold
+                      - suggestedZone
+              isClimbSuccess:
+                type: boolean
+                default: false
+              editable:
+                type: boolean
+                default: true
+              centerCoordinates:
+                type: array
+                items:
+                  type: string
+                maxItems: 2
+              vertices:
+                type: array
+                items:
+                  type: array
+                  items:
+                    type: string
+                  maxItems: 2
+              theta:
+                type: integer
+                minimum: -180
+                maximum: 180
+              suggestedReason:
+                type: string
+                enum:
+                  - cliff
+                  - object
+                  - unsafeZone
+            required:
+              - id
+      - name: mapId
+        optional: true
+        schema:
+          type: string
+    sensitive: false
+  combineArea:
+    name: combineArea
+    arguments:
+      - name: areaIds
+        optional: false
+        schema:
+          type: array
+          items:
+            type: string
+          minItems: 2
+          maxItems: 2
+      - name: mapId
+        optional: true
+        schema:
+          type: string
+    sensitive: false
+  clearClimbZones:
+    name: clearClimbZones
+    arguments:
+      - name: mapId
+        optional: true
+        schema:
+          type: string
+    sensitive: false

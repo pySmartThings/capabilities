@@ -1,6 +1,6 @@
 id: radonHealthConcern
 version: 1
-status: proposed
+status: live
 name: Radon Health Concern
 ephemeral: false
 attributes:

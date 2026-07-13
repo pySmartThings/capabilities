@@ -50,6 +50,7 @@
                   "fridgeVegetablesFruit",
                   "fridgeDrink",
                   "fridgeDegree2",
+                  "fridgeSoftFreeze5",
                   "storageRiceWine",
                   "storageVegetables",
                   "storageMeat",
@@ -74,6 +75,18 @@
                   "off",
                   "unknown"
                 ]
+              },
+              "ripeningTime": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "value": { "type": "integer", "minimum": 0 },
+                  "unit": {
+                    "type": "string",
+                    "enum": ["hour"],
+                    "default": "hour"
+                  }
+                }
               },
               "remainingRipeningTime": {
                 "type": "object",
@@ -142,6 +155,7 @@
                     "fridgeVegetablesFruit",
                     "fridgeDrink",
                     "fridgeDegree2",
+                    "fridgeSoftFreeze5",
                     "storageRiceWine",
                     "storageVegetables",
                     "storageMeat",
@@ -190,6 +204,11 @@
     }
   },
   "commands": {
+    "cancelRipening": {
+      "name": "cancelRipening",
+      "arguments": [],
+      "sensitive": false
+    },
     "setMode": {
       "name": "setMode",
       "arguments": [
@@ -233,6 +252,7 @@
               "fridgeVegetablesFruit",
               "fridgeDrink",
               "fridgeDegree2",
+              "fridgeSoftFreeze5",
               "storageRiceWine",
               "storageVegetables",
               "storageMeat",

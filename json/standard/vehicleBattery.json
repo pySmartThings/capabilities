@@ -1,7 +1,7 @@
 {
   "id": "vehicleBattery",
   "version": 1,
-  "status": "proposed",
+  "status": "live",
   "name": "Vehicle Battery",
   "ephemeral": false,
   "attributes": {

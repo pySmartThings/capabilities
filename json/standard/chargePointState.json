@@ -1,7 +1,7 @@
 {
   "id": "chargePointState",
   "version": 1,
-  "status": "proposed",
+  "status": "live",
   "name": "Charge Point State",
   "ephemeral": false,
   "attributes": {

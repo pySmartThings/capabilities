@@ -1,7 +1,7 @@
 {
   "id": "flowMeasurement",
   "version": 1,
-  "status": "proposed",
+  "status": "live",
   "name": "Flow Measurement",
   "ephemeral": false,
   "attributes": {

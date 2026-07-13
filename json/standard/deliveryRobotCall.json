@@ -1,7 +1,7 @@
 {
   "id": "deliveryRobotCall",
   "version": 1,
-  "status": "proposed",
+  "status": "live",
   "name": "Delivery Robot Call",
   "ephemeral": false,
   "attributes": {

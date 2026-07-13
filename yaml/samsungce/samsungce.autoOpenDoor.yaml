@@ -46,11 +46,174 @@ attributes:
       additionalProperties: false
       required:
         - value
+    setter: setPressureLevel
+    enumCommands: []
+  supportedOpenDoorTimes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: integer
+            minimum: 1
+            maximum: 6
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  openDoorOption:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - semiOpen
+            - wideOpen
+      additionalProperties: false
+      required:
+        - value
+    setter: setOpenDoorOption
+    enumCommands: []
+  supportedOpenDoorUsingVoices:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - "on"
+              - "off"
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedOpenDoorOptions:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - semiOpen
+              - wideOpen
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  doorOpeningAlert:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - "on"
+            - "off"
+      additionalProperties: false
+      required:
+        - value
+    setter: setDoorOpeningAlert
+    enumCommands: []
+  openDoorTime:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+          minimum: 1
+          maximum: 6
+        unit:
+          type: string
+          enum:
+            - sec
+          default: sec
+      additionalProperties: false
+      required:
+        - value
+    setter: setOpenDoorTime
+    enumCommands: []
+  supportedDoorOpeningAlerts:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - "on"
+              - "off"
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  openDoorUsingVoice:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - "on"
+            - "off"
+      additionalProperties: false
+      required:
+        - value
+    setter: setOpenDoorUsingVoice
     enumCommands: []
 commands:
+  setOpenDoorOption:
+    name: setOpenDoorOption
+    arguments:
+      - name: openDoorOption
+        optional: false
+        schema:
+          type: string
+          enum:
+            - semiOpen
+            - wideOpen
+    sensitive: false
+  setOpenDoorTime:
+    name: setOpenDoorTime
+    arguments:
+      - name: openDoorTime
+        optional: false
+        schema:
+          type: integer
+          minimum: 1
+          maximum: 6
+    sensitive: false
+  setOpenDoorUsingVoice:
+    name: setOpenDoorUsingVoice
+    arguments:
+      - name: openDoorUsingVoice
+        optional: false
+        schema:
+          type: string
+          enum:
+            - "on"
+            - "off"
+    sensitive: false
   "off":
     name: "off"
     arguments: []
+    sensitive: false
+  setDoorOpeningAlert:
+    name: setDoorOpeningAlert
+    arguments:
+      - name: doorOpeningAlert
+        optional: false
+        schema:
+          type: string
+          enum:
+            - "on"
+            - "off"
     sensitive: false
   "on":
     name: "on"

@@ -26,6 +26,25 @@
         "required": ["value"]
       },
       "enumCommands": []
+    },
+    "featureUpdatePolicy": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "patternProperties": {
+              "^(immediately|newly|invisible)$": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
     }
   },
   "commands": {}

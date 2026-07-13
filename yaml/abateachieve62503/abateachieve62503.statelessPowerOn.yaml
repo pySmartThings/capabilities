@@ -1,0 +1,11 @@
+id: abateachieve62503.statelessPowerOn
+version: 1
+status: proposed
+name: Stateless Power On
+ephemeral: false
+attributes: {}
+commands:
+  powerOn:
+    name: powerOn
+    arguments: []
+    sensitive: false

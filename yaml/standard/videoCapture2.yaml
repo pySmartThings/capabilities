@@ -55,6 +55,7 @@ attributes:
               title: String
               type: string
               maxLength: 255
+      sensitive: true
       additionalProperties: false
       required:
         - value

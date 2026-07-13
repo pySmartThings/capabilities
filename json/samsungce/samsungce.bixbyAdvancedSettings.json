@@ -1,0 +1,210 @@
+{
+  "id": "samsungce.bixbyAdvancedSettings",
+  "version": 1,
+  "status": "proposed",
+  "name": "Bixby Advanced Settings",
+  "ephemeral": false,
+  "attributes": {
+    "wakeUpLess": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "setting": { "type": "string", "enum": ["on", "off"] },
+              "utterances": { "type": "array", "items": { "type": "string" } }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "continuousConversation": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string", "enum": ["on", "off"] } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedOptionalFeatures": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "continuousConversation",
+                "discoverBixby",
+                "llmBixby",
+                "personalization",
+                "wakeUpLess",
+                "autoWakeUp"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedAutoWakeUps": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "setting": { "type": "string", "enum": ["on", "off"] },
+                "utterances": { "type": "array", "items": { "type": "string" } }
+              }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedWakeUpLesses": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["on", "off"] }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "autoWakeUp": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "setting": { "type": "string", "enum": ["on", "off"] },
+              "utterances": { "type": "array", "items": { "type": "string" } }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedContinuousConversations": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["on", "off"] }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedWakeUpLessLanguages": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "cs-CZ",
+                "da-DK",
+                "de-DE",
+                "el-GR",
+                "en-AU",
+                "en-GB",
+                "en-IN",
+                "en-US",
+                "es-ES",
+                "es-MX",
+                "fi-FI",
+                "fr-FR",
+                "hu-HU",
+                "it-IT",
+                "ko-KR",
+                "nb-NO",
+                "nl-NL",
+                "pl-PL",
+                "pt-BR",
+                "pt-PT",
+                "ro-RO",
+                "ru-RU",
+                "sk-SK",
+                "sv-SE",
+                "th-TH",
+                "tr-TR",
+                "zh-CN",
+                "zh-TW",
+                "zh-HK",
+                "ja-JP"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setContinuousConversation": {
+      "name": "setContinuousConversation",
+      "arguments": [
+        {
+          "name": "continuousConversation",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["on", "off"] }
+        }
+      ],
+      "sensitive": false
+    },
+    "setAutoWakeUp": {
+      "name": "setAutoWakeUp",
+      "arguments": [
+        {
+          "name": "autoWakeUp",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["on", "off"] }
+        }
+      ],
+      "sensitive": false
+    },
+    "setWakeUpLess": {
+      "name": "setWakeUpLess",
+      "arguments": [
+        {
+          "name": "wakeUpLess",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["on", "off"] }
+        }
+      ],
+      "sensitive": false
+    }
+  }
+}

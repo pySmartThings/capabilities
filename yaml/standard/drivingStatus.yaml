@@ -1,6 +1,6 @@
 id: drivingStatus
 version: 1
-status: proposed
+status: live
 name: Driving Status
 ephemeral: false
 attributes:

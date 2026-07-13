@@ -1,7 +1,7 @@
 {
   "id": "lockSchedules",
   "version": 1,
-  "status": "proposed",
+  "status": "live",
   "name": "Lock Schedules",
   "ephemeral": false,
   "attributes": {

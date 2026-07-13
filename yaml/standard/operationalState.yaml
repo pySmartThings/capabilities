@@ -1,6 +1,6 @@
 id: operationalState
 version: 1
-status: proposed
+status: live
 name: Operational State
 ephemeral: false
 attributes:

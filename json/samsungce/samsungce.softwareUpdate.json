@@ -41,13 +41,56 @@
       },
       "enumCommands": []
     },
+    "schedule": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "scheduledTime": {
+                "type": "string",
+                "pattern": "^(?:[1-9]\\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)T(?:[01]\\d|2[0-3]):?[0-5]\\d:?[0-5]\\d(?:\\.\\d{3})?(?:Z|[+-][01]\\d(?::?[0-5]\\d)?)$"
+              }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setSchedule",
+      "enumCommands": []
+    },
+    "availableModuleDetails": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": { "type": "string" },
+                "modelId": { "type": "string" },
+                "versions": { "type": "array", "items": { "type": "string" } },
+                "visVersion": { "type": "string" }
+              }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
     "lastUpdatedDate": {
       "schema": {
         "type": "object",
         "properties": {
           "value": {
             "type": "string",
-            "pattern": "^(?:[1-9]\\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)"
+            "pattern": "^(?:[1-9]\\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)$"
           }
         },
         "additionalProperties": false,
@@ -110,9 +153,57 @@
         "required": ["value"]
       },
       "enumCommands": []
+    },
+    "protocolVersion": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string", "default": "1.0" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "moduleUpdateCounts": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "total": { "type": "integer", "minimum": 0 },
+              "success": { "type": "integer", "minimum": 0 },
+              "failure": { "type": "integer", "minimum": 0 }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
     }
   },
   "commands": {
+    "setSchedule": {
+      "name": "setSchedule",
+      "arguments": [
+        {
+          "name": "schedule",
+          "optional": false,
+          "schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "scheduledTime": {
+                "type": "string",
+                "pattern": "^(?:[1-9]\\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)T(?:[01]\\d|2[0-3]):?[0-5]\\d:?[0-5]\\d(?:\\.\\d{3})?(?:Z|[+-][01]\\d(?::?[0-5]\\d)?)$"
+              }
+            }
+          }
+        }
+      ],
+      "sensitive": false
+    },
     "agreeUpdate": {
       "name": "agreeUpdate",
       "arguments": [
@@ -125,6 +216,11 @@
       "arguments": [
         { "name": "module", "optional": true, "schema": { "type": "string" } }
       ],
+      "sensitive": false
+    },
+    "cancelSchedule": {
+      "name": "cancelSchedule",
+      "arguments": [],
       "sensitive": false
     }
   }
