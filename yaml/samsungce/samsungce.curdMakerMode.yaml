@@ -1,0 +1,100 @@
+id: samsungce.curdMakerMode
+version: 1
+status: proposed
+name: Curd Maker Mode
+ephemeral: false
+attributes:
+  curdMakerMode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            mode:
+              type: string
+              enum:
+                - "off"
+                - soft
+                - thick
+                - serve
+                - curd
+                - yogurt
+            thickness:
+              type: string
+              enum:
+                - low
+                - medium
+                - high
+          required:
+            - mode
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedCurdMakerModes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              mode:
+                type: string
+                enum:
+                  - "off"
+                  - soft
+                  - thick
+                  - serve
+                  - curd
+                  - yogurt
+              thickness:
+                type: string
+                enum:
+                  - low
+                  - medium
+                  - high
+              thicknessOptions:
+                type: array
+                items:
+                  type: string
+                  enum:
+                    - low
+                    - medium
+                    - high
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setCurdMakerMode:
+    name: setCurdMakerMode
+    arguments:
+      - name: curdMakerMode
+        optional: true
+        schema:
+          type: object
+          additionalProperties: false
+          properties:
+            mode:
+              type: string
+              enum:
+                - "off"
+                - soft
+                - thick
+                - serve
+                - curd
+                - yogurt
+            thickness:
+              type: string
+              enum:
+                - low
+                - medium
+                - high
+          required:
+            - mode
+    sensitive: false

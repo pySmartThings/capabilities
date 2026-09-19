@@ -1,0 +1,20 @@
+id: samsungce.fridgeIcemakerOperatingState
+version: 1
+status: proposed
+name: Fridge Icemaker Operating State
+ephemeral: false
+attributes:
+  operatingState:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - running
+            - ready
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

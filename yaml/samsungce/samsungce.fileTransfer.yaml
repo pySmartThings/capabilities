@@ -1,0 +1,104 @@
+id: samsungce.fileTransfer
+version: 1
+status: proposed
+name: File Transfer
+ephemeral: false
+attributes:
+  uploadStatus:
+    schema:
+      type: object
+      properties:
+        value:
+          type: object
+          additionalProperties: false
+          properties:
+            requestId:
+              type: string
+            originFilePath:
+              type: string
+            status:
+              type: string
+              enum:
+                - inprogress
+                - completed
+                - failed
+                - cancelled
+            errors:
+              type: array
+              items:
+                type: string
+          required:
+            - status
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  fileType:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - binary
+            - sqlite
+            - unknown
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  supportedQueryIds:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            pattern: ^\d{1,2}(_\d{1,2})?$
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  requestUpload:
+    name: requestUpload
+    arguments:
+      - name: queryId
+        optional: false
+        schema:
+          type: string
+          pattern: ^\d{1,2}(_\d{1,2})?$
+      - name: extraData
+        optional: true
+        schema:
+          type: object
+          additionalProperties: false
+          properties:
+            requestId:
+              type: string
+            interval:
+              type: integer
+              minimum: 1
+              maximum: 10
+              default: 3
+            count:
+              type: integer
+              minimum: 1
+              maximum: 10
+              default: 1
+      - name: fileData
+        optional: true
+        schema:
+          type: object
+          additionalProperties: false
+          properties:
+            type:
+              type: string
+            variant:
+              type: string
+    sensitive: false
+  cancelUpload:
+    name: cancelUpload
+    arguments: []
+    sensitive: false

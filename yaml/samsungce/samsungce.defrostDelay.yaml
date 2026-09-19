@@ -1,0 +1,110 @@
+id: samsungce.defrostDelay
+version: 1
+status: proposed
+name: Defrost Delay
+ephemeral: false
+attributes:
+  availableDefrostDelay:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - "on"
+              - "off"
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  schedules:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              id:
+                type: string
+              startDate:
+                type: string
+                pattern: ^(0[1-9]|1[0-2])-(0[1-9]|1\d|2\d|3[0-1])$
+              endDate:
+                type: string
+                pattern: ^(0[1-9]|1[0-2])-(0[1-9]|1\d|2\d|3[0-1])$
+              startTime:
+                type: string
+                pattern: ^([01]\d|2[0-3]):[0-5]\d$
+              duration:
+                type: integer
+                minimum: 1
+                maximum: 4
+          maxItems: 4
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  defrostDelay:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - "on"
+            - "off"
+      additionalProperties: false
+      required:
+        - value
+    setter: setDefrostDelay
+    enumCommands: []
+commands:
+  setDefrostDelay:
+    name: setDefrostDelay
+    arguments:
+      - name: defrostDelay
+        optional: false
+        schema:
+          type: string
+          enum:
+            - "on"
+            - "off"
+    sensitive: false
+  removeSchedule:
+    name: removeSchedule
+    arguments:
+      - name: id
+        optional: false
+        schema:
+          type: string
+    sensitive: false
+  addSchedule:
+    name: setSchedule
+    arguments:
+      - name: schedule
+        optional: false
+        schema:
+          type: object
+          additionalProperties: false
+          properties:
+            id:
+              type: string
+            startDate:
+              type: string
+              pattern: ^(0[1-9]|1[0-2])-(0[1-9]|1\d|2\d|3[0-1])$
+            endDate:
+              type: string
+              pattern: ^(0[1-9]|1[0-2])-(0[1-9]|1\d|2\d|3[0-1])$
+            startTime:
+              type: string
+              pattern: ^([01]\d|2[0-3]):[0-5]\d$
+            duration:
+              type: integer
+              minimum: 1
+              maximum: 4
+    sensitive: false

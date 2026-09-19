@@ -1,0 +1,72 @@
+id: samsungce.sendContents
+version: 1
+status: proposed
+name: Send Contents
+ephemeral: false
+attributes:
+  supportedContentTypes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+            enum:
+              - memo
+              - media
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  sendContents:
+    name: sendContents
+    arguments:
+      - name: contentType
+        optional: false
+        schema:
+          type: string
+          enum:
+            - memo
+            - media
+      - name: contents
+        optional: false
+        schema:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              uriSchemes:
+                type: array
+                items:
+                  type: string
+                  enum:
+                    - http
+                    - https
+              host:
+                type: string
+              path:
+                type: string
+              query:
+                type: string
+              encoding:
+                type: string
+              datetime:
+                type: string
+              fileId:
+                type: string
+              provider:
+                type: string
+                enum:
+                  - s-cloud
+                default: s-cloud
+              mimeType:
+                type: string
+            required:
+              - uriSchemes
+              - fileId
+              - provider
+              - mimeType
+    sensitive: false

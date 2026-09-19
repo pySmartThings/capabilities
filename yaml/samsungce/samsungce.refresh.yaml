@@ -1,0 +1,32 @@
+id: samsungce.refresh
+version: 1
+status: proposed
+name: Refresh
+ephemeral: false
+attributes: {}
+commands:
+  refresh:
+    name: refresh
+    arguments:
+      - name: arguments
+        optional: true
+        schema:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              component:
+                type: string
+              capability:
+                type: string
+              version:
+                type: string
+                default: "1"
+              queryParam:
+                type: string
+            required:
+              - component
+              - capability
+              - version
+    sensitive: false

@@ -1,0 +1,74 @@
+{
+  "id": "samsungce.audioMode",
+  "version": 1,
+  "status": "proposed",
+  "name": "Audio Mode",
+  "ephemeral": false,
+  "attributes": {
+    "availableAudioModes": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["voice", "tone", "fixedTone", "buzzer", "mute"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "audioMode": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["voice", "tone", "fixedTone", "buzzer", "mute"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setAudioMode",
+      "enumCommands": []
+    },
+    "supportedAudioModes": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["voice", "tone", "fixedTone", "buzzer", "mute"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setAudioMode": {
+      "name": "setAudioMode",
+      "arguments": [
+        {
+          "name": "audioMode",
+          "optional": false,
+          "schema": {
+            "type": "string",
+            "enum": ["voice", "tone", "fixedTone", "buzzer", "mute"]
+          }
+        }
+      ],
+      "sensitive": false
+    }
+  }
+}

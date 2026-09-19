@@ -1,0 +1,273 @@
+{
+  "id": "samsungce.fridgeInteriorLighting",
+  "version": 1,
+  "status": "proposed",
+  "name": "Fridge Interior Lighting",
+  "ephemeral": false,
+  "attributes": {
+    "brightnessLevel": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["low", "medium", "high"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setBrightnessLevel",
+      "enumCommands": []
+    },
+    "supportedNightLight": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["on", "off"] }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "supportedNightLightBrightnessLevels": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["low", "medium", "high"] }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "brightenGradually": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string", "enum": ["on", "off"] } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setBrightenGradually",
+      "enumCommands": []
+    },
+    "availableInteriorLightings": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["on", "off"] }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "autoLightOff": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "integer", "minimum": 0 },
+          "unit": { "type": "string", "enum": ["min"], "default": "min" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setAutoLightOff",
+      "enumCommands": []
+    },
+    "nightLight": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string", "enum": ["on", "off"] } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setNightLight",
+      "enumCommands": []
+    },
+    "nightLightBrightnessLevel": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "enum": ["low", "medium", "high"] }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setNightLightBrightnessLevel",
+      "enumCommands": []
+    },
+    "supportedBrightnessesLevels": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["low", "medium", "high"] }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "nightLightSchedule": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "startTime": {
+                "type": "string",
+                "pattern": "^(?:[1-9]\\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)T(?:[01]\\d|2[0-3]):?[0-5]\\d:?[0-5]\\d(?:\\.\\d{3})?(?:Z|[+-][01]\\d(?::?[0-5]\\d)?)$"
+              },
+              "duration": { "type": "integer", "minimum": 0 }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setNightLightSchedule",
+      "enumCommands": []
+    },
+    "supportedInteriorLightings": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["on", "off"] }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "interiorLighting": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string", "enum": ["on", "off"] } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setInteriorLighting",
+      "enumCommands": []
+    },
+    "supportedAutoLightOffs": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setNightLightSchedule": {
+      "name": "setNightLightSchedule",
+      "arguments": [
+        {
+          "name": "nightLightSchedule",
+          "optional": false,
+          "schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "startTime": {
+                "type": "string",
+                "pattern": "^(?:[1-9]\\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)T(?:[01]\\d|2[0-3]):?[0-5]\\d:?[0-5]\\d(?:\\.\\d{3})?(?:Z|[+-][01]\\d(?::?[0-5]\\d)?)$"
+              },
+              "duration": { "type": "integer", "minimum": 0 }
+            }
+          }
+        }
+      ],
+      "sensitive": false
+    },
+    "setAutoLightOff": {
+      "name": "setAutoLightOff",
+      "arguments": [
+        {
+          "name": "autoLightOff",
+          "optional": false,
+          "schema": { "type": "integer", "minimum": 0 }
+        }
+      ],
+      "sensitive": false
+    },
+    "setInteriorLighting": {
+      "name": "setInteriorLighting",
+      "arguments": [
+        {
+          "name": "interiorLighting",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["on", "off"] }
+        }
+      ],
+      "sensitive": false
+    },
+    "setNightLight": {
+      "name": "setNightLight",
+      "arguments": [
+        {
+          "name": "nightLight",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["on", "off"] }
+        }
+      ],
+      "sensitive": false
+    },
+    "setBrightnessLevel": {
+      "name": "setBrightnessLevel",
+      "arguments": [
+        {
+          "name": "brightnessLevel",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["low", "medium", "high"] }
+        }
+      ],
+      "sensitive": false
+    },
+    "off": { "name": "off", "arguments": [], "sensitive": false },
+    "setBrightenGradually": {
+      "name": "setBrightenGradually",
+      "arguments": [
+        {
+          "name": "brightenGradually",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["on", "off"] }
+        }
+      ],
+      "sensitive": false
+    },
+    "on": { "name": "on", "arguments": [], "sensitive": false },
+    "setNightLightBrightnessLevel": {
+      "name": "setNightLightBrightnessLevel",
+      "arguments": [
+        {
+          "name": "nightLightBrightnessLevel",
+          "optional": false,
+          "schema": { "type": "string", "enum": ["low", "medium", "high"] }
+        }
+      ],
+      "sensitive": false
+    }
+  }
+}

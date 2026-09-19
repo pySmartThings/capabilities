@@ -26,6 +26,28 @@
   },
   "commands": {
     "refresh": { "name": "refresh", "arguments": [], "sensitive": false },
+    "stfInstalled": {
+      "name": "stfInstalled",
+      "arguments": [
+        {
+          "name": "installedAppId",
+          "optional": false,
+          "schema": { "type": "string" }
+        }
+      ],
+      "sensitive": false
+    },
+    "stfUninstalled": {
+      "name": "stfUninstalled",
+      "arguments": [
+        {
+          "name": "installedAppId",
+          "optional": false,
+          "schema": { "type": "string" }
+        }
+      ],
+      "sensitive": false
+    },
     "off": { "name": "off", "arguments": [], "sensitive": false },
     "on": { "name": "on", "arguments": [], "sensitive": false }
   }

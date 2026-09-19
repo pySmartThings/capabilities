@@ -1,0 +1,31 @@
+id: samsungce.audioOutput
+version: 1
+status: proposed
+name: Audio Output
+ephemeral: false
+attributes:
+  deviceType:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+          enum:
+            - speaker
+            - buzzer
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  alarmInMute:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+          default: true
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

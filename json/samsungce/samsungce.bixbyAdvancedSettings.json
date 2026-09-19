@@ -62,14 +62,7 @@
         "properties": {
           "value": {
             "type": "array",
-            "items": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "setting": { "type": "string", "enum": ["on", "off"] },
-                "utterances": { "type": "array", "items": { "type": "string" } }
-              }
-            }
+            "items": { "type": "string", "enum": ["on", "off"] }
           }
         },
         "additionalProperties": false,
