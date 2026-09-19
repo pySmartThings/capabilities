@@ -1,27 +1,25 @@
 {
-  "id": "custom.airConditionerTropicalNightMode",
+  "id": "samsungce.soundTheme",
   "version": 1,
   "status": "proposed",
-  "name": "Air Conditioner Tropical Night Mode",
+  "name": "Sound Theme",
   "ephemeral": false,
   "attributes": {
-    "acTropicalNightModeLevel": {
+    "soundTheme": {
       "schema": {
         "type": "object",
-        "properties": {
-          "value": { "maximum": 35, "minimum": 0, "type": "integer" }
-        },
+        "properties": { "value": { "type": "string" } },
         "additionalProperties": false,
         "required": ["value"]
       },
+      "setter": "setSoundTheme",
       "enumCommands": []
     },
-    "remainingTime": {
+    "supportedSoundThemes": {
       "schema": {
         "type": "object",
         "properties": {
-          "value": { "type": "integer" },
-          "unit": { "type": "string", "enum": ["min"] }
+          "value": { "type": "array", "items": { "type": "string" } }
         },
         "additionalProperties": false,
         "required": ["value"]
@@ -30,13 +28,13 @@
     }
   },
   "commands": {
-    "setAcTropicalNightModeLevel": {
-      "name": "setAcTropicalNightModeLevel",
+    "setSoundTheme": {
+      "name": "setSoundTheme",
       "arguments": [
         {
-          "name": "hours",
+          "name": "soundTheme",
           "optional": false,
-          "schema": { "maximum": 35, "minimum": 0, "type": "integer" }
+          "schema": { "type": "string" }
         }
       ],
       "sensitive": false

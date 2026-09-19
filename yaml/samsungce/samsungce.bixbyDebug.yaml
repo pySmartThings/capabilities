@@ -1,0 +1,48 @@
+id: samsungce.bixbyDebug
+version: 1
+status: proposed
+name: Bixby Debug
+ephemeral: false
+attributes:
+  debugInfo:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              key:
+                type: string
+              value:
+                type: string
+            required:
+              - key
+              - value
+      additionalProperties: false
+      required:
+        - value
+    setter: setDebugInfo
+    enumCommands: []
+commands:
+  setDebugInfo:
+    name: setDebugInfo
+    arguments:
+      - name: debugInfo
+        optional: false
+        schema:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              key:
+                type: string
+              value:
+                type: string
+            required:
+              - key
+              - value
+    sensitive: false

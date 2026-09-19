@@ -1,0 +1,38 @@
+id: samsungce.soundTheme
+version: 1
+status: proposed
+name: Sound Theme
+ephemeral: false
+attributes:
+  soundTheme:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setSoundTheme
+    enumCommands: []
+  supportedSoundThemes:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands:
+  setSoundTheme:
+    name: setSoundTheme
+    arguments:
+      - name: soundTheme
+        optional: false
+        schema:
+          type: string
+    sensitive: false

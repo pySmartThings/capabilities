@@ -33,6 +33,35 @@ attributes:
       required:
         - value
     enumCommands: []
+  availableAcOptionalMode:
+    schema:
+      type: object
+      properties:
+        value:
+          items:
+            enum:
+              - "off"
+              - energySaving
+              - windFree
+              - sleep
+              - windFreeSleep
+              - speed
+              - smart
+              - quiet
+              - twoStep
+              - comfort
+              - dlightCool
+              - dryComfort
+              - cubePurify
+              - longWind
+              - motionIndirect
+              - motionDirect
+            type: string
+          type: array
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
   acOptionalMode:
     schema:
       type: object

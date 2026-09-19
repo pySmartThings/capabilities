@@ -64,18 +64,10 @@ attributes:
         value:
           type: array
           items:
-            type: object
-            additionalProperties: false
-            properties:
-              setting:
-                type: string
-                enum:
-                  - "on"
-                  - "off"
-              utterances:
-                type: array
-                items:
-                  type: string
+            type: string
+            enum:
+              - "on"
+              - "off"
       additionalProperties: false
       required:
         - value

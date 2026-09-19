@@ -1,0 +1,49 @@
+id: samsungce.energyManagement
+version: 1
+status: proposed
+name: Energy Management
+ephemeral: false
+attributes:
+  lastMonthEnergyConsumption:
+    schema:
+      type: object
+      properties:
+        value:
+          type: number
+          minimum: 0
+        unit:
+          type: string
+          enum:
+            - Wh
+          default: Wh
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  thisMonthEnergyConsumption:
+    schema:
+      type: object
+      properties:
+        value:
+          type: number
+          minimum: 0
+        unit:
+          type: string
+          enum:
+            - Wh
+          default: Wh
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+  energySavingMode:
+    schema:
+      type: object
+      properties:
+        value:
+          type: boolean
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

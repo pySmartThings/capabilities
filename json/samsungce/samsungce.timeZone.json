@@ -1,0 +1,53 @@
+{
+  "id": "samsungce.timeZone",
+  "version": 1,
+  "status": "proposed",
+  "name": "Time Zone",
+  "ephemeral": false,
+  "attributes": {
+    "offset": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "pattern": "^[+-][01]\\d:[0-5]\\d$" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "zoneId": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "pattern": "^[A-Za-z0-9/_\\+\\-]+$" }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "dstApplied": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "boolean", "default": false } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setZoneId": {
+      "name": "setZoneId",
+      "arguments": [
+        {
+          "name": "zoneId",
+          "optional": false,
+          "schema": { "type": "string", "pattern": "^[A-Za-z0-9/_\\+\\-]+$" }
+        }
+      ],
+      "sensitive": false
+    }
+  }
+}
