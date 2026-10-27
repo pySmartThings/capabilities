@@ -926,5 +926,11 @@
   "samsungce.curdMakerMode",
   "samsungce.bixbyDebug",
   "partyvoice23922.rokukeys2",
-  "legendabsolute60149.createDevice"
+  "legendabsolute60149.createDevice",
+  "samsungvd.refresh",
+  "legendabsolute60149.executeRuleNumber",
+  "legendabsolute60149.deviceName",
+  "legendabsolute60149.productType",
+  "legendabsolute60149.manufacturer",
+  "legendabsolute60149.productId"
 ]
