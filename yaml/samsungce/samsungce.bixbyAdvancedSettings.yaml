@@ -21,6 +21,15 @@ attributes:
               type: array
               items:
                 type: string
+            utterancesWithTitle:
+              type: array
+              items:
+                type: object
+                properties:
+                  title:
+                    type: string
+                  utterance:
+                    type: string
       additionalProperties: false
       required:
         - value
@@ -53,6 +62,7 @@ attributes:
               - personalization
               - wakeUpLess
               - autoWakeUp
+              - seamlessOnboarding
       additionalProperties: false
       required:
         - value

@@ -4,6 +4,18 @@ status: proposed
 name: Unavailable Capabilities
 ephemeral: false
 attributes:
+  unavailableCapabilities:
+    schema:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: string
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
   unavailableCommands:
     schema:
       type: object

@@ -1,0 +1,32 @@
+{
+  "id": "samsungvd.refresh",
+  "version": 1,
+  "status": "proposed",
+  "name": "Refresh",
+  "ephemeral": false,
+  "attributes": {},
+  "commands": {
+    "refresh": {
+      "name": "refresh",
+      "arguments": [
+        {
+          "name": "arguments",
+          "optional": true,
+          "schema": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "component": { "type": "string" },
+                "capability": { "type": "string" },
+                "version": { "type": "string" }
+              }
+            }
+          }
+        }
+      ],
+      "sensitive": false
+    }
+  }
+}

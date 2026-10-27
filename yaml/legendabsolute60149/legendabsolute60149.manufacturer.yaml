@@ -1,0 +1,26 @@
+id: legendabsolute60149.manufacturer
+version: 1
+status: proposed
+name: Manufacturer
+ephemeral: false
+attributes:
+  manufacturer:
+    schema:
+      type: object
+      properties:
+        value:
+          type: string
+      additionalProperties: false
+      required:
+        - value
+    setter: setManufacturer
+    enumCommands: []
+commands:
+  setManufacturer:
+    name: setManufacturer
+    arguments:
+      - name: value
+        optional: false
+        schema:
+          type: string
+    sensitive: false

@@ -19,10 +19,12 @@ attributes:
               type: string
               enum:
                 - mainController
+                - subController
                 - display
                 - inverter
                 - indoorUnit
                 - outdoorUnit
+                - battery
       additionalProperties: false
       required:
         - value

@@ -14,7 +14,17 @@
             "additionalProperties": false,
             "properties": {
               "setting": { "type": "string", "enum": ["on", "off"] },
-              "utterances": { "type": "array", "items": { "type": "string" } }
+              "utterances": { "type": "array", "items": { "type": "string" } },
+              "utterancesWithTitle": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "title": { "type": "string" },
+                    "utterance": { "type": "string" }
+                  }
+                }
+              }
             }
           }
         },
@@ -46,7 +56,8 @@
                 "llmBixby",
                 "personalization",
                 "wakeUpLess",
-                "autoWakeUp"
+                "autoWakeUp",
+                "seamlessOnboarding"
               ]
             }
           }

@@ -5,6 +5,17 @@
   "name": "Kitchen Device Identification",
   "ephemeral": false,
   "attributes": {
+    "supportedServiceList": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
     "regionCode": {
       "schema": {
         "type": "object",
