@@ -9,21 +9,18 @@ attributes:
       type: object
       properties:
         value:
-          oneOf:
-            - type: string
-              enum:
-                - "off"
-                - "on"
-                - low
-                - mid
-                - high
-                - extraHigh
-            - type: integer
-              minimum: 0
-              maximum: 100
+          type: string
+          enum:
+            - "off"
+            - "on"
+            - low
+            - mid
+            - high
+            - extraHigh
       additionalProperties: false
       required:
         - value
+    setter: setBrightnessLevel
     enumCommands: []
   supportedBrightnessLevel:
     schema:
@@ -31,18 +28,14 @@ attributes:
       properties:
         value:
           items:
-            oneOf:
-              - type: string
-                enum:
-                  - "off"
-                  - "on"
-                  - low
-                  - mid
-                  - high
-                  - extraHigh
-              - type: integer
-                minimum: 0
-                maximum: 100
+            type: string
+            enum:
+              - "off"
+              - "on"
+              - low
+              - mid
+              - high
+              - extraHigh
           type: array
       additionalProperties: false
       required:
@@ -55,16 +48,12 @@ commands:
       - name: level
         optional: false
         schema:
-          oneOf:
-            - type: string
-              enum:
-                - "off"
-                - "on"
-                - low
-                - mid
-                - high
-                - extraHigh
-            - type: integer
-              minimum: 0
-              maximum: 100
+          type: string
+          enum:
+            - "off"
+            - "on"
+            - low
+            - mid
+            - high
+            - extraHigh
     sensitive: false

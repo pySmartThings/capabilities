@@ -10,18 +10,14 @@
         "type": "object",
         "properties": {
           "value": {
-            "oneOf": [
-              {
-                "type": "string",
-                "enum": ["off", "on", "low", "mid", "high", "extraHigh"]
-              },
-              { "type": "integer", "minimum": 0, "maximum": 100 }
-            ]
+            "type": "string",
+            "enum": ["off", "on", "low", "mid", "high", "extraHigh"]
           }
         },
         "additionalProperties": false,
         "required": ["value"]
       },
+      "setter": "setBrightnessLevel",
       "enumCommands": []
     },
     "supportedBrightnessLevel": {
@@ -30,13 +26,8 @@
         "properties": {
           "value": {
             "items": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": ["off", "on", "low", "mid", "high", "extraHigh"]
-                },
-                { "type": "integer", "minimum": 0, "maximum": 100 }
-              ]
+              "type": "string",
+              "enum": ["off", "on", "low", "mid", "high", "extraHigh"]
             },
             "type": "array"
           }
@@ -55,13 +46,8 @@
           "name": "level",
           "optional": false,
           "schema": {
-            "oneOf": [
-              {
-                "type": "string",
-                "enum": ["off", "on", "low", "mid", "high", "extraHigh"]
-              },
-              { "type": "integer", "minimum": 0, "maximum": 100 }
-            ]
+            "type": "string",
+            "enum": ["off", "on", "low", "mid", "high", "extraHigh"]
           }
         }
       ],

@@ -52,6 +52,9 @@
                 "sterilizingMop",
                 "dryingMop",
                 "mopWashingPaused",
+                "mopWashingStopped",
+                "mopWashingStoppedWithoutDrying",
+                "mopWashingResumed",
                 "spinDrying",
                 "preparingWater",
                 "supplyingWater",
@@ -155,6 +158,9 @@
               "sterilizingMop",
               "dryingMop",
               "mopWashingPaused",
+              "mopWashingStopped",
+              "mopWashingStoppedWithoutDrying",
+              "mopWashingResumed",
               "spinDrying",
               "preparingWater",
               "supplyingWater",
@@ -224,6 +230,20 @@
       },
       "enumCommands": []
     },
+    "supportedOptionalFeatures": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["redrawMap", "relocalPause"] }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
     "showLiveMapOnSuspend": {
       "schema": {
         "type": "object",
@@ -268,6 +288,13 @@
   },
   "commands": {
     "resume": { "name": "resume", "arguments": [], "sensitive": false },
+    "redrawMap": {
+      "name": "redrawMap",
+      "arguments": [
+        { "name": "mapId", "optional": false, "schema": { "type": "string" } }
+      ],
+      "sensitive": false
+    },
     "setOperatingState": {
       "name": "setOperatingState",
       "arguments": [
@@ -284,6 +311,7 @@
               "findingPerson",
               "monitoringAutomation",
               "emitDust",
+              "standby",
               "suspend",
               "wakeup"
             ]

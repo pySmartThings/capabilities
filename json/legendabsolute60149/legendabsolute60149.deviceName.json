@@ -1,0 +1,28 @@
+{
+  "id": "legendabsolute60149.deviceName",
+  "version": 1,
+  "status": "proposed",
+  "name": "Device Name",
+  "ephemeral": false,
+  "attributes": {
+    "deviceName": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setDeviceName",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setDeviceName": {
+      "name": "setDeviceName",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "string" } }
+      ],
+      "sensitive": false
+    }
+  }
+}

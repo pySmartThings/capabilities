@@ -1,0 +1,28 @@
+{
+  "id": "legendabsolute60149.productId",
+  "version": 1,
+  "status": "proposed",
+  "name": "Product Id",
+  "ephemeral": false,
+  "attributes": {
+    "productId": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setProductId",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setProductId": {
+      "name": "setProductId",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "string" } }
+      ],
+      "sensitive": false
+    }
+  }
+}

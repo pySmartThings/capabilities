@@ -1,0 +1,28 @@
+{
+  "id": "legendabsolute60149.executeRuleNumber",
+  "version": 1,
+  "status": "proposed",
+  "name": "Execute Rule Number",
+  "ephemeral": false,
+  "attributes": {
+    "executeRuleNumber": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "integer" } },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "setter": "setExecuteRuleNumber",
+      "enumCommands": []
+    }
+  },
+  "commands": {
+    "setExecuteRuleNumber": {
+      "name": "setExecuteRuleNumber",
+      "arguments": [
+        { "name": "value", "optional": false, "schema": { "type": "integer" } }
+      ],
+      "sensitive": false
+    }
+  }
+}

@@ -78,10 +78,7 @@
               "additionalProperties": false,
               "properties": {
                 "id": { "type": "string" },
-                "uuid": {
-                  "type": "string",
-                  "pattern": "^(?:[0-9]+|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$"
-                },
+                "uuid": { "type": "string" },
                 "name": { "type": "string" },
                 "userEdited": { "type": "boolean" },
                 "areaInfo": {
@@ -135,14 +132,8 @@
                     "required": ["name", "coordinates"]
                   }
                 },
-                "createdTime": {
-                  "type": "string",
-                  "pattern": "^(?:[1-9]\\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)T(?:[01]\\d|2[0-3]):?[0-5]\\d:?[0-5]\\d(?:\\.\\d{3})?(?:Z|[+-][01]\\d(?::?[0-5]\\d)?)$"
-                },
-                "updatedTime": {
-                  "type": "string",
-                  "pattern": "^(?:[1-9]\\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)T(?:[01]\\d|2[0-3]):?[0-5]\\d:?[0-5]\\d(?:\\.\\d{3})?(?:Z|[+-][01]\\d(?::?[0-5]\\d)?)$"
-                }
+                "createdTime": { "type": "string" },
+                "updatedTime": { "type": "string" }
               },
               "required": ["id", "name", "userEdited", "createdTime"]
             }
@@ -192,10 +183,7 @@
               "maxNumberOfNoGoZones": { "type": "integer", "minimum": 0 },
               "latestAutoAddedNogoZoneUUIDs": {
                 "type": "array",
-                "items": {
-                  "type": "string",
-                  "pattern": "^(?:[0-9]+|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$"
-                }
+                "items": { "type": "string" }
               },
               "noGoZoneInfo": {
                 "type": "array",
@@ -206,10 +194,7 @@
                       "additionalProperties": false,
                       "properties": {
                         "id": { "type": "string" },
-                        "uuid": {
-                          "type": "string",
-                          "pattern": "^(?:[0-9]+|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$"
-                        },
+                        "uuid": { "type": "string" },
                         "name": { "type": "string" },
                         "shape": {
                           "type": "string",
@@ -303,6 +288,40 @@
       },
       "enumCommands": []
     },
+    "backupMaps": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": { "type": "string" },
+                "name": { "type": "string" },
+                "areaInfo": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": { "type": "string" },
+                      "name": { "type": "string" },
+                      "userEdited": { "type": "boolean" }
+                    }
+                  }
+                },
+                "updatedTime": { "type": "string" }
+              },
+              "required": ["id"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
     "suggestedNoGoZones": {
       "schema": {
         "type": "object",
@@ -312,10 +331,6 @@
             "additionalProperties": false,
             "properties": {
               "mapId": { "type": "string" },
-              "reason": {
-                "type": "string",
-                "enum": ["cliff", "object", "unsafeZone"]
-              },
               "noGoZones": {
                 "type": "array",
                 "items": {
@@ -325,10 +340,7 @@
                       "additionalProperties": false,
                       "properties": {
                         "id": { "type": "string" },
-                        "uuid": {
-                          "type": "string",
-                          "pattern": "^(?:[0-9]+|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$"
-                        },
+                        "uuid": { "type": "string" },
                         "name": { "type": "string" },
                         "shape": {
                           "type": "string",
@@ -454,6 +466,61 @@
       },
       "enumCommands": []
     },
+    "carpetZones": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "mapId": { "type": "string" },
+              "supportedOptionalFeatures": {
+                "type": "array",
+                "items": { "type": "string", "enum": ["ignore"] }
+              },
+              "carpetZoneInfo": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "id": { "type": "string" },
+                    "style": {
+                      "type": "string",
+                      "enum": ["manual", "suggestedZone"]
+                    },
+                    "ignored": { "type": "boolean", "default": false },
+                    "centerCoordinates": {
+                      "type": "array",
+                      "items": { "type": "string" },
+                      "maxItems": 2
+                    },
+                    "vertices": {
+                      "type": "array",
+                      "items": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "maxItems": 2
+                      }
+                    },
+                    "theta": {
+                      "type": "integer",
+                      "minimum": -180,
+                      "maximum": 180
+                    }
+                  },
+                  "required": ["id"]
+                }
+              }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
     "mopPads": {
       "schema": {
         "type": "object",
@@ -490,6 +557,21 @@
       },
       "enumCommands": []
     },
+    "deviceModelType": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "enum": ["type0", "type1", "type2"],
+            "default": "type0"
+          }
+        },
+        "additionalProperties": false,
+        "required": []
+      },
+      "enumCommands": []
+    },
     "areaInfo": {
       "schema": {
         "type": "object",
@@ -518,34 +600,6 @@
       },
       "enumCommands": []
     },
-    "currentMap": {
-      "schema": {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "id": { "type": "string" },
-              "uuid": {
-                "type": "string",
-                "pattern": "^(?:[0-9]+|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$"
-              },
-              "masterMapExist": { "type": "boolean" },
-              "onlineMapExist": { "type": "boolean" },
-              "needEditName": { "type": "boolean" },
-              "createdTime": {
-                "type": "string",
-                "pattern": "^(?:[1-9]\\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)T(?:[01]\\d|2[0-3]):?[0-5]\\d:?[0-5]\\d(?:\\.\\d{3})?(?:Z|[+-][01]\\d(?::?[0-5]\\d)?)$"
-              }
-            }
-          }
-        },
-        "additionalProperties": false,
-        "required": ["value"]
-      },
-      "enumCommands": []
-    },
     "maxNumberOfMaps": {
       "schema": {
         "type": "object",
@@ -567,10 +621,6 @@
             "properties": {
               "mapId": { "type": "string" },
               "isValidCoordinates": { "type": "boolean", "default": true },
-              "modelType": {
-                "type": "string",
-                "enum": ["type0", "type1", "type2", "type3"]
-              },
               "coordinates": {
                 "type": "array",
                 "items": { "type": "string" },
@@ -585,10 +635,65 @@
       },
       "enumCommands": []
     },
-    "currentMapId": {
+    "recognitionInfo": {
       "schema": {
         "type": "object",
-        "properties": { "value": { "type": "string" } },
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "mapId": { "type": "string" },
+              "recognitions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "id": { "type": "string" },
+                    "type": { "type": "string", "enum": ["bathroom"] },
+                    "coordinates": {
+                      "type": "array",
+                      "items": { "type": "string" },
+                      "maxItems": 2
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "floorPatternInfo": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "mapId": { "type": "string" },
+              "floorPatterns": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "areaId": { "type": "string" },
+                    "pattern": {
+                      "type": "string",
+                      "enum": ["default", "horizontal", "vertical"]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "additionalProperties": false,
         "required": ["value"]
       },
@@ -626,10 +731,7 @@
                   "additionalProperties": false,
                   "properties": {
                     "id": { "type": "string" },
-                    "uuid": {
-                      "type": "string",
-                      "pattern": "^(?:[0-9]+|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$"
-                    },
+                    "uuid": { "type": "string" },
                     "name": { "type": "string" },
                     "shape": {
                       "type": "string",
@@ -704,6 +806,10 @@
             "additionalProperties": false,
             "properties": {
               "mapId": { "type": "string" },
+              "supportedDisplayTypes": {
+                "type": "array",
+                "items": { "type": "string", "enum": ["icon", "polygon"] }
+              },
               "objects": {
                 "type": "array",
                 "items": {
@@ -761,20 +867,23 @@
             "additionalProperties": false,
             "properties": {
               "mapId": { "type": "string" },
-              "uuid": {
-                "type": "string",
-                "pattern": "^(?:[0-9]+|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$"
-              },
+              "uuid": { "type": "string" },
               "masterMapExist": { "type": "boolean" },
               "onlineMapExist": { "type": "boolean" },
               "needEditName": { "type": "boolean" },
-              "createdTime": {
-                "type": "string",
-                "pattern": "^(?:[1-9]\\d{3}-?(?:(?:0[1-9]|1[0-2])-?(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-?(?:29|30)|(?:0[13578]|1[02])-?31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-?02-?29)T(?:[01]\\d|2[0-3]):?[0-5]\\d:?[0-5]\\d(?:\\.\\d{3})?(?:Z|[+-][01]\\d(?::?[0-5]\\d)?)$"
-              }
+              "createdTime": { "type": "string" }
             }
           }
         },
+        "additionalProperties": false,
+        "required": ["value"]
+      },
+      "enumCommands": []
+    },
+    "currentOperatingMapId": {
+      "schema": {
+        "type": "object",
+        "properties": { "value": { "type": "string" } },
         "additionalProperties": false,
         "required": ["value"]
       },
@@ -836,6 +945,13 @@
       ],
       "sensitive": false
     },
+    "restoreMap": {
+      "name": "restoreMap",
+      "arguments": [
+        { "name": "mapId", "optional": false, "schema": { "type": "string" } }
+      ],
+      "sensitive": false
+    },
     "clearSpots": {
       "name": "clearSpots",
       "arguments": [
@@ -865,10 +981,7 @@
                   "additionalProperties": false,
                   "properties": {
                     "id": { "type": "string" },
-                    "uuid": {
-                      "type": "string",
-                      "pattern": "^(?:[0-9]+|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$"
-                    },
+                    "uuid": { "type": "string" },
                     "name": { "type": "string" },
                     "shape": {
                       "type": "string",
@@ -1057,6 +1170,74 @@
       ],
       "sensitive": false
     },
+    "deleteRecognitions": {
+      "name": "deleteRecognitions",
+      "arguments": [
+        {
+          "name": "recognitions",
+          "optional": false,
+          "schema": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": { "type": "string" },
+                "type": { "type": "string", "enum": ["bathroom"] },
+                "coordinates": {
+                  "type": "array",
+                  "items": { "type": "string" },
+                  "maxItems": 2
+                }
+              }
+            }
+          }
+        },
+        { "name": "mapId", "optional": true, "schema": { "type": "string" } }
+      ],
+      "sensitive": false
+    },
+    "updateCarpetZones": {
+      "name": "updateCarpetZones",
+      "arguments": [
+        {
+          "name": "carpetZones",
+          "optional": false,
+          "schema": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": { "type": "string" },
+                "style": {
+                  "type": "string",
+                  "enum": ["manual", "suggestedZone"]
+                },
+                "ignored": { "type": "boolean", "default": false },
+                "centerCoordinates": {
+                  "type": "array",
+                  "items": { "type": "string" },
+                  "maxItems": 2
+                },
+                "vertices": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": { "type": "string" },
+                    "maxItems": 2
+                  }
+                },
+                "theta": { "type": "integer", "minimum": -180, "maximum": 180 }
+              },
+              "required": ["id"]
+            }
+          }
+        },
+        { "name": "mapId", "optional": true, "schema": { "type": "string" } }
+      ],
+      "sensitive": false
+    },
     "deleteObjects": {
       "name": "deleteObject",
       "arguments": [
@@ -1090,6 +1271,13 @@
       ],
       "sensitive": false
     },
+    "clearCarpetZones": {
+      "name": "clearCarpetZones",
+      "arguments": [
+        { "name": "mapId", "optional": true, "schema": { "type": "string" } }
+      ],
+      "sensitive": false
+    },
     "setNeedEditName": {
       "name": "setNeedEditName",
       "arguments": [
@@ -1097,6 +1285,31 @@
           "name": "needEditName",
           "optional": false,
           "schema": { "type": "boolean" }
+        },
+        { "name": "mapId", "optional": true, "schema": { "type": "string" } }
+      ],
+      "sensitive": false
+    },
+    "updateFloorPatterns": {
+      "name": "updateFloorPatterns",
+      "arguments": [
+        {
+          "name": "floorPatterns",
+          "optional": false,
+          "schema": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "areaId": { "type": "string" },
+                "pattern": {
+                  "type": "string",
+                  "enum": ["default", "horizontal", "vertical"]
+                }
+              }
+            }
+          }
         },
         { "name": "mapId", "optional": true, "schema": { "type": "string" } }
       ],
@@ -1115,10 +1328,7 @@
               "additionalProperties": false,
               "properties": {
                 "id": { "type": "string" },
-                "uuid": {
-                  "type": "string",
-                  "pattern": "^(?:[0-9]+|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$"
-                },
+                "uuid": { "type": "string" },
                 "name": { "type": "string" },
                 "shape": {
                   "type": "string",

@@ -18,10 +18,12 @@
                 "type": "string",
                 "enum": [
                   "mainController",
+                  "subController",
                   "display",
                   "inverter",
                   "indoorUnit",
-                  "outdoorUnit"
+                  "outdoorUnit",
+                  "battery"
                 ]
               }
             }
